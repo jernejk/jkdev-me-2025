@@ -1,0 +1,111 @@
+---
+title: Using AppSettings in Blazor WebAssembly
+date: "2020-05-01"
+lastmod: "2020-05-01"
+tags:
+  - Blazor
+  - .NET Core
+draft: false
+images:
+  - /content/images/2020/04/blazor-appsettings-logo-1.png
+authors:
+  - default
+layout: PostSimple
+---
+While client-side Blazor technically isn't yet stable, I love working with it more than other web front-end technologies. One significant hiccup I found while developing [Cognitive Studio](https://github.com/jernejk/CognitiveServices.Explorer) is having environment-sensitive configurations for the application.
+
+I want my application to behave as an application that can live anywhere and is consistent with what we have in traditional .NET Core applications as much as possible.
+
+My current solution is going the official route for AppSettings in Blazor introduced in 3.2 Preview 4 and updated to Blazor 3.2 Release Candidate.
+
+## Setup .NET Core Blazor app
+
+1.  Create **appsettings.json** and add it to **wwwroot** folder
+2.  Add any additional environment AppSettings like **appsettings.Staging.json**
+
+## Use Configuration
+
+Blazor host already comes with configuration builder as part of `WebAssemblyHostBuilder` and gets built as well as registered when the host is built.
+
+This means if you try to make your own `IConfiguration`, `WebAssemblyHostBuilder.Build()` will override it! Also, if you try to build configuration with `WebAssemblyHostBuilder.Configuration.Build()`, Blazor app will fail to bootstrap. I believe this is because **appsettings.json** is read via JS but JS interop isn't read yet until Blazor app has successfully booted.
+
+To solve this, when you want to use configuration, use lambda expression.
+
+```csharp
+        public static async Task Main(string[] args)
+        {
+            var builder = WebAssemblyHostBuilder.CreateDefault(args);
+            builder.RootComponents.Add<App>("app");
+
+            ConfigureServices(builder.Services);
+
+            await builder.Build().RunAsync();
+        }
+
+        public static void ConfigureServices(IServiceCollection services)
+        {
+            // Example of loading a configuration as configuration isn't available yet at this stage.
+            services.AddSingleton(provider =>
+            {
+                var config = provider.GetService<IConfiguration>();
+                return config.GetSection("App").Get<AppConfiguration>();
+            });
+        }
+```
+
+You can also use the following code in Razor pages to access configuration directly.
+
+```cs
+@inject IConfiguration Configuration
+```
+
+## Configure multiple environments
+
+This part is about loading the correct AppSettings. The default **appsettings.json** is always downloaded, while the **appsettings.\*.json** is downloaded based on the app's environment.
+
+Currently, the only way to set the Blazor WebAssembly environment is to return HTTP header **blazor-environment** when requesting **blazor.boot.json**. Custom HTTP headers are not a big problem if you use a web server to serve your application. In Azure WebApp you can use **web.config** and other platforms have ways to inject HTTP headers to requested files.
+
+Sadly, GitHub Pages and Azure Blob Storage Websites don't support custom HTTP Headers.
+
+Yes, you can try to inject an HTTP header inside **index.html** with the following metadata:
+
+```html
+<head>
+    <meta http-equiv="Blazor-Environment" content="Staging" />
+</head>
+```
+
+This **won't work** because the header needs to be set for **blazor.boot.json**!
+
+Is to postpone loading Blazor (came with 3.2 Release Candidate) and inject headers in `Blazor.start`.
+
+In **wwwroot/index.html** add:
+
+```js
+<script src="_framework/blazor.webassembly.js" autostart="false"></script>
+<script>
+    const environmentName = 'Staging';
+    Blazor.start({
+        loadBootResource: function (type, name, defaultUri, integrity) {
+            // Adds a custom HTTP header to the outbound requests
+            // To retain the default integrity checking behavior, it's necessary to pass through the 'integrity' parameter
+            return fetch(defaultUri, { 
+                cache: 'no-cache',
+                integrity: integrity,
+                headers: { 'blazor-environment': environmentName }
+            });
+        }
+    });
+</script>
+```
+
+Now all you have to do is to modify `environmentName` value on deployment and you'll dynamically download the correct AppSettings! 😁
+
+![blazor-downloading-appsettings](/content/images/2020/04/blazor-downloading-appsettings.png)
+
+Special thanks to [Steve Sanderson](https://blog.stevensanderson.com) for finding a workaround for the switching environments problem. :)
+
+Original issue: [https://github.com/dotnet/aspnetcore/issues/20935](https://github.com/dotnet/aspnetcore/issues/20935)
+
+**UPDATE 1:** Added code for DI and accessing configuration.  
+**UPDATE 2:** Updated how to inject headers in Blazor 3.2 Release Candidate.

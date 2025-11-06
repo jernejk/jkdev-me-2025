@@ -1,0 +1,37 @@
+---
+title: "Real-time face recognition with Microsoft Cognitive Services"
+date: "2019-01-26"
+lastmod: "2020-03-27"
+tags:
+  - Azure
+  - Cognitive Services
+  - AI
+draft: false
+summary: "Learn how to use Face API in Real-Time without breaking your bank and learning some interesting tricks with infrared and depth sensing cameras."
+images:
+  - /content/images/2019/05/action-ai-android-595804.jpg
+authors:
+  - default
+layout: PostSimple
+---
+Recently, I have been touring around Australia to present how to do real-time face recognition with Microsoft Cognitive Services. In the presentation I go through how to reduce cost, what are some of the environmental issues and how you can leverage infrared and depth streams to improve user experience.
+
+Here is my video from .NET User Group Sydney recorded by SSW TV (thanks Adam and Raj!):
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KCSyRO0KotA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+
+Here is the demo project built with C#, OpenCV and Cognitive Services:  
+[https://github.com/jernejk/RealTimeFaceApi](https://github.com/jernejk/RealTimeFaceApi)
+
+You can use either web cam or video file for facial recognition.
+
+Here are some of the frameworks I have played around for offline face detection:
+
+-   C#
+    -   UWP - [https://msdn.microsoft.com/en-us/magazine/mt788628.aspx](https://msdn.microsoft.com/en-us/magazine/mt788628.aspx)
+    -   OpenCV - [https://github.com/shimat/opencvsharp](https://github.com/shimat/opencvsharp)
+-   JavaScript
+    -   TensorFlow.js - [https://js.tensorflow.org/](https://js.tensorflow.org/)
+    -   BRFv4 - [https://github.com/Tastenkunst/brfv4\_javascript\_examples](https://github.com/Tastenkunst/brfv4_javascript_examples)
+
+**Update**: You can now explore Face API with [Cognitive Services Exlorer](https://jernejk.github.io/CognitiveServices.Explorer/face/v1.0/persongroups).

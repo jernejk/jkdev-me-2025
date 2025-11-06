@@ -1,0 +1,109 @@
+---
+title: Remote debugging on Android and iOS devices
+date: "2018-04-09"
+lastmod: "2019-06-13"
+tags:
+  - Debugging
+draft: false
+images:
+  - /content/images/2019/05/macbook-606763_1920-min.jpg
+authors:
+  - default
+layout: PostSimple
+---
+Every year the market share of mobile devices is growing, which means that testing on a mobile device is becoming increasingly more important.
+
+While in easy cases we can open just open up the server to outside world and connect with your phone. However, in this blog I'll tackle a much harder scenario:
+
+-   WiFi is blocked and not accessible by mobile devices
+-   Some of the resources are locked behind VPN, no mobile client for the VPN
+-   Dev and staging servers are not available to mobile devices
+-   The problem only happens on the mobile devices, specifically iPad
+
+The blog post will still be very useful if you only have an issue with WiFi or VPN.
+
+## Software used
+
+For enabling remote debugging in a locked down environment I used:
+
+-   [Connectify HotSpot](http://www.connectify.me/hotspot/) for creating Wi-Fi hotspots
+-   [Telerik Fiddler](http://www.telerik.com/fiddler) for redirecting web traffic on the mobile devices
+
+You can use any other applications that do the same functionality.
+
+## 1\. Create and connect to Wi-Fi hotspot
+
+Create a hotspot and connect to hotspot via your mobile device.  
+You can skip this part if you already can ping your laptop via the mobile device.
+
+With Connectify it took me 2 minutes to do just that.  
+Too easy, right?
+
+On your mobile device use network utils that allows you to ping your laptop to see if the mobile device has access to the laptop.  
+Connect to the VPN and repeat ping process to verify that the connection is still OK.
+
+## 2\. Configure IIS
+
+Open `applicationhost.config`:
+
+-   VS2015+
+    -   open `[solution folder]\.vs\config\applicationhost.config`
+-   Pre-VS2015
+    -   open `C:\Users\[user-name]\My Documents\IISExpress\config\applicationhost.config`
+
+Find bindings for your website, e.g.
+
+```XML
+<binding protocol="http" bindingInformation="*:55499:localhost" />
+```
+
+And add a binding with your own IP address that is pingable through the mobile device.
+
+```XML
+<binding protocol="http" bindingInformation="*:55499:192.168.77.7" />
+```
+
+Close your Visual Studio and run it as admin.  
+The above change may require admin permissions in order to spin a new instance of IIS Express with the custom bindings.
+
+If you don't need to get all communication via VPN or don't need to track all HTTP(S) requests, you're done.  
+If not, follow the last step.
+
+**Bonus: You can use [Conveyor by Keyoti](https://marketplace.visualstudio.com/items?itemName=vs-publisher-1448185.ConveyorbyKeyoti) to simplify the process of enabling web apps to be accessible outside the local network.**
+
+## 3\. Use Fiddler for debugging and enabling VPN on the mobile device
+
+In this step, we'll use Fiddler as a proxy that will redirect all the traffic from the mobile device directly to current network connection. You'll be able to access everything your laptop can access via the phone, include the VPN connection.
+
+You can follow this official guide to setup it up: [Capture Traffic from iOS Device](http://docs.telerik.com/fiddler/Configure-Fiddler/Tasks/ConfigureForiOS)
+
+Short version (Fiddler on desktop):
+
+-   In Fiddler go to **Tools** | **Options** | **Connections**
+-   Tick **Allow remote computers to connect**
+-   Restart Fiddler
+
+On iOS (similar steps for other mobile devices):
+
+-   Go to **Settings** | **General** | **Network > Wi-Fi**
+-   Select current Wi-Fi
+-   On the bottom select **Manual**
+-   Server: **\[laptops IP\]**
+-   Port: **8888** (unless changed in Fiddler)
+-   Authentication: **Off**
+
+Now you should be able to access all of the laptop's resources.
+
+As a bonus, you can use Fiddler to manipulate traffic on your phone, simulate slow connections, modify packages, go offline or selectively cancel requests.
+
+## Bonus - Setup Angular CLI
+
+When trying to run Angular CLI project instead of running `ng serve` run:
+
+```bash
+ng s --host [laptop IP] --port 4200
+```
+
+This will make the website available on the **\[laptop IP\]** address.
+
+**Update 24/08/2018: Added Angular CLI steps for remote debugging.**

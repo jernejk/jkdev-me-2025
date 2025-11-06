@@ -1,0 +1,136 @@
+---
+title: .NET Core complex EF Core unit testing
+date: "2018-02-01"
+lastmod: "2019-11-22"
+tags:
+  - .NET Core
+  - EF Core
+  - Unit Test
+draft: false
+images:
+  - /content/images/2019/05/blur-bottle-chemistry-248152-min.jpg
+authors:
+  - default
+layout: PostSimple
+---
+When writing unit tests for EF Core we can use InMemoryDatabase so that we don't have to create mock repositories. But sometimes we need to test functionalities that are not supported in in-memory-database.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/PppmuvsFO78" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>In-memory-database does not support:
+
+-   Executing SQL commands
+-   Enforcing foreign keys
+-   Returning null objects for properties that needed to be included in the query `.Include()`
+-   Failing when using features not supported in Linq-to-sql queries
+
+Of course, we can mock the data layer but sometimes we need to test if the database's queries are playing well the application logic.
+
+The solution is to use SQLite in-memory DB which allows us to use some of the SQL and DB relational features.
+
+An example of creating DB context that switches between in-memory-database and SQLite database:
+
+```CSharp
+private bool _useSqlite;
+
+public void UseSqlite()
+{
+    _useSqlite = true;
+}
+
+public async Task<SampleDbContext> GetDbContext()
+{
+    DbContextOptionsBuilder builder = new DbContextOptionsBuilder();
+    if (_useSqlite)
+    {
+        // Use Sqlite DB.
+        builder.UseSqlite("DataSource=:memory:", x => { });
+    }
+    else
+    {
+        // Use In-Memory DB.
+        builder.UseInMemoryDatabase(Guid.NewGuid().ToString()).ConfigureWarnings(w =>
+        {
+            w.Ignore(InMemoryEventId.TransactionIgnoredWarning);
+        });
+    }
+            
+    var dbContext = new SampleDbContext(builder.Options);
+    if (_useSqlite)
+    {
+        // SQLite needs to open connection to the DB.
+        // Not required for in-memory-database and MS SQL.
+        await dbContext.Database.OpenConnectionAsync();
+    }
+
+    await dbContext.Database.EnsureCreatedAsync();
+
+    return dbContext;
+}
+```
+
+Example of a unit test:
+
+```CSharp
+public async Task ShouldThrowAnException()
+{
+    var context = GetDbContext();
+    context.TestDatas.Add(new TestData
+    {
+        Text = "Parent",
+        IsDeleted = false,
+        Child = null
+    });
+
+    // Will not fail even though Child is required.
+    await context.SaveChangesAsync();
+
+    // Execute and assert
+    // This fails because in-memory-database does not support SQL.
+    await Assert.ThrowsAsync<System.InvalidOperationException>(
+        () => context.TestDatas
+            .FromSqlRaw(@"select * from TestDatas"));
+}
+
+[Fact]
+public async Task ShouldWork()
+{
+    // Prepare
+    UseSqlite();
+
+    var context = GetDbContext();
+    context.TestDatas.Add(new TestData
+    {
+        Text = "Parent",
+        IsDeleted = false,
+        Child = new ChildData
+        {
+            Text = "Child"
+        }
+    });
+
+    // Checks if Child property is correctly populated
+    context.SaveChanges();
+            
+    // Execute
+    var data = await context.Database.GetDbConnection()
+        .QueryAsync<TestData>(@"select * from TestDatas");
+
+    // Assert
+    Assert.Single(data);
+}
+```
+
+However, there are a few caveats regarding using SQLite in unit tests:
+
+-   In-memory SQLite is around ~5~ 3 times slower than EF Core in-memory-database
+-   The order of results will not be consistent unless it's ordered by a column
+-   For complex database structures foreign key restrictions will not work and needs to be disabled in order to allow testing
+-   If dealing with raw SQL commands, there are some differences between SQLite and MS SQL. It means that the code might need to generate slightly different SQL for SQLite than for MS SQL
+
+The best approach so far is to choose in-memory-database and SQLite in-memory database based on the unit test scenario. Personally, I always prefer in-memory-database because of the performance benefits and I switch to SQLite when absolutely necessary.
+
+### Watch my DDD talk for more unit test content (DDD Sydney 2018)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6nYefHkKby8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+**UPDATE: I'm going around Australia to present this topic on various user groups. Here is the GitHub repository for the session: [https://github.com/jernejk/NorthwindTraders](https://github.com/jernejk/NorthwindTraders)**  
+**UPDATE 2:** Updated the blog post and GitHub code for .NET Core 3.0.

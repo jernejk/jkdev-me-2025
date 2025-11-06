@@ -1,0 +1,40 @@
+---
+title: Use Windows Subsystem for Android in Visual Studio
+date: "2022-08-04"
+lastmod: "2022-08-22"
+tags:
+  - Windows11
+  - MAUI
+  - Xamarin
+  - Android
+draft: false
+images:
+  - /content/images/2022/08/Screenshot-2022-03-31-094256.png
+authors:
+  - default
+layout: PostSimple
+---
+This blog post is to summarize what you should do to run Windows Subsystem for Android in Visual Studio. If you need instructions on how to enable Windows Subsystem for Android in Windows 11, follow [Windows Subsystem for Android in Windows 11](https://jkdev.me/use-windows-subsystem-for-android-in-windows-11/).
+
+1.  From the Start menu, run **Windows Subsystem for Android app**
+    
+    1.  Under **Developer**, Enable **Developer Mode** (optionally enable automation dev)  
+        ![win11-android-dev](/content/images/2022/08/win11-android-dev.png)
+2.  Keep **Developer** settings open and open **Windows Terminal** and run:
+    
+    ```bash
+    cd "C:\Program Files (x86)\Android\android-sdk\platform-tools"
+    adb.exe connect [device IP from step 3]
+    ```
+    
+    **NOTE:** It's `.\adb.exe` if in PowerShell.  
+    ![win11-android-start-dev](/content/images/2022/08/win11-android-start-dev.png)
+    
+3.  In Visual Studio switch to `Microsoft Corporation Subsystem for Androind(TM) (Android X.Y - API XX)`  
+    ![win11-android-vs](/content/images/2022/08/win11-android-vs.png)
+    
+
+**TIP:** The IP usually is 127.0.0.1:58526 and you can try to run `adb.exe connect 127.0.0.1:58526` straight away to see if it works.
+
+**NOTE:** If you don't see IP, make sure Android subsystem is running. (if in step 2.1 you selected "As needed", you need to run at least 1 Android app)  
+**NOTE:** If you get authentication error, you can ignore it. It will still work.

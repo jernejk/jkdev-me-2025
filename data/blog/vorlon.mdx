@@ -1,0 +1,53 @@
+---
+title: Remote web debugging with Vorlon
+date: "2018-09-01"
+lastmod: "2019-05-21"
+tags:
+  - Debugging
+draft: false
+images:
+  - /content/images/2019/05/vorlon-min.png
+authors:
+  - default
+layout: PostSimple
+---
+In this post we'll cover how to debug applications running in browser and/or devices that don't have debugging abilities. We'll manipulate DOM tree, see console output and more.
+
+This post works great with remote debugging introduced in [Remote debugging on Android and iOS devices](/remote-debugging-on-devices/) blog post.
+
+## Vorlon.JS
+
+In short [Vorlon.JS](http://www.vorlonjs.io/) is an open source, extensible, platform-agnostic tool for remotely debugging and testing your JavaScript.
+
+We can debug multiple browser locally or remotely on devices. All we need to do is run Voltron on a server and a `<script>` in the web application.
+
+## Get started
+
+First install Voltron with NPM:
+
+```bash
+npm i -g vorlon
+```
+
+And add in `index.html`:
+
+```html
+<script src="http://localhost:1337/vorlon.js"></script>
+```
+
+Run Vorlon in command line:
+
+```bash
+vorlon
+```
+
+Then go to `localhost:1337` to access the dashboard.  
+![Screenshot_2018-09-02-Vorlon-js](/content/images/2018/09/Screenshot_2018-09-02-Vorlon-js.png)
+
+When accessing the website, we can see console logs, DOM tree and many more things.  
+![Screenshot_2018-09-02-Vorlon-js-1-](/content/images/2018/09/Screenshot_2018-09-02-Vorlon-js-1-.png)
+
+Similarly as with Chrome/Edge/FireFox F12, we can highlight and modify DOM elements.  
+![2018-09-02_16-56-15](/content/images/2018/09/2018-09-02_16-56-15.png)
+
+Let me know if you like me to write more about Vorlon and how to improve debugging on mobile devices.

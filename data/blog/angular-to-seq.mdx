@@ -1,0 +1,100 @@
+---
+title: How to get Angular logs to Seq
+date: "2018-04-29"
+lastmod: "2018-05-11"
+tags:
+  - Serilog
+  - Angular
+draft: false
+images:
+  - /content/images/2018/04/angular_seq.jpg
+authors:
+  - default
+layout: PostSimple
+---
+The Angular applications are starting to become and more complicated with more layers on the client side then ever before. This means we should treat client-side applications similarly as back-end projects.
+
+For non-dev environments, I would recommend mature libraries like [Raygun](https://raygun.com/docs/languages/angular) or [TrackJS](https://trackjs.com/) to track issues over time and be able to resolve them for specific versions.
+
+However in development environment we can use a bit more chatty tool that gives us a lot more information about is happening with client-side application. As we all know, sometimes it's more important how the user got to the error than the error itself.
+
+For that I use [JSNLog](http://jsnlog.com/) with [Serilog](https://serilog.net/) + [Seq](https://getseq.net/). There are several JS to Seq libraries but I like this one the best because I can use exatly the same Serilog configuration with not much effort. (You can also use loggers like [Structured log](https://github.com/structured-log/structured-log) to directly log into Seq without the need of a backend)
+
+The easiest way and not recommended despite being the part of tutorial, is to simply add the logging into `app.module.ts`:
+
+```TypeScript
+import { NgModule, ErrorHandler } from '@angular/core';
+import { JL } from 'jsnlog';
+
+// Logging stuff
+class UncaughtExceptionHandler implements ErrorHandler {
+  handleError(error: any) {
+      JL().fatalException('Uncaught Exception', error);
+      console.warn('logged');
+  }
+}
+
+const logLevel = JL.getAllLevel();
+const appender = JL.createAjaxAppender('example appender');
+appender.setOptions({
+    'bufferSize': 20,
+    'storeInBufferLevel': 1000,
+    'level': logLevel,
+    'sendWithBufferLevel': 6000,
+    'url': 'http://localhost:51213/jsnlog.logger'
+});
+
+// Configure the JSNLog logging library.
+// See http://jsnlog.com/Documentation/JSNLogJs
+JL().setOptions({
+    'appenders': [appender],
+    'level': logLevel
+});
+
+JL().info('Angular is starting...');
+
+const appRoutes: Routes = [
+  // ...
+  providers: [
+    { provide: 'JSNLOG', useValue: JL },
+    { provide: ErrorHandler, useClass: UncaughtExceptionHandler }
+  ],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
+
+Server side:
+
+```CSharp
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
+        {
+            if (env.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage();
+            }
+
+            app.UseMvc();
+
+            // Configure JSNLog
+            // See http://jsnlog.com/Documentation/Configuration/JSNLog
+            var jsnlogConfiguration = new JsnlogConfiguration()
+            {
+                // HACK: Format "%message" will break logging.
+                serverSideMessageFormat = "JL: %message",
+            };
+
+            app.UseJSNLog(new LoggingAdapter(loggerFactory), jsnlogConfiguration);
+        }
+```
+
+Official instructions: [http://jsnlog.com/Documentation/HowTo/Angular2Logging](http://jsnlog.com/Documentation/HowTo/Angular2Logging)  
+My oversimplified implementation based on instructions: [https://github.com/jernejk/JSNLog/tree/features/jsnlog-simple](https://github.com/jernejk/JSNLog/tree/features/jsnlog-simple)
+
+However this version will swallow all errors amoung other things if it fails to load on bootstraps, resulting in a white page and non-sense errors in console output.
+
+I have improved the initial quick start to have `LogService` and `UncaughtExceptionHandler` in separate files, as well starting the JSNLog only when Angular essentials have been correctly bootstrapping. This solves the problem of the official quick start tutorial!
+
+Since the code is too big, here is a diff between new application and adding log: [https://github.com/jernejk/JSNLog/compare/features/jsnlog](https://github.com/jernejk/JSNLog/compare/features/jsnlog)
+
+Personally I use this all the way to UAT and disable it for preprod and production. I want the application to work as efficiently as possible once they hit production environments and unfortenately, JSNLog doesn't work 100% well all of the time. All things consider, it's an increadiable tool in development environement.

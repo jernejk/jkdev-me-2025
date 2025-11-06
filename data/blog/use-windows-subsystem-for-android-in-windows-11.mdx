@@ -1,0 +1,85 @@
+---
+title: "Use Windows Subsystem for Android in Windows 11 (non-US edition)"
+date: "2022-03-30"
+lastmod: "2022-08-03"
+tags:
+  - Windows11
+  - Xamarin
+  - MAUI
+  - Android
+draft: false
+images:
+  - /content/images/2022/03/Screenshot-2022-03-31-094256.png
+authors:
+  - default
+layout: PostSimple
+---
+**UPDATED: 04/08/2022** - Updated screenshots and steps to reflect W11 Insider Preview on Release Preview.  
+**NOTE:** This is for developers and users that I don't mind side-loading Android apps.
+
+Recently, I managed to get Android working on my Windows 11 for Xamarin and MAUI development. Initially, I thought "Debugging will probably be somewhere between an emulator and an actual device", but I couldn't have been more wrong! The speed of running the application and debugging is incredible, making development on Android fun again. 😊
+
+There is a catch for most people in the world... It's a US-only feature... But don't worry! Let an Aussie help you set up `Windows Subsystem for Android` without needing to be in the US in less than 10 minutes and no reboots! 😎
+
+Ok, let's get started!
+
+1.  Open **Windows Settings** (`WIN + I`)
+2.  Search for **Region** Settings
+3.  Under **Region**, change **Country** to **United State** (you can change it back later)
+
+![Screenshot-2022-03-31-091646-1](/content/images/2022/03/Screenshot-2022-03-31-091646-1.png)
+
+Now, we can follow existing instructions on setting up Android. 😊
+
+A quick summary of the steps:
+
+1.  From the Start menu, open **Windows Store** and install **Amazon Appstore**
+    
+    1.  Setting up **Amazon Appstore** is optional.  
+        We only need it for the **Windows Subsystem for Android** (not yet standalone, as far as I know)
+    2.  Alternatively, you can install it from [https://www.microsoft.com/en-au/p/windows-subsystem-for-android/9p3395vx91nr?amp;WT.mc\_id=friends-0000-jamont&WT.mc\_id=friends-0000-jamont&rtc=1&activetab=pivot:overviewtab](https://www.microsoft.com/en-au/p/windows-subsystem-for-android/9p3395vx91nr?amp;WT.mc_id=friends-0000-jamont&WT.mc_id=friends-0000-jamont&rtc=1&activetab=pivot:overviewtab)
+2.  From the Start menu, run **Windows Subsystem for Android app**
+    
+    1.  Under **System**, tick **Continuous** (you can work with **As needed** if you run at least 1 Android app at all times when developing for Android)  
+        ![win11-android-continuous](/content/images/2022/08/win11-android-continuous.png)
+        
+    2.  Under **Developer**, Enable **Developer Mode** (optionally enable automation dev)  
+        ![win11-android-dev](/content/images/2022/08/win11-android-dev.png)
+        
+3.  Keep **Developer** settings open and open **Windows Terminal** at `C:\Program Files (x86)\Android\android-sdk\platform-tools`:
+    
+    ```bash
+    cd "C:\Program Files (x86)\Android\android-sdk\platform-tools"
+    ```
+    
+4.  Run
+    
+    ```bash
+    .\adb.exe connect [device IP from step 3]
+    ```
+    
+    ![win11-android-start-dev](/content/images/2022/08/win11-android-start-dev.png)  
+    **NOTE:** If you don't see IP, make sure Android subsystem is running. (if in step 2.1 you selected "As needed", you need to run at least 1 Android app)
+    
+    1.  If you get authentication error, you can ignore it. It will still work.
+5.  Optional: You can set your region back
+    
+
+You'll have a new device available called **Microsoft Corporation Subsystem for Android(TM) (Android 12.1 - API 32)**. You can use this device on any tool, like Visual Studio, that supports deployment via **adb**.
+
+![Screenshot-2022-03-31-094317](/content/images/2022/03/Screenshot-2022-03-31-094317.png)
+
+And that's all. 😊
+
+You'll need to repeat steps 3 and 4 every time the Android environment restarts. The steps are pretty quick to do but I hope I'll be able to find a script to automate these steps.
+
+## Bonus: Install Android apps
+
+Since when this blog post was posted, Amazon Store has started to looked at your Amazon account country instead of your PC region. You can create an US Amazon account but if you don't mind side-loading, you can by-pass Amazon Store completely.
+
+1.  Find APK for your favorite Android app. There are several pages where you can download APKs but you should read their reviews before using them just in case. You don't want to install malicious software by mistake 🧐
+2.  Run `adb install android-app.apk`
+
+Suffice to say, you should run this at your own risk and only from sources where you can trust that the APK package wasn't tampered. The APK updates are manual, just do the same steps as above.
+
+**NOTE:** You have Windows Store apps that does the above but at least one has been suspected as malicious which is why I'm not recommending any specific apps or websites.

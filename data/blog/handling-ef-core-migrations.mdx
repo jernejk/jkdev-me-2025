@@ -1,0 +1,46 @@
+---
+title: Handling EF Core migrations in a team
+date: "2018-06-01"
+lastmod: "2019-06-04"
+tags:
+  - EF Core
+draft: false
+images:
+  - /content/images/2019/05/2018-06-02_17-21-44-min.jpg
+authors:
+  - default
+layout: PostSimple
+---
+Entity Framework Core has a good migration story for the Database, however it's not perfect, especially in a large team where DB schema changes are frequent. All migrations are increamental based on the last `*DbContextModelSnapshot.cs` snapshot. When multiple migrations are happening in different branches, a lot of issues arise and we even asked EF team on Twitter on how to solve this problem. [Click here for the tweet](https://twitter.com/thiagospassos/status/1002443608555810816)
+
+To better understand the problem, let's build up a scenario in team project.
+
+Let's see an example of problematic migration:
+
+```
+     A
+    / \
+   B1  C
+   |   |
+   B2  |
+    \ /
+ (git merge)
+     |
+     D
+```
+
+The migration `B1` and `B2` are out-of-sync of migration `C` and when we merge `B1`, `B2` and `C` back into main branch the `D` migration will likely not work from correct DbContext model snapshot.
+
+Traditionally, we would revert `C` migration, merge branch with `B1` and `B2` migrations and re-apply `C` migration with correct DbContext model snapshot. Git doesn't help us resolving the problem because there are no conflicts from the code perspective.
+
+I found that the best way to solve this problem is to treat `*DbContextModelSnapshot.cs` as binary file, forcing the developers to resolve the problem before they break migration in `master` branch.
+
+By including `.gitattributes` in `Migrations` folder with content:
+
+```gitignore
+PageDbContextModelSnapshot.cs binary
+```
+
+This will prevent any non-incremental changes to `*DbContextModelSnapshot.cs` and prevents breaking migrations after merging into `master` branch.
+
+You can check my friends blog post on how to improve your team communication and resolve conflicts, once they happen at his blog [Overcoming EF Core Migration Conflicts](https://passos.com.au/overcoming-ef-core-migration-conflicts/).

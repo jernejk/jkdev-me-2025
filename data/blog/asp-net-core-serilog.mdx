@@ -1,0 +1,242 @@
+---
+title: ASP.NET Core 5 + Serilog
+date: "2019-06-06"
+lastmod: "2020-12-31"
+tags:
+  - .NET Core
+  - Serilog
+draft: false
+images:
+  - /content/images/2019/06/bellevue-sky-2-min.jpg
+authors:
+  - default
+layout: PostSimple
+---
+**UPDATED TO .NET 5 (31/12/2020)**
+
+I have been a great fan of Serilog and Seq for over 2 years and I delivered great value to many of my clients.
+
+After many projects of integrating Serilog and Seq into ASP.NET Core applications, I finally found my favorite way to integrate them.
+
+There are few things this integration needs to nail:
+
+-   Integrate with Serilog, so we have Seq and other important integrations
+-   Capture errors that might happen on app startup
+-   Have all configuration in the `appsettings.json` except the dynamic ones (application name)
+
+PS: If you're looking for .NET Core Console app with Serilog integration, check my [Why is Serilog not writing my logs into Seq?](https://jkdev.me/serilog-console/) post.
+
+**TL;DR;** Here is a sample code for ASP.NET Core 5: [https://github.com/jernejk/AspNetCoreSerilogExample](https://github.com/jernejk/AspNetCoreSerilogExample)
+
+If you're looking for .NET Core 3.1 or 2.2, checkout the old branches: [https://github.com/jernejk/AspNetCoreSerilogExample/branches](https://github.com/jernejk/AspNetCoreSerilogExample/branches)
+
+## Recommend configuration
+
+My recommended configuration consists on Serilog + Seq integration, with all configuration in `appsettings.logs.json` (in this example I put it in `appsettings.json`) and creating the logger as the second thing in the program, right after loading the configuration.
+
+### Get right Nuget packages
+
+The packages to install:
+
+```bash
+dotnet add package Serilog
+dotnet add package Serilog.AspNetCore
+dotnet add package Serilog.Enrichers.Environment
+dotnet add package Serilog.Exceptions
+dotnet add package Serilog.Extensions.Logging
+dotnet add package Serilog.Settings.Configuration
+dotnet add package Serilog.Sinks.Async
+dotnet add package Serilog.Sinks.Console
+dotnet add package Serilog.Sinks.Seq
+```
+
+Also, make sure that `appsettings.json` is copied on build time. Some empty ASP.NET Core templates don't do that!
+
+Use the configuration below if `appsettings.json` is not copied.
+
+```xml
+  <ItemGroup>
+    <!-- Make sure all of the necessary appsettings are included with the application. -->
+    <Content Update="appsettings*.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+    </Content>
+    <Content Update="appsettings.Local.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToPublishDirectory>Never</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+```
+
+![Make sure the appsettings.json is configured correctly](/content/images/2019/11/serilog-dotnetcore3-appsettings-properties.jpg) **Figure: Make sure the appsettings.json is configured correctly.**
+
+### Add right configuration
+
+Most of our Serilog configuration is in `appsettings.json` file instead of in code, so we can more easily change it.
+
+In `appsettings.json` we add:
+
+```json
+  "Serilog": {
+    "Using": [ "Serilog.Exceptions", "Serilog", "Serilog.Sinks.Console", "Serilog.Sinks.Seq" ],
+    "MinimumLevel": {
+      "Default": "Verbose",
+      "Override": {
+        "System": "Information",
+        "Microsoft": "Information",
+        "Microsoft.EntityFrameworkCore": "Information"
+      }
+    },
+    "WriteTo": [
+      {
+        "Name": "Seq",
+        "Args": {
+          "serverUrl": "http://localhost:5341",
+          "apiKey": "none",
+          "restrictedToMinimumLevel": "Verbose"
+        }
+      },
+      {
+        "Name": "Async",
+        "Args": {
+          "configure": [
+            {
+              "Name": "Console",
+              "Args": {
+                "restrictedToMinimumLevel": "Information"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "Enrich": [ "FromLogContext", "WithExceptionDetails" ],
+    "Properties": {
+      "Environment": "LocalDev"
+    }
+  }
+```
+
+The Console sink is under "Async" for performance reasons. Writing to console is slowing down your application, especially when using the "Verbose" log level.
+
+**NOTE:** If you're like me and like to separate log configuration away from other configuration, you can put them into `appsettings.logs.json` instead!
+
+### WebApp host builder - Program.cs
+
+In `Program.cs`, I'm doing something interesting that some might think is a bit odd for an ASP.NET Core application. First, I'm building and running `IHost` in try/catch in case it fails. Unlike [official example](https://nblumhardt.com/2019/10/serilog-in-aspnetcore-3/) for Serilog integration, I'm initializing a generic emergency logger only if the `IHost` fails to boot.
+
+Not only this should be rare, but there is also a good chance that the part that is failing impacts Serilog as well! (e.g. not being able to load configurations)
+
+The code snippets have instructions on how to debug an issue like that if the app is an Azure WebApp and doesn't boot.
+
+```CSharp
+        public static void Main(string[] args)
+        {
+            try
+            {
+                using IHost host = CreateHostBuilder(args).Build();
+                host.Run();
+            }
+            catch (Exception ex)
+            {
+                // Log.Logger will likely be internal type "Serilog.Core.Pipeline.SilentLogger".
+                if (Log.Logger == null || Log.Logger.GetType().Name == "SilentLogger")
+                {
+                    // Loading configuration or Serilog failed.
+                    // This will create a logger that can be captured by Azure logger.
+                    // To enable Azure logger, in Azure Portal:
+                    // 1. Go to WebApp
+                    // 2. App Service logs
+                    // 3. Enable "Application Logging (Filesystem)", "Application Logging (Filesystem)" and "Detailed error messages"
+                    // 4. Set Retention Period (Days) to 10 or similar value
+                    // 5. Save settings
+                    // 6. Under Overview, restart web app
+                    // 7. Go to Log Stream and observe the logs
+                    Log.Logger = new LoggerConfiguration()
+                        .MinimumLevel.Debug()
+                        .WriteTo.Console()
+                        .CreateLogger();
+                }
+
+                Log.Fatal(ex, "Host terminated unexpectedly");
+            }
+            finally
+            {
+                Log.CloseAndFlush();
+            }
+        }
+
+        public static IHostBuilder CreateHostBuilder(string[] args)
+            => Host.CreateDefaultBuilder(args)
+                   .ConfigureWebHostDefaults(webBuilder =>
+                   {
+                       webBuilder.UseStartup<Startup>()
+                        .CaptureStartupErrors(true)
+                        .ConfigureAppConfiguration(config =>
+                        {
+                            config
+                                // Used for local settings like connection strings.
+                                .AddJsonFile("appsettings.Local.json", optional: true);
+                        })
+                        .UseSerilog((hostingContext, loggerConfiguration) => {
+                            loggerConfiguration
+                                .ReadFrom.Configuration(hostingContext.Configuration)
+                                .Enrich.FromLogContext()
+                                .Enrich.WithProperty("ApplicationName", typeof(Program).Assembly.GetName().Name)
+                                .Enrich.WithProperty("Environment", hostingContext.HostingEnvironment);
+
+#if DEBUG
+                            // Used to filter out potentially bad data due debugging.
+                            // Very useful when doing Seq dashboards and want to remove logs under debugging session.
+                            loggerConfiguration.Enrich.WithProperty("DebuggerAttached", Debugger.IsAttached);
+#endif
+                        });
+                   });
+```
+
+The `UseSerilog` initializes the logger globally (`Serilog.Log.Logger`) and adds it to a built-in DI container, so now you can use either `Serilog.ILogger<T>` or `Microsoft.Extensions.Logging.ILogger<T>` in the constructors.
+
+If possible, always use `Microsoft.Extensions.Logging.ILogger<T>` as this is an interface that can work with or without Serilog integration. This interface is identical to `Serilog.ILogger<T>` and with the above code, uses Serilog behind the scenes.
+
+### WebApp startup - Startup.cs
+
+From .NET Core 3.0 onwards, we need to add a few things before we can get all of the logs we want. In `Configure` use `app.UseSerilogRequestLogging();` before `UseRouting`, `UseEndpoints` and other similar configuration.
+
+```csharp
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        {
+            if (env.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage();
+            }
+
+            // This will make the HTTP requests log as rich logs instead of plain text.
+            app.UseSerilogRequestLogging(); // <-- Add this line
+            
+            // ... endpoint routing, etc.
+        }
+```
+
+![HTTP logs without UseSerilogRequestLogging](/content/images/2019/11/serilog-dotnet-core3-no-http-highlight.jpg) **Figure: HTTP logs without UseSerilogRequestLogging.**
+
+![HTTP logs with UseSerilogRequestLogging](/content/images/2019/11/serilog-dotnet-core3-with-http-highlight.jpg) **Figure: HTTP logs with UseSerilogRequestLogging.**
+
+## Bonus - Non-generic ILogger
+
+If you want to use non-generic `ILogger` you have 2 options.
+
+### Autofac
+
+Using Autofac has multiple advantages over built-in, and that is also true for Serilog integration. Using `AutofacSerilogIntegration` Nuget package, not only you can use non-generic `Serilog.ILogger` interface, also `SourceContext` is configured correctly for you!
+
+Just add `builder.RegisterLogger();` to the Autofac `ContainerBuilder`.
+
+### Built-in .NET Core DI
+
+You can use non-generic `Serilog.ILogger` with .NET Core DI, however, I haven't found a way to set `SourceContext` automatically as Autofac can do correctly.
+
+Here is how you can register non-generic `ILogger`.
+
+```CSharp
+services.AddSingleton((Serilog.ILogger)Log.Logger);
+```

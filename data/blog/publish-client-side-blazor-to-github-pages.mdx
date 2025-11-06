@@ -1,0 +1,131 @@
+---
+title: "Publish client-side Blazor to GitHub pages"
+date: "2019-10-06"
+lastmod: "2020-02-13"
+tags:
+  - Blazor
+  - .NET Core
+draft: false
+summary: "Trying to publish client-side Blazor to GitHub pages but doesn't work? This blog posts covers how to make that happen! 🚀"
+images:
+  - /content/images/2019/10/blazor-github-rocket-hero.jpg
+authors:
+  - default
+layout: PostSimple
+---
+Lately, I got fascinated by client-side Blazor, as I can build and host a .NET Core application with $0 cost! This is because Blazor only needs to be hosted somewhere on the web and does not require server-side logic.
+
+However, if you try to publish Blazor to GitHub pages, you'll notice it doesn't quite work and [the official MS documentation](https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/blazor/webassembly?view=aspnetcore-3.0) is way out of date. I'll assume you have already created your GitHub Page.
+
+## 1\. Copy files from official Blazor demo
+
+You'll need to copy **404.html** and **.nojekyll** from [Official Blazor demo](https://github.com/blazor-demo/blazor-demo.github.io) (yes, almost 2 years ago).
+
+## 2\. Replace content in index.html
+
+In **index.html** replace your `<body></body` tag with the following html.
+
+```html
+<body>
+    <app>Loading...</app>
+
+    <!-- Start Single Page Apps for GitHub Pages -->
+    <script type="text/javascript">
+        // Single Page Apps for GitHub Pages
+        // https://github.com/rafrex/spa-github-pages
+        // Copyright (c) 2016 Rafael Pedicini, licensed under the MIT License
+        // ----------------------------------------------------------------------
+        // This script checks to see if a redirect is present in the query string
+        // and converts it back into the correct url and adds it to the
+        // browser's history using window.history.replaceState(...),
+        // which won't cause the browser to attempt to load the new url.
+        // When the single page app is loaded further down in this file,
+        // the correct url will be waiting in the browser's history for
+        // the single page app to route accordingly.
+        (function (l) {
+            if (l.search) {
+                var q = {};
+                l.search.slice(1).split('&').forEach(function (v) {
+                    var a = v.split('=');
+                    q[a[0]] = a.slice(1)
+                        .join('=')
+                        .replace(/~and~/g, '&');
+                });
+                if (q.p !== undefined) {
+                    // Support for non-main repo GitHub pages
+                    var repoName = l.pathname.slice(0, -1);
+                    if (q.p !== undefined) {
+                        q.p = q.p.replace(`${repoName}/`, '/');
+                    }
+
+                    window.history.replaceState(null, null,
+                        repoName + (q.p || '') +
+                        (q.q ? ('?' + q.q) : '') +
+                        l.hash
+                    );
+                }
+            }
+        }(window.location))
+    </script>
+    <!-- End Single Page Apps for GitHub Pages -->
+
+    <script src="_framework/blazor.webassembly.js" type="text/javascript"></script>
+</body>
+```
+
+## 3\. Update base href
+
+Make sure that `<base href="...">` is configured correctly. For development on your local machine it needs to be `<base href="/">` but when publishing it needs to include the repository name `<base href="/[repo-name]/">`.
+
+For example, repository named **CognitiveServices.Explorer** would have `<base href="/CognitiveServices.Explorer/">`.
+
+## 4\. Update 404.html
+
+If you want for Blazor navigation to work after refreshing your page, there is one more thing you need to do in **404.html**.
+
+Replace:
+
+```js
+        l.pathname.split('/').slice(0, 1 + segmentCount).join('/') + '/?p=/' +
+```
+
+With:
+
+```js
+        l.pathname.split('/').slice(0, 1 + segmentCount).join('/') + '/[repo-name]/?p=/' +
+```
+
+If you're still struggling, you can check one of my projects that currently use the above modifications: [https://github.com/jernejk/AutoML.CodeGenerator](https://github.com/jernejk/AutoML.CodeGenerator)
+
+Happy blazing. 🚀
+
+## Bonus
+
+Do you want to quickly build and publish your GitHub pages but don't have a CI/CD pipeline yet? Is your GitHub page in the same repo as your code?
+
+Here is a PowerShell script that might help you (based on my [Cognitive Services Explorer](https://github.com/jernejk/CognitiveServices.Explorer) project):
+
+```ps1
+$pathToSolution = "./src/CognitiveServices.Explorer/"
+$projectName = "CognitiveServices.Explorer.Web"
+$repoName = "CognitiveServices.Explorer"
+
+Write-Output "----==== Publish $pathToSolution"
+dotnet publish $pathToSolution -c Release -o ./dist/
+Write-Output ""
+
+Write-Output "----==== Copy from ./dist/$projectName/dist"
+Copy-Item -Path "./dist/$projectName/dist/*" -Destination "./" -Recurse -Force
+Write-Output ""
+
+$indexFile = "./index.html"
+$originalBaseUrlText = "<base href=""/"">";
+$targetBaseUrlText = "<base href=""/$repoName/"">";
+
+Write-Output "----==== Replace base href in $indexFile to be /$repoName/"
+((Get-Content -path $indexFile -Raw) -replace $originalBaseUrlText, $targetBaseUrlText) | Set-Content -NoNewline -Path $indexFile
+Write-Output ""
+
+Write-Output "----==== Delete dist folder"
+Remove-Item ./dist/ -Recurse
+```

@@ -1,0 +1,78 @@
+---
+title: "Interview - Machine Learning that's ACTUALLY easy with Richard Campbell"
+date: "2019-11-25"
+lastmod: "2020-04-23"
+tags:
+  - ML.NET
+  - ML
+  - Interview
+draft: false
+images:
+  - /content/images/2019/11/ml-net-interview-with-richard-campbell.jpg
+authors:
+  - default
+layout: PostSimple
+---
+Do you want to try machine learning, but don't want to invest too much time learning a new programming language or some other complicated API or complicated online tools?
+
+Richard Campbell and I are geeking out about why you would want to look at machine learning, how to get started, and what should you know when building your prototype. 🧐
+
+ML.NET Model Builder opens up the world of Machine Learning to all developers.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/35qt4DexxuE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+I had a blast doing the interview. I hope you'll enjoy watching it as much as I enjoyed making it! 😁
+
+## Updated demo (screenshots)
+
+Here are updated screenshots for ML .NET v1.4 Model Builder.
+
+![Start ML.NET Model Builder Wizzard](/content/images/2019/12/ml-net-model-builder-01.png) **Figure: Start ML.NET Model Builder Wizzard.**
+
+![Select Issue Classification](/content/images/2019/12/ml-net-model-builder-02.png) **Figure: Select Issue Classification.**
+
+![Select file, column to predict (label) and input columns used for prediction](/content/images/2019/12/ml-net-model-builder-03.png) **Figure: Select file, column to predict (label) and input columns used for prediction.**
+
+![Start training](/content/images/2019/12/ml-net-model-builder-04.png) **Figure: Start training.**
+
+![See results of training](/content/images/2019/12/ml-net-model-builder-05.png) **Figure: See results of training.**
+
+![You can try out your model before generating the code](/content/images/2019/12/ml-net-model-builder-06.png) **Figure: You can try out your model before generating the code.**
+
+![Generate the code](/content/images/2019/12/ml-net-model-builder-07.png) **Figure: Generate the code.**
+
+![It generates 2 projects. ConsoleApp is testing purposes and Model project is the one that you can use in your apps](/content/images/2019/12/ml-net-model-builder-08.png) **Figure: It generates 2 projects. ConsoleApp is testing purposes and Model project is the one that you can use in your apps.**
+
+![In ConsoleApp you can see the usage of ML Model](/content/images/2019/12/ml-net-model-builder-09.png) **Figure: In ConsoleApp you can see the usage of ML Model.**
+
+## Bonus
+
+When using ML .NET Model Builder, it will try to determine if a column should be a hash table or text, which can have a significant impact on your use case. It decides based on the ration of unique and duplicate values and it might choose the wrong type because of that.
+
+However, after generating the code, you can change from a hash table to text and vice versa.
+
+1.  In file `ModelBuilder.cs` in method `BuildTrainingPipeline` change the `.Append` for desired column.
+
+From:
+
+```cs
+.Append(mlContext.Transforms.Categorical.OneHotHashEncoding(new[] { new InputOutputColumnPair("Description", "Description") }))
+```
+
+To:
+
+```cs
+.Append(mlContext.Transforms.Text.FeaturizeText(inputColumnName: "Description", outputColumnName: "Description"))
+```
+
+![Update the Append from Categorical hash to Featurize text](/content/images/2019/12/ml-net-model-builder-10.png) **Figure: Update the Append from Categorical hash to Featurize text.**
+
+2.  Retrain model by running `ModelBuilder.CreateModel();` in `Program.cs`. Return right after training because the model hasn't been copied yet to `bin` folder.
+
+![Retrain model with feature text instead of categorical hash](/content/images/2019/12/ml-net-model-builder-11.png) **Figure: Retrain model with feature text instead of categorical hash.**
+
+3.  Remove the code from step 2.
+
+**NOTE:** If your project contains `.` in it's name, chances are that the path to the model will be incorrect. (a bug since v1.3) Make sure that path `MODEL_FILEPATH` in `ModelBuilder.cs` is correct!
+
+![Model Builder has a bug in generating the right path if project contains a dot in the name](/content/images/2019/12/ml-net-model-builder-12.png) **Figure: Model Builder has a bug in generating the right path if project contains a dot in the name.**

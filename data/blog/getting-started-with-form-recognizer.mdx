@@ -1,0 +1,151 @@
+---
+title: Getting started with Form Recognizer (preview)
+date: "2020-02-12"
+lastmod: "2020-06-08"
+tags:
+  - Cognitive Services
+  - Form Recognizer
+  - AI
+draft: false
+images:
+  - /content/images/2020/02/form-recognizer-hero.jpg
+authors:
+  - default
+layout: PostSimple
+---
+When I first heard about Form Recognizer, I thought to myself, "Wow, there are so many forms in the real world that needs to be parsed and digitilized!". Once v2 preview came out, I finally decided to build an app that will parse through all of our user feedback from the last [AI Hack Day](https://aihackday.com/).
+
+[Form Recognizer](https://azure.microsoft.com/en-au/services/cognitive-services/form-recognizer/) is an Azure Cognitive Services that allow us to parse text on forms in a structured format. Now we can extract the location and size (bounding box) for where information was entered or written along with the OCR'd text values.
+
+For feedback forms this means, I can get feedback from users by merely uploading their scanned forms to trained custom Form Recognizer.
+
+## Prerequisite
+
+In this blog post will attempt to recognize user feedback using Form Recognizer and Form Recognizer to do custom form recognition rather than built-in one.
+
+We'll need:
+
+1.  Filled out forms
+2.  Azure Account
+3.  Docker (optional)
+4.  Azure Storage Explorer
+
+**UPDATE 05/05/2020:** The setup process is now automated and you'll now be able to train and use custom forms much faster than before. 😀
+
+## 1\. Filled out forms
+
+You'll need at least 6 filled out forms for this demo.  
+As co-organizer of [AI Hack Day](https://aihackday.com/), I'm using the [SSW User Group Evaluation Survey](https://www.ssw.com.au/ssw/NETUG/EvaluationSurvey.aspx) which you can download, fill out, and scan if you don't have your forms.
+
+Microsoft also have their own data set, if you prefer prefilled: [https://github.com/Azure-Samples/cognitive-services-REST-api-samples/blob/master/curl/form-recognizer/sample\_data.zip](https://github.com/Azure-Samples/cognitive-services-REST-api-samples/blob/master/curl/form-recognizer/sample_data.zip)
+
+## 2\. Create Resources
+
+To get started, you can either go to [Azure Portal](https://portal.azure.com) and create a new resource for Form Recognizer or use PowerShell with [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest) to create that resource faster. The script will save you about 15 minutes of work and works with existing resources (you can re-run it)!
+
+Find the script on Gist: [https://gist.github.com/jernejk/fdb42e032a9568d42dc8c2f05bd1fc13](https://gist.github.com/jernejk/fdb42e032a9568d42dc8c2f05bd1fc13)
+
+Run with PowerShell Core (replace the \[...\]):
+
+```ps1
+.\create-custom-form-recognizer.ps1 `
+  -FormRecognizerName [FormsName] `
+  -StorageAccountName [BlobStorageAccountName] `
+  -ResourceGroup [ResourceGroupName] `
+  -StorageAccountSasExpiry "2021-01-01T00:00Z" `
+  -InstallationType Web
+```
+
+![custom-form-recognizer-setup-script](/content/images/2020/05/custom-form-recognizer-setup-script.png)  
+**Figure: Example run for Docker configuration.**
+
+Run `set-executionpolicy unrestricted` in admin mode if you don't have permission to run scripts.
+
+The script will:
+
+1.  Create Azure Blob Storage (name needs to be lowercase)
+2.  Correctly configure Azure Blob Storage (CORS and SAS)
+3.  Create Form Recognizer
+4.  Give you instructions and information required for completing the setup
+
+You can decide how to run the tool by changing `-InstallationType` argument:
+
+-   Website hosted by Microsoft `-InstallationType Web` (default)
+-   Docker Container `-InstallationType Docker`
+-   Running React app locally from GitHub source `-InstallationType Web`
+
+If you're interested how to configure everything from scratch, you can visit [Train a Form Recognizer model with labels using the sample labeling tool](https://docs.microsoft.com/en-au/azure/cognitive-services/form-recognizer/quickstarts/label-tool#connect-to-the-sample-labeling-tool) at Microsoft Docs.
+
+## 3\. Create a project
+
+Whew, that's a lot of prep work for one service, but now we can start!
+
+Run Form Recognizer Tool via Docker:
+
+```bash
+docker run -it -p 30000:80 mcr.microsoft.com/azure-cognitive-services/custom-form/labeltool eula=accept
+```
+
+Once running, go to "[http://localhost:30000](http://localhost:30000)" and let us create a new project.
+
+1.  Add name
+2.  "Add Connection"
+    1.  Add a name for the connection
+    2.  Copy "Blob Storage SAS URI"  
+        ![form-recognizer-tool-add-connection](/content/images/2020/02/form-recognizer-tool-add-connection.png)
+3.  Folder path is empty in this case
+4.  Copy "Form Recognizer service uri" and "Form Recognizer API key" from the script results
+
+We finally have our project created!
+
+![form-recognizer-tool-new-project-created](/content/images/2020/02/form-recognizer-tool-new-project-created.png)
+
+## 4\. Start labeling
+
+You'll notice that the project is empty and it doesn't give you options to upload images. To get your forms in (images or PDF), you'll have to upload them to the Blob Storage we created for this project. You can use Microsoft Azure Storage Explorer to upload your forms.
+
+**TIP:** Don't upload all of your images because you want to leave some of them for testing.
+
+Once they are uploaded, refresh the page on the Form Recognizer Tool.
+
+1.  Wait for OCR to complete  
+    ![form-recognizer-tool-wait-for-ocr](/content/images/2020/02/form-recognizer-tool-wait-for-ocr.png)
+2.  Create tags in the right column you want to recognize (name, email, etc.)
+3.  Select the detected text (it will be light green)
+4.  Select the correct tag (e.g. "Position")
+5.  The selected text will now have the same color as the tag  
+    ![form-recognizer-tool-tag-text](/content/images/2020/02/form-recognizer-tool-tag-text.png)
+
+Do this for all of the text you want to be tagged on all of the forms.
+
+**NOTE:** This tool supports only one form per image/PDF. Form with multiple pages will be treated as a single multipage form!
+
+## 5\. Training
+
+1.  Go to Train icon
+2.  Click "Train"
+3.  Done! 🎉
+
+![form-recognizer-tool-train](/content/images/2020/02/form-recognizer-tool-train.png)
+
+## 6\. Testing
+
+1.  Go to 2 squares icon
+2.  Browse
+3.  Predict! 🎉
+
+![form-recognizer-tool-test](/content/images/2020/02/form-recognizer-tool-test.png)
+
+**NOTE:** If using are free tier, this may take a while because of the rate limit.
+
+Personally, I'm using [PowerAutomate](https://flow.microsoft.com/en-us/) to use Custom Form Recognizer because I can add Form Recognizer as a step in flow with no code. Instead of writting an app, I simply create a button trigger in flow and share that flow with other admins, which allows them to use it on their phone or desktop.
+
+## What's next
+
+The form recognizer works mostly well however, there are a few issues I need to address:
+
+1.  OCR isn't always great especially if someone's handwriting isn't great
+2.  This version doesn't recognize checkboxes (the feature is on their backlog)
+3.  When uploading a multipage PDF, it treats it as a single form on multiple pages. We need to split it up into multiple images/PDFs
+
+At the moment I'm experimenting with recognizing checkboxes myself. However, I'm happy that we can quickly get images into structured data and do a bit of correction and add ratings rather than typing everything from scratch. I'm looking forward to the day when our feedback forms for hack days and user groups are automated and we can send feedback to guest speakers much quicker (and enjoying the weekend instead of entering data! 😁).

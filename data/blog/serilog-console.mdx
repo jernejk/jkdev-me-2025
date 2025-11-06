@@ -1,0 +1,235 @@
+---
+title: Why is Serilog not writing my logs into Seq? (Console app)
+date: "2018-01-21"
+lastmod: "2020-03-11"
+tags:
+  - .NET Core
+  - Serilog
+draft: false
+images:
+  - /content/images/2019/05/bellevue-sky-2-min.jpg
+authors:
+  - default
+layout: PostSimple
+---
+When setting up Serilog for .Net Core Console application there a few things to keep in mind on initial setup. The most important one is the lifecycle for Serilog since the lifecycle of Console apps is different than lifecycle of Web apps.
+
+Long story short, in Serilog in Console application need to be properly disposed of, application needs to be around `try/catch` statement and application should handle global exceptions despite try/catch statement.
+
+Let's build on example, where we have a Serilog with Console output and Seq Sink.
+
+**NOTE:** If you're looking for ASP.NET Core implementation, check [ASP.NET Core + Serilog + Seq](https://jkdev.me/asp-net-core-serilog/).
+
+```CSharp
+private static Logger BuildSerilog()
+{
+    var logger = new LoggerConfiguration()
+        .WriteTo.Seq("http://localhost:5341")
+        .WriteTo.Console()
+        .CreateLogger();
+
+    Log.Logger = logger;
+
+    return logger;
+}
+```
+
+The `Log.Logger` will come in handy a bit later but let's focus on common problems.
+
+Naive logging:
+
+```CSharp
+var logger = BuildSerilog();
+logger.Information("Hello console");
+```
+
+In console application it will output `"Hello console"` while Seq will not receive any logs.
+
+Why?  
+Because Serilog didn't have the time to flush the logs before the application closed.
+
+Simple fix:
+
+```CSharp
+using (var logger = BuildSerilog())
+    logger.Information("Hello console and Seq");
+```
+
+Now this works for both console and Seq.  
+It will send any remaining messages to Seq before normally closing the application.
+
+What happens when exception happens? The exception and the last logs are **not** logged!  
+Let's fix that!
+
+Exception handling:
+
+```CSharp
+using (var logger = BuildSerilog())
+{
+    try
+    {
+        logger.Information("Hello world");
+        throw new Exception("It's a feature");
+    }
+    catch (Exception e)
+    {
+        logger.Fatal(e, "Console crashed");
+    }
+}
+```
+
+Now we are done, right?  
+Not yet, there are ways to crash applications, especially if the application is using 3rd party tools using Thread, COM objects, unmanaged memory, etc. In some cases the exceptions will by-pass try/catch as well as using statement!
+
+Example of a global exception:
+
+```CSharp
+// Message is visible in console but not in Seq
+using (var logger = BuildSerilog())
+{
+    try
+    {
+        logger.Information("Threads can crash console applications!");
+
+        var demo = new Thread(() => {
+            throw new Exception("It's a feature, I promise!");
+        });
+        demo.Start();
+
+        Task.Delay(10000).Wait();
+
+        logger.Information("This line will never be logged!");
+    }
+    catch (Exception e)
+    {
+        // The thread exception will by-pass this catch.
+        logger.Fatal(e, "Console crashed");
+    }
+}
+```
+
+To fix that, we need to handle global exception with help of `AppDomain.CurrentDomain.UnhandledException`.
+
+Global exception handling:
+
+```CSharp
+static void Main(string[] args)
+{
+    AppDomain.CurrentDomain.UnhandledException += AppUnhandledException;
+
+    // Message is visible in console but not in Seq
+    using (var logger = BuildSerilog())
+    {
+        try
+        {
+            logger.Information("Hello world");
+
+            var demo = new Thread(() => {
+                throw new Exception("It's a feature, I promise!");
+            });
+            demo.Start();
+
+            Task.Delay(10000).Wait();
+
+            logger.Information("Hello world 23");
+        }
+        catch (Exception e)
+        {
+            UnhandledExceptions(e);
+        }
+    }
+}
+
+private static void AppUnhandledException(object sender, UnhandledExceptionEventArgs e)
+{
+    if (Log.Logger != null && e.ExceptionObject is Exception exception)
+    {
+        UnhandledExceptions(exception);
+
+        // It's not necessary to flush if the application isn't terminating.
+        if (e.IsTerminating)
+        {
+            Log.CloseAndFlush();
+        }
+    }
+}
+
+private static void UnhandledExceptions(Exception e)
+{
+    Log.Logger?.Error(e, "Console application crashed");
+}
+```
+
+And here is the final template for using Serilog in Console applications:
+
+```CSharp
+class Program
+{
+    static void Main(string[] args)
+    {
+        AppDomain.CurrentDomain.UnhandledException += AppUnhandledException;
+
+        using (var logger = BuildSerilog())
+        {
+            try
+            {
+                // TODO: Your application
+            }
+            catch (Exception e)
+            {
+                UnhandledExceptions(e);
+            }
+        }
+    }
+
+    private static void AppUnhandledException(object sender, UnhandledExceptionEventArgs e)
+    {
+        if (Log.Logger != null && e.ExceptionObject is Exception exception)
+        {
+            UnhandledExceptions(exception);
+
+            // It's not necessary to flush if the application isn't terminating.
+            if (e.IsTerminating)
+            {
+                Log.CloseAndFlush();
+            }
+        }
+    }
+
+    private static void UnhandledExceptions(Exception e)
+    {
+        Log.Logger?.Error(e, "Console application crashed");
+    }
+
+    private static Logger BuildSerilog()
+    {
+        var logger = new LoggerConfiguration()
+            .WriteTo.Seq("http://localhost:5341")
+            .WriteTo.Console()
+            .CreateLogger();
+
+        Log.Logger = logger;
+
+        return logger;
+    }
+}
+```
+
+## Code that will still break your logs
+
+An interesting exception to that is `AccessViolationException` which cannot be handled by standard managed code. ([https://stackoverflow.com/questions/3469368/how-to-handle-accessviolationexception](https://stackoverflow.com/questions/3469368/how-to-handle-accessviolationexception))
+
+Example of causing such exception:
+
+```CSharp
+var ptr = new IntPtr(42);
+Marshal.StructureToPtr(42, ptr, true);
+```
+
+This can be handled with `[HandleProcessCorruptedStateExceptions]` attribute if such issue is anticipated.
+
+Other issues that can't be captured:
+
+-   `System.Diagnostics.Process.GetCurrentProcess().Kill();`
+-   `Environment.Exit(0);`
+-   Possibly more...
