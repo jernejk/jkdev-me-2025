@@ -16,7 +16,7 @@ const root = path.resolve(__dirname, '..')
 
 const PUBLIC_DIR = path.join(root, 'public')
 const IMAGES_DIR = path.join(PUBLIC_DIR, 'content', 'images')
-const OUTPUT_FILE = path.join(root, 'data', 'image-metadata.json')
+const OUTPUT_FILE = path.join(root, 'lib', 'image-metadata.json')
 
 async function getImageMetadata(imagePath) {
   try {

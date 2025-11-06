@@ -1,5 +1,5 @@
 import NextImage, { ImageProps } from 'next/image'
-import imageMetadata from '@/data/image-metadata.json'
+import imageMetadata from '@/lib/image-metadata.json'
 
 const basePath = process.env.BASE_PATH
 
