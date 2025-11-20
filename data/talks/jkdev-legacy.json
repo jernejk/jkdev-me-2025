@@ -1,0 +1,954 @@
+{
+  "talks": [
+    {
+      "id": "2020-getting-started-with-machine-learning-using-ml-net",
+      "title": "Getting Started with Machine Learning using ML.NET (full day workshop)",
+      "description": "",
+      "events": [
+        {
+          "eventName": "NDC Sydney 2020",
+          "date": "2020-10-13",
+          "url": "https://ndcsydney.com"
+        }
+      ],
+      "tags": [
+        "ML.NET",
+        "AI",
+        "Machine Learning"
+      ]
+    },
+    {
+      "id": "2020-machine-learning-simplified-for-developers-with-ml",
+      "title": "Machine Learning simplified for Developers with ML.NET",
+      "description": "",
+      "events": [
+        {
+          "eventName": "NDC Sydney 2020",
+          "date": "2020-10-15",
+          "url": "https://ndcsydney.com"
+        }
+      ],
+      "tags": [
+        "ML.NET",
+        "AI",
+        "Machine Learning"
+      ]
+    },
+    {
+      "id": "2020-ef-core-query-tags-and-logging",
+      "title": "EF Core Query Tags and logging",
+      "description": "",
+      "events": [
+        {
+          "eventName": "SSW Online User Group",
+          "date": "2020-09-17",
+          "url": "https://www.meetup.com"
+        }
+      ],
+      "tags": [
+        "EF Core",
+        ".NET"
+      ]
+    },
+    {
+      "id": "2020-machine-learning-simplified-for-developers-with-ml",
+      "title": "Machine Learning simplified for Developers with ML.NET",
+      "description": "",
+      "events": [
+        {
+          "eventName": "Microsoft Reactor Abu Dhabi",
+          "date": "2020-09-13",
+          "url": "https://www.meetup.com"
+        }
+      ],
+      "tags": [
+        "ML.NET",
+        "AI",
+        "Machine Learning"
+      ]
+    },
+    {
+      "id": "2020-getting-started-with-machine-learning-using-ml-net",
+      "title": "Getting Started with Machine Learning using ML.NET (half day workshop)",
+      "description": "",
+      "events": [
+        {
+          "eventName": "NDC Minnesota 2020",
+          "date": "2020-09-08",
+          "dateEnd": "2020-09-11",
+          "url": "https://ndcminnesota.com"
+        }
+      ],
+      "tags": [
+        "ML.NET",
+        "AI",
+        "Machine Learning"
+      ]
+    },
+    {
+      "id": "2020-from-paper-to-power-using-azure-form-recognizer",
+      "title": "From Paper to Power using Azure Form Recognizer",
+      "description": "",
+      "events": [
+        {
+          "eventName": "Azure Sydney User Group",
+          "date": "2020-08-19",
+          "url": "https://www.youtube.com/watch?v=OpSXbHUYTAQ"
+        }
+      ],
+      "tags": [
+        "Azure",
+        "AI"
+      ],
+      "videoUrl": "https://www.youtube.com/watch?v=OpSXbHUYTAQ"
+    },
+    {
+      "id": "2020-from-paper-to-power-using-azure-form-recognizer",
+      "title": "From Paper to Power using Azure Form Recognizer",
+      "description": "",
+      "events": [
+        {
+          "eventName": "Azure Sydney User Group",
+          "date": "2020-07-08",
+          "url": "https://www.meetup.com"
+        }
+      ],
+      "tags": [
+        "Azure",
+        "AI"
+      ]
+    },
+    {
+      "id": "2020-get-your-app-deployed-for-cheap-with-azure-static-",
+      "title": "Get your app deployed for cheap with Azure Static Web Apps",
+      "description": "",
+      "events": [
+        {
+          "eventName": "Angular Hack Day Sydney",
+          "date": "2020-06-27",
+          "url": "https://angularhackday.com"
+        }
+      ],
+      "tags": [
+        "Azure"
+      ]
+    },
+    {
+      "id": "2020-machine-learning-simplified-for-developers-with-ml",
+      "title": "Machine Learning simplified for Developers with ML.NET",
+      "description": "",
+      "events": [
+        {
+          "eventName": "Virtual Global AI on Tour 2020 Melbourne Australia",
+          "date": "2020-06-20",
+          "url": "https://globalai.community"
+        }
+      ],
+      "tags": [
+        "ML.NET",
+        "AI",
+        "Machine Learning"
+      ]
+    },
+    {
+      "id": "2020-getting-started-with-azure-cognitive-services",
+      "title": "Getting started with Azure Cognitive Services",
+      "description": "",
+      "events": [
+        {
+          "eventName": "AI Hack Day Warmup",
+          "date": "2020-06-13",
+          "url": "https://aihackday.com"
+        }
+      ],
+      "tags": [
+        "Azure",
+        "AI"
+      ]
+    },
+    {
+      "id": "2020-machine-learning-simplified-for-developers-with-ml",
+      "title": "Machine Learning simplified for Developers with ML.NET",
+      "description": "",
+      "events": [
+        {
+          "eventName": "The Virtual ML.NET Community Conference",
+          "date": "2020-05-29",
+          "url": "https://virtualml.net"
+        }
+      ],
+      "tags": [
+        "ML.NET",
+        "AI",
+        "Machine Learning"
+      ]
+    },
+    {
+      "id": "2020-ef-core-query-tags-and-logging",
+      "title": "EF Core Query Tags and logging",
+      "description": "",
+      "events": [
+        {
+          "eventName": "DDD Melbourne by night",
+          "date": "2020-05-21",
+          "url": "https://www.meetup.com"
+        }
+      ],
+      "tags": [
+        "EF Core",
+        ".NET"
+      ]
+    },
+    {
+      "id": "2020-paper-to-power-using-azure-form-recognizer",
+      "title": "Paper to Power using Azure Form Recognizer",
+      "description": "",
+      "events": [
+        {
+          "eventName": "Brisbane Azure User Group",
+          "date": "2020-05-14",
+          "url": "https://www.meetup.com"
+        }
+      ],
+      "tags": [
+        "Azure",
+        "AI"
+      ]
+    },
+    {
+      "id": "2020-paper-to-power-using-azure-form-recognizer",
+      "title": "Paper to Power using Azure Form Recognizer",
+      "description": "",
+      "events": [
+        {
+          "eventName": "SSW User Group",
+          "date": "2020-04-29",
+          "url": "https://www.meetup.com"
+        }
+      ],
+      "tags": [
+        "Azure",
+        "AI"
+      ]
+    },
+    {
+      "id": "2020-paper-to-power-using-azure-form-recognizer",
+      "title": "Paper to Power using Azure Form Recognizer",
+      "description": "",
+      "events": [
+        {
+          "eventName": "#GlobalAzureVirtual",
+          "date": "2020-04-25",
+          "url": "https://virtual.globalazure.net"
+        }
+      ],
+      "tags": [
+        "Azure",
+        "AI"
+      ]
+    },
+    {
+      "id": "2020-machine-learning-simplified-for-developers-with-ml",
+      "title": "Machine Learning simplified for Developers with ML.NET",
+      "description": "",
+      "events": [
+        {
+          "eventName": "NDC Porto 2020",
+          "date": "2020-04-23",
+          "url": "https://ndcporto.com"
+        }
+      ],
+      "tags": [
+        "ML.NET",
+        "AI",
+        "Machine Learning"
+      ]
+    },
+    {
+      "id": "2020-paper-to-power-using-azure-form-recognizer",
+      "title": "Paper to Power using Azure Form Recognizer",
+      "description": "",
+      "events": [
+        {
+          "eventName": "Global AI On Tour",
+          "date": "2020-04-08",
+          "url": "https://www.meetup.com",
+          "status": "cancelled"
+        }
+      ],
+      "tags": [
+        "Azure",
+        "AI"
+      ]
+    },
+    {
+      "id": "2020-getting-started-with-cognitive-services",
+      "title": "Getting Started with Cognitive Services",
+      "description": "",
+      "events": [
+        {
+          "eventName": "AI Hack Day Warmup",
+          "date": "2020-03-28",
+          "url": "https://aihackday.com"
+        }
+      ],
+      "tags": [
+        "Azure",
+        "AI"
+      ]
+    },
+    {
+      "id": "2020-azure-cognitive-services-and-ml-net",
+      "title": "Azure Cognitive Services and ML .NET",
+      "description": "",
+      "events": [
+        {
+          "eventName": "AI Hack Day Melbourne",
+          "date": "2020-02-01",
+          "url": "https://aihackday.com"
+        }
+      ],
+      "tags": [
+        "Azure",
+        "AI"
+      ]
+    },
+    {
+      "id": "2019-machine-learning-simplified-for-developers-with-ml",
+      "title": "Machine Learning simplified for Developers with ML.NET",
+      "description": "",
+      "events": [
+        {
+          "eventName": "Global AI Bootcamp Brisbane",
+          "date": "2019-12-14",
+          "url": "https://brisbanebootcamp.com"
+        }
+      ],
+      "tags": [
+        "ML.NET",
+        "AI",
+        "Machine Learning"
+      ]
+    },
+    {
+      "id": "2019-quick-and-easy-testing-web-apis-with-postman",
+      "title": "Quick and easy testing Web APIs with Postman",
+      "description": "",
+      "events": [
+        {
+          "eventName": "Brisbane Azure User Group",
+          "date": "2019-12-11",
+          "url": "https://www.meetup.com"
+        }
+      ],
+      "tags": [
+        "Testing"
+      ]
+    },
+    {
+      "id": "2019-postman-how-to-test-and-monitor-your-apis-with-no-",
+      "title": "Postman: How to test and monitor your APIs with no hassle",
+      "description": "",
+      "events": [
+        {
+          "eventName": "BrisJS",
+          "date": "2019-12-02",
+          "url": "https://www.meetup.com"
+        }
+      ],
+      "tags": [
+        "Testing"
+      ]
+    },
+    {
+      "id": "2019-real-time-face-recognition-with-microsoft-cognitiv",
+      "title": "Real-time Face Recognition With Microsoft Cognitive Services",
+      "description": "",
+      "events": [
+        {
+          "eventName": "NDC Sydney",
+          "date": "2019-10-18",
+          "url": "https://ndcsydney.com"
+        }
+      ],
+      "tags": [
+        "Azure",
+        "AI"
+      ]
+    },
+    {
+      "id": "2019-ml-net-rocks-machine-learning-that-s-actually-easy",
+      "title": "ML.Net Rocks - Machine Learning that's ACTUALLY easy with Richard Campbell and Jernej Kavka (JK)",
+      "description": "",
+      "events": [
+        {
+          "eventName": "NDC Sydney",
+          "date": "2019-10-17"
+        }
+      ],
+      "tags": [
+        "ML.NET",
+        "AI",
+        "Machine Learning"
+      ]
+    },
+    {
+      "id": "2019-opening-the-machine-learning-box-with-f",
+      "title": "Opening the Machine Learning box with F#",
+      "description": "",
+      "events": [
+        {
+          "eventName": "NDC Sydney",
+          "date": "2019-10-16"
+        }
+      ],
+      "tags": [
+        "AI",
+        "Machine Learning"
+      ]
+    },
+    {
+      "id": "2019-quick-and-easy-testing-web-apis-with-postman",
+      "title": "Quick and easy testing Web APIs with Postman",
+      "description": "",
+      "events": [
+        {
+          "eventName": "DDD Melbourne by night",
+          "date": "2019-09-05",
+          "url": "https://www.meetup.com"
+        }
+      ],
+      "tags": [
+        "Testing"
+      ]
+    },
+    {
+      "id": "2019-cognitive-services-how-can-you-add-so-much-with-so",
+      "title": "Cognitive Services – How can you add so much, with so little effort?",
+      "description": "",
+      "events": [
+        {
+          "eventName": "Brisbane Full Stack User Group",
+          "date": "2019-09-03",
+          "url": "https://www.meetup.com"
+        }
+      ],
+      "tags": [
+        "Azure",
+        "AI"
+      ]
+    },
+    {
+      "id": "2019-machine-learning-simplified-for-developers-with-ml",
+      "title": "Machine Learning simplified for Developers with ML.NET",
+      "description": "",
+      "events": [
+        {
+          "eventName": "DDD Sydney 2019",
+          "date": "2019-09-21",
+          "url": "https://www.dddsydney.com.au"
+        }
+      ],
+      "tags": [
+        "ML.NET",
+        "AI",
+        "Machine Learning"
+      ]
+    },
+    {
+      "id": "2019-machine-learning-simplified-for-developers-with-ml",
+      "title": "Machine Learning simplified for Developers with ML.NET",
+      "description": "",
+      "events": [
+        {
+          "eventName": "DDD Melbourne 2019",
+          "date": "2019-08-10",
+          "url": "https://dddmelbourne.com"
+        }
+      ],
+      "tags": [
+        "ML.NET",
+        "AI",
+        "Machine Learning"
+      ]
+    },
+    {
+      "id": "2019-machine-learning-simplified-for-developers-with-ml",
+      "title": "Machine Learning simplified for Developers with ML.NET",
+      "description": "",
+      "events": [
+        {
+          "eventName": "Melbourne ALT.NET",
+          "date": "2019-07-30",
+          "url": "https://www.meetup.com"
+        }
+      ],
+      "tags": [
+        "ML.NET",
+        "AI",
+        "Machine Learning"
+      ]
+    },
+    {
+      "id": "2019-machine-learning-simplified-for-developers-with-ml",
+      "title": "Machine Learning simplified for Developers with ML.NET",
+      "description": "",
+      "events": [
+        {
+          "eventName": "Sydney .NET User Group",
+          "date": "2019-07-17",
+          "url": "https://www.meetup.com"
+        }
+      ],
+      "tags": [
+        "ML.NET",
+        "AI",
+        "Machine Learning"
+      ]
+    },
+    {
+      "id": "2019-machine-learning-simplified-for-developers-with-ml",
+      "title": "Machine Learning simplified for Developers with ML.NET",
+      "description": "",
+      "events": [
+        {
+          "eventName": "Canberra .NET User Group",
+          "date": "2019-07-15",
+          "url": "https://www.meetup.com"
+        }
+      ],
+      "tags": [
+        "ML.NET",
+        "AI",
+        "Machine Learning"
+      ]
+    },
+    {
+      "id": "2019-machine-learning-simplified-for-developers-with-ml",
+      "title": "Machine Learning simplified for Developers with ML.NET",
+      "description": "",
+      "events": [
+        {
+          "eventName": "Melbourne .NET User Group",
+          "date": "2019-07-10",
+          "url": "https://www.meetup.com"
+        }
+      ],
+      "tags": [
+        "ML.NET",
+        "AI",
+        "Machine Learning"
+      ]
+    },
+    {
+      "id": "2019-machine-learning-simplified-for-developers-with-ml",
+      "title": "Machine Learning simplified for Developers with ML.NET",
+      "description": "",
+      "events": [
+        {
+          "eventName": "Brisbane Full Stack User Group",
+          "date": "2019-07-02",
+          "url": "https://www.meetup.com"
+        }
+      ],
+      "tags": [
+        "ML.NET",
+        "AI",
+        "Machine Learning"
+      ]
+    },
+    {
+      "id": "2019-machine-learning-simplified-for-developers-with-ml",
+      "title": "Machine Learning simplified for Developers with ML.NET",
+      "description": "",
+      "events": [
+        {
+          "eventName": "Gold Coast Full Stack User Group",
+          "date": "2019-07-01",
+          "url": "https://www.meetup.com"
+        }
+      ],
+      "tags": [
+        "ML.NET",
+        "AI",
+        "Machine Learning"
+      ]
+    },
+    {
+      "id": "2019-angular-introduction-routing",
+      "title": "Angular introduction - Routing",
+      "description": "",
+      "events": [
+        {
+          "eventName": "Angular Hack Day Melbourne",
+          "date": "2019-06-22"
+        }
+      ],
+      "tags": [
+        "Angular"
+      ]
+    },
+    {
+      "id": "2019-angular-introduction-routing",
+      "title": "Angular introduction - Routing",
+      "description": "",
+      "events": [
+        {
+          "eventName": "Angular Hack Day Brisbane",
+          "date": "2019-06-01",
+          "url": "https://angularhackday.com"
+        }
+      ],
+      "tags": [
+        "Angular"
+      ]
+    },
+    {
+      "id": "2019-simple-machine-learning-classification-with-ml-net",
+      "title": "Simple Machine Learning classification with ML.NET",
+      "description": "",
+      "events": [
+        {
+          "eventName": "Melbourne .NET User Group",
+          "date": "2019-04-10",
+          "url": "https://www.meetup.com"
+        }
+      ],
+      "tags": [
+        "ML.NET",
+        "AI",
+        "Machine Learning"
+      ]
+    },
+    {
+      "id": "2019-real-time-face-recognition-with-microsoft-cognitiv",
+      "title": "Real-time Face Recognition With Microsoft Cognitive Services",
+      "description": "",
+      "events": [
+        {
+          "eventName": "Global Azure Bootcamp 2019",
+          "date": "2019-04-27",
+          "url": "https://brisbaneazurebootcamp.azurewebsites.net"
+        }
+      ],
+      "tags": [
+        "Azure",
+        "AI"
+      ]
+    },
+    {
+      "id": "2019-real-time-face-recognition-with-microsoft-cognitiv",
+      "title": "Real-time Face Recognition With Microsoft Cognitive Services",
+      "description": "",
+      "events": [
+        {
+          "eventName": "Sydney .NET User Group",
+          "date": "2019-01-16",
+          "url": "https://www.meetup.com"
+        }
+      ],
+      "tags": [
+        "Azure",
+        "AI"
+      ]
+    },
+    {
+      "id": "2019-real-time-face-recognition-with-microsoft-cognitiv",
+      "title": "Real-time Face Recognition With Microsoft Cognitive Services",
+      "description": "",
+      "events": [
+        {
+          "eventName": "Canberra .NET User Group",
+          "date": "2019-01-14",
+          "url": "https://www.meetup.com"
+        }
+      ],
+      "tags": [
+        "Azure",
+        "AI"
+      ]
+    },
+    {
+      "id": "2019-real-time-face-recognition-with-microsoft-cognitiv",
+      "title": "Real-time Face Recognition With Microsoft Cognitive Services",
+      "description": "",
+      "events": [
+        {
+          "eventName": "Melbourne .NET User Group",
+          "date": "2019-01-09",
+          "url": "https://www.meetup.com"
+        }
+      ],
+      "tags": [
+        "Azure",
+        "AI"
+      ]
+    },
+    {
+      "id": "2018-making-unit-tests-simple-again-with-net-core-and-e",
+      "title": "Making unit tests simple again with .Net Core and EF Core",
+      "description": "",
+      "events": [
+        {
+          "eventName": "DDD Sydney",
+          "url": "https://next.dddsydney.com.au"
+        }
+      ],
+      "tags": [
+        "EF Core",
+        ".NET"
+      ]
+    },
+    {
+      "id": "2018-brisbane-full-stack-user-group-angular-react-net-c",
+      "title": "Brisbane Full Stack User Group - Angular + React + .NET Core",
+      "description": "",
+      "events": [
+        {
+          "eventName": "Brisbane Full Stack User Group",
+          "url": "https://meetu.ps"
+        }
+      ],
+      "tags": [
+        "Angular"
+      ]
+    },
+    {
+      "id": "2018-gold-coast-full-stack-user-group-azure-net-more",
+      "title": "Gold Coast Full Stack User Group - Azure + .NET + More",
+      "description": "",
+      "events": [
+        {
+          "eventName": "Gold Coast Full Stack User Group",
+          "url": "https://meetu.ps"
+        }
+      ],
+      "tags": [
+        "Azure"
+      ]
+    },
+    {
+      "id": "2018-azure-sydney-user-group",
+      "title": "Azure Sydney User Group",
+      "description": "",
+      "events": [
+        {
+          "eventName": "Azure Sydney User Group",
+          "url": "https://meetu.ps"
+        }
+      ],
+      "tags": [
+        "Azure"
+      ]
+    },
+    {
+      "id": "2018-angular-and-xamarin-hack-days",
+      "title": "Angular and Xamarin Hack Days",
+      "description": "",
+      "events": [
+        {
+          "eventName": "Angular & Xamarin Hack Days",
+          "url": "https://angularhackday.com"
+        }
+      ],
+      "tags": [
+        "Angular"
+      ]
+    },
+    {
+      "id": "2017-gold-coast-full-stack-user-group-azure-net-more",
+      "title": "Gold Coast Full Stack User Group - Azure + .NET + More",
+      "description": "",
+      "events": [
+        {
+          "eventName": "Gold Coast Full Stack User Group",
+          "url": "https://meetu.ps"
+        }
+      ],
+      "tags": [
+        "Azure"
+      ]
+    },
+    {
+      "id": "2017-angular-and-xamarin-hack-days",
+      "title": "Angular and Xamarin Hack Days",
+      "description": "",
+      "events": [
+        {
+          "eventName": "Angular & Xamarin Hack Days",
+          "url": "https://angularhackday.com"
+        }
+      ],
+      "tags": [
+        "Angular"
+      ]
+    },
+    {
+      "id": "2016-angular-and-xamarin-hack-days",
+      "title": "Angular and Xamarin Hack Days",
+      "description": "",
+      "events": [
+        {
+          "eventName": "Angular & Xamarin Hack Days",
+          "url": "https://angularhackday.com"
+        }
+      ],
+      "tags": [
+        "Angular"
+      ]
+    },
+    {
+      "id": "2016-iot-hackathon-slovenia",
+      "title": "IoT Hackathon (Slovenia)",
+      "description": "",
+      "events": [
+        {
+          "eventName": "IoT Hackathon (Slovenia)"
+        }
+      ],
+      "tags": [
+        "IoT"
+      ],
+      "hide": true
+    },
+    {
+      "id": "2016-unity3d-workshop-slovenia",
+      "title": "Unity3D workshop (Slovenia)",
+      "description": "",
+      "events": [
+        {
+          "eventName": "Unity3D workshop (Slovenia)"
+        }
+      ],
+      "tags": [
+        "Game Development"
+      ]
+    },
+    {
+      "id": "2015-visual-studio-everywhere-linux-osx-in-windows-se-r",
+      "title": "Visual Studio Everywhere - Linux, OSX in (Windows, se razume)",
+      "description": "",
+      "events": [
+        {
+          "eventName": "NTK Conference Slovenia",
+          "date": "2015-05-20",
+          "url": "https://www.ntk.si"
+        }
+      ],
+      "tags": [
+        ".NET"
+      ]
+    },
+    {
+      "id": "2014-build-2014-novosti-v-windows-phone-8-1-za-razvijal",
+      "title": "Build 2014 - Novosti v Windows Phone 8.1 za razvijalce",
+      "description": "",
+      "events": [
+        {
+          "eventName": "NTK Conference Slovenia",
+          "date": "2014-04-10",
+          "url": "https://www.ntk.si"
+        }
+      ],
+      "tags": [
+        "Mobile",
+        "Windows"
+      ]
+    },
+    {
+      "id": "2013-delavnica-windows-8-in-windows-phone-8-cross-platf",
+      "title": "Delavnica: Windows 8 in Windows Phone 8 cross-platform development",
+      "description": "",
+      "events": [
+        {
+          "eventName": "NTK Conference Slovenia",
+          "date": "2013-04-25",
+          "url": "https://www.ntk.si"
+        }
+      ],
+      "tags": [
+        "Mobile",
+        "Windows"
+      ]
+    },
+    {
+      "id": "2012-surface-2-0-what-is-new",
+      "title": "Surface 2.0 - what is new?",
+      "description": "",
+      "events": [
+        {
+          "eventName": "NTK Conference Slovenia",
+          "date": "2012-05-23",
+          "url": "https://www.ntk.si"
+        }
+      ],
+      "tags": [
+        ".NET"
+      ]
+    },
+    {
+      "id": "2011-poglobljen-celodnevni-seminar-gradnja-aplikacij-z-",
+      "title": "Poglobljen celodnevni seminar: Gradnja aplikacij z naravnimi uporabniškimi vmesniki: Windows 7 touch, Windows Phone 7, Windows Slate, Surface",
+      "description": "",
+      "events": [
+        {
+          "eventName": "NTK Conference Slovenia",
+          "date": "2011-05-23",
+          "url": "https://www.ntk.si"
+        }
+      ],
+      "tags": [
+        "Mobile",
+        "Windows"
+      ]
+    },
+    {
+      "id": "2011-nui-v-windows-phone-7",
+      "title": "NUI v Windows Phone 7",
+      "description": "",
+      "events": [
+        {
+          "eventName": "NTK Conference Slovenia",
+          "date": "2011-05-23",
+          "url": "https://www.ntk.si"
+        }
+      ],
+      "tags": [
+        "Mobile",
+        "Windows"
+      ]
+    },
+    {
+      "id": "2011-delavnica-razvoj-za-windows-phone-7",
+      "title": "Delavnica: Razvoj za Windows Phone 7",
+      "description": "",
+      "events": [
+        {
+          "eventName": "NTK Conference Slovenia",
+          "date": "2011-05-25",
+          "url": "https://www.ntk.si"
+        }
+      ],
+      "tags": [
+        "Mobile",
+        "Windows"
+      ]
+    },
+    {
+      "id": "2010-pregled-aplikacijske-platforme-za-windows-phone-7-",
+      "title": "Pregled aplikacijske platforme za Windows Phone 7 Series",
+      "description": "",
+      "events": [
+        {
+          "eventName": "NTK Conference Slovenia",
+          "date": "2010-05-26",
+          "url": "https://www.ntk.si"
+        }
+      ],
+      "tags": [
+        "Mobile",
+        "Windows"
+      ]
+    }
+  ]
+}

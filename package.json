@@ -11,7 +11,11 @@
     "lint": "next lint --fix --dir pages --dir app --dir components --dir lib --dir layouts --dir scripts",
     "prepare": "husky",
     "images:metadata": "node scripts/generate-image-metadata.mjs",
-    "images:download": "./scripts/download-images.sh"
+    "images:download": "./scripts/download-images.sh",
+    "speaking:extract-mvp": "node scripts/extract-mvp-speaking.mjs",
+    "speaking:fetch": "node scripts/fetch-sessionize-data.mjs",
+    "speaking:merge": "node scripts/merge-speaking-data-v2.mjs",
+    "speaking:build": "npm run speaking:extract-mvp && npm run speaking:fetch && npm run speaking:merge"
   },
   "dependencies": {
     "@headlessui/react": "2.2.0",

@@ -150,6 +150,7 @@ export const Authors = defineDocumentType(() => ({
 export default makeSource({
   contentDirPath: 'data',
   documentTypes: [Blog, Authors],
+  contentDirInclude: ['blog', 'authors'], // Only include blog and authors folders
   disableImportAliasWarning: true,
   mdx: {
     cwd: process.cwd(),

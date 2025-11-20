@@ -1,0 +1,2223 @@
+{
+  "talks": [
+    {
+      "id": "sessionize-event-20920",
+      "title": "Speaking at DDD Brisbane 2025",
+      "description": "Presented at DDD Brisbane 2025",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "DDD Brisbane 2025",
+          "location": "Brisbane, Australia",
+          "date": "2025-12-06",
+          "url": "https://www.dddbrisbane.com",
+          "status": "upcoming"
+        }
+      ],
+      "tags": [],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": "https://www.dddbrisbane.com"
+    },
+    {
+      "id": "sessionize-event-21307",
+      "title": "Speaking at AgentCon - Brisbane",
+      "description": "Presented at AgentCon - Brisbane",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "AgentCon - Brisbane",
+          "location": "Brisbane, Australia",
+          "date": "2025-11-01",
+          "url": "https://globalai.community/chapters/brisbane/events/agentcon-brisbane/",
+          "status": "past"
+        }
+      ],
+      "tags": [],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": "https://globalai.community/chapters/brisbane/events/agentcon-brisbane/"
+    },
+    {
+      "id": "2025-ai-hack-day-brisbane-2025",
+      "title": "AI Hack Day Brisbane 2025",
+      "description": "",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "AI Hack Day Brisbane",
+          "date": "2025-03-28",
+          "dateEnd": "2025-03-29",
+          "url": "https://aihackday.com/brisbane/",
+          "location": "Brisbane, Queensland, Australia",
+          "status": "past"
+        }
+      ],
+      "tags": [
+        "AI",
+        "Machine Learning",
+        "Azure"
+      ],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": null
+    },
+    {
+      "id": "sessionize-event-15603",
+      "title": "Speaking at Level Up Your Data 2024",
+      "description": "Presented at Level Up Your Data 2024",
+      "type": "talk",
+      "groupName": "sessionize-event-15603-group",
+      "events": [
+        {
+          "eventName": "Level Up Your Data 2024",
+          "location": "Brisbane, Australia",
+          "date": "2024-11-25",
+          "dateEnd": "2024-11-26",
+          "url": "https://levelupyourdata.com/conference",
+          "status": "past"
+        },
+        {
+          "eventName": "Level Up Your Data",
+          "location": "Brisbane, Australia",
+          "date": "2023-11-20",
+          "dateEnd": "2023-11-21",
+          "url": "https://levelupyourdata.com",
+          "status": "past"
+        }
+      ],
+      "tags": [],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": "https://levelupyourdata.com/conference"
+    },
+    {
+      "id": "2024-ai-hack-day-sydney-2024",
+      "title": "AI Hack Day Sydney 2024",
+      "description": "",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "AI Hack Day Sydney",
+          "date": "2024-07-19",
+          "dateEnd": "2024-07-20",
+          "url": "https://www.eventbrite.com.au/e/ai-hack-day-sydney-tickets-727321386847",
+          "location": "Neutral Bay, New South Wales, Australia",
+          "status": "past"
+        }
+      ],
+      "tags": [
+        "AI",
+        "Machine Learning",
+        "Azure"
+      ],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": null
+    },
+    {
+      "id": "2024-ai-hack-day-melbourne-2024",
+      "title": "AI Hack Day Melbourne 2024",
+      "description": "",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "AI Hack Day Melbourne",
+          "date": "2024-07-12",
+          "dateEnd": "2024-07-13",
+          "url": "https://www.eventbrite.com.au/e/ai-hack-day-melbourne-tickets-727321868287",
+          "location": "Melbourne, Victoria, Australia",
+          "status": "past"
+        }
+      ],
+      "tags": [
+        "AI",
+        "Machine Learning",
+        "Azure"
+      ],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": null
+    },
+    {
+      "id": "sessionize-event-14325",
+      "title": "Speaking at Data and AI Bootcamp - Brisbane 2024",
+      "description": "Presented at Data and AI Bootcamp - Brisbane 2024",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "Data and AI Bootcamp - Brisbane 2024",
+          "location": "Brisbane, Australia",
+          "date": "2024-05-18",
+          "url": "https://brisbanebootcamp.com",
+          "status": "past"
+        }
+      ],
+      "tags": [],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": "https://brisbanebootcamp.com"
+    },
+    {
+      "id": "sessionize-event-11894",
+      "title": "Speaking at NDC Sydney 2024",
+      "description": "Presented at NDC Sydney 2024",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "NDC Sydney 2024",
+          "location": "Sydney, Australia",
+          "date": "2024-02-12",
+          "dateEnd": "2024-02-16",
+          "url": "https://ndcsydney.com",
+          "status": "past"
+        }
+      ],
+      "tags": [],
+      "videoUrl": "https://youtube.com/watch?v=3VPHV1902OQ",
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": "https://ndcsydney.com"
+    },
+    {
+      "id": "sessionize-event-11303",
+      "title": "Speaking at NDC London 2024",
+      "description": "Presented at NDC London 2024",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "NDC London 2024",
+          "location": "London, United Kingdom",
+          "date": "2024-01-29",
+          "dateEnd": "2024-02-02",
+          "url": "",
+          "status": "past"
+        }
+      ],
+      "tags": [],
+      "videoUrl": "https://youtube.com/watch?v=oE8lEP4mKjk",
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": null
+    },
+    {
+      "id": "sessionize-event-12996",
+      "title": "Speaking at DDD Brisbane 2023",
+      "description": "Presented at DDD Brisbane 2023",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "DDD Brisbane 2023",
+          "location": "Brisbane, Australia",
+          "date": "2023-12-02",
+          "url": "https://www.dddbrisbane.com",
+          "status": "past"
+        }
+      ],
+      "tags": [],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": "https://www.dddbrisbane.com"
+    },
+    {
+      "id": "sessionize-event-10567",
+      "title": "Speaking at NDC Porto 2023",
+      "description": "Presented at NDC Porto 2023",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "NDC Porto 2023",
+          "location": "Porto, Portugal",
+          "date": "2023-10-16",
+          "dateEnd": "2023-10-20",
+          "url": "https://ndcporto.com/",
+          "status": "past"
+        }
+      ],
+      "tags": [],
+      "videoUrl": "https://youtube.com/watch?v=gOABWmQ5zdM",
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": "https://ndcporto.com/"
+    },
+    {
+      "id": "2023-ai-hack-day-sydney-2023",
+      "title": "AI Hack Day Sydney 2023",
+      "description": "",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "AI Hack Day Sydney",
+          "date": "2023-09-15",
+          "dateEnd": "2023-09-16",
+          "url": "https://aihackday.com/sydney/",
+          "location": "Sydney, New South Wales, Australia",
+          "status": "past"
+        }
+      ],
+      "tags": [
+        "AI",
+        "Machine Learning",
+        "Azure"
+      ],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": null
+    },
+    {
+      "id": "2023-ai-hack-days-sydney-brisbane-and-melbourne",
+      "title": "AI Hack Days @ Sydney, Brisbane and Melbourne",
+      "description": "",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "AI Hack Day",
+          "date": "2023-06-23",
+          "dateEnd": "2023-11-18",
+          "url": "https://aihackday.com/",
+          "location": "Sydney, New South Wales, Australia",
+          "status": "past"
+        }
+      ],
+      "tags": [
+        "AI",
+        "Machine Learning",
+        "Azure"
+      ],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": null
+    },
+    {
+      "id": "2023-ai-hack-day-melbourne-2023",
+      "title": "AI Hack Day Melbourne 2023",
+      "description": "",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "AI Hack Day Melbourne",
+          "date": "2023-06-23",
+          "dateEnd": "2023-06-24",
+          "url": "https://aihackday.com/melbourne/",
+          "location": "Melbourne, Victoria, Australia",
+          "status": "past"
+        }
+      ],
+      "tags": [
+        "AI",
+        "Machine Learning",
+        "Azure"
+      ],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": null
+    },
+    {
+      "id": "sessionize-event-10508",
+      "title": "Speaking at Data, Power BI and AI Bootcamp - Brisbane 2023",
+      "description": "Presented at Data, Power BI and AI Bootcamp - Brisbane 2023",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "Data, Power BI and AI Bootcamp - Brisbane 2023",
+          "location": "Brisbane, Australia",
+          "date": "2023-06-10",
+          "url": "https://brisbanebootcamp.com",
+          "status": "past"
+        }
+      ],
+      "tags": [],
+      "videoUrl": "https://youtube.com/watch?v=2N4Pw1FpC5I",
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": "https://brisbanebootcamp.com"
+    },
+    {
+      "id": "sessionize-event-9747",
+      "title": "Speaking at NDC Oslo 2023",
+      "description": "Presented at NDC Oslo 2023",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "NDC Oslo 2023",
+          "location": "Oslo, Norway",
+          "date": "2023-05-22",
+          "dateEnd": "2023-05-26",
+          "url": "https://ndcoslo.com",
+          "status": "past"
+        }
+      ],
+      "tags": [],
+      "videoUrl": "https://youtube.com/watch?v=dDANjr5MCew",
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": "https://ndcoslo.com"
+    },
+    {
+      "id": "2023-global-ai-the-podcast",
+      "title": "Global AI The Podcast",
+      "description": "",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "Global AI The Podcast",
+          "date": "2023-04-01",
+          "dateEnd": "2023-04-01",
+          "url": "https://open.spotify.com/show/5qVleSNEBd1uwRq7rU7kkQ",
+          "online": true,
+          "status": "past"
+        }
+      ],
+      "tags": [
+        "AI",
+        "Machine Learning",
+        "Azure"
+      ],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": null
+    },
+    {
+      "id": "sessionize-event-9197",
+      "title": "Speaking at Data, Power BI and AI Bootcamp - Brisbane 2022",
+      "description": "Presented at Data, Power BI and AI Bootcamp - Brisbane 2022",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "Data, Power BI and AI Bootcamp - Brisbane 2022",
+          "location": "Brisbane, Australia",
+          "date": "2022-11-26",
+          "url": "https://brisbanebootcamp.com",
+          "status": "past"
+        }
+      ],
+      "tags": [],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": "https://brisbanebootcamp.com"
+    },
+    {
+      "id": "sessionize-event-9036",
+      "title": "Speaking at Global AI Developers Days",
+      "description": "Presented at Global AI Developers Days",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "Global AI Developers Days",
+          "location": "",
+          "date": "2022-10-26",
+          "dateEnd": "2022-10-27",
+          "url": "https://globalai.community/developer-days/",
+          "status": "past"
+        }
+      ],
+      "tags": [],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": "https://globalai.community/developer-days/"
+    },
+    {
+      "id": "sessionize-event-7275",
+      "title": "Speaking at NDC Sydney 2022",
+      "description": "Presented at NDC Sydney 2022",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "NDC Sydney 2022",
+          "location": "Sydney, Australia",
+          "date": "2022-10-10",
+          "dateEnd": "2022-10-14",
+          "url": "https://ndcsydney.com",
+          "status": "past"
+        }
+      ],
+      "tags": [],
+      "videoUrl": "https://youtube.com/watch?v=abMAW1pjreg",
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": "https://ndcsydney.com"
+    },
+    {
+      "id": "sessionize-event-6372",
+      "title": "Speaking at Data and AI Bootcamp - Brisbane 2021",
+      "description": "Presented at Data and AI Bootcamp - Brisbane 2021",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "Data and AI Bootcamp - Brisbane 2021",
+          "location": "Brisbane, Australia",
+          "date": "2021-11-27",
+          "url": "https://brisbanebootcamp.com",
+          "status": "past"
+        }
+      ],
+      "tags": [],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": "https://brisbanebootcamp.com"
+    },
+    {
+      "id": "sessionize-event-6419",
+      "title": "Speaking at NDC Sydney 2021",
+      "description": "Presented at NDC Sydney 2021",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "NDC Sydney 2021",
+          "location": "",
+          "date": "2021-11-02",
+          "dateEnd": "2021-11-05",
+          "url": "https://ndcsydney.com",
+          "status": "past"
+        }
+      ],
+      "tags": [],
+      "videoUrl": "https://youtube.com/watch?v=iSWxny5MUY8",
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": "https://ndcsydney.com"
+    },
+    {
+      "id": "sessionize-event-5549",
+      "title": "Speaking at The Virtual ML.NET Community Conference 2021",
+      "description": "Presented at The Virtual ML.NET Community Conference 2021",
+      "type": "talk",
+      "groupName": "sessionize-event-5549-group",
+      "events": [
+        {
+          "eventName": "The Virtual ML.NET Community Conference 2021",
+          "location": "",
+          "date": "2021-05-07",
+          "dateEnd": "2021-05-08",
+          "url": "https://virtualml.net/",
+          "status": "past"
+        },
+        {
+          "eventName": "The Virtual ML.NET Community Conference",
+          "location": "",
+          "date": "2020-05-29",
+          "dateEnd": "2020-05-30",
+          "url": "https://virtualml.net/",
+          "status": "past"
+        }
+      ],
+      "tags": [],
+      "videoUrl": "https://youtube.com/watch?v=35qt4DexxuE",
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": "https://virtualml.net/"
+    },
+    {
+      "id": "2020-machine-learning-simplified-for-developers-with-ml",
+      "title": "Machine Learning simplified for Developers with ML.NET",
+      "description": "Do you want to try machine learning, but don't want to invest too much time learning a new programming language or some other complicated API?\r\n\r\nMicrosoft recently launched ML.NET 1.4 which is a great entry point for .NET developers and to gain experience building something with Machine Learning.\r\n\r\nWith the recent release of ML.NET Model Builder, we can create machine learning models by attempting to import raw data first and over time curate the data, to get better results.\r\n\r\nJK will show you how ML.NET works, how to leverage Model Builder, experiment with training data and what to watch out for when building models.",
+      "type": "talk",
+      "groupName": "2020-machine-learning-simplified-for-developers-with-ml-group",
+      "events": [
+        {
+          "eventName": "NDC Sydney 2020",
+          "date": "2020-10-15",
+          "url": "https://ndcsydney.com",
+          "status": "past"
+        },
+        {
+          "eventName": "Microsoft Reactor Abu Dhabi",
+          "date": "2020-09-13",
+          "url": "https://www.meetup.com",
+          "status": "past"
+        },
+        {
+          "eventName": "Virtual Global AI on Tour 2020 Melbourne Australia",
+          "date": "2020-06-20",
+          "url": "https://globalai.community",
+          "status": "past"
+        },
+        {
+          "eventName": "The Virtual ML.NET Community Conference",
+          "date": "2020-05-29",
+          "url": "https://virtualml.net",
+          "status": "past"
+        },
+        {
+          "eventName": "NDC Porto 2020",
+          "date": "2020-04-23",
+          "url": "https://ndcporto.com",
+          "status": "past"
+        },
+        {
+          "eventName": "Global AI Bootcamp Brisbane",
+          "date": "2019-12-14",
+          "url": "https://brisbanebootcamp.com",
+          "status": "past"
+        },
+        {
+          "eventName": "DDD Sydney 2019",
+          "date": "2019-09-21",
+          "url": "https://www.dddsydney.com.au",
+          "status": "past"
+        },
+        {
+          "eventName": "DDD Melbourne 2019",
+          "date": "2019-08-10",
+          "url": "https://dddmelbourne.com",
+          "status": "past"
+        },
+        {
+          "eventName": "Melbourne ALT.NET",
+          "date": "2019-07-30",
+          "url": "https://www.meetup.com",
+          "status": "past"
+        },
+        {
+          "eventName": "Sydney .NET User Group",
+          "date": "2019-07-17",
+          "url": "https://www.meetup.com",
+          "status": "past"
+        },
+        {
+          "eventName": "Canberra .NET User Group",
+          "date": "2019-07-15",
+          "url": "https://www.meetup.com",
+          "status": "past"
+        },
+        {
+          "eventName": "Melbourne .NET User Group",
+          "date": "2019-07-10",
+          "url": "https://www.meetup.com",
+          "status": "past"
+        },
+        {
+          "eventName": "Brisbane Full Stack User Group",
+          "date": "2019-07-02",
+          "url": "https://www.meetup.com",
+          "status": "past"
+        },
+        {
+          "eventName": "Gold Coast Full Stack User Group",
+          "date": "2019-07-01",
+          "url": "https://www.meetup.com",
+          "status": "past"
+        }
+      ],
+      "tags": [
+        "ML.NET",
+        "AI",
+        "Machine Learning"
+      ],
+      "videoUrl": "https://youtube.com/watch?v=ie8kQ5YU8eU",
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": "https://sessionize.com/s/jernej-kavka/machine-learning-simplified-for-developers-with-ml/24940"
+    },
+    {
+      "id": "2020-getting-started-with-machine-learning-using-ml-net",
+      "title": "Getting Started with Machine Learning using ML.NET (full day workshop)",
+      "description": "Want to get started with machine learning but don't know where to start? Have you got an Excel spreadsheet, SQL Database or CSV lying around and wondering if you can use it to experiment with Machine Learning?\r\n\r\nIn this workshop, we'll start from a CSV exported by a service, and go all the way to an application that uses Machine Learning to make clever decisions.\r\n\r\nWe will cover:\r\n1. What does a developer need to know about Machine Learning?\r\n2. How does ML.NET help getting started with ML?\r\n3. Quickly prototype a solution with ML.NET Model Builder\r\n4. Improve solution with simple data science rules\r\n5. Integrate a machine learning solution into your application\r\n6. Continuously improving machine learning model and updating applications",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "NDC Sydney 2020",
+          "date": "2020-10-13",
+          "url": "https://ndcsydney.com",
+          "status": "past"
+        }
+      ],
+      "tags": [
+        "ML.NET",
+        "AI",
+        "Machine Learning"
+      ],
+      "videoUrl": "https://youtube.com/watch?v=LG1DHMNT0TA",
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": "https://sessionize.com/s/jernej-kavka/getting-started-with-machine-learning-using-ml.net/34372"
+    },
+    {
+      "id": "sessionize-event-3269",
+      "title": "Speaking at NDC Sydney 2020",
+      "description": "Presented at NDC Sydney 2020",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "NDC Sydney 2020",
+          "location": "Sydney, Australia",
+          "date": "2020-10-12",
+          "dateEnd": "2020-10-16",
+          "url": "https://ndcsydney.com",
+          "status": "past"
+        }
+      ],
+      "tags": [],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": "https://ndcsydney.com"
+    },
+    {
+      "id": "2020-ef-core-query-tags-and-logging",
+      "title": "EF Core Query Tags and logging",
+      "description": "",
+      "type": "talk",
+      "groupName": "2020-ef-core-query-tags-and-logging-group",
+      "events": [
+        {
+          "eventName": "SSW Online User Group",
+          "date": "2020-09-17",
+          "url": "https://www.meetup.com",
+          "status": "past"
+        },
+        {
+          "eventName": "DDD Melbourne by night",
+          "date": "2020-05-21",
+          "url": "https://www.meetup.com",
+          "status": "past"
+        }
+      ],
+      "tags": [
+        "EF Core",
+        ".NET"
+      ],
+      "videoUrl": "https://youtube.com/watch?v=pUMs8TkuMFk",
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": null
+    },
+    {
+      "id": "2020-getting-started-with-machine-learning-using-ml-net",
+      "title": "Getting Started with Machine Learning using ML.NET (half day workshop)",
+      "description": "",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "NDC Minnesota 2020",
+          "date": "2020-09-08",
+          "dateEnd": "2020-09-11",
+          "url": "https://ndcminnesota.com",
+          "status": "past"
+        }
+      ],
+      "tags": [
+        "ML.NET",
+        "AI",
+        "Machine Learning"
+      ],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": null
+    },
+    {
+      "id": "sessionize-event-3799",
+      "title": "Speaking at NDC Minnesota 2020 - Online Workshop Event",
+      "description": "Presented at NDC Minnesota 2020 - Online Workshop Event",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "NDC Minnesota 2020 - Online Workshop Event",
+          "location": "",
+          "date": "2020-09-08",
+          "dateEnd": "2020-09-11",
+          "url": "https://ndcMinnesota.com/",
+          "status": "past"
+        }
+      ],
+      "tags": [],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": "https://ndcMinnesota.com/"
+    },
+    {
+      "id": "2020-from-paper-to-power-using-azure-form-recognizer",
+      "title": "From Paper to Power using Azure Form Recognizer",
+      "description": "",
+      "type": "talk",
+      "groupName": "2020-from-paper-to-power-using-azure-form-recognizer-group",
+      "events": [
+        {
+          "eventName": "Azure Sydney User Group",
+          "date": "2020-08-19",
+          "url": "https://www.youtube.com/watch?v=OpSXbHUYTAQ",
+          "status": "past"
+        },
+        {
+          "eventName": "Azure Sydney User Group",
+          "date": "2020-07-08",
+          "url": "https://www.meetup.com",
+          "status": "past"
+        },
+        {
+          "eventName": "Brisbane Azure User Group",
+          "date": "2020-05-14",
+          "url": "https://www.meetup.com",
+          "status": "past"
+        },
+        {
+          "eventName": "SSW User Group",
+          "date": "2020-04-29",
+          "url": "https://www.meetup.com",
+          "status": "past"
+        },
+        {
+          "eventName": "#GlobalAzureVirtual",
+          "date": "2020-04-25",
+          "url": "https://virtual.globalazure.net",
+          "status": "past"
+        },
+        {
+          "eventName": "Global AI On Tour",
+          "date": "2020-04-08",
+          "url": "https://www.meetup.com",
+          "status": "past"
+        }
+      ],
+      "tags": [
+        "Azure",
+        "AI"
+      ],
+      "videoUrl": "https://www.youtube.com/watch?v=OpSXbHUYTAQ",
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": null
+    },
+    {
+      "id": "2020-get-your-app-deployed-for-cheap-with-azure-static-",
+      "title": "Get your app deployed for cheap with Azure Static Web Apps",
+      "description": "",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "Angular Hack Day Sydney",
+          "date": "2020-06-27",
+          "url": "https://angularhackday.com",
+          "status": "past"
+        }
+      ],
+      "tags": [
+        "Azure"
+      ],
+      "videoUrl": "https://youtube.com/watch?v=FzcOt6pwVTs",
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": null
+    },
+    {
+      "id": "sessionize-event-3730",
+      "title": "Speaking at Virtual Global AI on Tour 2020 Melbourne Australia ",
+      "description": "Presented at Virtual Global AI on Tour 2020 Melbourne Australia ",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "Virtual Global AI on Tour 2020 Melbourne Australia ",
+          "location": "",
+          "date": "2020-06-20",
+          "url": "https://globalai.community/global-ai-on-tour/",
+          "status": "past"
+        }
+      ],
+      "tags": [],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": "https://globalai.community/global-ai-on-tour/"
+    },
+    {
+      "id": "2020-getting-started-with-azure-cognitive-services",
+      "title": "Getting started with Azure Cognitive Services",
+      "description": "",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "AI Hack Day Warmup",
+          "date": "2020-06-13",
+          "url": "https://aihackday.com",
+          "status": "past"
+        }
+      ],
+      "tags": [
+        "Azure",
+        "AI"
+      ],
+      "videoUrl": "https://youtube.com/watch?v=KCSyRO0KotA",
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": null
+    },
+    {
+      "id": "sessionize-event-3490",
+      "title": "Speaking at Global Azure Virtual",
+      "description": "Presented at Global Azure Virtual",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "Global Azure Virtual",
+          "location": "Seattle, Washington, United States",
+          "date": "2020-04-23",
+          "dateEnd": "2020-04-25",
+          "url": "https://virtual.globalazure.net",
+          "status": "past"
+        }
+      ],
+      "tags": [],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": "https://virtual.globalazure.net"
+    },
+    {
+      "id": "sessionize-event-2397",
+      "title": "Speaking at NDC Porto 2020",
+      "description": "Presented at NDC Porto 2020",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "NDC Porto 2020",
+          "location": "Porto, Portugal",
+          "date": "2020-04-21",
+          "dateEnd": "2020-04-24",
+          "url": "https://ndcporto.com/",
+          "status": "past"
+        }
+      ],
+      "tags": [],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": "https://ndcporto.com/"
+    },
+    {
+      "id": "2020-getting-started-with-cognitive-services",
+      "title": "Getting Started with Cognitive Services",
+      "description": "",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "AI Hack Day Warmup",
+          "date": "2020-03-28",
+          "url": "https://aihackday.com",
+          "status": "past"
+        }
+      ],
+      "tags": [
+        "Azure",
+        "AI"
+      ],
+      "videoUrl": "https://youtube.com/watch?v=SdXj-2IHhiA",
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": null
+    },
+    {
+      "id": "2020-azure-cognitive-services-and-ml-net",
+      "title": "Azure Cognitive Services and ML .NET",
+      "description": "",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "AI Hack Day Melbourne",
+          "date": "2020-02-01",
+          "url": "https://aihackday.com",
+          "status": "past"
+        }
+      ],
+      "tags": [
+        "Azure",
+        "AI"
+      ],
+      "videoUrl": "https://youtube.com/watch?v=JicAk7zDcSA",
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": null
+    },
+    {
+      "id": "sessionize-event-2328",
+      "title": "Speaking at Global AI Bootcamp - Brisbane 2019",
+      "description": "Presented at Global AI Bootcamp - Brisbane 2019",
+      "type": "talk",
+      "groupName": "sessionize-event-2328-group",
+      "events": [
+        {
+          "eventName": "Global AI Bootcamp - Brisbane 2019",
+          "location": "Brisbane, Australia",
+          "date": "2019-12-14",
+          "url": "http://brisbanebootcamp.com",
+          "status": "past"
+        },
+        {
+          "eventName": "Global AI Bootcamp - Brisbane",
+          "location": "Brisbane, Australia",
+          "date": "2018-12-15",
+          "url": "https://www.globalaibootcamp.com/bootcamp/b6c80d48-f710-403c-a3d0-387df97956cd",
+          "status": "past"
+        }
+      ],
+      "tags": [],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": "http://brisbanebootcamp.com"
+    },
+    {
+      "id": "2019-quick-and-easy-testing-web-apis-with-postman",
+      "title": "Quick and easy testing Web APIs with Postman",
+      "description": "",
+      "type": "talk",
+      "groupName": "2019-quick-and-easy-testing-web-apis-with-postman-group",
+      "events": [
+        {
+          "eventName": "Brisbane Azure User Group",
+          "date": "2019-12-11",
+          "url": "https://www.meetup.com",
+          "status": "past"
+        },
+        {
+          "eventName": "DDD Melbourne by night",
+          "date": "2019-09-05",
+          "url": "https://www.meetup.com",
+          "status": "past"
+        }
+      ],
+      "tags": [
+        "Testing"
+      ],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": null
+    },
+    {
+      "id": "2019-postman-how-to-test-and-monitor-your-apis-with-no-",
+      "title": "Postman: How to test and monitor your APIs with no hassle",
+      "description": "",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "BrisJS",
+          "date": "2019-12-02",
+          "url": "https://www.meetup.com",
+          "status": "past"
+        }
+      ],
+      "tags": [
+        "Testing"
+      ],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": null
+    },
+    {
+      "id": "2019-real-time-face-recognition-with-microsoft-cognitiv",
+      "title": "Real-time Face Recognition With Microsoft Cognitive Services",
+      "description": "",
+      "type": "talk",
+      "groupName": "2019-real-time-face-recognition-with-microsoft-cognitiv-group",
+      "events": [
+        {
+          "eventName": "NDC Sydney",
+          "date": "2019-10-18",
+          "url": "https://ndcsydney.com",
+          "status": "past"
+        },
+        {
+          "eventName": "Global Azure Bootcamp 2019",
+          "date": "2019-04-27",
+          "url": "https://brisbaneazurebootcamp.azurewebsites.net",
+          "status": "past"
+        },
+        {
+          "eventName": "Sydney .NET User Group",
+          "date": "2019-01-16",
+          "url": "https://www.meetup.com",
+          "status": "past"
+        },
+        {
+          "eventName": "Canberra .NET User Group",
+          "date": "2019-01-14",
+          "url": "https://www.meetup.com",
+          "status": "past"
+        },
+        {
+          "eventName": "Melbourne .NET User Group",
+          "date": "2019-01-09",
+          "url": "https://www.meetup.com",
+          "status": "past"
+        }
+      ],
+      "tags": [
+        "Azure",
+        "AI"
+      ],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": null
+    },
+    {
+      "id": "2019-ml-net-rocks-machine-learning-that-s-actually-easy",
+      "title": "ML.Net Rocks - Machine Learning that's ACTUALLY easy with Richard Campbell and Jernej Kavka (JK)",
+      "description": "",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "NDC Sydney",
+          "date": "2019-10-17",
+          "status": "past"
+        }
+      ],
+      "tags": [
+        "ML.NET",
+        "AI",
+        "Machine Learning"
+      ],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": null
+    },
+    {
+      "id": "2019-opening-the-machine-learning-box-with-f",
+      "title": "Opening the Machine Learning box with F#",
+      "description": "",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "NDC Sydney",
+          "date": "2019-10-16",
+          "status": "past"
+        }
+      ],
+      "tags": [
+        "AI",
+        "Machine Learning"
+      ],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": null
+    },
+    {
+      "id": "sessionize-event-1401",
+      "title": "Speaking at NDC Sydney 2019",
+      "description": "Presented at NDC Sydney 2019",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "NDC Sydney 2019",
+          "location": "Sydney, Australia",
+          "date": "2019-10-14",
+          "dateEnd": "2019-10-18",
+          "url": "https://ndcsydney.com",
+          "status": "past"
+        }
+      ],
+      "tags": [],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": "https://ndcsydney.com"
+    },
+    {
+      "id": "sessionize-event-1888",
+      "title": "Speaking at DDD Sydney 2019",
+      "description": "Presented at DDD Sydney 2019",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "DDD Sydney 2019",
+          "location": "Sydney, Australia",
+          "date": "2019-09-21",
+          "url": "http://next.dddsydney.com.au",
+          "status": "past"
+        }
+      ],
+      "tags": [],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": "http://next.dddsydney.com.au"
+    },
+    {
+      "id": "2019-cognitive-services-how-can-you-add-so-much-with-so",
+      "title": "Cognitive Services – How can you add so much, with so little effort?",
+      "description": "",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "Brisbane Full Stack User Group",
+          "date": "2019-09-03",
+          "url": "https://www.meetup.com",
+          "status": "past"
+        }
+      ],
+      "tags": [
+        "Azure",
+        "AI"
+      ],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": null
+    },
+    {
+      "id": "sessionize-event-1637",
+      "title": "Speaking at DDD Melbourne 2019",
+      "description": "Presented at DDD Melbourne 2019",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "DDD Melbourne 2019",
+          "location": "Melbourne, Australia",
+          "date": "2019-08-10",
+          "url": "https://www.dddmelbourne.com/",
+          "status": "past"
+        }
+      ],
+      "tags": [],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": "https://www.dddmelbourne.com/"
+    },
+    {
+      "id": "2019-angular-introduction-routing",
+      "title": "Angular introduction - Routing",
+      "description": "",
+      "type": "talk",
+      "groupName": "2019-angular-introduction-routing-group",
+      "events": [
+        {
+          "eventName": "Angular Hack Day Melbourne",
+          "date": "2019-06-22",
+          "status": "past"
+        },
+        {
+          "eventName": "Angular Hack Day Brisbane",
+          "date": "2019-06-01",
+          "url": "https://angularhackday.com",
+          "status": "past"
+        }
+      ],
+      "tags": [
+        "Angular"
+      ],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": null
+    },
+    {
+      "id": "sessionize-event-1374",
+      "title": "Speaking at Brisbane Azure Global Bootcamp 2019",
+      "description": "Presented at Brisbane Azure Global Bootcamp 2019",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "Brisbane Azure Global Bootcamp 2019",
+          "location": "Brisbane, Australia",
+          "date": "2019-04-27",
+          "url": "https://www.meetup.com/en-AU/Brisbane-Azure-User-Group/events/258725136/",
+          "status": "past"
+        }
+      ],
+      "tags": [],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": "https://www.meetup.com/en-AU/Brisbane-Azure-User-Group/events/258725136/"
+    },
+    {
+      "id": "2019-simple-machine-learning-classification-with-ml-net",
+      "title": "Simple Machine Learning classification with ML.NET",
+      "description": "",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "Melbourne .NET User Group",
+          "date": "2019-04-10",
+          "url": "https://www.meetup.com",
+          "status": "past"
+        }
+      ],
+      "tags": [
+        "ML.NET",
+        "AI",
+        "Machine Learning"
+      ],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": null
+    },
+    {
+      "id": "sessionize-event-621",
+      "title": "Speaking at DDD Sydney 2018",
+      "description": "Presented at DDD Sydney 2018",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "DDD Sydney 2018",
+          "location": "Sydney, Australia",
+          "date": "2018-08-18",
+          "url": "http://next.dddsydney.com.au",
+          "status": "past"
+        }
+      ],
+      "tags": [],
+      "videoUrl": "https://youtube.com/watch?v=6nYefHkKby8",
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": "http://next.dddsydney.com.au"
+    },
+    {
+      "id": "2015-visual-studio-everywhere-linux-osx-in-windows-se-r",
+      "title": "Visual Studio Everywhere - Linux, OSX in (Windows, se razume)",
+      "description": "",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "NTK Conference Slovenia",
+          "date": "2015-05-20",
+          "url": "https://www.ntk.si",
+          "status": "past"
+        }
+      ],
+      "tags": [
+        ".NET"
+      ],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": null
+    },
+    {
+      "id": "2014-build-2014-novosti-v-windows-phone-8-1-za-razvijal",
+      "title": "Build 2014 - Novosti v Windows Phone 8.1 za razvijalce",
+      "description": "",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "NTK Conference Slovenia",
+          "date": "2014-04-10",
+          "url": "https://www.ntk.si",
+          "status": "past"
+        }
+      ],
+      "tags": [
+        "Mobile",
+        "Windows"
+      ],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": null
+    },
+    {
+      "id": "2013-delavnica-windows-8-in-windows-phone-8-cross-platf",
+      "title": "Delavnica: Windows 8 in Windows Phone 8 cross-platform development",
+      "description": "",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "NTK Conference Slovenia",
+          "date": "2013-04-25",
+          "url": "https://www.ntk.si",
+          "status": "past"
+        }
+      ],
+      "tags": [
+        "Mobile",
+        "Windows"
+      ],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": null
+    },
+    {
+      "id": "2012-surface-2-0-what-is-new",
+      "title": "Surface 2.0 - what is new?",
+      "description": "",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "NTK Conference Slovenia",
+          "date": "2012-05-23",
+          "url": "https://www.ntk.si",
+          "status": "past"
+        }
+      ],
+      "tags": [
+        ".NET"
+      ],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": null
+    },
+    {
+      "id": "2011-delavnica-razvoj-za-windows-phone-7",
+      "title": "Delavnica: Razvoj za Windows Phone 7",
+      "description": "",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "NTK Conference Slovenia",
+          "date": "2011-05-25",
+          "url": "https://www.ntk.si",
+          "status": "past"
+        }
+      ],
+      "tags": [
+        "Mobile",
+        "Windows"
+      ],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": null
+    },
+    {
+      "id": "2011-poglobljen-celodnevni-seminar-gradnja-aplikacij-z-",
+      "title": "Poglobljen celodnevni seminar: Gradnja aplikacij z naravnimi uporabniškimi vmesniki: Windows 7 touch, Windows Phone 7, Windows Slate, Surface",
+      "description": "",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "NTK Conference Slovenia",
+          "date": "2011-05-23",
+          "url": "https://www.ntk.si",
+          "status": "past"
+        }
+      ],
+      "tags": [
+        "Mobile",
+        "Windows"
+      ],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": null
+    },
+    {
+      "id": "2011-nui-v-windows-phone-7",
+      "title": "NUI v Windows Phone 7",
+      "description": "",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "NTK Conference Slovenia",
+          "date": "2011-05-23",
+          "url": "https://www.ntk.si",
+          "status": "past"
+        }
+      ],
+      "tags": [
+        "Mobile",
+        "Windows"
+      ],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": null
+    },
+    {
+      "id": "2010-pregled-aplikacijske-platforme-za-windows-phone-7-",
+      "title": "Pregled aplikacijske platforme za Windows Phone 7 Series",
+      "description": "",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "NTK Conference Slovenia",
+          "date": "2010-05-26",
+          "url": "https://www.ntk.si",
+          "status": "past"
+        }
+      ],
+      "tags": [
+        "Mobile",
+        "Windows"
+      ],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": null
+    },
+    {
+      "id": "2018-making-unit-tests-simple-again-with-net-core-and-e",
+      "title": "Making unit tests simple again with .Net Core and EF Core",
+      "description": "",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "DDD Sydney",
+          "url": "https://next.dddsydney.com.au",
+          "status": "past"
+        }
+      ],
+      "tags": [
+        "EF Core",
+        ".NET"
+      ],
+      "videoUrl": "https://youtube.com/watch?v=gZDw0IeS6f8",
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": null
+    },
+    {
+      "id": "2018-brisbane-full-stack-user-group-angular-react-net-c",
+      "title": "Brisbane Full Stack User Group - Angular + React + .NET Core",
+      "description": "",
+      "type": "talk",
+      "groupName": "2018-brisbane-full-stack-user-group-angular-react-net-c-group",
+      "events": [
+        {
+          "eventName": "Brisbane Full Stack User Group",
+          "url": "https://meetu.ps",
+          "status": "past"
+        },
+        {
+          "eventName": "Brisbane Full Stack User Group",
+          "date": "2023-04-01",
+          "dateEnd": "2025-04-01",
+          "url": "https://www.meetup.com/brisbane-full-stack-user-group/",
+          "location": "Brisbane, Queensland, Australia",
+          "online": true,
+          "status": "past"
+        },
+        {
+          "eventName": "Brisbane Full Stack User Group",
+          "date": "2023-03-17",
+          "dateEnd": "2023-03-17",
+          "url": "https://www.meetup.com/brisbane-full-stack-user-group/",
+          "location": "Brisbane, Queensland, Australia",
+          "online": true,
+          "status": "past"
+        }
+      ],
+      "tags": [
+        "Angular",
+        ".NET"
+      ],
+      "videoUrl": "https://youtube.com/watch?v=yyJuol7oxtA",
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": null
+    },
+    {
+      "id": "2018-gold-coast-full-stack-user-group-azure-net-more",
+      "title": "Gold Coast Full Stack User Group - Azure + .NET + More",
+      "description": "",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "Gold Coast Full Stack User Group",
+          "url": "https://meetu.ps",
+          "status": "past"
+        }
+      ],
+      "tags": [
+        "Azure"
+      ],
+      "videoUrl": "https://youtube.com/watch?v=is4fO4NnjY0",
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": null
+    },
+    {
+      "id": "2018-azure-sydney-user-group",
+      "title": "Azure Sydney User Group",
+      "description": "",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "Azure Sydney User Group",
+          "url": "https://meetu.ps",
+          "status": "past"
+        }
+      ],
+      "tags": [
+        "Azure"
+      ],
+      "videoUrl": "https://youtube.com/watch?v=SU9B6_2h2VM",
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": null
+    },
+    {
+      "id": "2018-angular-and-xamarin-hack-days",
+      "title": "Angular and Xamarin Hack Days",
+      "description": "",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "Angular & Xamarin Hack Days",
+          "url": "https://angularhackday.com",
+          "status": "past"
+        }
+      ],
+      "tags": [
+        "Angular"
+      ],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": null
+    },
+    {
+      "id": "2016-iot-hackathon-slovenia",
+      "title": "IoT Hackathon (Slovenia)",
+      "description": "",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "IoT Hackathon (Slovenia)",
+          "status": "past"
+        }
+      ],
+      "tags": [
+        "IoT"
+      ],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": null
+    },
+    {
+      "id": "2016-unity3d-workshop-slovenia",
+      "title": "Unity3D workshop (Slovenia)",
+      "description": "",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "Unity3D workshop (Slovenia)",
+          "status": "past"
+        }
+      ],
+      "tags": [
+        "Game Development"
+      ],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": null
+    },
+    {
+      "id": "sessionize-151695",
+      "title": "🤖 Offline AI Magic: Run LLMs Locally with LM Studio & .NET 9",
+      "description": "Discover the full power of offline AI in this epic deep-dive session. From understanding why offline LLMs matter for privacy, data sovereignty, and latency to configuring tools like LM Studio, Docker, and .NET 9, JK walks you through everything you need to run local models like a pro.",
+      "type": "talk",
+      "groupName": null,
+      "events": [],
+      "tags": [],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": "https://sessionize.com/s/jernej-kavka/offline-ai-magic-run-llms-locally-with-lm-studio-./151695"
+    },
+    {
+      "id": "sessionize-126485",
+      "title": "Unlocking the Power of AI on Azure: A Hands-On OpenAI Workshop",
+      "description": "Dive into a comprehensive workshop designed to empower participants with the skills to leverage OpenAI’s cutting-edge technology on Azure. This interactive session offers a hands-on approach, guiding attendees from foundational concepts to advanced real-world applications.\r\n\r\nRequirements:\r\nBring your laptop\r\n\r\nAgenda Overview:\r\n\r\nIntroduction & Overview\r\nStart with an overview of the workshop's objectives and essentials of integrating AI on Azure to set a solid knowledge base.\r\n\r\nConfiguring Azure for OpenAI\r\nStep-by-step setup to configure Azure for OpenAI usage, including live troubleshooting support for those facing issues.\r\n\r\nExploring GPT Capabilities\r\nDeep dive into the capabilities of GPT-4, exploring its use cases in semantic search, content generation, and beyond. Note: Focus on GPT-4 as GPT-3.5 is being phased out.\r\n\r\nDALL-E Image Generation\r\nExperience hands-on training with DALL-E for creating stunning images from text prompts.\r\n\r\nUsing Your Own Data with Azure OpenAI\r\nLearn best practices for data storage and integration with Azure OpenAI. This includes hands-on practice with data loading and Retrieval-Augmented Generation (RAG) for customized outputs.\r\n\r\nDeployment & Real-Time Applications\r\nGain practical insights into deploying models for real-time applications that can be seamlessly integrated into your projects.\r\n\r\nWrap-Up & Q&A\r\nConclude with key takeaways, a discussion on next steps, and an open Q&A session to address any outstanding questions.",
+      "type": "workshop",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "Level Up Your Data – Conference",
+          "url": "https://levelupyourdata.com/conference/",
+          "status": "past"
+        }
+      ],
+      "tags": [
+        "AI",
+        "Machine Learning",
+        "Azure",
+        "OpenAI"
+      ],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": "https://sessionize.com/s/jernej-kavka/unlocking-the-power-of-ai-on-azure-a-hands-on-open/126485"
+    },
+    {
+      "id": "sessionize-126484",
+      "title": "Leveraging Offline AI with Small Language Models in .NET",
+      "description": "Discover how to quickly set up your own offline AI system for conversational interactions or to power your applications—whether at home or in the cloud.\r\n\r\nSmall Language Models (SLMs) are powerful tools that enable advanced AI capabilities without the need for constant internet connectivity or extensive resources. This talk focuses on the potential of SLMs for offline applications, using home automation as a compelling example. We'll delve into how SLMs work, demystify model naming conventions like 8B, Q4, and more.\r\n\r\nJoin us to explore the possibilities of offline AI and learn how to implement SLMs effectively for enhanced privacy, efficiency, and control in your projects.",
+      "type": "talk",
+      "groupName": null,
+      "events": [],
+      "tags": [],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": "https://sessionize.com/s/jernej-kavka/leveraging-offline-ai-with-small-language-models-i/126484"
+    },
+    {
+      "id": "sessionize-105198",
+      "title": "Building solutions in Azure OpenAI",
+      "description": "With ChatGPT being more accessible than ever, it's becoming essential to understand how to add AI to our applications and existing flow.\r\n\r\nThis talk will focus on some of the features Azure OpenAI offers to help your application leverage AI.",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "Level Up Your Data – Brisbane Bootcamp",
+          "url": "https://levelupyourdata.com/brisbane-bootcamp/#PROGRAM",
+          "location": "Brisbane, Queensland, Australia",
+          "status": "past"
+        }
+      ],
+      "tags": [
+        "AI",
+        "Machine Learning",
+        "Azure",
+        "OpenAI"
+      ],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": "https://sessionize.com/s/jernej-kavka/building-solutions-in-azure-openai/105198"
+    },
+    {
+      "id": "sessionize-89884",
+      "title": "The Harmonious Dance of EF Core and SQL Server",
+      "description": "In this talk, we'll explore practical strategies to enhance how EF Core and SQL Server work together.\r\n\r\nWe will delve into effective logging practices, decoding EF Core generated SQL queries, adding indexing and many more.",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "NDC Sydney 2024 + related events",
+          "url": "https://ndcsydney.com/agenda/unlocking-the-full-potential-the-harmonious-dance-of-ef-core-and-sql-server/e1fc1d6a1074",
+          "location": "Sydney, New South Wales, Australia",
+          "status": "past"
+        }
+      ],
+      "tags": [
+        ".NET",
+        "EF Core"
+      ],
+      "videoUrl": "https://www.youtube.com/watch?v=yyJuol7oxtA",
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": "https://sessionize.com/s/jernej-kavka/the-harmonious-dance-of-ef-core-and-sql-server/89884"
+    },
+    {
+      "id": "sessionize-79636",
+      "title": "From Raw Data to Actionable Data with ChatGPT and plugins simplified",
+      "description": "In the new era of ChatGPT, Machine Learning and other AI technologies, many things have changed. Developers can now use AI to generate code, social media can be automated and we summarise an entire book in a matter of minutes.\r\n\r\nBut can we take some data and get some insights out of them? Do we still need to learn a lot of data science, to clean up data? Can AI do my taxes?\r\n\r\nIs ChatGPT going to take away my job? Probably not on the last question, but let's have fun and see how far we can push ChatGPT and plugins without a lot of data science knowledge. :)",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "Level Up Your Data",
+          "url": "https://levelupyourdata.com/program/",
+          "status": "past"
+        }
+      ],
+      "tags": [
+        "AI",
+        "Machine Learning",
+        "Azure",
+        "OpenAI"
+      ],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": "https://sessionize.com/s/jernej-kavka/from-raw-data-to-actionable-data-with-chatgpt-and-/79636"
+    },
+    {
+      "id": "sessionize-76579",
+      "title": "🤖 ML.NET in the Post-GPT Era: Importance of Machine Learning 🌐",
+      "description": "Image Ever thought about machine learning's place in the post-GPT world? 🤖🌐\r\nGet ready for a fun exploration of traditional machine learning, zooming in on ML.NET, in this amazing ChatGPT era.\r\n \r\nWe'll uncover the cool perks and real-life uses of ML.NET, with a relatable example of categorizing bank transactions, and even show you how to level up the process with ChatGPT. Whether you're an AI/ML guru or just getting started, this talk is perfect for everyone. Join us for an exciting learning adventure! 🎉💡",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "Data and AI Bootcamp Brisbane 2023",
+          "url": "https://brisbanebootcamp.com/data-and-ai-bootcamp-brisbane-edition-2023/",
+          "location": "Brisbane, Queensland, Australia",
+          "status": "past"
+        }
+      ],
+      "tags": [
+        "AI",
+        "Machine Learning",
+        "Azure"
+      ],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": "https://sessionize.com/s/jernej-kavka/ml.net-in-the-post-gpt-era-importance-of-machine-l/76579"
+    },
+    {
+      "id": "sessionize-48354",
+      "title": "Common mistakes in EF Core",
+      "description": "When JK worked with many different clients and projects, he frequently heard \"EF Core is slow\" or \"We should do this in raw SQL\" only to realize they haven't used EF Core correctly.\r\n\r\nJK will show you how to improve your EF Core statements as well as how various configurations impacts the performance and scalability of your application. You'll be blown away at how small changes can significantly impact not only the performance but also stability of the application.",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "NDC Oslo 2023 / NDC Porto 2023 / DDD Brisbane 2023 / NDC London 2024",
+          "url": "https://ndcoslo.com/agenda/common-mistakes-in-ef-core-0oco/0k284b9a2lt",
+          "status": "past"
+        }
+      ],
+      "tags": [
+        ".NET",
+        "EF Core"
+      ],
+      "videoUrl": "https://youtube.com/watch?v=tfMPfDyzHxc",
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": "https://sessionize.com/s/jernej-kavka/common-mistakes-in-ef-core/48354"
+    },
+    {
+      "id": "2023-common-mistakes-in-ef-core-7-brisbane-net-user-gro",
+      "title": "Common mistakes in EF Core 7 @ Brisbane .NET User Group",
+      "description": "",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "Brisbane .NET User Group",
+          "url": "https://www.meetup.com/brisbane-dotnet-user-group/events/289806543",
+          "location": "Brisbane, Queensland, Australia",
+          "online": true,
+          "status": "past"
+        }
+      ],
+      "tags": [
+        ".NET",
+        "EF Core"
+      ],
+      "videoUrl": "https://www.youtube.com/watch?v=tfMPfDyzHxc",
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": null
+    },
+    {
+      "id": "2022-how-to-keep-your-email-tidy-with-ai-ndc-sydney-202",
+      "title": "How to keep your email tidy with AI @ NDC Sydney 2022",
+      "description": "",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "NDC Sydney 2022",
+          "location": "Sydney, New South Wales, Australia",
+          "status": "past"
+        }
+      ],
+      "tags": [
+        "AI",
+        "Machine Learning",
+        "Azure"
+      ],
+      "videoUrl": "https://youtube.com/watch?v=Waib00d9nwk",
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": null
+    },
+    {
+      "id": "2022-how-to-keep-your-email-tidy-with-ai-sydney-net-use",
+      "title": "How to keep your email tidy with AI @ Sydney .NET User Group",
+      "description": "",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "Sydney .NET User Group",
+          "url": "https://www.meetup.com/sydney-net-user-group/events/288895553/",
+          "location": "Sydney, New South Wales, Australia",
+          "online": true,
+          "status": "past"
+        }
+      ],
+      "tags": [
+        "AI",
+        "Machine Learning",
+        "Azure"
+      ],
+      "videoUrl": "https://www.youtube.com/watch?v=OW5wBERdhQU",
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": null
+    },
+    {
+      "id": "2022-getting-started-with-cognitive-services-ai-hack-da",
+      "title": "Getting started with Cognitive Services @ AI Hack Day Sydney 2022",
+      "description": "",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "AI Hack Day Sydney 2022",
+          "url": "https://github.com/jernejk/aihackday2022/blob/main/Sydney/Presentations/CognitiveServices.pptx",
+          "location": "Sydney, New South Wales, Australia",
+          "status": "past"
+        }
+      ],
+      "tags": [
+        "AI",
+        "Machine Learning",
+        "Azure"
+      ],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": null
+    },
+    {
+      "id": "2022-build-your-own-source-generator-with-chris-sienkie",
+      "title": "Build your own Source Generator With Chris Sienkiewicz & JK | NDC Sydney 2022",
+      "description": "",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "NDC Sydney 2022",
+          "url": "https://www.youtube.com/watch?v=abMAW1pjreg",
+          "location": "Sydney, New South Wales, Australia",
+          "online": true,
+          "status": "past"
+        }
+      ],
+      "tags": [
+        ".NET"
+      ],
+      "videoUrl": "https://www.youtube.com/watch?v=abMAW1pjreg",
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": null
+    },
+    {
+      "id": "2022-source-generators-with-chris-sienkiewicz-jk-ndc-sy",
+      "title": "Source Generators With Chris Sienkiewicz & JK | NDC Sydney 2022",
+      "description": "",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "NDC Sydney 2022",
+          "url": "https://www.youtube.com/watch?v=3ObZSNeBVac",
+          "location": "Sydney, New South Wales, Australia",
+          "online": true,
+          "status": "past"
+        }
+      ],
+      "tags": [
+        ".NET"
+      ],
+      "videoUrl": "https://www.youtube.com/watch?v=3ObZSNeBVac",
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": null
+    },
+    {
+      "id": "2022-from-data-to-ai-quickly-create-machine-learning-wi",
+      "title": "From Data to AI: Quickly create Machine Learning with ML.NET @ AI Hack Day Sydney 2022",
+      "description": "",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "AI Hack Day Sydney 2022",
+          "url": "https://github.com/jernejk/aihackday2022/blob/main/Sydney/Presentations/FireEmojiMlNet.pptx",
+          "location": "Sydney, New South Wales, Australia",
+          "status": "past"
+        }
+      ],
+      "tags": [
+        "AI",
+        "Machine Learning",
+        "Azure"
+      ],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": null
+    },
+    {
+      "id": "2022-from-data-to-ai-quickly-create-machine-learning-wi",
+      "title": "From Data to AI: Quickly create Machine Learning with ML.NET @ AI Hack Day Melbourne 2022",
+      "description": "",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "AI Hack Day Melbourne 2022",
+          "url": "https://github.com/jernejk/aihackday2022/blob/main/Melbourne/Presentations/FireEmojiMlNet.pptx",
+          "location": "Melbourne, Victoria, Australia",
+          "status": "past"
+        }
+      ],
+      "tags": [
+        "AI",
+        "Machine Learning",
+        "Azure"
+      ],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": null
+    },
+    {
+      "id": "2022-getting-started-with-cognitive-services-ai-hack-da",
+      "title": "Getting started with Cognitive Services @ AI Hack Day Melbourne 2022",
+      "description": "",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "AI Hack Day Melbourne 2022",
+          "url": "https://github.com/jernejk/aihackday2022/blob/main/Melbourne/Presentations/CognitiveServices.pptx",
+          "location": "Melbourne, Victoria, Australia",
+          "status": "past"
+        }
+      ],
+      "tags": [
+        "AI",
+        "Machine Learning",
+        "Azure"
+      ],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": null
+    },
+    {
+      "id": "2024-global-ai-podcast-mvp-panel",
+      "title": "Global AI Podcast MVP Panel",
+      "description": "",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "Azure Sydney User Group / Global AI Podcast",
+          "url": "https://www.meetup.com/azure-sydney-user-group/events/298402875/",
+          "location": "Sydney, New South Wales, Australia",
+          "online": true,
+          "status": "past"
+        }
+      ],
+      "tags": [
+        "AI",
+        "Machine Learning",
+        "Azure"
+      ],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": null
+    },
+    {
+      "id": "2023-from-bank-transactions-to-actionable-data-with-cha",
+      "title": "From Bank Transactions to Actionable Data with ChatGPT and Noteable",
+      "description": "",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "ActiumAI Conference",
+          "url": "https://actiumai.com/wp-content/uploads/2023/08/ActiumAI-Conference-Program-v10.pdf",
+          "status": "past"
+        }
+      ],
+      "tags": [
+        "AI",
+        "Machine Learning",
+        "Azure",
+        "OpenAI"
+      ],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": null
+    },
+    {
+      "id": "2024-ai-hack-day",
+      "title": "AI Hack Day",
+      "description": "",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "AI Hack Day",
+          "url": "https://aihackday.com/",
+          "status": "past"
+        }
+      ],
+      "tags": [
+        "AI",
+        "Machine Learning",
+        "Azure"
+      ],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": null
+    },
+    {
+      "id": "2025-ai-hack-day-2025",
+      "title": "AI Hack Day (2025)",
+      "description": "",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "AI Hack Day",
+          "url": "https://aihackday.com/",
+          "status": "past"
+        }
+      ],
+      "tags": [
+        "AI",
+        "Machine Learning",
+        "Azure"
+      ],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": null
+    },
+    {
+      "id": "2025-unlocking-the-full-potential-the-harmonious-dance-",
+      "title": "Unlocking the Full Potential: The Harmonious Dance of EF Core and SQL Server",
+      "description": "",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "Online recording",
+          "url": "https://www.youtube.com/watch?v=gZDw0IeS6f8",
+          "online": true,
+          "status": "past"
+        }
+      ],
+      "tags": [
+        ".NET",
+        "EF Core"
+      ],
+      "videoUrl": "https://www.youtube.com/watch?v=gZDw0IeS6f8",
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": null
+    },
+    {
+      "id": "2025-ai-2-day-workshop",
+      "title": "AI 2-day Workshop",
+      "description": "",
+      "type": "workshop",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "SSW AI Workshop",
+          "url": "https://www.ssw.com.au/events/ai-workshop",
+          "status": "past"
+        }
+      ],
+      "tags": [
+        "AI",
+        "Machine Learning",
+        "Azure"
+      ],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": null
+    },
+    {
+      "id": "2025-quickstart-offline-home-automation-prototype-with-",
+      "title": "Quickstart: Offline Home Automation prototype with Blazor and LLM for fun",
+      "description": "",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "Brisbane .NET User Group",
+          "url": "https://www.youtube.com/watch?v=1d6V0lAs_so&t=539s",
+          "location": "Brisbane, Queensland, Australia",
+          "online": true,
+          "status": "past"
+        }
+      ],
+      "tags": [
+        ".NET"
+      ],
+      "videoUrl": "https://www.youtube.com/watch?v=1d6V0lAs_so&t=539s",
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": null
+    }
+  ]
+}

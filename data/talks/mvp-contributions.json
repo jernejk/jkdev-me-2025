@@ -1,0 +1,611 @@
+{
+  "contributions": [
+    {
+      "id": "2023-ai-hack-days-sydney-brisbane-and-melbourne",
+      "title": "AI Hack Days @ Sydney, Brisbane and Melbourne",
+      "description": "",
+      "events": [
+        {
+          "eventName": "AI Hack Day",
+          "date": "2023-06-23",
+          "dateEnd": "2023-11-18",
+          "url": "https://aihackday.com/",
+          "location": "Sydney, New South Wales, Australia"
+        }
+      ],
+      "tags": [
+        "AI",
+        "Machine Learning",
+        "Azure"
+      ],
+      "type": "talk"
+    },
+    {
+      "id": "2023-brisbane-full-stack-user-group-angular-react-net-c",
+      "title": "Brisbane Full Stack User Group – Angular + React + .NET Core",
+      "description": "",
+      "events": [
+        {
+          "eventName": "Brisbane Full Stack User Group",
+          "date": "2023-04-01",
+          "dateEnd": "2025-04-01",
+          "url": "https://www.meetup.com/brisbane-full-stack-user-group/",
+          "location": "Brisbane, Queensland, Australia",
+          "online": true
+        }
+      ],
+      "tags": [
+        ".NET"
+      ],
+      "type": "talk"
+    },
+    {
+      "id": "2023-global-ai-the-podcast",
+      "title": "Global AI The Podcast",
+      "description": "",
+      "events": [
+        {
+          "eventName": "Global AI The Podcast",
+          "date": "2023-04-01",
+          "dateEnd": "2023-04-01",
+          "url": "https://open.spotify.com/show/5qVleSNEBd1uwRq7rU7kkQ",
+          "online": true
+        }
+      ],
+      "tags": [
+        "AI",
+        "Machine Learning",
+        "Azure"
+      ],
+      "type": "talk"
+    },
+    {
+      "id": "2023-ai-hack-day-melbourne-2023",
+      "title": "AI Hack Day Melbourne 2023",
+      "description": "",
+      "events": [
+        {
+          "eventName": "AI Hack Day Melbourne",
+          "date": "2023-06-23",
+          "dateEnd": "2023-06-24",
+          "url": "https://aihackday.com/melbourne/",
+          "location": "Melbourne, Victoria, Australia"
+        }
+      ],
+      "tags": [
+        "AI",
+        "Machine Learning",
+        "Azure"
+      ],
+      "type": "talk"
+    },
+    {
+      "id": "2023-ai-hack-day-sydney-2023",
+      "title": "AI Hack Day Sydney 2023",
+      "description": "",
+      "events": [
+        {
+          "eventName": "AI Hack Day Sydney",
+          "date": "2023-09-15",
+          "dateEnd": "2023-09-16",
+          "url": "https://aihackday.com/sydney/",
+          "location": "Sydney, New South Wales, Australia"
+        }
+      ],
+      "tags": [
+        "AI",
+        "Machine Learning",
+        "Azure"
+      ],
+      "type": "talk"
+    },
+    {
+      "id": "2023-brisbane-full-stack-user-group-angular-react-net-c",
+      "title": "Brisbane Full Stack User Group – Angular + React + .NET Core",
+      "description": "",
+      "events": [
+        {
+          "eventName": "Brisbane Full Stack User Group",
+          "date": "2023-03-17",
+          "dateEnd": "2023-03-17",
+          "url": "https://www.meetup.com/brisbane-full-stack-user-group/",
+          "location": "Brisbane, Queensland, Australia",
+          "online": true
+        }
+      ],
+      "tags": [
+        ".NET"
+      ],
+      "type": "talk"
+    },
+    {
+      "id": "2024-ai-hack-day-melbourne-2024",
+      "title": "AI Hack Day Melbourne 2024",
+      "description": "",
+      "events": [
+        {
+          "eventName": "AI Hack Day Melbourne",
+          "date": "2024-07-12",
+          "dateEnd": "2024-07-13",
+          "url": "https://www.eventbrite.com.au/e/ai-hack-day-melbourne-tickets-727321868287",
+          "location": "Melbourne, Victoria, Australia"
+        }
+      ],
+      "tags": [
+        "AI",
+        "Machine Learning",
+        "Azure"
+      ],
+      "type": "talk"
+    },
+    {
+      "id": "2024-ai-hack-day-sydney-2024",
+      "title": "AI Hack Day Sydney 2024",
+      "description": "",
+      "events": [
+        {
+          "eventName": "AI Hack Day Sydney",
+          "date": "2024-07-19",
+          "dateEnd": "2024-07-20",
+          "url": "https://www.eventbrite.com.au/e/ai-hack-day-sydney-tickets-727321386847",
+          "location": "Neutral Bay, New South Wales, Australia"
+        }
+      ],
+      "tags": [
+        "AI",
+        "Machine Learning",
+        "Azure"
+      ],
+      "type": "talk"
+    },
+    {
+      "id": "2025-ai-hack-day-brisbane-2025",
+      "title": "AI Hack Day Brisbane 2025",
+      "description": "",
+      "events": [
+        {
+          "eventName": "AI Hack Day Brisbane",
+          "date": "2025-03-28",
+          "dateEnd": "2025-03-29",
+          "url": "https://aihackday.com/brisbane/",
+          "location": "Brisbane, Queensland, Australia"
+        }
+      ],
+      "tags": [
+        "AI",
+        "Machine Learning",
+        "Azure"
+      ],
+      "type": "talk"
+    },
+    {
+      "id": "2023-common-mistakes-in-ef-core",
+      "title": "Common mistakes in EF Core",
+      "description": "",
+      "events": [
+        {
+          "eventName": "NDC Oslo 2023 / NDC Porto 2023 / DDD Brisbane 2023 / NDC London 2024",
+          "url": "https://ndcoslo.com/agenda/common-mistakes-in-ef-core-0oco/0k284b9a2lt"
+        }
+      ],
+      "tags": [
+        ".NET",
+        "EF Core"
+      ],
+      "type": "talk"
+    },
+    {
+      "id": "2023-common-mistakes-in-ef-core-7-brisbane-net-user-gro",
+      "title": "Common mistakes in EF Core 7 @ Brisbane .NET User Group",
+      "description": "",
+      "events": [
+        {
+          "eventName": "Brisbane .NET User Group",
+          "url": "https://www.meetup.com/brisbane-dotnet-user-group/events/289806543",
+          "location": "Brisbane, Queensland, Australia",
+          "online": true
+        }
+      ],
+      "tags": [
+        ".NET",
+        "EF Core"
+      ],
+      "type": "talk",
+      "videoUrl": "https://www.youtube.com/watch?v=tfMPfDyzHxc"
+    },
+    {
+      "id": "2022-how-to-keep-your-email-tidy-with-ai-ndc-sydney-202",
+      "title": "How to keep your email tidy with AI @ NDC Sydney 2022",
+      "description": "",
+      "events": [
+        {
+          "eventName": "NDC Sydney 2022",
+          "location": "Sydney, New South Wales, Australia"
+        }
+      ],
+      "tags": [
+        "AI",
+        "Machine Learning",
+        "Azure"
+      ],
+      "type": "talk"
+    },
+    {
+      "id": "2022-how-to-keep-your-email-tidy-with-ai-sydney-net-use",
+      "title": "How to keep your email tidy with AI @ Sydney .NET User Group",
+      "description": "",
+      "events": [
+        {
+          "eventName": "Sydney .NET User Group",
+          "url": "https://www.meetup.com/sydney-net-user-group/events/288895553/",
+          "location": "Sydney, New South Wales, Australia",
+          "online": true
+        }
+      ],
+      "tags": [
+        "AI",
+        "Machine Learning",
+        "Azure"
+      ],
+      "type": "talk",
+      "videoUrl": "https://www.youtube.com/watch?v=OW5wBERdhQU"
+    },
+    {
+      "id": "2022-getting-started-with-cognitive-services-ai-hack-da",
+      "title": "Getting started with Cognitive Services @ AI Hack Day Sydney 2022",
+      "description": "",
+      "events": [
+        {
+          "eventName": "AI Hack Day Sydney 2022",
+          "url": "https://github.com/jernejk/aihackday2022/blob/main/Sydney/Presentations/CognitiveServices.pptx",
+          "location": "Sydney, New South Wales, Australia"
+        }
+      ],
+      "tags": [
+        "AI",
+        "Machine Learning",
+        "Azure"
+      ],
+      "type": "talk"
+    },
+    {
+      "id": "2022-build-your-own-source-generator-with-chris-sienkie",
+      "title": "Build your own Source Generator With Chris Sienkiewicz & JK | NDC Sydney 2022",
+      "description": "",
+      "events": [
+        {
+          "eventName": "NDC Sydney 2022",
+          "url": "https://www.youtube.com/watch?v=abMAW1pjreg",
+          "location": "Sydney, New South Wales, Australia",
+          "online": true
+        }
+      ],
+      "tags": [
+        ".NET"
+      ],
+      "type": "talk",
+      "videoUrl": "https://www.youtube.com/watch?v=abMAW1pjreg"
+    },
+    {
+      "id": "2022-source-generators-with-chris-sienkiewicz-jk-ndc-sy",
+      "title": "Source Generators With Chris Sienkiewicz & JK | NDC Sydney 2022",
+      "description": "",
+      "events": [
+        {
+          "eventName": "NDC Sydney 2022",
+          "url": "https://www.youtube.com/watch?v=3ObZSNeBVac",
+          "location": "Sydney, New South Wales, Australia",
+          "online": true
+        }
+      ],
+      "tags": [
+        ".NET"
+      ],
+      "type": "talk",
+      "videoUrl": "https://www.youtube.com/watch?v=3ObZSNeBVac"
+    },
+    {
+      "id": "2022-from-data-to-ai-quickly-create-machine-learning-wi",
+      "title": "From Data to AI: Quickly create Machine Learning with ML.NET @ AI Hack Day Sydney 2022",
+      "description": "",
+      "events": [
+        {
+          "eventName": "AI Hack Day Sydney 2022",
+          "url": "https://github.com/jernejk/aihackday2022/blob/main/Sydney/Presentations/FireEmojiMlNet.pptx",
+          "location": "Sydney, New South Wales, Australia"
+        }
+      ],
+      "tags": [
+        "AI",
+        "Machine Learning",
+        "Azure"
+      ],
+      "type": "talk"
+    },
+    {
+      "id": "2022-from-data-to-ai-quickly-create-machine-learning-wi",
+      "title": "From Data to AI: Quickly create Machine Learning with ML.NET @ AI Hack Day Melbourne 2022",
+      "description": "",
+      "events": [
+        {
+          "eventName": "AI Hack Day Melbourne 2022",
+          "url": "https://github.com/jernejk/aihackday2022/blob/main/Melbourne/Presentations/FireEmojiMlNet.pptx",
+          "location": "Melbourne, Victoria, Australia"
+        }
+      ],
+      "tags": [
+        "AI",
+        "Machine Learning",
+        "Azure"
+      ],
+      "type": "talk"
+    },
+    {
+      "id": "2022-getting-started-with-cognitive-services-ai-hack-da",
+      "title": "Getting started with Cognitive Services @ AI Hack Day Melbourne 2022",
+      "description": "",
+      "events": [
+        {
+          "eventName": "AI Hack Day Melbourne 2022",
+          "url": "https://github.com/jernejk/aihackday2022/blob/main/Melbourne/Presentations/CognitiveServices.pptx",
+          "location": "Melbourne, Victoria, Australia"
+        }
+      ],
+      "tags": [
+        "AI",
+        "Machine Learning",
+        "Azure"
+      ],
+      "type": "talk"
+    },
+    {
+      "id": "2024-the-harmonious-dance-of-ef-core-and-sql-server",
+      "title": "The Harmonious Dance of EF Core and SQL Server",
+      "description": "",
+      "events": [
+        {
+          "eventName": "NDC Sydney 2024 + related events",
+          "url": "https://ndcsydney.com/agenda/unlocking-the-full-potential-the-harmonious-dance-of-ef-core-and-sql-server/e1fc1d6a1074",
+          "location": "Sydney, New South Wales, Australia"
+        }
+      ],
+      "tags": [
+        ".NET",
+        "EF Core"
+      ],
+      "type": "talk",
+      "videoUrl": "https://www.youtube.com/watch?v=yyJuol7oxtA"
+    },
+    {
+      "id": "2024-global-ai-podcast-mvp-panel",
+      "title": "Global AI Podcast MVP Panel",
+      "description": "",
+      "events": [
+        {
+          "eventName": "Azure Sydney User Group / Global AI Podcast",
+          "url": "https://www.meetup.com/azure-sydney-user-group/events/298402875/",
+          "location": "Sydney, New South Wales, Australia",
+          "online": true
+        }
+      ],
+      "tags": [
+        "AI",
+        "Machine Learning",
+        "Azure"
+      ],
+      "type": "talk"
+    },
+    {
+      "id": "2023-ml-net-in-the-post-gpt-era-importance-of-machine-l",
+      "title": "ML.NET in the Post-GPT Era: Importance of Machine Learning",
+      "description": "",
+      "events": [
+        {
+          "eventName": "Data and AI Bootcamp Brisbane 2023",
+          "url": "https://brisbanebootcamp.com/data-and-ai-bootcamp-brisbane-edition-2023/",
+          "location": "Brisbane, Queensland, Australia"
+        }
+      ],
+      "tags": [
+        "AI",
+        "Machine Learning",
+        "Azure"
+      ],
+      "type": "talk"
+    },
+    {
+      "id": "2023-from-raw-data-to-actionable-data-with-chatgpt-and-",
+      "title": "From Raw Data to Actionable Data with ChatGPT and plugins simplified",
+      "description": "",
+      "events": [
+        {
+          "eventName": "Level Up Your Data",
+          "url": "https://levelupyourdata.com/program/"
+        }
+      ],
+      "tags": [
+        "AI",
+        "Machine Learning",
+        "Azure",
+        "OpenAI"
+      ],
+      "type": "talk"
+    },
+    {
+      "id": "2023-from-bank-transactions-to-actionable-data-with-cha",
+      "title": "From Bank Transactions to Actionable Data with ChatGPT and Noteable",
+      "description": "",
+      "events": [
+        {
+          "eventName": "ActiumAI Conference",
+          "url": "https://actiumai.com/wp-content/uploads/2023/08/ActiumAI-Conference-Program-v10.pdf"
+        }
+      ],
+      "tags": [
+        "AI",
+        "Machine Learning",
+        "Azure",
+        "OpenAI"
+      ],
+      "type": "talk"
+    },
+    {
+      "id": "2025-building-solutions-in-azure-openai",
+      "title": "Building solutions in Azure OpenAI",
+      "description": "",
+      "events": [
+        {
+          "eventName": "Level Up Your Data – Brisbane Bootcamp",
+          "url": "https://levelupyourdata.com/brisbane-bootcamp/#PROGRAM",
+          "location": "Brisbane, Queensland, Australia"
+        }
+      ],
+      "tags": [
+        "AI",
+        "Machine Learning",
+        "Azure",
+        "OpenAI"
+      ],
+      "type": "talk"
+    },
+    {
+      "id": "2025-unlocking-the-power-of-ai-on-azure-a-hands-on-open",
+      "title": "Unlocking the Power of AI on Azure: A Hands-On OpenAI Workshop",
+      "description": "",
+      "events": [
+        {
+          "eventName": "Level Up Your Data – Conference",
+          "url": "https://levelupyourdata.com/conference/"
+        }
+      ],
+      "tags": [
+        "AI",
+        "Machine Learning",
+        "Azure",
+        "OpenAI"
+      ],
+      "type": "workshop"
+    },
+    {
+      "id": "2024-brisbane-full-stack-user-group-angular-react-net-c",
+      "title": "Brisbane Full Stack User Group – Angular + React + .NET Core (2024)",
+      "description": "",
+      "events": [
+        {
+          "eventName": "Brisbane Full Stack User Group",
+          "url": "https://www.meetup.com/brisbane-full-stack-user-group/",
+          "location": "Brisbane, Queensland, Australia",
+          "online": true
+        }
+      ],
+      "tags": [
+        ".NET"
+      ],
+      "type": "talk"
+    },
+    {
+      "id": "2025-brisbane-full-stack-user-group-angular-react-net-c",
+      "title": "Brisbane Full Stack User Group – Angular + React + .NET Core",
+      "description": "",
+      "events": [
+        {
+          "eventName": "Brisbane Full Stack User Group",
+          "url": "https://www.meetup.com/brisbane-full-stack-user-group/",
+          "location": "Brisbane, Queensland, Australia",
+          "online": true
+        }
+      ],
+      "tags": [
+        ".NET"
+      ],
+      "type": "talk"
+    },
+    {
+      "id": "2024-ai-hack-day",
+      "title": "AI Hack Day",
+      "description": "",
+      "events": [
+        {
+          "eventName": "AI Hack Day",
+          "url": "https://aihackday.com/"
+        }
+      ],
+      "tags": [
+        "AI",
+        "Machine Learning",
+        "Azure"
+      ],
+      "type": "talk"
+    },
+    {
+      "id": "2025-ai-hack-day-2025",
+      "title": "AI Hack Day (2025)",
+      "description": "",
+      "events": [
+        {
+          "eventName": "AI Hack Day",
+          "url": "https://aihackday.com/"
+        }
+      ],
+      "tags": [
+        "AI",
+        "Machine Learning",
+        "Azure"
+      ],
+      "type": "talk"
+    },
+    {
+      "id": "2025-unlocking-the-full-potential-the-harmonious-dance-",
+      "title": "Unlocking the Full Potential: The Harmonious Dance of EF Core and SQL Server",
+      "description": "",
+      "events": [
+        {
+          "eventName": "Online recording",
+          "url": "https://www.youtube.com/watch?v=gZDw0IeS6f8",
+          "online": true
+        }
+      ],
+      "tags": [
+        ".NET",
+        "EF Core"
+      ],
+      "type": "talk",
+      "videoUrl": "https://www.youtube.com/watch?v=gZDw0IeS6f8"
+    },
+    {
+      "id": "2025-ai-2-day-workshop",
+      "title": "AI 2-day Workshop",
+      "description": "",
+      "events": [
+        {
+          "eventName": "SSW AI Workshop",
+          "url": "https://www.ssw.com.au/events/ai-workshop"
+        }
+      ],
+      "tags": [
+        "AI",
+        "Machine Learning",
+        "Azure"
+      ],
+      "type": "workshop"
+    },
+    {
+      "id": "2025-quickstart-offline-home-automation-prototype-with-",
+      "title": "Quickstart: Offline Home Automation prototype with Blazor and LLM for fun",
+      "description": "",
+      "events": [
+        {
+          "eventName": "Brisbane .NET User Group",
+          "url": "https://www.youtube.com/watch?v=1d6V0lAs_so&t=539s",
+          "location": "Brisbane, Queensland, Australia",
+          "online": true
+        }
+      ],
+      "tags": [
+        ".NET"
+      ],
+      "type": "talk",
+      "videoUrl": "https://www.youtube.com/watch?v=1d6V0lAs_so&t=539s"
+    }
+  ]
+}
