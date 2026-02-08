@@ -94,9 +94,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fff" />
       <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000" />
       <link rel="alternate" type="application/rss+xml" href={`${basePath}/feed.xml`} />
-      <body className="bg-white pl-[calc(100vw-100%)] text-black antialiased dark:bg-gray-950 dark:text-white">
+      <body className="bg-[#f6f9fc] pl-[calc(100vw-100%)] text-black antialiased dark:bg-[#020617] dark:text-white">
         <ThemeProviders>
           <Analytics analyticsConfig={siteMetadata.analytics as AnalyticsConfig} />
+          <div className="pointer-events-none fixed inset-0 -z-10 hidden [background:radial-gradient(circle_at_20%_0%,rgba(6,182,212,0.18),transparent_40%),radial-gradient(circle_at_100%_80%,rgba(14,165,233,0.16),transparent_40%),linear-gradient(160deg,#0f172a_0%,#020617_100%)] dark:block" />
           <SectionContainer>
             <SearchProvider searchConfig={siteMetadata.search as SearchConfig}>
               <Header />

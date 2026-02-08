@@ -116,11 +116,21 @@ Live data from Sessionize speaker profile.
 }
 ```
 
+### `manual-talks.json` ✅ Committed
+**Source**: Hand-authored local entries  
+**Use case**: Add upcoming/community talks that are not available in Sessionize yet
+
+**Features**:
+- ✅ **Committed to git** - Intentional source-of-truth for local announcements
+- Merged with Sessionize + legacy + MVP data
+- Ideal for user groups, meetup talks, and draft conference entries
+
 ## What Gets Committed?
 
 ✅ **Committed to Git:**
 - `mvp-contributions.json` - Sanitized MVP snapshot (no sensitive data)
 - `jkdev-legacy.json` - Public legacy talks
+- `manual-talks.json` - Manually curated entries
 - `README.md` - This documentation
 
 ⚠️ **Gitignored (regenerated):**
@@ -147,7 +157,7 @@ This approach ensures:
    ```bash
    npm run speaking:merge
    ```
-   - Reads static snapshots: `mvp-contributions.json`, `jkdev-legacy.json`
+   - Reads static snapshots: `mvp-contributions.json`, `jkdev-legacy.json`, `manual-talks.json`
    - Reads live data: `sessionize.json` (if exists)
    - Detects duplicates by title similarity
    - Merges events and URLs

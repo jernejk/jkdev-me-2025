@@ -1,0 +1,31 @@
+{
+  "source": "Manual talk entries",
+  "updatedDate": "2026-02-08",
+  "talks": [
+    {
+      "id": "manual-ef-core-bench-lab-dotnet-brisbane-2026",
+      "title": "EF Core Bench Lab – A Peek into the Black Box",
+      "description": "A practical performance deep-dive into EF Core internals, query costs, and benchmarking patterns.",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": ".NET Brisbane User Group",
+          "location": "Brisbane, Australia",
+          "date": "2026-03-05",
+          "url": "https://www.meetup.com/brisbane-net-user-group/",
+          "status": "upcoming"
+        }
+      ],
+      "tags": [
+        ".NET",
+        "EF Core",
+        "Performance"
+      ],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": "https://www.meetup.com/brisbane-net-user-group/"
+    }
+  ]
+}

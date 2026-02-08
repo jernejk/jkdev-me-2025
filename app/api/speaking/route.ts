@@ -1,6 +1,8 @@
 import { NextResponse } from 'next/server'
 import speakingData from '@/data/speakingData.json'
 
+export const dynamic = 'force-static'
+
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url)
   const status = searchParams.get('status') // 'upcoming' or 'past'

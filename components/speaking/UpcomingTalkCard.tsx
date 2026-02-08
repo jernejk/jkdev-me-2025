@@ -1,157 +1,158 @@
-'use client'
+import Link from 'next/link'
+import Image from 'next/image'
+import { formatDate } from 'pliny/utils/formatDate'
 
-import { useState } from 'react'
-import Link from '@/components/Link'
-
-interface Event {
-  eventName: string
-  location: string
-  date: string
-  url: string
-  status: 'upcoming' | 'past'
-}
-
-interface UpcomingTalkCardProps {
+interface Talk {
   title: string
   description: string
-  event: Event
+  events: {
+    eventName: string
+    location?: string
+    date: string
+    url?: string | null
+  }[]
   tags: string[]
-  videoUrl?: string | null
-  slidesUrl?: string | null
-  githubUrl?: string | null
   conferenceUrl?: string | null
 }
 
-export default function UpcomingTalkCard({
-  title,
-  description,
-  event,
-  tags,
-  videoUrl,
-  slidesUrl,
-  githubUrl,
-  conferenceUrl,
-}: UpcomingTalkCardProps) {
-  const [isExpanded, setIsExpanded] = useState(false)
+interface UpcomingTalkCardProps {
+  talk: Talk
+  compact?: boolean
+}
 
-  const formatDate = (dateString: string) => {
-    const date = new Date(dateString)
-    return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })
+export default function UpcomingTalkCard({ talk, compact = false }: UpcomingTalkCardProps) {
+  const { title, description, events, tags, conferenceUrl } = talk
+  const event = events && events.length > 0 ? events[0] : null
+
+  if (!event) return null
+
+  // Determine best URL for favicon (prefer conferenceUrl, avoid Eventbrite if possible)
+  const getBestUrlForIcon = () => {
+    const isEventbrite = (url: string) => url && url.includes('eventbrite')
+
+    if (conferenceUrl && !isEventbrite(conferenceUrl)) return conferenceUrl
+    if (event.url && !isEventbrite(event.url)) return event.url
+    return conferenceUrl || event.url
   }
 
-  const getCountdown = (dateString: string) => {
-    const eventDate = new Date(dateString)
-    const now = new Date()
-    const diffTime = eventDate.getTime() - now.getTime()
-    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24))
+  const iconUrl = getBestUrlForIcon()
 
-    if (diffDays < 0) return null
-    if (diffDays === 0) return 'Today!'
-    if (diffDays === 1) return 'Tomorrow!'
-    if (diffDays <= 7) return `in ${diffDays} days`
-    if (diffDays <= 30) {
-      const weeks = Math.floor(diffDays / 7)
-      return `in ${weeks} week${weeks > 1 ? 's' : ''}`
+  // Helper to get domain from URL
+  const getDomain = (url: string) => {
+    try {
+      return new URL(url).hostname
+    } catch (e) {
+      return ''
     }
-    const months = Math.floor(diffDays / 30)
-    return `in ${months} month${months > 1 ? 's' : ''}`
   }
 
-  const getFirstSentence = (text: string) => {
-    const match = text.match(/^[^.!?]+[.!?]/)
-    return match ? match[0] : text.split(' ').slice(0, 15).join(' ') + '...'
-  }
-
-  const countdown = getCountdown(event.date)
-  const firstSentence = getFirstSentence(description)
+  const eventDomain = iconUrl ? getDomain(iconUrl) : ''
+  const faviconUrl = eventDomain
+    ? `https://www.google.com/s2/favicons?domain=${eventDomain}&sz=64`
+    : null
 
   return (
-    <div className="rounded-lg border border-green-500 bg-green-50 p-6 dark:border-green-700 dark:bg-green-900/20">
-      <div className="mb-3 flex items-center gap-2">
-        <span className="rounded-full bg-green-200 px-3 py-1 text-sm font-semibold text-green-800 dark:bg-green-800 dark:text-green-100">
-          Upcoming
-        </span>
-        {countdown && (
-          <span className="rounded-full bg-green-600 px-3 py-1 text-sm font-bold text-white dark:bg-green-500">
-            🗓️ {countdown}
-          </span>
-        )}
-      </div>
-      <h3 className="mb-3 text-2xl leading-8 font-bold tracking-tight">
-        {conferenceUrl || event.url ? (
-          <Link
-            href={conferenceUrl || event.url}
-            className="hover:text-primary-500 dark:hover:text-primary-400 text-gray-900 dark:text-gray-100"
+    <div
+      className={`group relative overflow-hidden ${compact ? 'rounded-lg border border-cyan-400/30 bg-slate-900' : 'rounded-xl bg-gradient-to-br from-white to-gray-50 p-1 shadow-md transition-all hover:shadow-lg dark:from-gray-800 dark:to-gray-900'}`}
+    >
+      {!compact && (
+        <div className="bg-primary-500/5 group-hover:bg-primary-500/10 absolute -top-12 -right-12 h-40 w-40 rounded-full blur-3xl transition-all"></div>
+      )}
+
+      <div
+        className={`relative h-full ${compact ? 'bg-transparent p-3' : 'rounded-lg bg-white p-4 dark:bg-gray-900'}`}
+      >
+        <div className={`flex ${compact ? 'gap-3' : 'flex-col gap-4 sm:flex-row'}`}>
+          {/* Left side: Event Info & Icon */}
+          <div
+            className={`flex shrink-0 flex-col items-center justify-center gap-2 ${compact ? 'w-16' : 'sm:w-24 sm:border-r sm:border-gray-100 sm:pr-4 dark:sm:border-gray-800'}`}
           >
-            {title}
-          </Link>
-        ) : (
-          <span className="text-gray-900 dark:text-gray-100">{title}</span>
-        )}
-      </h3>
-      <div className="mb-4 rounded-lg bg-green-100 p-3 dark:bg-green-800/30">
-        <p className="text-xl font-bold text-green-900 dark:text-green-100">{event.eventName}</p>
-        <p className="text-lg font-semibold text-green-800 dark:text-green-200">
-          📅 {formatDate(event.date)}
-        </p>
-        <p className="text-sm text-green-700 dark:text-green-300">📍 {event.location}</p>
-      </div>
-      <div className="mb-3">
-        <p className="prose max-w-none text-gray-600 dark:text-gray-400">
-          {isExpanded ? description : firstSentence}
-        </p>
-        {description.length > firstSentence.length && (
-          <button
-            onClick={() => setIsExpanded(!isExpanded)}
-            className="text-primary-500 hover:text-primary-600 dark:text-primary-400 dark:hover:text-primary-300 mt-1 text-sm font-medium"
-          >
-            {isExpanded ? '↑ Show less' : '↓ Read more'}
-          </button>
-        )}
-      </div>
-      <div className="mb-4 flex flex-wrap gap-2">
-        {tags.map((tag) => (
-          <span
-            key={tag}
-            className="rounded bg-green-200 px-2 py-1 text-xs font-medium text-green-800 dark:bg-green-700 dark:text-green-100"
-          >
-            {tag}
-          </span>
-        ))}
-      </div>
-      <div className="flex flex-wrap gap-3">
-        {conferenceUrl && (
-          <Link
-            href={conferenceUrl}
-            className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400 font-medium"
-          >
-            🎤 Conference →
-          </Link>
-        )}
-        {event.url && !conferenceUrl && (
-          <Link
-            href={event.url}
-            className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400 font-medium"
-          >
-            🔗 Event Details →
-          </Link>
-        )}
-        {slidesUrl && (
-          <Link
-            href={slidesUrl}
-            className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400 font-medium"
-          >
-            📊 Slides →
-          </Link>
-        )}
-        {githubUrl && (
-          <Link
-            href={githubUrl}
-            className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400 font-medium"
-          >
-            💻 Code →
-          </Link>
-        )}
+            {faviconUrl ? (
+              <div
+                className={`relative overflow-hidden rounded-md bg-gray-50 p-1 shadow-sm dark:bg-gray-800 ${compact ? 'h-10 w-10' : 'h-12 w-12'}`}
+              >
+                <Image
+                  src={faviconUrl}
+                  alt={event.eventName}
+                  width={compact ? 40 : 48}
+                  height={compact ? 40 : 48}
+                  className="h-full w-full object-contain"
+                  unoptimized
+                />
+              </div>
+            ) : (
+              <div
+                className={`bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center rounded-md ${compact ? 'h-10 w-10 text-base' : 'h-12 w-12 text-xl'}`}
+              >
+                🎤
+              </div>
+            )}
+
+            <div className="text-center">
+              <div
+                className={`text-xs font-bold ${compact ? 'text-cyan-100' : 'text-gray-900 dark:text-gray-100'}`}
+              >
+                {new Date(event.date).toLocaleDateString('en-US', {
+                  month: 'short',
+                  day: 'numeric',
+                })}
+              </div>
+              <div
+                className={`text-[10px] ${compact ? 'text-slate-300' : 'text-gray-500 dark:text-gray-400'}`}
+              >
+                {new Date(event.date).getFullYear()}
+              </div>
+            </div>
+          </div>
+
+          {/* Right side: Content */}
+          <div className="flex min-w-0 flex-1 flex-col justify-center">
+            <h3
+              className={`${compact ? 'mb-1 text-lg leading-tight font-semibold text-white' : 'mb-2 text-2xl leading-tight font-bold text-gray-900 dark:text-gray-100'}`}
+            >
+              {conferenceUrl ? (
+                <Link href={conferenceUrl} className="transition-colors hover:text-cyan-300">
+                  {title}
+                </Link>
+              ) : (
+                title
+              )}
+            </h3>
+
+            <div
+              className={`flex flex-wrap items-center gap-x-2 ${compact ? 'mb-2 text-xs text-slate-300' : 'mb-3 text-sm text-gray-600 dark:text-gray-400'}`}
+            >
+              <span
+                className={`font-semibold ${compact ? 'text-cyan-100' : 'text-gray-800 dark:text-gray-200'}`}
+              >
+                {event.eventName}
+              </span>
+              <span className={compact ? 'text-cyan-300/40' : 'text-gray-300 dark:text-gray-600'}>
+                •
+              </span>
+              <span>{event.location}</span>
+            </div>
+
+            {!compact && (
+              <p className="mb-4 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
+                {description}
+              </p>
+            )}
+
+            {tags.length > 0 && (
+              <div className="flex flex-wrap gap-2">
+                {tags.slice(0, compact ? 3 : tags.length).map((tag) => (
+                  <span
+                    key={tag}
+                    className={`${compact ? 'rounded-md bg-cyan-500/15 px-1.5 py-0.5 text-[10px] font-medium text-cyan-100' : 'rounded-md bg-gray-100 px-2 py-1 text-xs font-medium text-gray-600 dark:bg-gray-800 dark:text-gray-300'}`}
+                  >
+                    #{tag}
+                  </span>
+                ))}
+              </div>
+            )}
+          </div>
+        </div>
       </div>
     </div>
   )

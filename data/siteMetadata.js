@@ -1,27 +1,22 @@
 /** @type {import("pliny/config").PlinyConfig } */
 const siteMetadata = {
-  title: 'Next.js Starter Blog',
-  author: 'Tails Azimuth',
-  headerTitle: 'TailwindBlog',
-  description: 'A blog created with Next.js and Tailwind.css',
+  title: 'Jernej Kavka (JK)',
+  author: 'Jernej Kavka',
+  headerTitle: 'JK',
+  description: 'Microsoft AI MVP - .NET, AI, and speaking',
   language: 'en-us',
   theme: 'system', // system, dark or light
-  siteUrl: 'https://tailwind-nextjs-starter-blog.vercel.app',
-  siteRepo: 'https://github.com/timlrx/tailwind-nextjs-starter-blog',
+  siteUrl: 'https://jkdev.me',
+  siteRepo: 'https://github.com/jernejk/jkdev-me-2025',
   siteLogo: `${process.env.BASE_PATH || ''}/static/images/logo.png`,
   socialBanner: `${process.env.BASE_PATH || ''}/static/images/twitter-card.png`,
-  mastodon: 'https://mastodon.social/@mastodonuser',
-  email: 'address@yoursite.com',
-  github: 'https://github.com',
-  x: 'https://twitter.com/x',
-  // twitter: 'https://twitter.com/Twitter',
-  facebook: 'https://facebook.com',
-  youtube: 'https://youtube.com',
-  linkedin: 'https://www.linkedin.com',
-  threads: 'https://www.threads.net',
-  instagram: 'https://www.instagram.com',
-  medium: 'https://medium.com',
-  bluesky: 'https://bsky.app/',
+  github: 'https://github.com/jernejk',
+  x: 'https://x.com/jernej_kavka',
+  youtube: 'https://www.youtube.com/channel/UCige1JIdeIc3sYU2HSaismg',
+  linkedin: 'https://www.linkedin.com/in/jernejkavka/',
+  sessionize: 'https://sessionize.com/jernej-kavka/',
+  ssw: 'https://www.ssw.com.au/people/jernej-kavka/',
+  mvp: 'https://mvp.microsoft.com/en-US/MVP/profile/a20a7792-5c01-eb11-a815-000d3a8ccaf5',
   locale: 'en-US',
   // set to true if you want a navbar fixed to the top
   stickyNav: false,
@@ -30,24 +25,8 @@ const siteMetadata = {
     // content security policy in the `next.config.js` file.
     // supports Plausible, Simple Analytics, Umami, Posthog or Google Analytics.
     umamiAnalytics: {
-      // We use an env variable for this site to avoid other users cloning our analytics ID
-      umamiWebsiteId: process.env.NEXT_UMAMI_ID, // e.g. 123e4567-e89b-12d3-a456-426614174000
-      // You may also need to overwrite the script if you're storing data in the US - ex:
-      // src: 'https://us.umami.is/script.js'
-      // Remember to add 'us.umami.is' in `next.config.js` as a permitted domain for the CSP
+      umamiWebsiteId: process.env.NEXT_UMAMI_ID,
     },
-    // plausibleAnalytics: {
-    //   plausibleDataDomain: '', // e.g. tailwind-nextjs-starter-blog.vercel.app
-    // If you are hosting your own Plausible.
-    //   src: '', // e.g. https://plausible.my-domain.com/js/script.js
-    // },
-    // simpleAnalytics: {},
-    // posthogAnalytics: {
-    //   posthogProjectApiKey: '', // e.g. 123e4567-e89b-12d3-a456-426614174000
-    // },
-    // googleAnalytics: {
-    //   googleAnalyticsId: '', // e.g. G-XXXXXXX
-    // },
   },
   newsletter: {
     // supports mailchimp, buttondown, convertkit, klaviyo, revue, emailoctopus, beehive

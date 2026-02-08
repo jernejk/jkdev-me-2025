@@ -1,6 +1,31 @@
 {
   "talks": [
     {
+      "id": "manual-ef-core-bench-lab-dotnet-brisbane-2026",
+      "title": "EF Core Bench Lab – A Peek into the Black Box",
+      "description": "A practical performance deep-dive into EF Core internals, query costs, and benchmarking patterns.",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": ".NET Brisbane User Group",
+          "location": "Brisbane, Australia",
+          "date": "2026-03-05",
+          "url": "https://www.meetup.com/brisbane-net-user-group/",
+          "status": "upcoming"
+        }
+      ],
+      "tags": [
+        ".NET",
+        "EF Core",
+        "Performance"
+      ],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": "https://www.meetup.com/brisbane-net-user-group/"
+    },
+    {
       "id": "sessionize-event-20920",
       "title": "Speaking at DDD Brisbane 2025",
       "description": "Presented at DDD Brisbane 2025",
@@ -12,7 +37,7 @@
           "location": "Brisbane, Australia",
           "date": "2025-12-06",
           "url": "https://www.dddbrisbane.com",
-          "status": "upcoming"
+          "status": "past"
         }
       ],
       "tags": [],
@@ -188,7 +213,7 @@
         }
       ],
       "tags": [],
-      "videoUrl": "https://youtube.com/watch?v=3VPHV1902OQ",
+      "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
       "conferenceUrl": "https://ndcsydney.com"
@@ -210,7 +235,7 @@
         }
       ],
       "tags": [],
-      "videoUrl": "https://youtube.com/watch?v=oE8lEP4mKjk",
+      "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
       "conferenceUrl": null
@@ -253,7 +278,7 @@
         }
       ],
       "tags": [],
-      "videoUrl": "https://youtube.com/watch?v=gOABWmQ5zdM",
+      "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
       "conferenceUrl": "https://ndcporto.com/"
@@ -352,7 +377,7 @@
         }
       ],
       "tags": [],
-      "videoUrl": "https://youtube.com/watch?v=2N4Pw1FpC5I",
+      "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
       "conferenceUrl": "https://brisbanebootcamp.com"
@@ -374,7 +399,7 @@
         }
       ],
       "tags": [],
-      "videoUrl": "https://youtube.com/watch?v=dDANjr5MCew",
+      "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
       "conferenceUrl": "https://ndcoslo.com"
@@ -465,7 +490,7 @@
         }
       ],
       "tags": [],
-      "videoUrl": "https://youtube.com/watch?v=abMAW1pjreg",
+      "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
       "conferenceUrl": "https://ndcsydney.com"
@@ -508,7 +533,7 @@
         }
       ],
       "tags": [],
-      "videoUrl": "https://youtube.com/watch?v=iSWxny5MUY8",
+      "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
       "conferenceUrl": "https://ndcsydney.com"
@@ -538,7 +563,7 @@
         }
       ],
       "tags": [],
-      "videoUrl": "https://youtube.com/watch?v=35qt4DexxuE",
+      "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
       "conferenceUrl": "https://virtualml.net/"
@@ -640,7 +665,7 @@
         "AI",
         "Machine Learning"
       ],
-      "videoUrl": "https://youtube.com/watch?v=ie8kQ5YU8eU",
+      "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
       "conferenceUrl": "https://sessionize.com/s/jernej-kavka/machine-learning-simplified-for-developers-with-ml/24940"
@@ -664,7 +689,7 @@
         "AI",
         "Machine Learning"
       ],
-      "videoUrl": "https://youtube.com/watch?v=LG1DHMNT0TA",
+      "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
       "conferenceUrl": "https://sessionize.com/s/jernej-kavka/getting-started-with-machine-learning-using-ml.net/34372"
@@ -715,7 +740,7 @@
         "EF Core",
         ".NET"
       ],
-      "videoUrl": "https://youtube.com/watch?v=pUMs8TkuMFk",
+      "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
       "conferenceUrl": null
@@ -837,7 +862,7 @@
       "tags": [
         "Azure"
       ],
-      "videoUrl": "https://youtube.com/watch?v=FzcOt6pwVTs",
+      "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
       "conferenceUrl": null
@@ -881,7 +906,7 @@
         "Azure",
         "AI"
       ],
-      "videoUrl": "https://youtube.com/watch?v=KCSyRO0KotA",
+      "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
       "conferenceUrl": null
@@ -948,7 +973,7 @@
         "Azure",
         "AI"
       ],
-      "videoUrl": "https://youtube.com/watch?v=SdXj-2IHhiA",
+      "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
       "conferenceUrl": null
@@ -971,7 +996,7 @@
         "Azure",
         "AI"
       ],
-      "videoUrl": "https://youtube.com/watch?v=JicAk7zDcSA",
+      "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
       "conferenceUrl": null
@@ -1321,7 +1346,7 @@
         }
       ],
       "tags": [],
-      "videoUrl": "https://youtube.com/watch?v=6nYefHkKby8",
+      "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
       "conferenceUrl": "http://next.dddsydney.com.au"
@@ -1525,7 +1550,7 @@
         "EF Core",
         ".NET"
       ],
-      "videoUrl": "https://youtube.com/watch?v=gZDw0IeS6f8",
+      "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
       "conferenceUrl": null
@@ -1565,7 +1590,7 @@
         "Angular",
         ".NET"
       ],
-      "videoUrl": "https://youtube.com/watch?v=yyJuol7oxtA",
+      "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
       "conferenceUrl": null
@@ -1586,7 +1611,7 @@
       "tags": [
         "Azure"
       ],
-      "videoUrl": "https://youtube.com/watch?v=is4fO4NnjY0",
+      "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
       "conferenceUrl": null
@@ -1607,7 +1632,7 @@
       "tags": [
         "Azure"
       ],
-      "videoUrl": "https://youtube.com/watch?v=SU9B6_2h2VM",
+      "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
       "conferenceUrl": null
@@ -1836,7 +1861,7 @@
         ".NET",
         "EF Core"
       ],
-      "videoUrl": "https://youtube.com/watch?v=tfMPfDyzHxc",
+      "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
       "conferenceUrl": "https://sessionize.com/s/jernej-kavka/common-mistakes-in-ef-core/48354"
@@ -1883,7 +1908,7 @@
         "Machine Learning",
         "Azure"
       ],
-      "videoUrl": "https://youtube.com/watch?v=Waib00d9nwk",
+      "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
       "conferenceUrl": null

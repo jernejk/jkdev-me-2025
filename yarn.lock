@@ -6631,12 +6631,31 @@ __metadata:
   languageName: node
   linkType: hard
 
+"fsevents@npm:2.3.2":
+  version: 2.3.2
+  resolution: "fsevents@npm:2.3.2"
+  dependencies:
+    node-gyp: latest
+  checksum: 97ade64e75091afee5265e6956cb72ba34db7819b4c3e94c431d4be2b19b8bb7a2d4116da417950c3425f17c8fe693d25e20212cac583ac1521ad066b77ae31f
+  conditions: os=darwin
+  languageName: node
+  linkType: hard
+
 "fsevents@npm:~2.3.2":
   version: 2.3.3
   resolution: "fsevents@npm:2.3.3"
   dependencies:
     node-gyp: latest
   checksum: 11e6ea6fea15e42461fc55b4b0e4a0a3c654faa567f1877dbd353f39156f69def97a69936d1746619d656c4b93de2238bf731f6085a03a50cabf287c9d024317
+  conditions: os=darwin
+  languageName: node
+  linkType: hard
+
+"fsevents@patch:fsevents@2.3.2#~builtin<compat/fsevents>":
+  version: 2.3.2
+  resolution: "fsevents@patch:fsevents@npm%3A2.3.2#~builtin<compat/fsevents>::version=2.3.2&hash=df0bf1"
+  dependencies:
+    node-gyp: latest
   conditions: os=darwin
   languageName: node
   linkType: hard
@@ -10022,6 +10041,30 @@ __metadata:
   languageName: node
   linkType: hard
 
+"playwright-core@npm:1.58.2":
+  version: 1.58.2
+  resolution: "playwright-core@npm:1.58.2"
+  bin:
+    playwright-core: cli.js
+  checksum: fd8c4c6658b80f5db90af36db9f560e7bf461f704d0ffe706e8858570af0321312fff9c44a5ee49552df3e3cce981e1f8dd9e8b09e6d7bdd62e094639b68bddd
+  languageName: node
+  linkType: hard
+
+"playwright@npm:^1.50.1":
+  version: 1.58.2
+  resolution: "playwright@npm:1.58.2"
+  dependencies:
+    fsevents: 2.3.2
+    playwright-core: 1.58.2
+  dependenciesMeta:
+    fsevents:
+      optional: true
+  bin:
+    playwright: cli.js
+  checksum: 3536138633135bdd62eb3aa63c653036b944fbb6fb2d57f4d936baaad9d706c11bde13ef11b307677fba061bad2f4ad68256f84978cc9280667437d1106d12e6
+  languageName: node
+  linkType: hard
+
 "pliny@npm:0.4.1":
   version: 0.4.1
   resolution: "pliny@npm:0.4.1"
@@ -12016,6 +12059,7 @@ __metadata:
     next-contentlayer2: 0.5.5
     next-themes: ^0.4.6
     plaiceholder: ^3.0.0
+    playwright: ^1.50.1
     pliny: 0.4.1
     postcss: ^8.4.24
     prettier: ^3.0.0

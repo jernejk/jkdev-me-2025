@@ -1,0 +1,78 @@
+name: Update Speaking Data
+
+on:
+  # Run on schedule (weekly on Sunday at 00:00 UTC)
+  schedule:
+    - cron: '0 0 * * 0'
+
+  # Allow manual trigger
+  workflow_dispatch:
+
+  # Run when speaking data scripts are updated
+  push:
+    paths:
+      - 'scripts/extract-*.mjs'
+      - 'scripts/fetch-sessionize-data.mjs'
+      - 'scripts/merge-speaking-data-v2.mjs'
+      - 'data/talks/*.json'
+      - '.github/workflows/update-speaking-data.yml'
+
+jobs:
+  update-speaking-data:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'yarn'
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Extract MVP contributions
+        run: npm run speaking:extract-mvp
+        continue-on-error: true # MVP data might not exist in CI
+
+      - name: Fetch Sessionize data
+        run: npm run speaking:fetch
+        continue-on-error: true # Sessionize API might fail
+
+      - name: Merge all sources
+        run: npm run speaking:merge
+
+      - name: Check for changes
+        id: git-check
+        run: |
+          git diff --exit-code data/speakingData.json || echo "changed=true" >> $GITHUB_OUTPUT
+
+      - name: Commit and push changes
+        if: steps.git-check.outputs.changed == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add data/speakingData.json data/talks/*.json
+          git commit -m "chore: update speaking data [skip ci]"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Create summary
+        if: always()
+        run: |
+          echo "## Speaking Data Update" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### Summary" >> $GITHUB_STEP_SUMMARY
+          if [ -f data/speakingData.json ]; then
+            TALK_COUNT=$(node -p "require('./data/speakingData.json').talks.length")
+            echo "- Total talks: ${TALK_COUNT}" >> $GITHUB_STEP_SUMMARY
+          fi
+          if [ "${{ steps.git-check.outputs.changed }}" == "true" ]; then
+            echo "- Status: ✅ Updated" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "- Status: ℹ️ No changes" >> $GITHUB_STEP_SUMMARY
+          fi

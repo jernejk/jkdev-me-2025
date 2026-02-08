@@ -56,3 +56,14 @@ yarn-error.log*
 
 /.sandbox/
 /.tmp/
+
+# v2
+/v2/node_modules
+/v2/.next/
+/v2/.contentlayer
+/v2/public/feed.xml
+/v2/public/search.json
+/v2/public/sitemap.xml
+# local archive
+/.archive/
+.github/workflows/pages.yml.disabled

@@ -15,7 +15,8 @@
     "speaking:extract-mvp": "node scripts/extract-mvp-speaking.mjs",
     "speaking:fetch": "node scripts/fetch-sessionize-data.mjs",
     "speaking:merge": "node scripts/merge-speaking-data-v2.mjs",
-    "speaking:build": "npm run speaking:extract-mvp && npm run speaking:fetch && npm run speaking:merge"
+    "speaking:build": "npm run speaking:extract-mvp && npm run speaking:fetch && npm run speaking:merge",
+    "ui:review": "node scripts/ui-review-loop.mjs"
   },
   "dependencies": {
     "@headlessui/react": "2.2.0",
@@ -73,6 +74,7 @@
     "globals": "^15.12.0",
     "husky": "^9.0.0",
     "lint-staged": "^13.0.0",
+    "playwright": "^1.50.1",
     "prettier": "^3.0.0",
     "prettier-plugin-tailwindcss": "^0.6.11",
     "typescript": "^5.1.3"

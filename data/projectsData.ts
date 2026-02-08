@@ -7,20 +7,28 @@ interface Project {
 
 const projectsData: Project[] = [
   {
-    title: 'A Search Engine',
-    description: `What if you could look up any information in the world? Webpages, images, videos
-    and more. Google has many features to help you find exactly what you're looking
-    for.`,
-    imgSrc: '/static/images/google.png',
-    href: 'https://www.google.com',
+    title: 'efcore-bench-lab',
+    description:
+      'EF Core benchmarking experiments focused on query behavior, performance bottlenecks, and practical optimization.',
+    href: 'https://github.com/jernejk/efcore-bench-lab',
   },
   {
-    title: 'The Time Machine',
-    description: `Imagine being able to travel back in time or to the future. Simple turn the knob
-    to the desired date and press "Go". No more worrying about lost keys or
-    forgotten headphones with this simple yet affordable solution.`,
-    imgSrc: '/static/images/time-machine.jpg',
-    href: '/blog/the-time-machine',
+    title: 'home-automation-offline-gpt',
+    description:
+      'Offline GPT prototype for home automation, using local models for privacy-first voice and workflow automation.',
+    href: 'https://github.com/jernejk/home-automation-offline-gpt',
+  },
+  {
+    title: 'CognitiveServices.Explorer',
+    description:
+      'Tooling and demos for exploring Microsoft Cognitive Services APIs in practical developer scenarios.',
+    href: 'https://github.com/jernejk/CognitiveServices.Explorer',
+  },
+  {
+    title: 'RealTimeFaceApi',
+    description:
+      'Real-time Face API experimentation with OpenCV and Azure Cognitive Services integrations.',
+    href: 'https://github.com/jernejk/RealTimeFaceApi',
   },
 ]
 
