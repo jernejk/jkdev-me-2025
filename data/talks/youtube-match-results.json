@@ -1,0 +1,362 @@
+{
+  "generatedAt": "2026-02-08T15:38:39.098Z",
+  "source": "YouTube search and channel scan (yt-dlp)",
+  "totalVideosScanned": 129,
+  "totalTalks": 91,
+  "appliedMatches": [
+    {
+      "talkId": "2020-machine-learning-simplified-for-developers-with-ml",
+      "talkTitle": "Machine Learning simplified for Developers with ML.NET",
+      "eventName": "NDC Sydney 2020",
+      "score": 1.4,
+      "topicOverlap": 1,
+      "videoTitle": "Machine Learning simplified for Developers with ML.NET",
+      "videoUrl": "https://www.youtube.com/watch?v=FKQ70_6NoH4",
+      "uploader": "Global AI Community"
+    },
+    {
+      "talkId": "2020-ef-core-query-tags-and-logging",
+      "talkTitle": "EF Core Query Tags and logging",
+      "eventName": "SSW Online User Group",
+      "score": 1.2,
+      "topicOverlap": 0.667,
+      "videoTitle": "EF Core Query Tags and logging | Jernej \"JK\" Kavka",
+      "videoUrl": "https://www.youtube.com/watch?v=xUL3YKKC5lI",
+      "uploader": "SSW TV | Videos for developers, by developers"
+    },
+    {
+      "talkId": "2019-real-time-face-recognition-with-microsoft-cognitiv",
+      "talkTitle": "Real-time Face Recognition With Microsoft Cognitive Services",
+      "eventName": "NDC Sydney",
+      "score": 1.317,
+      "topicOverlap": 0.778,
+      "videoTitle": "Real-time Face Recognition With Microsoft Cognitive Services - Jernej Kavka (JK)",
+      "videoUrl": "https://www.youtube.com/watch?v=SdXj-2IHhiA",
+      "uploader": "NDC Conferences"
+    },
+    {
+      "talkId": "2019-ml-net-rocks-machine-learning-that-s-actually-easy",
+      "talkTitle": "ML.Net Rocks - Machine Learning that's ACTUALLY easy with Richard Campbell and Jernej Kavka (JK)",
+      "eventName": "NDC Sydney",
+      "score": 0.847,
+      "topicOverlap": 0.455,
+      "videoTitle": "Machine Learning with ML.NET - NDC Sydney 2020 Ask Me Anything! with Jernej (JK) Kavka",
+      "videoUrl": "https://www.youtube.com/watch?v=ORRM33HoNeY",
+      "uploader": "SSW TV | Videos for developers, by developers"
+    },
+    {
+      "talkId": "2019-opening-the-machine-learning-box-with-f",
+      "talkTitle": "Opening the Machine Learning box with F#",
+      "eventName": "NDC Sydney",
+      "score": 1.039,
+      "topicOverlap": 0.444,
+      "videoTitle": "Opening the Machine Learning box with F# | 'Tech Tips' @ NDC Sydney 2019",
+      "videoUrl": "https://www.youtube.com/watch?v=9sfFBX1b-pc",
+      "uploader": "SSW TV | Videos for developers, by developers"
+    },
+    {
+      "talkId": "2018-making-unit-tests-simple-again-with-net-core-and-e",
+      "talkTitle": "Making unit tests simple again with .Net Core and EF Core",
+      "eventName": "DDD Sydney",
+      "score": 1.329,
+      "topicOverlap": 0.583,
+      "videoTitle": "Making unit tests simple again with .Net Core and EF Core | Jernej Kavka (JK) at DDD Sydney 2018",
+      "videoUrl": "https://www.youtube.com/watch?v=6nYefHkKby8",
+      "uploader": "SSW TV | Videos for developers, by developers"
+    },
+    {
+      "talkId": "sessionize-151695",
+      "talkTitle": "🤖 Offline AI Magic: Run LLMs Locally with LM Studio & .NET 9",
+      "eventName": null,
+      "score": 1.113,
+      "topicOverlap": 0.583,
+      "videoTitle": "Offline AI Magic: Run LLMs Locally with LM Studio & .NET 9 | Jernej Kavka (JK) | SSW User Group",
+      "videoUrl": "https://www.youtube.com/watch?v=is4fO4NnjY0",
+      "uploader": "SSW TV | Videos for developers, by developers"
+    },
+    {
+      "talkId": "sessionize-48354",
+      "talkTitle": "Common mistakes in EF Core",
+      "eventName": "NDC Oslo 2023 / NDC Porto 2023 / DDD Brisbane 2023 / NDC London 2024",
+      "score": 1.13,
+      "topicOverlap": 0.6,
+      "videoTitle": "Common Mistakes in EF Core with Jernej JK Kavka",
+      "videoUrl": "https://www.youtube.com/watch?v=x4TumMHiB6w",
+      "uploader": "SSW TV | Videos for developers, by developers"
+    }
+  ],
+  "suggestedMatches": [
+    {
+      "talkId": "sessionize-event-6419",
+      "talkTitle": "Speaking at NDC Sydney 2021",
+      "eventName": "NDC Sydney 2021",
+      "score": 0.6,
+      "topicOverlap": 0,
+      "videoTitle": "NDC Sydney 2021 - Track 1",
+      "videoUrl": "https://www.youtube.com/watch?v=A6AixvFherE",
+      "uploader": "NDC Conferences"
+    },
+    {
+      "talkId": "2020-getting-started-with-machine-learning-using-ml-net",
+      "talkTitle": "Getting Started with Machine Learning using ML.NET (full day workshop)",
+      "eventName": "NDC Sydney 2020",
+      "score": 0.695,
+      "topicOverlap": 0.3,
+      "videoTitle": "Machine Learning with ML.NET - NDC Sydney 2020 Ask Me Anything! with Jernej (JK) Kavka",
+      "videoUrl": "https://www.youtube.com/watch?v=ORRM33HoNeY",
+      "uploader": "SSW TV | Videos for developers, by developers"
+    },
+    {
+      "talkId": "sessionize-event-3269",
+      "talkTitle": "Speaking at NDC Sydney 2020",
+      "eventName": "NDC Sydney 2020",
+      "score": 0.6,
+      "topicOverlap": 0,
+      "videoTitle": "NDC Sydney 2020",
+      "videoUrl": "https://www.youtube.com/watch?v=tqtOo73fyOE",
+      "uploader": "NDC Conferences"
+    },
+    {
+      "talkId": "2020-getting-started-with-machine-learning-using-ml-net",
+      "talkTitle": "Getting Started with Machine Learning using ML.NET (half day workshop)",
+      "eventName": "NDC Minnesota 2020",
+      "score": 0.6,
+      "topicOverlap": 0.429,
+      "videoTitle": "Machine Learning simplified for Developers with ML.NET - Jernej Kavka",
+      "videoUrl": "https://www.youtube.com/watch?v=ie8kQ5YU8eU",
+      "uploader": "The Virtual MLNET Community Conference"
+    },
+    {
+      "talkId": "2020-from-paper-to-power-using-azure-form-recognizer",
+      "talkTitle": "From Paper to Power using Azure Form Recognizer",
+      "eventName": "Azure Sydney User Group",
+      "score": 1.186,
+      "topicOverlap": 0.571,
+      "videoTitle": "From Paper to Power using Azure Form Recognizer - Jernej Kavka (JK)",
+      "videoUrl": "https://www.youtube.com/watch?v=c1FYHjqkj_E",
+      "uploader": "Global AI Community"
+    },
+    {
+      "talkId": "sessionize-event-1401",
+      "talkTitle": "Speaking at NDC Sydney 2019",
+      "eventName": "NDC Sydney 2019",
+      "score": 0.6,
+      "topicOverlap": 0,
+      "videoTitle": "NDC Sydney 2019",
+      "videoUrl": "https://www.youtube.com/watch?v=60ZS-WFiwHA",
+      "uploader": "NDC Conferences"
+    },
+    {
+      "talkId": "sessionize-89884",
+      "talkTitle": "The Harmonious Dance of EF Core and SQL Server",
+      "eventName": "NDC Sydney 2024 + related events",
+      "score": 1.156,
+      "topicOverlap": 0.625,
+      "videoTitle": "The Harmonious Dance of EF Core and SQL Server — Jernej Kavka (SSW)",
+      "videoUrl": "https://www.youtube.com/watch?v=Bras2vjmCZU",
+      "uploader": "Brisbane dotNET User Group"
+    },
+    {
+      "talkId": "sessionize-76579",
+      "talkTitle": "🤖 ML.NET in the Post-GPT Era: Importance of Machine Learning 🌐",
+      "eventName": "Data and AI Bootcamp Brisbane 2023",
+      "score": 0.6,
+      "topicOverlap": 0.429,
+      "videoTitle": "Machine Learning simplified for Developers with ML.NET - Jernej Kavka",
+      "videoUrl": "https://www.youtube.com/watch?v=ie8kQ5YU8eU",
+      "uploader": "The Virtual MLNET Community Conference"
+    },
+    {
+      "talkId": "2023-common-mistakes-in-ef-core-7-brisbane-net-user-gro",
+      "talkTitle": "Common mistakes in EF Core 7 @ Brisbane .NET User Group",
+      "eventName": "Brisbane .NET User Group",
+      "score": 0.694,
+      "topicOverlap": 0.6,
+      "videoTitle": "Common Mistakes in EF Core with Jernej JK Kavka",
+      "videoUrl": "https://www.youtube.com/watch?v=x4TumMHiB6w",
+      "uploader": "SSW TV | Videos for developers, by developers"
+    },
+    {
+      "talkId": "2022-how-to-keep-your-email-tidy-with-ai-ndc-sydney-202",
+      "talkTitle": "How to keep your email tidy with AI @ NDC Sydney 2022",
+      "eventName": "NDC Sydney 2022",
+      "score": 0.607,
+      "topicOverlap": 0,
+      "videoTitle": "Source Generators With Chris Sienkiewicz & JK | NDC Sydney 2022",
+      "videoUrl": "https://www.youtube.com/watch?v=3ObZSNeBVac",
+      "uploader": "SSW TV | Videos for developers, by developers"
+    },
+    {
+      "talkId": "2022-how-to-keep-your-email-tidy-with-ai-sydney-net-use",
+      "talkTitle": "How to keep your email tidy with AI @ Sydney .NET User Group",
+      "eventName": "Sydney .NET User Group",
+      "score": 0.769,
+      "topicOverlap": 0.375,
+      "videoTitle": ".NET User Group: How to keep your email tidy with AI with Jernej Kavka (JK)",
+      "videoUrl": "https://www.youtube.com/watch?v=hmaKg6eUliM",
+      "uploader": "SSW TV | Videos for developers, by developers"
+    },
+    {
+      "talkId": "2022-build-your-own-source-generator-with-chris-sienkie",
+      "talkTitle": "Build your own Source Generator With Chris Sienkiewicz & JK | NDC Sydney 2022",
+      "eventName": "NDC Sydney 2022",
+      "score": 1.6,
+      "topicOverlap": 0.667,
+      "videoTitle": "Build your own Source Generator With Chris Sienkiewicz & JK | NDC Sydney 2022",
+      "videoUrl": "https://www.youtube.com/watch?v=abMAW1pjreg",
+      "uploader": "SSW TV | Videos for developers, by developers"
+    },
+    {
+      "talkId": "2022-source-generators-with-chris-sienkiewicz-jk-ndc-sy",
+      "talkTitle": "Source Generators With Chris Sienkiewicz & JK | NDC Sydney 2022",
+      "eventName": "NDC Sydney 2022",
+      "score": 1.557,
+      "topicOverlap": 0.571,
+      "videoTitle": "Source Generators With Chris Sienkiewicz & JK | NDC Sydney 2022",
+      "videoUrl": "https://www.youtube.com/watch?v=3ObZSNeBVac",
+      "uploader": "SSW TV | Videos for developers, by developers"
+    },
+    {
+      "talkId": "2025-unlocking-the-full-potential-the-harmonious-dance-",
+      "talkTitle": "Unlocking the Full Potential: The Harmonious Dance of EF Core and SQL Server",
+      "eventName": "Online recording",
+      "score": 1.34,
+      "topicOverlap": 0.8,
+      "videoTitle": "Unlocking the Full Potential: The Harmonious Dance of EF Core and SQL Server - Jernej Kavka",
+      "videoUrl": "https://www.youtube.com/watch?v=gZDw0IeS6f8",
+      "uploader": "NDC Conferences"
+    },
+    {
+      "talkId": "2025-quickstart-offline-home-automation-prototype-with-",
+      "talkTitle": "Quickstart: Offline Home Automation prototype with Blazor and LLM for fun",
+      "eventName": "Brisbane .NET User Group",
+      "score": 0.818,
+      "topicOverlap": 0.636,
+      "videoTitle": "Quick Start: Offline home automation prototype with Blazor and LLM for fun — Jernej Kavka [JK]",
+      "videoUrl": "https://www.youtube.com/watch?v=kvDTKi5eLLc",
+      "uploader": "Brisbane dotNET User Group"
+    }
+  ],
+  "missingTalkCandidates": [
+    {
+      "videoTitle": "Common mistakes in EF Core - Jernej Kavka - NDC Oslo 2023",
+      "videoUrl": "https://www.youtube.com/watch?v=dDANjr5MCew",
+      "uploader": "NDC Conferences",
+      "sourceQuery": "ytsearch80:Jernej Kavka talk",
+      "referencesJernej": true,
+      "confidence": 1
+    },
+    {
+      "videoTitle": "Common mistakes in EF Core - Jernej Kavka - NDC London 2024",
+      "videoUrl": "https://www.youtube.com/watch?v=oE8lEP4mKjk",
+      "uploader": "NDC Conferences",
+      "sourceQuery": "ytsearch80:Jernej Kavka talk",
+      "referencesJernej": true,
+      "confidence": 1
+    },
+    {
+      "videoTitle": "Common mistakes in EF Core - Jernej Kavka - NDC Porto 2023",
+      "videoUrl": "https://www.youtube.com/watch?v=gOABWmQ5zdM",
+      "uploader": "NDC Conferences",
+      "sourceQuery": "ytsearch80:Jernej Kavka talk",
+      "referencesJernej": true,
+      "confidence": 1
+    },
+    {
+      "videoTitle": "Common mistakes in EF Core  - Jernej Kavka - NDC Sydney 2021",
+      "videoUrl": "https://www.youtube.com/watch?v=iSWxny5MUY8",
+      "uploader": "NDC Conferences",
+      "sourceQuery": "ytsearch80:Jernej Kavka talk",
+      "referencesJernej": true,
+      "confidence": 1
+    },
+    {
+      "videoTitle": "Machine Learning simplified for Developers with ML.NET - Jernej Kavka",
+      "videoUrl": "https://www.youtube.com/watch?v=3Ll9t15FW6g",
+      "uploader": "NDC Conferences",
+      "sourceQuery": "ytsearch80:Jernej Kavka talk",
+      "referencesJernej": true,
+      "confidence": 1
+    },
+    {
+      "videoTitle": "Common mistakes in EF Core — Jernej Kavka (JK)",
+      "videoUrl": "https://www.youtube.com/watch?v=tfMPfDyzHxc",
+      "uploader": "Brisbane dotNET User Group",
+      "sourceQuery": "ytsearch80:Jernej JK Kavka",
+      "referencesJernej": true,
+      "confidence": 1
+    },
+    {
+      "videoTitle": "EF Core Query Tags and logging - Jernej Kavka (JK)",
+      "videoUrl": "https://www.youtube.com/watch?v=bgJyMdi5S0Q",
+      "uploader": "DDD Melbourne",
+      "sourceQuery": "ytsearch80:Jernej JK Kavka",
+      "referencesJernej": true,
+      "confidence": 1
+    },
+    {
+      "videoTitle": "The Harmonious Dance of EF Core and SQL Server | Jernej Kavka | User Group",
+      "videoUrl": "https://www.youtube.com/watch?v=yyJuol7oxtA",
+      "uploader": "SSW TV | Videos for developers, by developers",
+      "sourceQuery": "ytsearch80:Jernej JK Kavka",
+      "referencesJernej": true,
+      "confidence": 1
+    },
+    {
+      "videoTitle": "NDC Sydney 2017 - AMA! with Jernej Kavka (JK) and Daniel Chambers (F#, C# .NET Core)",
+      "videoUrl": "https://www.youtube.com/watch?v=3VPHV1902OQ",
+      "uploader": "SSW TV | Videos for developers, by developers",
+      "sourceQuery": "ytsearch80:Jernej Kavka talk",
+      "referencesJernej": true,
+      "confidence": 0.8
+    },
+    {
+      "videoTitle": "October .NET User Group: How to keep your email tidy with AI with Jernej Kavka",
+      "videoUrl": "https://www.youtube.com/watch?v=PrXosWPgDwc",
+      "uploader": "SSW TV | Videos for developers, by developers",
+      "sourceQuery": "ytsearch80:Jernej Kavka talk",
+      "referencesJernej": true,
+      "confidence": 0.8
+    },
+    {
+      "videoTitle": "Machine Learning simplified for Developers with ML.NET - Jernej Kavka (JK)",
+      "videoUrl": "https://www.youtube.com/watch?v=LG1DHMNT0TA",
+      "uploader": "SSW TV | Videos for developers, by developers",
+      "sourceQuery": "ytsearch80:Jernej Kavka talk",
+      "referencesJernej": true,
+      "confidence": 0.8
+    },
+    {
+      "videoTitle": "Azure Community Live # 20 - Jernej Kavka and Azure Form Recognizer",
+      "videoUrl": "https://www.youtube.com/watch?v=OpSXbHUYTAQ",
+      "uploader": "Azure Community Live",
+      "sourceQuery": "ytsearch80:Jernej Kavka talk",
+      "referencesJernej": true,
+      "confidence": 0.8
+    },
+    {
+      "videoTitle": "Real-time Face Recognition With Microsoft Cognitive Services by Jernej Kavka",
+      "videoUrl": "https://www.youtube.com/watch?v=JicAk7zDcSA",
+      "uploader": "Gold Coast Azure / .NET User Group",
+      "sourceQuery": "ytsearch80:Jernej JK Kavka",
+      "referencesJernej": true,
+      "confidence": 0.8
+    },
+    {
+      "videoTitle": "EF Core Unit Testing with SQLite",
+      "videoUrl": "https://www.youtube.com/watch?v=PppmuvsFO78",
+      "uploader": "Jernej Kavka (JK) SSW",
+      "sourceQuery": "ytsearch80:Jernej JK Kavka",
+      "referencesJernej": true,
+      "confidence": 0.8
+    },
+    {
+      "videoTitle": "Table Talk:  AI Community - Haritha Thilakarathne, Akanksha Malik, Arafat Tehsin & Jernej Kavka (JK)",
+      "videoUrl": "https://www.youtube.com/watch?v=F9IaHBGEVkE",
+      "uploader": "Global AI Community",
+      "sourceQuery": "ytsearch80:Jernej Kavka talk",
+      "referencesJernej": true,
+      "confidence": 0.65
+    }
+  ]
+}

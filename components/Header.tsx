@@ -4,7 +4,7 @@ import Link from './Link'
 import MobileNav from './MobileNav'
 import ThemeSwitch from './ThemeSwitch'
 import SearchButton from './SearchButton'
-import Image from 'next/image'
+import BrandLogo from './BrandLogo'
 
 const Header = () => {
   let headerClass =
@@ -19,7 +19,7 @@ const Header = () => {
       <Link href="/" aria-label={siteMetadata.headerTitle}>
         <div className="flex items-center justify-between">
           <div className="mr-3">
-            <Image src="/static/images/jk-logo.svg" alt="JK" width={72} height={44} priority />
+            <BrandLogo />
           </div>
         </div>
       </Link>

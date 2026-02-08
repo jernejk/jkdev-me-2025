@@ -15,6 +15,7 @@
     "speaking:extract-mvp": "node scripts/extract-mvp-speaking.mjs",
     "speaking:fetch": "node scripts/fetch-sessionize-data.mjs",
     "speaking:merge": "node scripts/merge-speaking-data-v2.mjs",
+    "speaking:youtube-sync": "node scripts/sync-youtube-talks.mjs",
     "speaking:build": "npm run speaking:extract-mvp && npm run speaking:fetch && npm run speaking:merge",
     "ui:review": "node scripts/ui-review-loop.mjs"
   },
