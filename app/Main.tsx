@@ -104,12 +104,14 @@ export default function Home({ posts, upcomingTalk }) {
         </section>
 
         <aside className="space-y-4">
-          <div className="rounded-xl border border-cyan-500/35 bg-gradient-to-b from-slate-900 to-slate-950 p-4 shadow-[0_12px_30px_rgba(8,145,178,0.18)]">
+          <div className="rounded-xl border border-gray-200/90 bg-white/95 p-4 shadow-sm dark:border-cyan-500/35 dark:bg-gradient-to-b dark:from-slate-900 dark:to-slate-950 dark:shadow-[0_12px_30px_rgba(8,145,178,0.18)]">
             <div className="mb-3 flex items-center justify-between">
-              <h2 className="text-xl font-bold tracking-tight text-cyan-100">Upcoming Talk</h2>
+              <h2 className="text-xl font-bold tracking-tight text-gray-900 dark:text-cyan-100">
+                Upcoming Talk
+              </h2>
               <Link
                 href="/speaking"
-                className="text-xs font-semibold text-cyan-300 hover:text-cyan-200"
+                className="text-xs font-semibold text-cyan-700 hover:text-cyan-600 dark:text-cyan-300 dark:hover:text-cyan-200"
                 aria-label="See all speaking events"
               >
                 All talks
@@ -118,7 +120,7 @@ export default function Home({ posts, upcomingTalk }) {
             {upcomingTalk ? (
               <UpcomingTalkCard talk={upcomingTalk} compact />
             ) : (
-              <div className="rounded-lg border border-dashed border-cyan-400/40 p-4 text-sm text-slate-300">
+              <div className="rounded-lg border border-dashed border-cyan-300/70 bg-cyan-50/60 p-4 text-sm text-cyan-900 dark:border-cyan-400/40 dark:bg-transparent dark:text-slate-300">
                 No upcoming talks listed right now.
               </div>
             )}

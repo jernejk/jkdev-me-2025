@@ -1,0 +1,34 @@
+# local-only and archives
+.archive
+.sandbox
+.tmp
+.private-data
+
+# VCS and docs not needed for runtime deploy
+.git
+.github
+
+# local/editor artifacts
+.DS_Store
+.vscode
+.claude
+
+# node/build artifacts
+node_modules
+.next
+out
+coverage
+
+# duplicate legacy site tree
+v2
+
+# env files
+.env
+.env.*
+!.env.example
+
+# generated files
+public/feed.xml
+public/search.json
+public/sitemap.xml
+data/talks/sessionize.json
