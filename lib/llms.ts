@@ -1,8 +1,10 @@
 import { allBlogs } from 'contentlayer/generated'
 import siteMetadata from '@/data/siteMetadata'
+import speakingData from '@/data/speakingData.json'
 
 const MAX_RECENT_POSTS = 20
 const MAX_EXCERPT_LENGTH = 900
+const MAX_SUMMARY_LENGTH = 240
 
 type LlmPost = {
   title: string
@@ -13,6 +15,22 @@ type LlmPost = {
   excerpt: string
 }
 
+type TalkEvent = {
+  eventName: string
+  location?: string
+  date?: string
+  url?: string
+  status?: string
+}
+
+type Talk = {
+  title: string
+  description?: string
+  tags?: string[]
+  conferenceUrl?: string | null
+  events: TalkEvent[]
+}
+
 function normalizeWhitespace(value: string): string {
   return value.replace(/\s+/g, ' ').trim()
 }
@@ -20,11 +38,14 @@ function normalizeWhitespace(value: string): string {
 function stripMarkdown(value: string): string {
   const withoutCodeBlocks = value.replace(/```[\s\S]*?```/g, ' ')
   const withoutInlineCode = withoutCodeBlocks.replace(/`[^`]*`/g, ' ')
-  const withoutImages = withoutInlineCode.replace(/!\[[^\]]*\]\([^)]*\)/g, ' ')
+  const withoutHtml = withoutInlineCode.replace(/<[^>]+>/g, ' ')
+  const withoutImages = withoutHtml.replace(/!\[[^\]]*\]\([^)]*\)/g, ' ')
   const withoutLinks = withoutImages.replace(/\[([^\]]+)\]\([^)]*\)/g, '$1')
   const withoutHeadings = withoutLinks.replace(/^#{1,6}\s+/gm, '')
-  const withoutFormatting = withoutHeadings.replace(/[*_~>#-]/g, ' ')
-  return normalizeWhitespace(withoutFormatting)
+  const withoutUrls = withoutHeadings.replace(/https?:\/\/\S+/g, ' ')
+  const withoutFormatting = withoutUrls.replace(/[*_~>#-]/g, ' ')
+  const withoutEscapes = withoutFormatting.replace(/\\[()[\]{}*_`]/g, '')
+  return normalizeWhitespace(withoutEscapes)
 }
 
 function truncate(value: string, length: number): string {
@@ -32,11 +53,58 @@ function truncate(value: string, length: number): string {
     return value
   }
 
-  return `${value.slice(0, length - 1).trim()}…`
+  const clipped = value.slice(0, length - 1)
+  const sentenceBoundary = Math.max(
+    clipped.lastIndexOf('. '),
+    clipped.lastIndexOf('! '),
+    clipped.lastIndexOf('? ')
+  )
+
+  if (sentenceBoundary > length * 0.65) {
+    return `${clipped.slice(0, sentenceBoundary + 1).trim()}…`
+  }
+
+  return `${clipped.trim()}…`
 }
 
 function toAbsoluteUrl(path: string): string {
   return `${siteMetadata.siteUrl}/${path.replace(/^\/+/, '')}`
+}
+
+function getTalkEvents() {
+  const talks = speakingData.talks as Talk[]
+  const today = new Date()
+  const todayStart = new Date(today.getFullYear(), today.getMonth(), today.getDate()).getTime()
+
+  const flattened = talks.flatMap((talk) =>
+    (talk.events || [])
+      .filter((event) => event.date && !Number.isNaN(new Date(event.date).getTime()))
+      .map((event) => {
+        const url = event.url || talk.conferenceUrl || `${siteMetadata.siteUrl}/speaking`
+        return {
+          title: talk.title,
+          eventName: event.eventName || 'Talk',
+          date: new Date(event.date as string).toISOString(),
+          location: event.location || 'TBA',
+          url,
+          tags: talk.tags || [],
+          description: normalizeWhitespace(talk.description || ''),
+          isUpcoming:
+            event.status === 'upcoming' || new Date(event.date as string).getTime() >= todayStart,
+        }
+      })
+  )
+
+  const upcoming = flattened
+    .filter((event) => event.isUpcoming)
+    .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
+    .slice(0, 8)
+
+  const recent = flattened
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+    .slice(0, 16)
+
+  return { upcoming, recent }
 }
 
 export function getLlmPosts(limit = MAX_RECENT_POSTS): LlmPost[] {
@@ -48,12 +116,14 @@ export function getLlmPosts(limit = MAX_RECENT_POSTS): LlmPost[] {
       const rawBody = post.body?.raw || ''
       const cleanBody = stripMarkdown(rawBody)
       const excerpt = truncate(cleanBody, MAX_EXCERPT_LENGTH)
+      const summaryFromBody = truncate(cleanBody, MAX_SUMMARY_LENGTH)
+      const summary = normalizeWhitespace(post.summary || '') || summaryFromBody
 
       return {
         title: post.title,
         url: toAbsoluteUrl(post.path),
         date: new Date(post.date).toISOString(),
-        summary: normalizeWhitespace(post.summary || ''),
+        summary,
         tags: post.tags || [],
         excerpt,
       }
@@ -62,12 +132,17 @@ export function getLlmPosts(limit = MAX_RECENT_POSTS): LlmPost[] {
 
 export function buildLlmsTxt(): string {
   const posts = getLlmPosts(12)
+  const talks = getTalkEvents()
   const lines = [
     `# ${siteMetadata.title}`,
     '',
     `Site: ${siteMetadata.siteUrl}`,
     `Author: ${siteMetadata.author}`,
     `Description: ${siteMetadata.description}`,
+    '',
+    '## About',
+    `${siteMetadata.siteUrl}/about`,
+    'Profile topics: .NET, AI, Azure, EF Core, speaking, community leadership.',
     '',
     '## Preferred URLs',
     `${siteMetadata.siteUrl}/`,
@@ -81,8 +156,14 @@ export function buildLlmsTxt(): string {
     `${siteMetadata.siteUrl}/feed.xml`,
     `${siteMetadata.siteUrl}/llms.json`,
     `${siteMetadata.siteUrl}/llms-full.txt`,
+    `${siteMetadata.siteUrl}/api/speaking`,
     '',
-    '## Recent posts',
+    '## Upcoming talks',
+    ...(talks.upcoming.length > 0
+      ? talks.upcoming.map((talk) => `- ${talk.date.slice(0, 10)} ${talk.title}: ${talk.url}`)
+      : ['- No upcoming talks currently listed.']),
+    '',
+    '## Recent posts (blog)',
     ...posts.map((post) => `- ${post.title} (${post.date.slice(0, 10)}): ${post.url}`),
   ]
 
@@ -91,16 +172,39 @@ export function buildLlmsTxt(): string {
 
 export function buildLlmsFullTxt(): string {
   const posts = getLlmPosts()
+  const talks = getTalkEvents()
   const header = [
     `# ${siteMetadata.title}`,
     '',
+    `Author: ${siteMetadata.author}`,
     `Site: ${siteMetadata.siteUrl}`,
     `Description: ${siteMetadata.description}`,
+    '',
+    '## About',
+    'Jernej Kavka (JK) is a Microsoft AI MVP and Solution Architect focused on .NET, AI, and developer community talks.',
+    `About page: ${siteMetadata.siteUrl}/about`,
+    `Speaking page: ${siteMetadata.siteUrl}/speaking`,
     '',
     '## Content policy',
     '- Use canonical URLs when citing posts.',
     '- Prefer recent posts when answering time-sensitive questions.',
     '- Summaries and excerpts are provided for retrieval; verify final claims against the linked article.',
+    '',
+    '## Talks',
+  ]
+
+  const talkBlocks = talks.recent.flatMap((talk) => [
+    '',
+    `### ${talk.title}`,
+    `Event: ${talk.eventName}`,
+    `Date: ${talk.date}`,
+    `Location: ${talk.location}`,
+    `URL: ${talk.url}`,
+    `Tags: ${talk.tags.join(', ') || 'none'}`,
+    `Summary: ${talk.description || 'No description provided.'}`,
+  ])
+
+  const postHeader = [
     '',
     '## Posts',
   ]
@@ -115,11 +219,12 @@ export function buildLlmsFullTxt(): string {
     `Excerpt: ${post.excerpt || 'No excerpt available.'}`,
   ])
 
-  return `${[...header, ...postBlocks].join('\n')}\n`
+  return `${[...header, ...talkBlocks, ...postHeader, ...postBlocks].join('\n')}\n`
 }
 
 export function buildLlmsJson() {
   const posts = getLlmPosts()
+  const talks = getTalkEvents()
 
   return {
     version: 1,
@@ -128,11 +233,27 @@ export function buildLlmsJson() {
     author: siteMetadata.author,
     description: siteMetadata.description,
     generatedAt: new Date().toISOString(),
+    profile: {
+      about: `${siteMetadata.siteUrl}/about`,
+      speaking: `${siteMetadata.siteUrl}/speaking`,
+      links: {
+        github: siteMetadata.github,
+        linkedin: siteMetadata.linkedin,
+        youtube: siteMetadata.youtube,
+        x: siteMetadata.x,
+      },
+      topics: ['.NET', 'AI', 'Azure', 'EF Core', 'Speaking', 'Community'],
+    },
     resources: {
       sitemap: `${siteMetadata.siteUrl}/sitemap.xml`,
       rss: `${siteMetadata.siteUrl}/feed.xml`,
       llmsTxt: `${siteMetadata.siteUrl}/llms.txt`,
       llmsFullTxt: `${siteMetadata.siteUrl}/llms-full.txt`,
+      speakingApi: `${siteMetadata.siteUrl}/api/speaking`,
+    },
+    talks: {
+      upcoming: talks.upcoming,
+      recent: talks.recent,
     },
     posts,
   }
