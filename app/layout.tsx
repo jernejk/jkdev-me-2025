@@ -38,6 +38,11 @@ export const metadata: Metadata = {
     canonical: './',
     types: {
       'application/rss+xml': `${siteMetadata.siteUrl}/feed.xml`,
+      'text/plain': [
+        { url: `${siteMetadata.siteUrl}/llms.txt`, title: 'LLMs Text Index' },
+        { url: `${siteMetadata.siteUrl}/llms-full.txt`, title: 'LLMs Full Text Index' },
+      ],
+      'application/json': [{ url: `${siteMetadata.siteUrl}/llms.json`, title: 'LLMs JSON Index' }],
     },
   },
   robots: {
@@ -94,6 +99,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fff" />
       <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000" />
       <link rel="alternate" type="application/rss+xml" href={`${basePath}/feed.xml`} />
+      <link rel="alternate" type="text/plain" href={`${basePath}/llms.txt`} />
+      <link rel="alternate" type="text/plain" href={`${basePath}/llms-full.txt`} />
+      <link rel="alternate" type="application/json" href={`${basePath}/llms.json`} />
       <body className="bg-[#f6f9fc] pl-[calc(100vw-100%)] text-black antialiased dark:bg-[#020617] dark:text-white">
         <ThemeProviders>
           <Analytics analyticsConfig={siteMetadata.analytics as AnalyticsConfig} />
