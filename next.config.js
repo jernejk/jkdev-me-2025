@@ -1,4 +1,6 @@
 const { withContentlayer } = require('next-contentlayer2')
+const fs = require('fs')
+const path = require('path')
 
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
@@ -63,6 +65,17 @@ const unoptimized = process.env.UNOPTIMIZED ? true : undefined
  **/
 module.exports = () => {
   const plugins = [withContentlayer, withBundleAnalyzer]
+
+  const legacyBlogRedirects = fs
+    .readdirSync(path.join(process.cwd(), 'data', 'blog'))
+    .filter((file) => file.endsWith('.mdx'))
+    .map((file) => file.replace(/\.mdx$/, ''))
+    .map((slug) => ({
+      source: `/${slug}`,
+      destination: `/blog/${slug}`,
+      permanent: true,
+    }))
+
   return plugins.reduce((acc, next) => next(acc), {
     output,
     basePath,
@@ -87,6 +100,18 @@ module.exports = () => {
           source: '/(.*)',
           headers: securityHeaders,
         },
+      ]
+    },
+    async redirects() {
+      return [
+        ...legacyBlogRedirects,
+        { source: '/author/jk', destination: '/about', permanent: true },
+        { source: '/author/jk/:path*', destination: '/about', permanent: true },
+        { source: '/about-me', destination: '/about', permanent: true },
+        { source: '/about-me-test', destination: '/about', permanent: true },
+        { source: '/:slug/amp', destination: '/blog/:slug', permanent: true },
+        { source: '/blog/:slug/amp', destination: '/blog/:slug', permanent: true },
+        { source: '/tag/:slug', destination: '/tags/:slug', permanent: true },
       ]
     },
     webpack: (config, options) => {

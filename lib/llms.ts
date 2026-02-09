@@ -11,6 +11,7 @@ type LlmPost = {
   url: string
   date: string
   summary: string
+  tldr: string
   tags: string[]
   excerpt: string
 }
@@ -118,12 +119,14 @@ export function getLlmPosts(limit = MAX_RECENT_POSTS): LlmPost[] {
       const excerpt = truncate(cleanBody, MAX_EXCERPT_LENGTH)
       const summaryFromBody = truncate(cleanBody, MAX_SUMMARY_LENGTH)
       const summary = normalizeWhitespace(post.summary || '') || summaryFromBody
+      const tldr = normalizeWhitespace(post.tldr || '') || summary
 
       return {
         title: post.title,
         url: toAbsoluteUrl(post.path),
         date: new Date(post.date).toISOString(),
         summary,
+        tldr,
         tags: post.tags || [],
         excerpt,
       }
@@ -216,6 +219,7 @@ export function buildLlmsFullTxt(): string {
     `Published: ${post.date}`,
     `Tags: ${post.tags.join(', ') || 'none'}`,
     `Summary: ${post.summary || 'No summary provided.'}`,
+    `TL;DR: ${post.tldr || 'No TL;DR provided.'}`,
     `Excerpt: ${post.excerpt || 'No excerpt available.'}`,
   ])
 

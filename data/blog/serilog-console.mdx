@@ -7,6 +7,7 @@ tags:
   - Serilog
 draft: false
 summary: "Fix common Seq logging issues in .NET console apps by configuring Serilog lifecycle, exception handling, and proper flush/disposal."
+tldr: "In console apps, wrap execution in try/catch/finally and always call Log.CloseAndFlush so Seq receives final events."
 images:
   - /content/images/2019/05/bellevue-sky-2-min.jpg
 authors:
