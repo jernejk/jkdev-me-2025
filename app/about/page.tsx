@@ -4,7 +4,11 @@ import AuthorLayout from '@/layouts/AuthorLayout'
 import { coreContent } from 'pliny/utils/contentlayer'
 import { genPageMetadata } from 'app/seo'
 
-export const metadata = genPageMetadata({ title: 'About' })
+export const metadata = genPageMetadata({
+  title: 'About',
+  description:
+    'About Jernej Kavka (JK), a Microsoft AI MVP and Solution Architect in Brisbane working on .NET, EF Core, Azure, and AI.',
+})
 
 export default function Page() {
   const author = allAuthors.find((p) => p.slug === 'default') as Authors

@@ -9,6 +9,7 @@ const MAX_SUMMARY_LENGTH = 240
 type LlmPost = {
   title: string
   url: string
+  markdownUrl: string
   date: string
   summary: string
   tldr: string
@@ -120,10 +121,12 @@ export function getLlmPosts(limit = MAX_RECENT_POSTS): LlmPost[] {
       const summaryFromBody = truncate(cleanBody, MAX_SUMMARY_LENGTH)
       const summary = normalizeWhitespace(post.summary || '') || summaryFromBody
       const tldr = normalizeWhitespace(post.tldr || '') || summary
+      const markdownUrl = toAbsoluteUrl(`blog-md/${post.slug}`)
 
       return {
         title: post.title,
         url: toAbsoluteUrl(post.path),
+        markdownUrl,
         date: new Date(post.date).toISOString(),
         summary,
         tldr,
@@ -159,6 +162,7 @@ export function buildLlmsTxt(): string {
     `${siteMetadata.siteUrl}/feed.xml`,
     `${siteMetadata.siteUrl}/llms.json`,
     `${siteMetadata.siteUrl}/llms-full.txt`,
+    `${siteMetadata.siteUrl}/md`,
     `${siteMetadata.siteUrl}/api/speaking`,
     '',
     '## Upcoming talks',
@@ -167,7 +171,9 @@ export function buildLlmsTxt(): string {
       : ['- No upcoming talks currently listed.']),
     '',
     '## Recent posts (blog)',
-    ...posts.map((post) => `- ${post.title} (${post.date.slice(0, 10)}): ${post.url}`),
+    ...posts.map(
+      (post) => `- ${post.title} (${post.date.slice(0, 10)}): ${post.url} (md: ${post.markdownUrl})`
+    ),
   ]
 
   return `${lines.join('\n')}\n`
@@ -213,6 +219,7 @@ export function buildLlmsFullTxt(): string {
     '',
     `### ${post.title}`,
     `URL: ${post.url}`,
+    `Markdown: ${post.markdownUrl}`,
     `Published: ${post.date}`,
     `Tags: ${post.tags.join(', ') || 'none'}`,
     `Summary: ${post.summary || 'No summary provided.'}`,
@@ -250,6 +257,7 @@ export function buildLlmsJson() {
       rss: `${siteMetadata.siteUrl}/feed.xml`,
       llmsTxt: `${siteMetadata.siteUrl}/llms.txt`,
       llmsFullTxt: `${siteMetadata.siteUrl}/llms-full.txt`,
+      markdownIndex: `${siteMetadata.siteUrl}/md`,
       speakingApi: `${siteMetadata.siteUrl}/api/speaking`,
     },
     talks: {

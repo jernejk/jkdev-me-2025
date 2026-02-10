@@ -4,7 +4,7 @@ const siteMetadata = {
   author: 'Jernej Kavka',
   headerTitle: 'JK',
   description: 'Microsoft AI MVP - .NET, AI, and speaking',
-  language: 'en-us',
+  language: 'en-US',
   theme: 'system', // system, dark or light
   siteUrl: 'https://jkdev.me',
   siteRepo: 'https://github.com/jernejk/jkdev-me-2025',

@@ -9,6 +9,14 @@ import { sortPosts } from 'pliny/utils/contentlayer.js'
 
 const outputFolder = process.env.EXPORT ? 'out' : 'public'
 
+function formatRssPerson(config) {
+  // RSS uses an "email (name)" pattern for author/editor fields, but email is optional.
+  if (config.email) {
+    return `${config.email} (${config.author})`
+  }
+  return config.author
+}
+
 const generateRssItem = (config, post) => `
   <item>
     <guid>${config.siteUrl}/blog/${post.slug}</guid>
@@ -16,7 +24,7 @@ const generateRssItem = (config, post) => `
     <link>${config.siteUrl}/blog/${post.slug}</link>
     ${post.summary && `<description>${escape(post.summary)}</description>`}
     <pubDate>${new Date(post.date).toUTCString()}</pubDate>
-    <author>${config.email} (${config.author})</author>
+    <author>${formatRssPerson(config)}</author>
     ${post.tags && post.tags.map((t) => `<category>${t}</category>`).join('')}
   </item>
 `
@@ -28,8 +36,8 @@ const generateRss = (config, posts, page = 'feed.xml') => `
       <link>${config.siteUrl}/blog</link>
       <description>${escape(config.description)}</description>
       <language>${config.language}</language>
-      <managingEditor>${config.email} (${config.author})</managingEditor>
-      <webMaster>${config.email} (${config.author})</webMaster>
+      <managingEditor>${formatRssPerson(config)}</managingEditor>
+      <webMaster>${formatRssPerson(config)}</webMaster>
       <lastBuildDate>${new Date(posts[0].date).toUTCString()}</lastBuildDate>
       <atom:link href="${config.siteUrl}/${page}" rel="self" type="application/rss+xml"/>
       ${posts.map((post) => generateRssItem(config, post)).join('')}
