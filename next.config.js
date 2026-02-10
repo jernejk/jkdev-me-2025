@@ -9,7 +9,7 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 // You might need to insert additional domains in script-src if you are using external services
 const ContentSecurityPolicy = `
   default-src 'self';
-  script-src 'self' 'unsafe-eval' 'unsafe-inline' giscus.app analytics.umami.is;
+  script-src 'self' 'unsafe-eval' 'unsafe-inline' giscus.app analytics.umami.is cloud.umami.is;
   style-src 'self' 'unsafe-inline';
   img-src * blob: data:;
   media-src *.s3.amazonaws.com;
@@ -135,7 +135,6 @@ module.exports = () => {
 
         { source: '/author/jk', destination: '/about', permanent: true },
         { source: '/author/jk/:path*', destination: '/about', permanent: true },
-        // Old site had additional authors (e.g. /author/ghost/, /author/gabriel/).
         { source: '/author/:slug', destination: '/about', permanent: true },
         { source: '/author/:slug/:path*', destination: '/about', permanent: true },
         { source: '/about-me', destination: '/about', permanent: true },

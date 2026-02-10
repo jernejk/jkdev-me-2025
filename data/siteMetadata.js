@@ -26,6 +26,8 @@ const siteMetadata = {
     // supports Plausible, Simple Analytics, Umami, Posthog or Google Analytics.
     umamiAnalytics: {
       umamiWebsiteId: process.env.NEXT_UMAMI_ID,
+      // Umami Cloud script URL (defaults to Umami Cloud; override if you self-host).
+      src: process.env.NEXT_UMAMI_SRC || 'https://cloud.umami.is/script.js',
     },
   },
   newsletter: {
