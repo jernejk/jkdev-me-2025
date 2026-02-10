@@ -65,6 +65,29 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const basePath = process.env.BASE_PATH || ''
+  const schemaWebsite = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: siteMetadata.title,
+    url: siteMetadata.siteUrl,
+    description: siteMetadata.description,
+    inLanguage: siteMetadata.language,
+  }
+  const schemaPerson = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: siteMetadata.author,
+    url: siteMetadata.siteUrl,
+    image: `${siteMetadata.siteUrl}/static/images/jk-headshot.jpg`,
+    jobTitle: 'Solution Architect',
+    sameAs: [
+      siteMetadata.github,
+      siteMetadata.linkedin,
+      siteMetadata.youtube,
+      siteMetadata.x,
+    ].filter(Boolean),
+    knowsAbout: ['.NET', 'EF Core', 'Azure', 'AI', 'Performance', 'Speaking'],
+  }
 
   return (
     <html
@@ -103,6 +126,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <link rel="alternate" type="text/plain" href={`${basePath}/llms-full.txt`} />
       <link rel="alternate" type="application/json" href={`${basePath}/llms.json`} />
       <body className="bg-[#f6f9fc] pl-[calc(100vw-100%)] text-black antialiased dark:bg-[#020617] dark:text-white">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify([schemaWebsite, schemaPerson]) }}
+        />
         <ThemeProviders>
           <Analytics analyticsConfig={siteMetadata.analytics as AnalyticsConfig} />
           <div className="pointer-events-none fixed inset-0 -z-10 hidden [background:radial-gradient(circle_at_20%_0%,rgba(6,182,212,0.18),transparent_40%),radial-gradient(circle_at_100%_80%,rgba(14,165,233,0.16),transparent_40%),linear-gradient(160deg,#0f172a_0%,#020617_100%)] dark:block" />

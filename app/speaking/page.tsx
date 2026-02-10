@@ -1,8 +1,8 @@
-import siteMetadata from '@/data/siteMetadata'
 import UpcomingTalkCard from '@/components/speaking/UpcomingTalkCard'
 import SingleTalkCard from '@/components/speaking/SingleTalkCard'
 import GroupedTalkCard from '@/components/speaking/GroupedTalkCard'
 import speakingData from '@/data/speakingData.json'
+import { genPageMetadata } from 'app/seo'
 
 interface Event {
   eventName: string
@@ -28,10 +28,11 @@ interface Talk {
   conferenceUrl: string | null
 }
 
-export const metadata = {
-  title: 'Speaking - JK',
-  description: 'My past and upcoming talks.',
-}
+export const metadata = genPageMetadata({
+  title: 'Speaking',
+  description:
+    'Past and upcoming conference talks and user group sessions on .NET, EF Core performance, Azure, and AI.',
+})
 
 export default function Speaking() {
   const talks = (speakingData.talks as Talk[]).sort(

@@ -122,8 +122,20 @@ export const Blog = defineDocumentType(() => ({
         datePublished: doc.date,
         dateModified: doc.lastmod || doc.date,
         description: doc.summary,
-        image: doc.images ? doc.images[0] : siteMetadata.socialBanner,
-        url: `${siteMetadata.siteUrl}/${doc._raw.flattenedPath}`,
+        image: (() => {
+          const raw = doc.images
+          const first =
+            typeof raw === 'string'
+              ? raw
+              : Array.isArray(raw) && raw.length > 0
+                ? raw[0]
+                : siteMetadata.socialBanner
+          return first && first.includes('http') ? first : `${siteMetadata.siteUrl}${first}`
+        })(),
+        url: doc.canonicalUrl || `${siteMetadata.siteUrl}/${doc._raw.flattenedPath}`,
+        mainEntityOfPage: doc.canonicalUrl || `${siteMetadata.siteUrl}/${doc._raw.flattenedPath}`,
+        keywords: doc.tags || [],
+        inLanguage: siteMetadata.language,
       }),
     },
   },
