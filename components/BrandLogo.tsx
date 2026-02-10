@@ -8,20 +8,21 @@ export default function BrandLogo() {
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="JK logo"
+      data-testid="brand-logo"
       className="h-11 w-[72px]"
     >
       <path
-        d="M55 8V53.5C55 69.2 44 80 28.8 80C20.7 80 13.3 77.3 8 72.6L15.5 62.7C19.3 65.8 23.5 67.3 28.1 67.3C36.3 67.3 41 62.2 41 53.3V8H55Z"
-        className="fill-slate-900 dark:fill-white"
+        d="M56 8V53.5C56 69.2 44.9 80 28.8 80C20.7 80 13.3 77.3 8 72.6L15.5 62.7C19.3 65.8 23.5 67.3 28.1 67.3C36.3 67.3 42 62.2 42 53.3V8H56Z"
+        className="fill-slate-900 dark:fill-slate-50"
       />
-      <rect x="62" y="8" width="14" height="72" rx="2" className="fill-cyan-500" />
+      <rect x="64" y="8" width="13" height="72" rx="2" className="fill-[#0EA5B8]" />
       <path
-        d="M132 8L95.3 41.4L132 80H113.7L82 46.4L96 31.6L114.8 12.9H132V8Z"
-        className="fill-cyan-500"
+        d="M134 8L96.6 41.6L134 80H115.8L82.2 45.8L97.3 31.1L115.2 13.2H134V8Z"
+        className="fill-[#0EA5B8]"
       />
       <path
-        d="M94.8 52.6L109.4 67.1L96.2 80H80.8L88.5 72.2L94.8 52.6Z"
-        className="fill-slate-900 dark:fill-white"
+        d="M97.6 52.5L111 66.2L97 80H81.4L89.6 71.7L97.6 52.5Z"
+        className="fill-slate-900 dark:fill-slate-50"
       />
     </svg>
   )

@@ -1,7 +1,8 @@
-<svg width="140" height="84" viewBox="0 0 140 84" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="jkLogoTitle">
-  <title id="jkLogoTitle">JK Logo</title>
-  <path d="M56 8V53.5C56 69.2 44.9 80 28.8 80C20.7 80 13.3 77.3 8 72.6L15.5 62.7C19.3 65.8 23.5 67.3 28.1 67.3C36.3 67.3 42 62.2 42 53.3V8H56Z" fill="#F8FAFC"/>
-  <rect x="64" y="8" width="13" height="72" rx="2" fill="#14B8C8"/>
-  <path d="M134 8L96.6 41.6L134 80H115.8L82.2 45.8L97.3 31.1L115.2 13.2H134V8Z" fill="#14B8C8"/>
-  <path d="M97.6 52.5L111 66.2L97 80H81.4L89.6 71.7L97.6 52.5Z" fill="#F8FAFC"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 84" fill="none">
+  <!-- J -->
+  <path d="M56 8V53.5C56 69.2 44.9 80 28.8 80C20.7 80 13.3 77.3 8 72.6L15.5 62.7C19.3 65.8 23.5 67.3 28.1 67.3C36.3 67.3 42 62.2 42 53.3V8H56Z" fill="currentColor"/>
+  <!-- K -->
+  <rect x="64" y="8" width="13" height="72" rx="2" fill="#0EA5B8"/>
+  <path d="M134 8L96.6 41.6L134 80H115.8L82.2 45.8L97.3 31.1L115.2 13.2H134V8Z" fill="#0EA5B8"/>
+  <path d="M97.6 52.5L111 66.2L97 80H81.4L89.6 71.7L97.6 52.5Z" fill="currentColor"/>
 </svg>
