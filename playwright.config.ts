@@ -4,6 +4,7 @@ const PORT = process.env.E2E_PORT ? Number(process.env.E2E_PORT) : 3100
 
 export default defineConfig({
   testDir: './e2e',
+  testIgnore: ['**/pages.spec.ts'],
   timeout: 60_000,
   expect: {
     timeout: 10_000,

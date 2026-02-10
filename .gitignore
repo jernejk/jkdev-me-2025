@@ -14,6 +14,10 @@
 /test-results/
 /playwright-report/
 
+# Local visual baseline experiments (not committed; use `test-results/` for artifacts instead)
+/e2e/pages.spec.ts
+/e2e/pages.spec.ts-snapshots/
+
 # next.js
 /.next/
 /out/
