@@ -81,6 +81,8 @@ module.exports = () => {
     basePath,
     reactStrictMode: true,
     trailingSlash: false,
+    // Avoid Next.js picking an incorrect tracing root when other lockfiles exist outside this repo.
+    outputFileTracingRoot: path.join(__dirname),
     pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
     eslint: {
       dirs: ['app', 'components', 'layouts', 'scripts'],
@@ -105,8 +107,37 @@ module.exports = () => {
     async redirects() {
       return [
         ...legacyBlogRedirects,
+        // Legacy RSS/feed endpoints (Ghost used `/rss/`).
+        { source: '/rss', destination: '/feed.xml', permanent: true },
+        { source: '/rss/', destination: '/feed.xml', permanent: true },
+        { source: '/feed', destination: '/feed.xml', permanent: true },
+        { source: '/feed/', destination: '/feed.xml', permanent: true },
+        { source: '/rss.xml', destination: '/feed.xml', permanent: true },
+        { source: '/atom.xml', destination: '/feed.xml', permanent: true },
+
+        // Legacy Ghost patterns.
+        { source: '/page/:page', destination: '/blog', permanent: true },
+        { source: '/page/:page/', destination: '/blog', permanent: true },
+        { source: '/tag/:slug/page/:page', destination: '/tags/:slug', permanent: true },
+        { source: '/tag/:slug/page/:page/', destination: '/tags/:slug', permanent: true },
+        { source: '/tag/:slug/rss', destination: '/tags/:slug/feed.xml', permanent: true },
+        { source: '/tag/:slug/rss/', destination: '/tags/:slug/feed.xml', permanent: true },
+
+        // Legacy tag slugs that don't match current tag slugification.
+        { source: '/tag/ml-net', destination: '/tags/mlnet', permanent: true },
+        { source: '/tag/ml-net/', destination: '/tags/mlnet', permanent: true },
+        { source: '/tags/ml-net', destination: '/tags/mlnet', permanent: true },
+        { source: '/tags/ml-net/', destination: '/tags/mlnet', permanent: true },
+
+        // Old tag exists but has no posts on the legacy site.
+        { source: '/tag/getting-started', destination: '/tags', permanent: true },
+        { source: '/tag/getting-started/', destination: '/tags', permanent: true },
+
         { source: '/author/jk', destination: '/about', permanent: true },
         { source: '/author/jk/:path*', destination: '/about', permanent: true },
+        // Old site had additional authors (e.g. /author/ghost/, /author/gabriel/).
+        { source: '/author/:slug', destination: '/about', permanent: true },
+        { source: '/author/:slug/:path*', destination: '/about', permanent: true },
         { source: '/about-me', destination: '/about', permanent: true },
         { source: '/about-me-test', destination: '/about', permanent: true },
         { source: '/:slug/amp', destination: '/blog/:slug', permanent: true },
