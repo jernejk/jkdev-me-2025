@@ -19,7 +19,12 @@
     "speaking:build": "npm run speaking:extract-mvp && npm run speaking:fetch && npm run speaking:merge",
     "ui:review": "node scripts/ui-review-loop.mjs",
     "e2e": "playwright test",
-    "e2e:screenshots": "playwright test --update-snapshots"
+    "e2e:screenshots": "playwright test --update-snapshots",
+    "audit:ai": "node scripts/audit/ai-benchmark.mjs",
+    "audit:links": "node scripts/audit/link-check.mjs",
+    "audit:a11y": "yarn exec pa11y-ci -c .pa11yci.js -j",
+    "audit:lighthouse": "node scripts/audit/lighthouse.mjs",
+    "test:seo": "yarn audit:ai && yarn audit:links && yarn audit:a11y"
   },
   "dependencies": {
     "@headlessui/react": "2.2.0",
@@ -69,6 +74,7 @@
     "@types/react": "^19.0.8",
     "@typescript-eslint/eslint-plugin": "^8.12.0",
     "@typescript-eslint/parser": "^8.12.0",
+    "@unlighthouse/cli": "^0.17.4",
     "cross-env": "^7.0.3",
     "eslint": "^9.14.0",
     "eslint-config-next": "15.5.12",
@@ -76,7 +82,9 @@
     "eslint-plugin-prettier": "^5.2.0",
     "globals": "^15.12.0",
     "husky": "^9.0.0",
+    "linkinator": "^7.5.3",
     "lint-staged": "^13.0.0",
+    "pa11y-ci": "^4.0.1",
     "playwright": "^1.50.1",
     "prettier": "^3.0.0",
     "prettier-plugin-tailwindcss": "^0.6.11",
