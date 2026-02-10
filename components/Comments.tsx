@@ -1,26 +1,72 @@
 'use client'
 
 import { Comments as CommentsComponent } from 'pliny/comments'
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import siteMetadata from '@/data/siteMetadata'
 
 export default function Comments({ slug }: { slug: string }) {
   const [loadComments, setLoadComments] = useState(false)
+  const containerRef = useRef<HTMLDivElement | null>(null)
   const repoUrl = siteMetadata.siteRepo?.replace(/\.git$/, '') || ''
   const githubDiscussionsUrl = repoUrl ? `${repoUrl}/discussions` : ''
 
-  if (!siteMetadata.comments?.provider) {
+  const comments = siteMetadata.comments
+  const isEnabled = Boolean(comments?.provider)
+  const isGiscus = comments?.provider === 'giscus'
+  const giscusConfig = isGiscus ? comments.giscusConfig : undefined
+  const hasGiscusConfig =
+    !isGiscus ||
+    Boolean(
+      giscusConfig?.repo &&
+        giscusConfig?.repositoryId &&
+        giscusConfig?.category &&
+        giscusConfig?.categoryId
+    )
+
+  useEffect(() => {
+    if (!isEnabled) return
+    if (!hasGiscusConfig) return
+
+    // Auto-load when the comment block scrolls into view (no click required).
+    // giscus itself is configured with iframe `loading="lazy"`, so this avoids doing any work
+    // until the user is near the end of the post.
+    if (loadComments) return
+
+    // If user navigated directly to the comment anchor, load immediately.
+    if (typeof window !== 'undefined' && window.location.hash === '#comment') {
+      setLoadComments(true)
+      return
+    }
+
+    const el = containerRef.current
+    if (!el) return
+
+    if (!('IntersectionObserver' in window)) {
+      setLoadComments(true)
+      return
+    }
+
+    const io = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            setLoadComments(true)
+            io.disconnect()
+            return
+          }
+        }
+      },
+      // Start loading a bit before the user reaches the block.
+      { root: null, rootMargin: '600px 0px', threshold: 0.01 }
+    )
+
+    io.observe(el)
+    return () => io.disconnect()
+  }, [hasGiscusConfig, isEnabled, loadComments])
+
+  if (!isEnabled) {
     return null
   }
-
-  const hasGiscusConfig =
-    siteMetadata.comments.provider !== 'giscus' ||
-    Boolean(
-      siteMetadata.comments.giscusConfig?.repo &&
-        siteMetadata.comments.giscusConfig?.repositoryId &&
-        siteMetadata.comments.giscusConfig?.category &&
-        siteMetadata.comments.giscusConfig?.categoryId
-    )
 
   if (!hasGiscusConfig) {
     return (
@@ -45,17 +91,12 @@ export default function Comments({ slug }: { slug: string }) {
   }
 
   return (
-    <>
+    <div ref={containerRef}>
       {loadComments ? (
-        <CommentsComponent commentsConfig={siteMetadata.comments} slug={slug} />
+        <CommentsComponent commentsConfig={comments!} slug={slug} />
       ) : (
-        <button
-          onClick={() => setLoadComments(true)}
-          className="rounded-md border border-cyan-400/40 bg-cyan-50 px-3 py-1.5 text-sm font-medium text-cyan-800 transition-colors hover:bg-cyan-100 dark:bg-cyan-900/20 dark:text-cyan-200 dark:hover:bg-cyan-900/35"
-        >
-          Load GitHub Comments
-        </button>
+        <div className="text-sm text-gray-500 dark:text-gray-400">Loading comments…</div>
       )}
-    </>
+    </div>
   )
 }

@@ -56,13 +56,15 @@ const siteMetadata = {
       // transparent_dark, preferred_color_scheme, custom
       theme: 'light',
       // theme when dark mode
-      darkTheme: 'transparent_dark',
+      // `dark_dimmed` tends to blend better with custom dark UIs than `transparent_dark`.
+      darkTheme: 'dark_dimmed',
       // If the theme option above is set to 'custom`
       // please provide a link below to your custom theme css file.
       // example: https://giscus.app/themes/custom_example.css
       themeURL: '',
       // This corresponds to the `data-lang="en"` in giscus's configurations
       lang: 'en',
+      inputPosition: 'top',
     },
   },
   search: {
