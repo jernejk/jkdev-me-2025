@@ -53,7 +53,11 @@ export default function UpcomingTalkCard({ talk, compact = false }: UpcomingTalk
 
   return (
     <div
-      className={`group relative overflow-hidden ${compact ? 'rounded-lg border border-cyan-600/30 bg-gradient-to-br from-white to-cyan-50/40 dark:border-cyan-400/30 dark:bg-slate-900' : 'rounded-xl bg-gradient-to-br from-white to-gray-50 p-1 shadow-md transition-all hover:shadow-lg dark:from-gray-800 dark:to-gray-900'}`}
+      className={`group relative overflow-hidden ${
+        compact
+          ? 'rounded-lg border border-cyan-600/30 bg-gradient-to-br from-white to-cyan-50/40 dark:border-cyan-400/30 dark:bg-gradient-to-br dark:from-slate-900 dark:to-slate-950'
+          : 'rounded-xl bg-gradient-to-br from-white to-gray-50 p-1 shadow-md transition-all hover:shadow-lg dark:from-gray-800 dark:to-gray-900'
+      }`}
     >
       {!compact && (
         <div className="bg-primary-500/5 group-hover:bg-primary-500/10 absolute -top-12 -right-12 h-40 w-40 rounded-full blur-3xl transition-all"></div>
