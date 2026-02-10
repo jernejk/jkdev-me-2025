@@ -42,7 +42,6 @@ export async function gotoWithTheme(page: Page, path: string, theme: Theme) {
 
   // Ensure fonts have settled before screenshot.
   await page.evaluate(async () => {
-    // @ts-expect-error - FontFaceSet exists in modern browsers.
     if (document.fonts?.ready) await document.fonts.ready
   })
 }
