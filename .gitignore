@@ -60,6 +60,9 @@ yarn-error.log*
 
 # Note: mvp-contributions.json and jkdev-legacy.json are committed as sanitized snapshots
 
+# Local notes/config (intentionally not committed yet)
+/docs/local/
+
 /.sandbox/
 /.tmp/
 /.draft/
