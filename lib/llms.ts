@@ -207,10 +207,7 @@ export function buildLlmsFullTxt(): string {
     `Summary: ${talk.description || 'No description provided.'}`,
   ])
 
-  const postHeader = [
-    '',
-    '## Posts',
-  ]
+  const postHeader = ['', '## Posts']
 
   const postBlocks = posts.flatMap((post) => [
     '',
