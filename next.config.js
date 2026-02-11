@@ -81,6 +81,8 @@ module.exports = () => {
     basePath,
     reactStrictMode: true,
     trailingSlash: false,
+    // Handle trailing slash redirects in middleware so /about-me-test/ can return 410 directly.
+    skipTrailingSlashRedirect: true,
     // Avoid Next.js picking an incorrect tracing root when other lockfiles exist outside this repo.
     outputFileTracingRoot: path.join(__dirname),
     pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],

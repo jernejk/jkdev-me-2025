@@ -14,6 +14,17 @@ export function middleware(request: NextRequest) {
     })
   }
 
+  // Keep canonical no-trailing-slash URLs for the rest of the site.
+  if (
+    pathname.length > 1 &&
+    pathname.endsWith('/') &&
+    !pathname.startsWith('/.well-known/') &&
+    !pathname.match(/\.[a-zA-Z0-9]+\/$/)
+  ) {
+    const redirectUrl = new URL(`${pathname.slice(0, -1)}${request.nextUrl.search}`, request.url)
+    return NextResponse.redirect(redirectUrl, 308)
+  }
+
   return NextResponse.next()
 }
 

@@ -80,10 +80,51 @@ export default function Speaking() {
 
   // Sort years descending.
   const sortedYears = Object.keys(groupedPastTalks).sort((a, b) => Number(b) - Number(a))
+  const speakingEventsJsonLd = talks
+    .flatMap((talk) =>
+      talk.events
+        .filter((event) => Boolean(event.date))
+        .map((event) => ({
+          '@context': 'https://schema.org',
+          '@type': 'Event',
+          name: talk.title,
+          description: talk.description,
+          startDate: event.date,
+          eventStatus:
+            event.status === 'upcoming'
+              ? 'https://schema.org/EventScheduled'
+              : 'https://schema.org/EventCompleted',
+          eventAttendanceMode: event.online
+            ? 'https://schema.org/OnlineEventAttendanceMode'
+            : 'https://schema.org/OfflineEventAttendanceMode',
+          location: event.online
+            ? {
+                '@type': 'VirtualLocation',
+                url: event.url || talk.conferenceUrl || undefined,
+              }
+            : {
+                '@type': 'Place',
+                name: event.eventName,
+                address: event.location || undefined,
+              },
+          organizer: {
+            '@type': 'Person',
+            name: 'Jernej Kavka',
+            url: 'https://jkdev.me/about',
+          },
+          keywords: talk.tags.join(', '),
+          url: talk.conferenceUrl || event.url || talk.videoUrl || talk.slidesUrl || undefined,
+        }))
+    )
+    .sort((a, b) => new Date(b.startDate).getTime() - new Date(a.startDate).getTime())
 
   return (
     <>
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(speakingEventsJsonLd) }}
+        />
         <div className="space-y-2 pt-6 pb-8 md:space-y-5">
           <h1 className="text-3xl leading-9 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14 dark:text-gray-100">
             Speaking
@@ -97,28 +138,36 @@ export default function Speaking() {
         <div className="container py-12">
           {/* Upcoming Talks Section */}
           {upcomingTalks.length > 0 && (
-            <div className="mb-16">
+            <section className="mb-16" aria-labelledby="upcoming-talks-heading">
               <h2 className="mb-8 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-gray-100">
-                Upcoming Talks
+                <span id="upcoming-talks-heading">Upcoming Talks</span>
               </h2>
               <div className="grid gap-8">
                 {upcomingTalks.map((talk, index) => (
-                  <UpcomingTalkCard key={`${talk.title}-${index}`} talk={talk} />
+                  <article key={`${talk.title}-${index}`} aria-label={talk.title}>
+                    <UpcomingTalkCard talk={talk} />
+                  </article>
                 ))}
               </div>
-            </div>
+            </section>
           )}
 
           {/* Past Talks Section */}
-          <div>
-            <h2 className="mb-8 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-gray-100">
+          <section aria-labelledby="past-talks-heading">
+            <h2
+              id="past-talks-heading"
+              className="mb-8 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-gray-100"
+            >
               Past Talks
             </h2>
 
             <div className="space-y-12">
               {sortedYears.map((year) => (
-                <div key={year}>
-                  <h3 className="mb-6 text-xl font-semibold text-gray-800 dark:text-gray-200">
+                <section key={year} aria-labelledby={`talk-year-${year}`}>
+                  <h3
+                    id={`talk-year-${year}`}
+                    className="mb-6 text-xl font-semibold text-gray-800 dark:text-gray-200"
+                  >
                     {year}
                   </h3>
                   <div className="mx-auto flex max-w-4xl flex-col gap-6">
@@ -126,41 +175,43 @@ export default function Speaking() {
                       // If there's a group name and multiple events, use GroupedTalkCard
                       if (talk.groupName && talk.events.length > 1) {
                         return (
-                          <GroupedTalkCard
-                            key={talk.title}
-                            title={talk.title}
-                            description={talk.description}
-                            events={talk.events}
-                            tags={talk.tags}
-                            videoUrl={talk.videoUrl}
-                            slidesUrl={talk.slidesUrl}
-                            githubUrl={talk.githubUrl}
-                            conferenceUrl={talk.conferenceUrl}
-                          />
+                          <article key={talk.title} aria-label={talk.title}>
+                            <GroupedTalkCard
+                              title={talk.title}
+                              description={talk.description}
+                              events={talk.events}
+                              tags={talk.tags}
+                              videoUrl={talk.videoUrl}
+                              slidesUrl={talk.slidesUrl}
+                              githubUrl={talk.githubUrl}
+                              conferenceUrl={talk.conferenceUrl}
+                            />
+                          </article>
                         )
                       }
 
                       // Otherwise use SingleTalkCard
                       const event = talk.events[0]
                       return (
-                        <SingleTalkCard
-                          key={talk.title}
-                          title={talk.title}
-                          description={talk.description}
-                          event={event}
-                          tags={talk.tags}
-                          videoUrl={talk.videoUrl}
-                          slidesUrl={talk.slidesUrl}
-                          githubUrl={talk.githubUrl}
-                          conferenceUrl={talk.conferenceUrl}
-                        />
+                        <article key={talk.title} aria-label={talk.title}>
+                          <SingleTalkCard
+                            title={talk.title}
+                            description={talk.description}
+                            event={event}
+                            tags={talk.tags}
+                            videoUrl={talk.videoUrl}
+                            slidesUrl={talk.slidesUrl}
+                            githubUrl={talk.githubUrl}
+                            conferenceUrl={talk.conferenceUrl}
+                          />
+                        </article>
                       )
                     })}
                   </div>
-                </div>
+                </section>
               ))}
             </div>
-          </div>
+          </section>
         </div>
       </div>
     </>
