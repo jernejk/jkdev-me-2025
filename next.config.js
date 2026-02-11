@@ -109,7 +109,7 @@ module.exports = () => {
     async redirects() {
       return [
         ...legacyBlogRedirects,
-        // Legacy RSS/feed endpoints (Ghost used `/rss/`).
+        // Legacy RSS/feed endpoints.
         { source: '/rss', destination: '/feed.xml', permanent: true },
         { source: '/rss/', destination: '/feed.xml', permanent: true },
         { source: '/feed', destination: '/feed.xml', permanent: true },
@@ -117,7 +117,7 @@ module.exports = () => {
         { source: '/rss.xml', destination: '/feed.xml', permanent: true },
         { source: '/atom.xml', destination: '/feed.xml', permanent: true },
 
-        // Legacy Ghost patterns.
+        // Legacy blog patterns.
         { source: '/page/:page', destination: '/blog', permanent: true },
         { source: '/page/:page/', destination: '/blog', permanent: true },
         { source: '/tag/:slug/page/:page', destination: '/tags/:slug', permanent: true },
