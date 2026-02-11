@@ -19,6 +19,11 @@ interface ListLayoutProps {
   title: string
   initialDisplayPosts?: CoreContent<Blog>[]
   pagination?: PaginationProps
+  tagGuide?: {
+    intro: string
+    startHere?: { title: string; href: string }
+    advancedFollowUp?: { title: string; href: string }
+  }
 }
 
 function Pagination({ totalPages, currentPage }: PaginationProps) {
@@ -71,6 +76,7 @@ export default function ListLayoutWithTags({
   title,
   initialDisplayPosts = [],
   pagination,
+  tagGuide,
 }: ListLayoutProps) {
   const pathname = usePathname()
   const tagCounts = tagData as Record<string, number>
@@ -124,6 +130,34 @@ export default function ListLayoutWithTags({
             </div>
           </div>
           <div>
+            {tagGuide && (
+              <section className="mb-6 rounded-xl border border-cyan-400/30 bg-cyan-50/60 p-4 dark:border-cyan-500/25 dark:bg-cyan-950/20">
+                <h2 className="text-sm font-semibold tracking-wide text-cyan-800 uppercase dark:text-cyan-200">
+                  Topic Guide
+                </h2>
+                <p className="mt-2 text-sm leading-6 text-gray-700 dark:text-gray-300">
+                  {tagGuide.intro}
+                </p>
+                <div className="mt-3 flex flex-wrap gap-4 text-sm">
+                  {tagGuide.startHere && (
+                    <Link
+                      href={tagGuide.startHere.href}
+                      className="font-semibold text-cyan-700 hover:text-cyan-600 dark:text-cyan-300 dark:hover:text-cyan-200"
+                    >
+                      Start here: {tagGuide.startHere.title}
+                    </Link>
+                  )}
+                  {tagGuide.advancedFollowUp && (
+                    <Link
+                      href={tagGuide.advancedFollowUp.href}
+                      className="font-semibold text-cyan-700 hover:text-cyan-600 dark:text-cyan-300 dark:hover:text-cyan-200"
+                    >
+                      Advanced follow-up: {tagGuide.advancedFollowUp.title}
+                    </Link>
+                  )}
+                </div>
+              </section>
+            )}
             <ul>
               {displayPosts.map((post) => {
                 const { path, date, title, summary, tags } = post

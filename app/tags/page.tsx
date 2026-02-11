@@ -18,22 +18,28 @@ export default async function Page() {
             Tags
           </h1>
         </div>
-        <div className="flex max-w-lg flex-wrap">
-          {tagKeys.length === 0 && 'No tags found.'}
-          {sortedTags.map((t) => {
-            return (
-              <div key={t} className="mt-2 mr-5 mb-2">
-                <Tag text={t} />
-                <Link
-                  href={`/tags/${slug(t)}`}
-                  className="-ml-2 text-sm font-semibold text-gray-600 uppercase dark:text-gray-300"
-                  aria-label={`View posts tagged ${t}`}
-                >
-                  {` (${tagCounts[t]})`}
-                </Link>
-              </div>
-            )
-          })}
+        <div className="max-w-2xl">
+          <p className="mb-4 text-sm leading-7 text-gray-600 dark:text-gray-300">
+            Browse posts by topic. Each tag groups practical guides and deep-dives, so you can
+            quickly choose a starting point or jump to advanced implementation details.
+          </p>
+          <div className="flex max-w-lg flex-wrap">
+            {tagKeys.length === 0 && 'No tags found.'}
+            {sortedTags.map((t) => {
+              return (
+                <div key={t} className="mt-2 mr-5 mb-2">
+                  <Tag text={t} />
+                  <Link
+                    href={`/tags/${slug(t)}`}
+                    className="-ml-2 text-sm font-semibold text-gray-600 uppercase dark:text-gray-300"
+                    aria-label={`View posts tagged ${t}`}
+                  >
+                    {` (${tagCounts[t]})`}
+                  </Link>
+                </div>
+              )
+            })}
+          </div>
         </div>
       </div>
     </>

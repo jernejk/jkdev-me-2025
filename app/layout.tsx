@@ -77,6 +77,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     '@context': 'https://schema.org',
     '@type': 'Person',
     name: siteMetadata.author,
+    alternateName: ['Jernej Kavka (JK)', 'JK'],
     url: siteMetadata.siteUrl,
     image: `${siteMetadata.siteUrl}/static/images/jk-headshot.jpg`,
     jobTitle: 'Solution Architect',

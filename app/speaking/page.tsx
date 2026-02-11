@@ -66,22 +66,20 @@ export default function Speaking() {
     }
   })
 
-  // Group past talks by month
+  // Group past talks by year for cleaner scanning and machine extraction.
   const groupedPastTalks = pastTalks.reduce((acc, talk) => {
     const date = new Date(talk.events[0].date)
-    const monthYear = date.toLocaleString('default', { month: 'long', year: 'numeric' })
+    const year = String(date.getFullYear())
 
-    if (!acc[monthYear]) {
-      acc[monthYear] = []
+    if (!acc[year]) {
+      acc[year] = []
     }
-    acc[monthYear].push(talk)
+    acc[year].push(talk)
     return acc
   }, {})
 
-  // Sort months descending
-  const sortedMonths = Object.keys(groupedPastTalks).sort((a, b) => {
-    return new Date(b).getTime() - new Date(a).getTime()
-  })
+  // Sort years descending.
+  const sortedYears = Object.keys(groupedPastTalks).sort((a, b) => Number(b) - Number(a))
 
   return (
     <>
@@ -118,13 +116,13 @@ export default function Speaking() {
             </h2>
 
             <div className="space-y-12">
-              {sortedMonths.map((month) => (
-                <div key={month}>
+              {sortedYears.map((year) => (
+                <div key={year}>
                   <h3 className="mb-6 text-xl font-semibold text-gray-800 dark:text-gray-200">
-                    {month}
+                    {year}
                   </h3>
                   <div className="mx-auto flex max-w-4xl flex-col gap-6">
-                    {groupedPastTalks[month].map((talk) => {
+                    {groupedPastTalks[year].map((talk) => {
                       // If there's a group name and multiple events, use GroupedTalkCard
                       if (talk.groupName && talk.events.length > 1) {
                         return (
