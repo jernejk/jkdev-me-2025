@@ -110,3 +110,34 @@ export function Bluesky(svgProps: SVGProps<SVGSVGElement>) {
     </svg>
   )
 }
+
+export function Sessionize(svgProps: SVGProps<SVGSVGElement>) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...svgProps}>
+      <title>Sessionize</title>
+      <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 1 0 6 0V5a3 3 0 0 0-3-3Zm-1 3a1 1 0 1 1 2 0v7a1 1 0 1 1-2 0V5Z" />
+      <path d="M6 11a1 1 0 0 1 1 1v.5a5 5 0 1 0 10 0V12a1 1 0 1 1 2 0v.5a7 7 0 0 1-6 6.93V22a1 1 0 1 1-2 0v-2.57A7 7 0 0 1 5 12.5V12a1 1 0 0 1 1-1Z" />
+    </svg>
+  )
+}
+
+export function SSW(svgProps: SVGProps<SVGSVGElement>) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...svgProps}>
+      <title>SSW</title>
+      <path d="M4 21a1 1 0 0 1-1-1V7.8a1 1 0 0 1 .48-.85l8-4.8a1 1 0 0 1 1.04 0l8 4.8A1 1 0 0 1 21 7.8V20a1 1 0 0 1-1 1H4Zm1-2h14V8.37l-7-4.2-7 4.2V19Z" />
+      <path d="M8 11a1 1 0 0 1 1-1h1.5a2.5 2.5 0 1 1 0 5H10a1 1 0 1 0 0 2h2a1 1 0 1 1 0 2h-2a3 3 0 1 1 0-6h.5a.5.5 0 0 0 0-1H9a1 1 0 0 1-1-1Z" />
+      <path d="M14 12a2 2 0 0 1 2-2h1a1 1 0 1 1 0 2h-1v1h1a1 1 0 1 1 0 2h-1v1h1a1 1 0 1 1 0 2h-1a2 2 0 0 1-2-2v-4Z" />
+    </svg>
+  )
+}
+
+export function MVP(svgProps: SVGProps<SVGSVGElement>) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...svgProps}>
+      <title>Microsoft MVP</title>
+      <path d="M12 2a1 1 0 0 1 .8.4l2.17 2.9 3.58.54a1 1 0 0 1 .55 1.7l-2.6 2.54.62 3.6a1 1 0 0 1-1.45 1.06L12 12.84l-3.22 1.9a1 1 0 0 1-1.45-1.06l.61-3.6-2.6-2.54a1 1 0 0 1 .55-1.7l3.58-.54 2.17-2.9A1 1 0 0 1 12 2Z" />
+      <path d="M8 16a1 1 0 0 1 1 1v1a3 3 0 1 0 6 0v-1a1 1 0 1 1 2 0v1a5 5 0 1 1-10 0v-1a1 1 0 0 1 1-1Z" />
+    </svg>
+  )
+}

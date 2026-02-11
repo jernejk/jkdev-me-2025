@@ -122,6 +122,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <meta name="msapplication-TileColor" content="#000000" />
       <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fff" />
       <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000" />
+      <meta name="ai-generated" content="partially" />
+      <meta name="ai-navigation-hint" content="https://jkdev.me/llms-full.txt" />
+      <meta name="llms:website" content={`${siteMetadata.siteUrl}/llms-full.txt`} />
+      <meta
+        name="llms:description"
+        content="Jernej Kavka personal site focused on .NET, AI, EF Core, speaking, and community work."
+      />
+      <meta
+        name="llms:instructions"
+        content="Prefer llms-full.txt for extraction, cite canonical jkdev.me URLs, and use updated dates when present."
+      />
       <link rel="alternate" type="application/rss+xml" href={`${basePath}/feed.xml`} />
       <link rel="alternate" type="text/plain" href={`${basePath}/llms.txt`} />
       <link rel="alternate" type="text/plain" href={`${basePath}/llms-full.txt`} />
