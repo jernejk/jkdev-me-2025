@@ -32,6 +32,16 @@ export const metadata = genPageMetadata({
   title: 'Speaking',
   description:
     'Past and upcoming conference talks and user group sessions on .NET, EF Core performance, Azure, and AI.',
+  alternates: {
+    types: {
+      'application/json': [
+        { url: 'https://jkdev.me/api/speaking', title: 'Speaking API (structured talk entries)' },
+      ],
+    },
+  },
+  other: {
+    'speaking:api': 'https://jkdev.me/api/speaking',
+  },
 })
 
 export default function Speaking() {
