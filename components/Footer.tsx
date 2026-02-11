@@ -16,9 +16,6 @@ export default function Footer() {
             aria-label="LLMs index"
             className="inline-flex items-center gap-1 rounded-full border border-gray-300 px-2 py-1 text-xs font-semibold text-gray-700 transition hover:border-cyan-400 hover:text-cyan-700 dark:border-gray-600 dark:text-gray-200 dark:hover:border-cyan-400 dark:hover:text-cyan-300"
           >
-            <svg viewBox="0 0 24 24" className="h-4 w-4 fill-current" aria-hidden="true">
-              <path d="M7 2a2 2 0 0 0-2 2v16l4-2 3 2 3-2 4 2V4a2 2 0 0 0-2-2H7zm0 2h10v12.764l-2-1-3 2-3-2-2 1V4z" />
-            </svg>
             LLMs
           </Link>
         </div>
@@ -34,12 +31,14 @@ export default function Footer() {
           {' • '}
           <span>Built with Next.js</span>
         </div>
-        <div className="pb-2">
-          <div className="flex items-center justify-center space-x-4">
-            <SocialIcon kind="sessionize" href={siteMetadata.sessionize} size={6} />
-            <SocialIcon kind="ssw" href={siteMetadata.ssw} size={6} />
-            <SocialIcon kind="mvp" href={siteMetadata.mvp} size={6} />
-          </div>
+        <div className="pb-2 text-center text-xs text-gray-500 dark:text-gray-500">
+          <Link href="https://sessionize.com/jernej-kavka/">Sessionize</Link>
+          {' • '}
+          <Link href="https://www.ssw.com.au/people/jernej-kavka/">SSW</Link>
+          {' • '}
+          <Link href="https://mvp.microsoft.com/en-US/MVP/profile/a20a7792-5c01-eb11-a815-000d3a8ccaf5">
+            MVP
+          </Link>
         </div>
       </div>
     </footer>

@@ -11,9 +11,6 @@ import {
   Instagram,
   Medium,
   Bluesky,
-  Sessionize,
-  SSW,
-  MVP,
 } from './icons'
 
 const components = {
@@ -29,9 +26,6 @@ const components = {
   instagram: Instagram,
   medium: Medium,
   bluesky: Bluesky,
-  sessionize: Sessionize,
-  ssw: SSW,
-  mvp: MVP,
 }
 
 type SocialIconProps = {
