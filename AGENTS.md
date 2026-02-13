@@ -2,6 +2,46 @@
 
 This repo powers `https://jkdev.me` (Next.js + Contentlayer/Pliny). The main goal is to make **every page and post** easy to crawl, easy to understand for LLMs, and solid for SEO, **without changing the visual design unless explicitly requested**.
 
+## Skills (Cross-Vendor)
+
+This repo provides four content workflows that work across Claude Code, GitHub Copilot, and OpenAI Codex.
+
+| Skill            | Claude Code             | Copilot / Codex                            | Purpose                                                     |
+| ---------------- | ----------------------- | ------------------------------------------ | ----------------------------------------------------------- |
+| **Research**     | `/research <topic>`     | Follow `.claude/commands/research.md`      | Research a topic and create a structured draft in `.draft/` |
+| **Draft → Post** | `/draft-to-post <name>` | Follow `.claude/commands/draft-to-post.md` | Turn an existing `.draft/` entry into a published blog post |
+| **Blog**         | `/blog <topic>`         | Follow `.claude/commands/blog.md`          | Write a blog post from scratch                              |
+| **Speaking**     | `/speaking <request>`   | Follow `.claude/commands/speaking.md`      | Add/update talks in `data/speakingData.json`                |
+
+### How Each Agent Finds Instructions
+
+| Agent              | Primary File                      | Skill Details                                                  |
+| ------------------ | --------------------------------- | -------------------------------------------------------------- |
+| **Claude Code**    | `AGENTS.md`                       | `.claude/commands/*.md` (auto-registered as `/slash` commands) |
+| **GitHub Copilot** | `.github/copilot-instructions.md` | References `.claude/commands/*.md`                             |
+| **OpenAI Codex**   | `CODEX.md` + `AGENTS.md`          | References `.claude/commands/*.md`                             |
+
+All skill files live in `.claude/commands/` as plain markdown — readable by any agent regardless of vendor.
+
+### Critical Rules (All Skills)
+
+- **Never** set `draft: false` or commit a blog post without explicit user approval.
+- **Never** delete `.draft/` directories after publishing (keep for reference).
+- **Always** run `yarn build` before committing content changes.
+- **Always** verify facts and include source URLs when researching.
+- **Prefer** existing tags over creating new ones.
+
+### Key Paths
+
+| Content               | Path                     |
+| --------------------- | ------------------------ |
+| Published blog posts  | `data/blog/*.mdx`        |
+| Draft research        | `.draft/<topic-slug>/`   |
+| Draft index & roadmap | `.draft/TODO.md`         |
+| Speaking data         | `data/speakingData.json` |
+| Site config           | `data/siteMetadata.js`   |
+| Contentlayer config   | `contentlayer.config.ts` |
+
 ## North Star
 
 - Humans: clear page intent, scannable structure, correct metadata and social previews.
@@ -120,4 +160,3 @@ Reports land in:
 - JSON-LD is present on home + posts and remains valid.
 - `yarn build` passes.
 - `SEO_SITE=... yarn test:seo` passes (or has a documented and accepted exception).
-
