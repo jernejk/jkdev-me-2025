@@ -437,8 +437,9 @@
       "description": "",
       "events": [
         {
-          "eventName": "ActiumAI Conference",
-          "url": "https://actiumai.com/wp-content/uploads/2023/08/ActiumAI-Conference-Program-v10.pdf"
+          "eventName": "ActiumAI LawTech 2023",
+          "url": "https://actiumai.com/wp-content/uploads/2023/08/ActiumAI-Conference-Program-v10.pdf",
+          "location": "Brisbane, Queensland, Australia"
         }
       ],
       "tags": [
@@ -447,7 +448,8 @@
         "Azure",
         "OpenAI"
       ],
-      "type": "talk"
+      "type": "talk",
+      "videoUrl": "https://www.youtube.com/watch?v=2N4Pw1FpC5I"
     },
     {
       "id": "2025-building-solutions-in-azure-openai",
