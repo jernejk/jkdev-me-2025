@@ -7,7 +7,7 @@ import { genPageMetadata } from 'app/seo'
 export const metadata = genPageMetadata({
   title: 'About',
   description:
-    'About Jernej Kavka (JK), a Microsoft AI MVP and Solution Architect in Brisbane working on .NET, EF Core, Azure, and AI.',
+    'About Jernej Kavka (JK), a Microsoft AI MVP, community contributor and builder in Brisbane working on .NET, EF Core, Azure, and AI.',
 })
 
 export default function Page() {
