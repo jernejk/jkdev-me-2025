@@ -11,15 +11,23 @@ const communityData: Community[] = [
     name: 'Build Club Brisbane',
     description:
       'Community for builders and makers exploring AI, automation, and product experiments in Brisbane.',
-    role: 'Member',
+    role: 'City Lead',
     href: 'https://www.buildclub.ai/',
     meetupUrl: 'https://www.meetup.com/build-club-brisbane/',
   },
   {
+    name: 'Brisbane Full Stack User Group',
+    description:
+      'Monthly meetup at SSW Brisbane covering .NET, Angular, React, Blazor, Azure, and full-stack development.',
+    role: 'Organizer',
+    href: 'https://www.ssw.com.au/netug/brisbane',
+    meetupUrl: 'https://www.meetup.com/brisbane-full-stack-user-group/',
+  },
+  {
     name: 'AI Hack Day',
     description:
-      'Hands-on AI hackathon events where developers build practical projects in a day.',
-    role: 'Co-organizer',
+      'Free, community-run AI hackathons across Australian cities. Presentations, coding challenges, and mentoring — all in a day.',
+    role: 'Organizer',
     href: 'https://aihackday.com/',
   },
   {

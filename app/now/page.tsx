@@ -35,12 +35,22 @@ export default function Now() {
             Improving content workflows for tutorials: faster drafting from notes, cleaner editing,
             stronger technical depth.
           </li>
+          <li>
+            Crazy agentic experiments that I might write about if they work or do a talk on
+            them if successful.
+          </li>
         </ul>
 
         <h2>Community</h2>
         <ul>
-          <li>Co-organizing AI Hack Day and Global AI Podcast initiatives.</li>
-          <li>Active across Brisbane developer and AI communities.</li>
+          <li>
+            City Lead for Build Club Brisbane — organizing workshops and talks on AI, MCP, and
+            developer tooling.
+          </li>
+          <li>
+            Running the Brisbane Full Stack User Group and speaking regularly at local meetups and
+            conferences.
+          </li>
         </ul>
 
         <h2>Work</h2>
