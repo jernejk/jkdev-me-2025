@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none">
+  <!-- Background -->
+  <rect width="128" height="128" rx="16" fill="#0078D4"/>
+  <!-- Microsoft 4-square logo -->
+  <g transform="translate(24, 20)">
+    <rect x="0" y="0" width="36" height="36" fill="#F25022" rx="2"/>
+    <rect x="40" y="0" width="36" height="36" fill="#7FBA00" rx="2"/>
+    <rect x="0" y="40" width="36" height="36" fill="#00A4EF" rx="2"/>
+    <rect x="40" y="40" width="36" height="36" fill="#FFB900" rx="2"/>
+  </g>
+  <!-- MVP text -->
+  <text x="64" y="115" text-anchor="middle" font-family="Segoe UI, sans-serif" font-weight="700" font-size="22" fill="white" letter-spacing="4">MVP</text>
+</svg>

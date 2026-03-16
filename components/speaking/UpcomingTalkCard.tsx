@@ -13,6 +13,7 @@ interface Talk {
   }[]
   tags: string[]
   conferenceUrl?: string | null
+  imageUrl?: string | null
 }
 
 interface UpcomingTalkCardProps {
@@ -21,7 +22,7 @@ interface UpcomingTalkCardProps {
 }
 
 export default function UpcomingTalkCard({ talk, compact = false }: UpcomingTalkCardProps) {
-  const { title, description, events, tags, conferenceUrl } = talk
+  const { title, description, events, tags, conferenceUrl, imageUrl } = talk
   const event = events && events.length > 0 ? events[0] : null
 
   if (!event) return null
@@ -71,7 +72,19 @@ export default function UpcomingTalkCard({ talk, compact = false }: UpcomingTalk
           <div
             className={`flex shrink-0 flex-col items-center justify-center gap-2 ${compact ? 'w-16' : 'sm:w-24 sm:border-r sm:border-gray-100 sm:pr-4 dark:sm:border-gray-800'}`}
           >
-            {faviconUrl ? (
+            {imageUrl ? (
+              <div
+                className={`relative overflow-hidden rounded-lg bg-white shadow-sm ring-1 ring-cyan-200/80 dark:bg-gray-800 dark:ring-cyan-500/20 ${compact ? 'h-12 w-12 p-1' : 'h-14 w-14 p-1'}`}
+              >
+                <Image
+                  src={imageUrl}
+                  alt={event.eventName}
+                  width={compact ? 48 : 56}
+                  height={compact ? 48 : 56}
+                  className="h-full w-full object-contain"
+                />
+              </div>
+            ) : faviconUrl ? (
               <div
                 className={`relative overflow-hidden rounded-md bg-white p-1 ring-1 shadow-sm ring-cyan-200/80 dark:bg-gray-800 dark:ring-cyan-500/20 ${compact ? 'h-10 w-10' : 'h-12 w-12'}`}
               >

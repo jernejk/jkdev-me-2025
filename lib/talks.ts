@@ -20,6 +20,7 @@ type Talk = {
   slidesUrl: string | null
   githubUrl: string | null
   conferenceUrl: string | null
+  imageUrl?: string | null
 }
 
 const isFutureOrUpcoming = (event: TalkEvent) => {

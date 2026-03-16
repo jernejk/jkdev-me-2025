@@ -78,3 +78,5 @@ yarn-error.log*
 # local archive
 /.archive/
 .github/workflows/pages.yml.disabled
+.mvp
+mvp-shared-docs

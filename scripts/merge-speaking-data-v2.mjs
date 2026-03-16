@@ -125,6 +125,7 @@ function mergeTalks() {
       if (talk.slidesUrl && !existing.slidesUrl) existing.slidesUrl = talk.slidesUrl
       if (talk.githubUrl && !existing.githubUrl) existing.githubUrl = talk.githubUrl
       if (talk.conferenceUrl && !existing.conferenceUrl) existing.conferenceUrl = talk.conferenceUrl
+      if (talk.imageUrl && !existing.imageUrl) existing.imageUrl = talk.imageUrl
 
       // Merge tags
       if (talk.tags) {
@@ -145,6 +146,7 @@ function mergeTalks() {
         slidesUrl: talk.slidesUrl || null,
         githubUrl: talk.githubUrl || null,
         conferenceUrl: talk.conferenceUrl || null,
+        ...(talk.imageUrl ? { imageUrl: talk.imageUrl } : {}),
       }
       mergedTalks.push(newTalk)
       seenTitles.set(normalizedTitle, mergedTalks.length - 1)

@@ -1,7 +1,36 @@
 {
   "source": "Manual talk entries",
-  "updatedDate": "2026-02-08",
+  "updatedDate": "2026-03-16",
   "talks": [
+    {
+      "id": "manual-mvp-summit-2026",
+      "title": "MVP Summit 2026",
+      "description": "Exclusive annual multi-day Microsoft event for MVPs and Regional Directors, featuring hundreds of in-depth technical sessions, direct engagement with Microsoft product leadership and engineers, and networking with MVPs worldwide.",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "MVP Summit 2026",
+          "location": "Microsoft Redmond Campus, WA, USA",
+          "date": "2026-03-24",
+          "dateEnd": "2026-03-26",
+          "url": "https://summit.microsoft.com/",
+          "status": "upcoming"
+        }
+      ],
+      "tags": [
+        "Microsoft",
+        "MVP",
+        "AI",
+        ".NET",
+        "Azure"
+      ],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": "https://summit.microsoft.com/",
+      "imageUrl": "/static/images/events/mvp-summit.svg"
+    },
     {
       "id": "manual-ef-core-bench-lab-dotnet-brisbane-2026",
       "title": "EF Core Bench Lab – A Peek into the Black Box",
@@ -14,7 +43,7 @@
           "location": "Brisbane, Australia",
           "date": "2026-03-05",
           "url": "https://www.meetup.com/brisbane-net-user-group/",
-          "status": "upcoming"
+          "status": "past"
         }
       ],
       "tags": [
