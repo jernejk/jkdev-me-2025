@@ -19,7 +19,7 @@ export default function Now() {
 
       <div className="prose dark:prose-invert max-w-none">
         <p>
-          <em>Last updated: February 2026</em>
+          <em>Last updated: March 2026</em>
         </p>
 
         <h2>Current Focus</h2>
@@ -36,16 +36,24 @@ export default function Now() {
             stronger technical depth.
           </li>
           <li>
-            Crazy agentic experiments that I might write about if they work or do a talk on
+            Crazy agentic experiments that I might write about them if they work or do a talk on
             them if successful.
           </li>
         </ul>
 
+        <h2>Upcoming Event</h2>
+        <p>
+          Attending the <a href="https://summit.microsoft.com/">Microsoft MVP Summit 2026</a> (March
+          24-26) at the Microsoft Redmond Campus — multi-day event with in-depth technical sessions,
+          direct engagement with Microsoft product teams, and networking with MVPs worldwide.
+        </p>
+
         <h2>Community</h2>
         <ul>
           <li>
-            City Lead for Build Club Brisbane — organizing workshops and talks on AI, MCP, and
-            developer tooling.
+            City Lead for{' '}
+            <a href="https://www.meetup.com/build-club-brisbane/">Build Club Brisbane</a> —
+            organizing workshops and talks on AI, MCP, and developer tooling.
           </li>
           <li>
             Running the Brisbane Full Stack User Group and speaking regularly at local meetups and
