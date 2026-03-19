@@ -68,6 +68,9 @@ yarn-error.log*
 /.tmp/
 /.draft/
 
+# Claude Code
+.claude/
+
 # v2
 /v2/node_modules
 /v2/.next/

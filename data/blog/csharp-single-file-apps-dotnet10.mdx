@@ -1,0 +1,188 @@
+---
+title: 'C# Single-File Apps in .NET 10: Scripts That Scale'
+date: '2026-03-20'
+tags:
+  - net-core
+  - csharp
+draft: true
+summary: ".NET 10 lets you build real tools from a single .cs file with NuGet packages, publish to native binaries and no .csproj needed. Here's how to use them for CLI tools and micro web apps."
+tldr: 'Use `dotnet app.cs` with `#:package` and `#:sdk` directives to build automation scripts and minimal APIs from a single C# file.'
+images:
+  - /static/images/twitter-card.png
+authors:
+  - default
+layout: PostSimple
+---
+
+I've been wanting something like this in .NET for years. Every now and then I need a quick script to check if my home lab services are up, transform some data or spin up a throwaway API. Usually I'd reach for Python or a messy Bash script because creating a whole `.csproj` for 30 lines of code felt like overkill.
+
+.NET 10 finally shipped **file-based C# apps** and after playing with them for a few weeks, I think they're going to change how I build small tools.
+
+## Getting started
+
+The simplest version is just a `.cs` file:
+
+```csharp
+#!/usr/bin/env dotnet
+
+Console.WriteLine("hello from a single-file app");
+```
+
+```bash
+chmod +x tool.cs
+./tool.cs
+```
+
+That's it. `dotnet tool.cs` is all you need to run it. The longer `dotnet run tool.cs` also works, but if you have a `.csproj` in the same directory, use `dotnet run --file tool.cs` to make sure it picks up the file and not the project.
+
+**NOTE:** The shebang line requires `LF` line endings (not `CRLF`) and no BOM. Keep that in mind if you're on Windows!
+
+## The directives
+
+.NET 10 introduces `#:` directives at the top of your file that replace what `.csproj` used to do:
+
+| Directive    | What it does              | Example                             |
+| ------------ | ------------------------- | ----------------------------------- |
+| `#:package`  | Add a NuGet package       | `#:package Humanizer@2.*`           |
+| `#:sdk`      | Change SDK (e.g., Web)    | `#:sdk Microsoft.NET.Sdk.Web`       |
+| `#:property` | Set MSBuild properties    | `#:property LangVersion=preview`    |
+| `#:project`  | Reference a local project | `#:project ../shared/Shared.csproj` |
+
+Place these at the top of your `.cs` file, before any C# code.
+
+## Replacing Bash scripts
+
+I find myself using this most when a Bash script is getting too clever. Here's a health check script I use to verify my home lab services are up:
+
+```csharp
+#!/usr/bin/env dotnet
+#:package Humanizer@2.*
+
+using Humanizer;
+
+var urls = new[] { "https://myapp.com/health", "https://myapp.com/api/status" };
+
+foreach (var url in urls)
+{
+    using var http = new HttpClient { Timeout = TimeSpan.FromSeconds(5) };
+    var sw = System.Diagnostics.Stopwatch.StartNew();
+    try
+    {
+        var response = await http.GetAsync(url);
+        Console.WriteLine($"OK {url} -> {(int)response.StatusCode} in {sw.Elapsed.Humanize()}");
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"FAIL {url} -> {ex.GetType().Name}: {ex.Message}");
+    }
+}
+```
+
+The `#:package Humanizer@2.*` line pulls in the NuGet package automatically on first run. No `dotnet restore`, no `packages.config`, just works.
+
+I've been using scripts like this for cron jobs, home automation and data migrations where Bash would've been painful.
+
+## Single-file web apps
+
+This is where it gets interesting. You can switch to the Web SDK with one directive and get a full minimal API:
+
+```csharp
+#:sdk Microsoft.NET.Sdk.Web
+
+var app = WebApplication.Create();
+app.MapGet("/", () => "Hello World!");
+app.MapGet("/health", () => Results.Ok(new { status = "healthy", time = DateTime.UtcNow }));
+app.Run();
+```
+
+```bash
+dotnet server.cs
+# Listening on http://localhost:5000
+```
+
+I've been using this for quick dashboards and webhook receivers on my home network. Here's a more realistic example, a JSON proxy that checks services running on my lab:
+
+```csharp
+#:sdk Microsoft.NET.Sdk.Web
+#:package Humanizer@2.*
+
+using Humanizer;
+
+var app = WebApplication.Create(args);
+
+app.MapGet("/proxy/{service}", async (string service, HttpContext ctx) =>
+{
+    using var http = new HttpClient { Timeout = TimeSpan.FromSeconds(10) };
+    var sw = System.Diagnostics.Stopwatch.StartNew();
+
+    try
+    {
+        var response = await http.GetAsync($"http://{service}.local/health");
+        var body = await response.Content.ReadAsStringAsync();
+        return Results.Ok(new
+        {
+            service,
+            status = (int)response.StatusCode,
+            latency = sw.Elapsed.Humanize(),
+            body
+        });
+    }
+    catch (Exception ex)
+    {
+        return Results.Problem($"{service}: {ex.Message}");
+    }
+});
+
+app.MapGet("/health", () => Results.Ok(new { status = "healthy", time = DateTime.UtcNow }));
+app.Run();
+```
+
+## Publishing to a native binary
+
+File-based apps target **native AOT by default** when you publish:
+
+```bash
+dotnet publish tool.cs
+```
+
+This produces a self-contained executable in an `artifacts` directory next to your `.cs` file.
+
+If your code uses reflection-heavy libraries that don't play well with AOT, you can disable it:
+
+```csharp
+#:property PublishAot=false
+```
+
+You can also target a specific runtime:
+
+```bash
+dotnet publish tool.cs -r linux-x64
+dotnet publish tool.cs -r osx-arm64
+```
+
+## When to graduate to a real project
+
+I've been keeping things file-based until one of these happens:
+
+- I need **multiple source files** or a test project
+- I need **multi-target** packaging (NuGet, different TFMs)
+- The file grows past ~200 lines and starts getting hard to navigate
+
+The nice thing is .NET 10 has a built-in command for the migration:
+
+```bash
+dotnet project convert tool.cs
+```
+
+This creates a new directory with a copy of your `.cs` file and a `.csproj` that has equivalent SDK, properties and package references from your `#:` directives. The original file is left untouched, so there's no risk in trying it.
+
+## Final thoughts
+
+Honestly, this fills a gap that's been bugging me for a while. There's a whole class of tools that are "too small for a project, too complex for Bash" and now I don't have to leave .NET for those.
+
+If you want to try it out, just run `dotnet tool.cs` and see how it feels. You can always convert to a full project later.
+
+## References
+
+- [.NET 10 announcement](https://devblogs.microsoft.com/dotnet/announcing-dotnet-10/)
+- [File-based apps reference](https://learn.microsoft.com/en-us/dotnet/core/sdk/file-based-apps)
