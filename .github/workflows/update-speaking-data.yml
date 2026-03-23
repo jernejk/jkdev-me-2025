@@ -37,10 +37,6 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile
 
-      - name: Extract MVP contributions
-        run: npm run speaking:extract-mvp
-        continue-on-error: true # MVP data might not exist in CI
-
       - name: Fetch Sessionize data
         run: npm run speaking:fetch
         continue-on-error: true # Sessionize API might fail
@@ -58,7 +54,7 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add data/speakingData.json data/talks/*.json
+          git add --ignore-errors data/speakingData.json data/talks/*.json
           git commit -m "chore: update speaking data [skip ci]"
           git push
         env:
