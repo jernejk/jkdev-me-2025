@@ -23,6 +23,10 @@ These are contract endpoints used by crawlers and LLM tools:
 
 If changing routing, metadata, or Contentlayer, verify these remain `200` on prod.
 
+## OpenAI Model References
+
+Never use deprecated/retired OpenAI model names in blog posts or code samples. Models like gpt-4o, gpt-4.1, gpt-4.5, o1, o3, and all earlier GPT-4 variants are retired. Use the current GPT-5 family instead (e.g., gpt-5.4-mini, gpt-5.4-nano, gpt-5.4, gpt-5.4-pro).
+
 ## Blog Post Quality Bar (Frontmatter + Content)
 
 Every blog post MUST have:
