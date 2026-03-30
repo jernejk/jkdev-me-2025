@@ -88,6 +88,19 @@ If changing slugs or routes:
 
 - Umami should be included via `siteMetadata.analytics.umamiAnalytics`.
 - Keep CSP in `next.config.js` aligned with analytics and giscus domains.
+- **API key** is stored in `.env` as `UMAMI_API_KEY` (gitignored). Website ID: `8ec92ed3-9035-48ba-aa42-0d6d56d824b2`.
+- **Analytics agent**: Run `/umami <query>` to analyse traffic, top pages, referrers, etc. The skill calls the Umami Cloud REST API directly via helper scripts (no MCP needed).
+
+### Analytics scripts (`scripts/umami/`)
+
+| Script | Usage | Description |
+|--------|-------|-------------|
+| `stats.sh [days]` | `./scripts/umami/stats.sh 7` | Overview: pageviews, visitors, bounce rate, top pages, referrers, countries |
+| `pageviews.sh [days] [unit]` | `./scripts/umami/pageviews.sh 30 week` | Pageview time-series (unit: hour/day/week/month/year) |
+| `post-stats.sh <url> [days]` | `./scripts/umami/post-stats.sh /blog/agenteval-dotnet` | Per-post views + referrers |
+| `backup.sh [period]` | `./scripts/umami/backup.sh previous-month` | Monthly full backup to `.backup/umami/YYYY-MM/` (raw JSON + summary.md) |
+
+Backup supports: `previous-month` (default), `current-month`, or `YYYY-MM`. Designed for cron on the 1st of each month. Backups go to `.backup/umami/YYYY-MM/` (gitignored) with raw JSON dumps and a processed `summary.md` for AI consumption.
 
 ## Testing: Required Gate
 
