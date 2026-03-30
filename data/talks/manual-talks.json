@@ -15,7 +15,7 @@
           "date": "2026-03-24",
           "dateEnd": "2026-03-26",
           "url": "https://summit.microsoft.com/",
-          "status": "upcoming"
+          "status": "past"
         }
       ],
       "tags": [
@@ -41,9 +41,9 @@
         {
           "eventName": ".NET Brisbane User Group",
           "location": "Brisbane, Australia",
-          "date": "2026-03-05",
+          "date": "2026-06-04",
           "url": "https://www.meetup.com/brisbane-net-user-group/",
-          "status": "past"
+          "status": "upcoming"
         }
       ],
       "tags": [

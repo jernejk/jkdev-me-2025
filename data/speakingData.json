@@ -1,6 +1,31 @@
 {
   "talks": [
     {
+      "id": "manual-ef-core-bench-lab-dotnet-brisbane-2026",
+      "title": "EF Core Bench Lab – A Peek into the Black Box",
+      "description": "A practical performance deep-dive into EF Core internals, query costs, and benchmarking patterns.",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": ".NET Brisbane User Group",
+          "location": "Brisbane, Australia",
+          "date": "2026-06-04",
+          "url": "https://www.meetup.com/brisbane-net-user-group/",
+          "status": "upcoming"
+        }
+      ],
+      "tags": [
+        ".NET",
+        "EF Core",
+        "Performance"
+      ],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": "https://www.meetup.com/brisbane-net-user-group/"
+    },
+    {
       "id": "manual-mvp-summit-2026",
       "title": "MVP Summit 2026",
       "description": "Exclusive annual multi-day Microsoft event for MVPs and Regional Directors, featuring hundreds of in-depth technical sessions, direct engagement with Microsoft product leadership and engineers, and networking with MVPs worldwide.",
@@ -13,7 +38,7 @@
           "date": "2026-03-24",
           "dateEnd": "2026-03-26",
           "url": "https://summit.microsoft.com/",
-          "status": "upcoming"
+          "status": "past"
         }
       ],
       "tags": [
@@ -28,31 +53,6 @@
       "githubUrl": null,
       "conferenceUrl": "https://summit.microsoft.com/",
       "imageUrl": "/static/images/events/mvp-summit.svg"
-    },
-    {
-      "id": "manual-ef-core-bench-lab-dotnet-brisbane-2026",
-      "title": "EF Core Bench Lab – A Peek into the Black Box",
-      "description": "A practical performance deep-dive into EF Core internals, query costs, and benchmarking patterns.",
-      "type": "talk",
-      "groupName": null,
-      "events": [
-        {
-          "eventName": ".NET Brisbane User Group",
-          "location": "Brisbane, Australia",
-          "date": "2026-03-05",
-          "url": "https://www.meetup.com/brisbane-net-user-group/",
-          "status": "past"
-        }
-      ],
-      "tags": [
-        ".NET",
-        "EF Core",
-        "Performance"
-      ],
-      "videoUrl": null,
-      "slidesUrl": null,
-      "githubUrl": null,
-      "conferenceUrl": "https://www.meetup.com/brisbane-net-user-group/"
     },
     {
       "id": "sessionize-event-20920",
@@ -694,7 +694,7 @@
         "AI",
         "Machine Learning"
       ],
-      "videoUrl": "https://www.youtube.com/watch?v=FKQ70_6NoH4",
+      "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
       "conferenceUrl": "https://sessionize.com/s/jernej-kavka/machine-learning-simplified-for-developers-with-ml/24940"
@@ -769,7 +769,7 @@
         "EF Core",
         ".NET"
       ],
-      "videoUrl": "https://www.youtube.com/watch?v=xUL3YKKC5lI",
+      "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
       "conferenceUrl": null
@@ -1150,7 +1150,7 @@
         "Azure",
         "AI"
       ],
-      "videoUrl": "https://www.youtube.com/watch?v=SdXj-2IHhiA",
+      "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
       "conferenceUrl": null
@@ -1173,7 +1173,7 @@
         "AI",
         "Machine Learning"
       ],
-      "videoUrl": "https://www.youtube.com/watch?v=ORRM33HoNeY",
+      "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
       "conferenceUrl": null
@@ -1195,7 +1195,7 @@
         "AI",
         "Machine Learning"
       ],
-      "videoUrl": "https://www.youtube.com/watch?v=9sfFBX1b-pc",
+      "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
       "conferenceUrl": null
@@ -1579,7 +1579,7 @@
         "EF Core",
         ".NET"
       ],
-      "videoUrl": "https://www.youtube.com/watch?v=6nYefHkKby8",
+      "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
       "conferenceUrl": null
@@ -1735,7 +1735,7 @@
       "groupName": null,
       "events": [],
       "tags": [],
-      "videoUrl": "https://www.youtube.com/watch?v=is4fO4NnjY0",
+      "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
       "conferenceUrl": "https://sessionize.com/s/jernej-kavka/offline-ai-magic-run-llms-locally-with-lm-studio-./151695"
@@ -1890,7 +1890,7 @@
         ".NET",
         "EF Core"
       ],
-      "videoUrl": "https://www.youtube.com/watch?v=x4TumMHiB6w",
+      "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
       "conferenceUrl": "https://sessionize.com/s/jernej-kavka/common-mistakes-in-ef-core/48354"
