@@ -186,7 +186,9 @@ function mergeTalks() {
     for (const talk of sessionizeData.talks) {
       // Skip if this Sessionize entry is claimed by a more specific talk
       if (claimedSessionizeIds.has(talk.id)) {
-        console.log(`  ⏭️  Skipping "${talk.title}" (claimed by another talk via sessionizeEventId)`)
+        console.log(
+          `  ⏭️  Skipping "${talk.title}" (claimed by another talk via sessionizeEventId)`
+        )
         continue
       }
 
