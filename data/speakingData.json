@@ -763,6 +763,28 @@
       "conferenceUrl": "https://sessionize.com/s/jernej-kavka/getting-started-with-machine-learning-using-ml.net/34372"
     },
     {
+      "id": "sessionize-event-3269",
+      "title": "Speaking at NDC Sydney 2020",
+      "description": "Presented at NDC Sydney 2020",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "NDC Sydney 2020",
+          "location": "Sydney, Australia",
+          "date": "2020-10-12",
+          "dateEnd": "2020-10-16",
+          "url": "https://ndcsydney.com",
+          "status": "past"
+        }
+      ],
+      "tags": [],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": "https://ndcsydney.com"
+    },
+    {
       "id": "2020-ef-core-query-tags-and-logging",
       "title": "EF Core Query Tags and logging",
       "description": "",
@@ -1401,6 +1423,27 @@
       "conferenceUrl": null
     },
     {
+      "id": "sessionize-event-621",
+      "title": "Speaking at DDD Sydney 2018",
+      "description": "Presented at DDD Sydney 2018",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "DDD Sydney 2018",
+          "location": "Sydney, Australia",
+          "date": "2018-08-18",
+          "url": "http://next.dddsydney.com.au",
+          "status": "past"
+        }
+      ],
+      "tags": [],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": "http://next.dddsydney.com.au"
+    },
+    {
       "id": "2015-visual-studio-everywhere-linux-osx-in-windows-se-r",
       "title": "Visual Studio Everywhere - Linux, OSX in (Windows, se razume)",
       "description": "",
@@ -1736,7 +1779,7 @@
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
-      "conferenceUrl": "https://sessionize.com/s/jernej-kavka/offline-ai-magic-run-llms-locally-with-lm-studio-./151695"
+      "conferenceUrl": "https://sessionize.com/s/jernej-kavka/offline-ai-magic-run-llms-locally-with-lm-studio-/151695"
     },
     {
       "id": "sessionize-126485",
