@@ -30,11 +30,11 @@ export default function UpcomingTalkCard({ talk, compact = false }: UpcomingTalk
   // Determine best URL for favicon (prefer conferenceUrl, skip generic platforms)
   const getBestUrlForIcon = () => {
     const isGenericPlatform = (url: string) =>
-      url && (url.includes('eventbrite') || url.includes('sessionize.com'))
+      url && /eventbrite|sessionize\.com|youtube\.com|youtu\.be|github\.com|meetu\.ps/i.test(url)
 
     if (conferenceUrl && !isGenericPlatform(conferenceUrl)) return conferenceUrl
     if (event.url && !isGenericPlatform(event.url)) return event.url
-    return conferenceUrl || event.url
+    return null
   }
 
   const iconUrl = getBestUrlForIcon()

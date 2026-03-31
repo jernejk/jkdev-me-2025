@@ -259,6 +259,28 @@ function mergeTalks() {
   return mergedTalks
 }
 
+// Auto-assign imageUrl based on known conference patterns
+const CONFERENCE_LOGOS = [
+  { pattern: /\bNDC\b/i, imageUrl: '/static/images/events/ndc.svg' },
+  {
+    pattern: /\bDDD\b.*\b(Brisbane|Sydney|Melbourne)\b/i,
+    imageUrl: '/static/images/events/ddd.png',
+  },
+  { pattern: /\bAI Hack Day\b/i, imageUrl: '/static/images/events/ai-hack-day.png' },
+  { pattern: /\bMVP Summit\b/i, imageUrl: '/static/images/events/mvp-summit.svg' },
+]
+
+function assignConferenceLogo(talk) {
+  if (talk.imageUrl) return // Already has a custom logo
+  const searchText = [talk.title, ...talk.events.map((e) => e.eventName)].join(' ')
+  for (const { pattern, imageUrl } of CONFERENCE_LOGOS) {
+    if (pattern.test(searchText)) {
+      talk.imageUrl = imageUrl
+      return
+    }
+  }
+}
+
 // Validate and enhance data
 function validateAndEnhance(talks) {
   console.log('\n🔍 Validating and enhancing data...')
@@ -275,6 +297,9 @@ function validateAndEnhance(talks) {
     talk.slidesUrl = talk.slidesUrl || null
     talk.githubUrl = talk.githubUrl || null
     talk.conferenceUrl = talk.conferenceUrl || null
+
+    // Auto-assign conference logo if not set
+    assignConferenceLogo(talk)
 
     // Determine groupName if multiple events
     if (talk.events.length > 1 && !talk.groupName) {

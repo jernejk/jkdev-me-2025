@@ -112,7 +112,8 @@
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
-      "conferenceUrl": "https://www.dddbrisbane.com"
+      "conferenceUrl": "https://www.dddbrisbane.com",
+      "imageUrl": "/static/images/events/ddd.png"
     },
     {
       "id": "sessionize-event-21307",
@@ -159,7 +160,8 @@
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
-      "conferenceUrl": null
+      "conferenceUrl": null,
+      "imageUrl": "/static/images/events/ai-hack-day.png"
     },
     {
       "id": "sessionize-event-15603",
@@ -215,7 +217,8 @@
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
-      "conferenceUrl": null
+      "conferenceUrl": null,
+      "imageUrl": "/static/images/events/ai-hack-day.png"
     },
     {
       "id": "2024-ai-hack-day-melbourne-2024",
@@ -241,7 +244,8 @@
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
-      "conferenceUrl": null
+      "conferenceUrl": null,
+      "imageUrl": "/static/images/events/ai-hack-day.png"
     },
     {
       "id": "sessionize-event-14325",
@@ -284,7 +288,8 @@
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
-      "conferenceUrl": "https://ndcsydney.com"
+      "conferenceUrl": "https://ndcsydney.com",
+      "imageUrl": "/static/images/events/ndc.svg"
     },
     {
       "id": "sessionize-event-11303",
@@ -306,7 +311,8 @@
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
-      "conferenceUrl": null
+      "conferenceUrl": null,
+      "imageUrl": "/static/images/events/ndc.svg"
     },
     {
       "id": "sessionize-event-12996",
@@ -327,7 +333,8 @@
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
-      "conferenceUrl": "https://www.dddbrisbane.com"
+      "conferenceUrl": "https://www.dddbrisbane.com",
+      "imageUrl": "/static/images/events/ddd.png"
     },
     {
       "id": "sessionize-event-10567",
@@ -349,7 +356,8 @@
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
-      "conferenceUrl": "https://ndcporto.com/"
+      "conferenceUrl": "https://ndcporto.com/",
+      "imageUrl": "/static/images/events/ndc.svg"
     },
     {
       "id": "2023-ai-hack-day-sydney-2023",
@@ -375,7 +383,8 @@
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
-      "conferenceUrl": null
+      "conferenceUrl": null,
+      "imageUrl": "/static/images/events/ai-hack-day.png"
     },
     {
       "id": "2023-ai-hack-days-sydney-brisbane-and-melbourne",
@@ -401,7 +410,8 @@
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
-      "conferenceUrl": null
+      "conferenceUrl": null,
+      "imageUrl": "/static/images/events/ai-hack-day.png"
     },
     {
       "id": "2023-ai-hack-day-melbourne-2023",
@@ -427,7 +437,8 @@
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
-      "conferenceUrl": null
+      "conferenceUrl": null,
+      "imageUrl": "/static/images/events/ai-hack-day.png"
     },
     {
       "id": "sessionize-event-10508",
@@ -470,7 +481,8 @@
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
-      "conferenceUrl": "https://ndcoslo.com"
+      "conferenceUrl": "https://ndcoslo.com",
+      "imageUrl": "/static/images/events/ndc.svg"
     },
     {
       "id": "2023-global-ai-the-podcast",
@@ -561,7 +573,8 @@
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
-      "conferenceUrl": "https://ndcsydney.com"
+      "conferenceUrl": "https://ndcsydney.com",
+      "imageUrl": "/static/images/events/ndc.svg"
     },
     {
       "id": "sessionize-event-6372",
@@ -604,7 +617,8 @@
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
-      "conferenceUrl": "https://ndcsydney.com"
+      "conferenceUrl": "https://ndcsydney.com",
+      "imageUrl": "/static/images/events/ndc.svg"
     },
     {
       "id": "sessionize-event-5549",
@@ -728,7 +742,8 @@
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
-      "conferenceUrl": "https://sessionize.com/s/jernej-kavka/machine-learning-simplified-for-developers-with-ml/24940"
+      "conferenceUrl": "https://sessionize.com/s/jernej-kavka/machine-learning-simplified-for-developers-with-ml/24940",
+      "imageUrl": "/static/images/events/ndc.svg"
     },
     {
       "id": "2020-getting-started-with-machine-learning-using-ml-net",
@@ -752,7 +767,8 @@
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
-      "conferenceUrl": "https://sessionize.com/s/jernej-kavka/getting-started-with-machine-learning-using-ml.net/34372"
+      "conferenceUrl": "https://sessionize.com/s/jernej-kavka/getting-started-with-machine-learning-using-ml.net/34372",
+      "imageUrl": "/static/images/events/ndc.svg"
     },
     {
       "id": "2020-ef-core-query-tags-and-logging",
@@ -781,7 +797,8 @@
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
-      "conferenceUrl": null
+      "conferenceUrl": null,
+      "imageUrl": "/static/images/events/ddd.png"
     },
     {
       "id": "2020-getting-started-with-machine-learning-using-ml-net",
@@ -806,7 +823,8 @@
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
-      "conferenceUrl": null
+      "conferenceUrl": null,
+      "imageUrl": "/static/images/events/ndc.svg"
     },
     {
       "id": "2020-from-paper-to-power-using-azure-form-recognizer",
@@ -904,7 +922,8 @@
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
-      "conferenceUrl": null
+      "conferenceUrl": null,
+      "imageUrl": "/static/images/events/ai-hack-day.png"
     },
     {
       "id": "sessionize-event-3490",
@@ -949,7 +968,8 @@
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
-      "conferenceUrl": null
+      "conferenceUrl": null,
+      "imageUrl": "/static/images/events/ai-hack-day.png"
     },
     {
       "id": "2020-azure-cognitive-services-and-ml-net",
@@ -972,7 +992,8 @@
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
-      "conferenceUrl": null
+      "conferenceUrl": null,
+      "imageUrl": "/static/images/events/ai-hack-day.png"
     },
     {
       "id": "sessionize-event-2328",
@@ -1028,7 +1049,8 @@
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
-      "conferenceUrl": null
+      "conferenceUrl": null,
+      "imageUrl": "/static/images/events/ddd.png"
     },
     {
       "id": "2019-postman-how-to-test-and-monitor-your-apis-with-no-",
@@ -1097,7 +1119,8 @@
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
-      "conferenceUrl": null
+      "conferenceUrl": null,
+      "imageUrl": "/static/images/events/ndc.svg"
     },
     {
       "id": "2019-ml-net-rocks-machine-learning-that-s-actually-easy",
@@ -1120,7 +1143,8 @@
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
-      "conferenceUrl": null
+      "conferenceUrl": null,
+      "imageUrl": "/static/images/events/ndc.svg"
     },
     {
       "id": "2019-opening-the-machine-learning-box-with-f",
@@ -1142,7 +1166,8 @@
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
-      "conferenceUrl": null
+      "conferenceUrl": null,
+      "imageUrl": "/static/images/events/ndc.svg"
     },
     {
       "id": "2019-cognitive-services-how-can-you-add-so-much-with-so",
@@ -1261,7 +1286,8 @@
       "videoUrl": "https://www.youtube.com/watch?v=6nYefHkKby8",
       "slidesUrl": null,
       "githubUrl": null,
-      "conferenceUrl": null
+      "conferenceUrl": null,
+      "imageUrl": "/static/images/events/ddd.png"
     },
     {
       "id": "2015-visual-studio-everywhere-linux-osx-in-windows-se-r",
@@ -1684,7 +1710,8 @@
       "videoUrl": "https://www.youtube.com/watch?v=yyJuol7oxtA",
       "slidesUrl": null,
       "githubUrl": null,
-      "conferenceUrl": "https://sessionize.com/s/jernej-kavka/the-harmonious-dance-of-ef-core-and-sql-server/89884"
+      "conferenceUrl": "https://sessionize.com/s/jernej-kavka/the-harmonious-dance-of-ef-core-and-sql-server/89884",
+      "imageUrl": "/static/images/events/ndc.svg"
     },
     {
       "id": "sessionize-79636",
@@ -1754,7 +1781,8 @@
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
-      "conferenceUrl": "https://sessionize.com/s/jernej-kavka/common-mistakes-in-ef-core/48354"
+      "conferenceUrl": "https://sessionize.com/s/jernej-kavka/common-mistakes-in-ef-core/48354",
+      "imageUrl": "/static/images/events/ndc.svg"
     },
     {
       "id": "2023-common-mistakes-in-ef-core-7-brisbane-net-user-gro",
@@ -1801,7 +1829,8 @@
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
-      "conferenceUrl": null
+      "conferenceUrl": null,
+      "imageUrl": "/static/images/events/ndc.svg"
     },
     {
       "id": "2022-how-to-keep-your-email-tidy-with-ai-sydney-net-use",
@@ -1850,7 +1879,8 @@
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
-      "conferenceUrl": null
+      "conferenceUrl": null,
+      "imageUrl": "/static/images/events/ai-hack-day.png"
     },
     {
       "id": "2022-build-your-own-source-generator-with-chris-sienkie",
@@ -1873,7 +1903,8 @@
       "videoUrl": "https://www.youtube.com/watch?v=abMAW1pjreg",
       "slidesUrl": null,
       "githubUrl": null,
-      "conferenceUrl": null
+      "conferenceUrl": null,
+      "imageUrl": "/static/images/events/ndc.svg"
     },
     {
       "id": "2022-source-generators-with-chris-sienkiewicz-jk-ndc-sy",
@@ -1896,7 +1927,8 @@
       "videoUrl": "https://www.youtube.com/watch?v=3ObZSNeBVac",
       "slidesUrl": null,
       "githubUrl": null,
-      "conferenceUrl": null
+      "conferenceUrl": null,
+      "imageUrl": "/static/images/events/ndc.svg"
     },
     {
       "id": "2022-from-data-to-ai-quickly-create-machine-learning-wi",
@@ -1920,7 +1952,8 @@
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
-      "conferenceUrl": null
+      "conferenceUrl": null,
+      "imageUrl": "/static/images/events/ai-hack-day.png"
     },
     {
       "id": "2022-from-data-to-ai-quickly-create-machine-learning-wi",
@@ -1944,7 +1977,8 @@
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
-      "conferenceUrl": null
+      "conferenceUrl": null,
+      "imageUrl": "/static/images/events/ai-hack-day.png"
     },
     {
       "id": "2022-getting-started-with-cognitive-services-ai-hack-da",
@@ -1968,7 +2002,8 @@
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
-      "conferenceUrl": null
+      "conferenceUrl": null,
+      "imageUrl": "/static/images/events/ai-hack-day.png"
     },
     {
       "id": "2024-global-ai-podcast-mvp-panel",
@@ -2041,7 +2076,8 @@
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
-      "conferenceUrl": null
+      "conferenceUrl": null,
+      "imageUrl": "/static/images/events/ai-hack-day.png"
     },
     {
       "id": "2025-ai-hack-day-2025",
@@ -2064,7 +2100,8 @@
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
-      "conferenceUrl": null
+      "conferenceUrl": null,
+      "imageUrl": "/static/images/events/ai-hack-day.png"
     },
     {
       "id": "2025-unlocking-the-full-potential-the-harmonious-dance-",
