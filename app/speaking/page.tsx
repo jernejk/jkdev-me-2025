@@ -195,6 +195,7 @@ export default function Speaking() {
                               slidesUrl={talk.slidesUrl}
                               githubUrl={talk.githubUrl}
                               conferenceUrl={talk.conferenceUrl}
+                              imageUrl={talk.imageUrl}
                             />
                           </article>
                         )
@@ -213,6 +214,7 @@ export default function Speaking() {
                             slidesUrl={talk.slidesUrl}
                             githubUrl={talk.githubUrl}
                             conferenceUrl={talk.conferenceUrl}
+                            imageUrl={talk.imageUrl}
                           />
                         </article>
                       )

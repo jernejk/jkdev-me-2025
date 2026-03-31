@@ -21,6 +21,7 @@ interface SingleTalkCardProps {
   slidesUrl?: string | null
   githubUrl?: string | null
   conferenceUrl?: string | null
+  imageUrl?: string | null
 }
 
 export default function SingleTalkCard({
@@ -32,6 +33,7 @@ export default function SingleTalkCard({
   slidesUrl,
   githubUrl,
   conferenceUrl,
+  imageUrl,
 }: SingleTalkCardProps) {
   const [isExpanded, setIsExpanded] = useState(false)
 
@@ -77,7 +79,17 @@ export default function SingleTalkCard({
       <div className="flex gap-4">
         {/* Icon Column */}
         <div className="flex shrink-0 flex-col items-center gap-2 pt-1">
-          {faviconUrl ? (
+          {imageUrl ? (
+            <div className="relative h-10 w-10 overflow-hidden rounded-md bg-white p-1 shadow-sm dark:bg-gray-800">
+              <Image
+                src={imageUrl}
+                alt={event.eventName}
+                width={40}
+                height={40}
+                className="h-full w-full object-contain"
+              />
+            </div>
+          ) : faviconUrl ? (
             <div className="relative h-10 w-10 overflow-hidden rounded-md bg-gray-50 p-1 shadow-sm dark:bg-gray-800">
               <Image
                 src={faviconUrl}
