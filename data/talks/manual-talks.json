@@ -55,6 +55,45 @@
       "slidesUrl": null,
       "githubUrl": null,
       "conferenceUrl": "https://www.meetup.com/brisbane-net-user-group/"
+    },
+    {
+      "id": "manual-ai-hack-days-2026",
+      "title": "AI Hack Days 2026",
+      "description": "A free community event for developers to learn AI hands-on with workshops and hack sessions.",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "AI Hack Day Sydney",
+          "location": "SSW Sydney, Neutral Bay, NSW, Australia",
+          "date": "2026-07-11",
+          "url": "https://aihackday.com/sydney/",
+          "status": "upcoming"
+        },
+        {
+          "eventName": "AI Hack Day Brisbane",
+          "location": "SSW Brisbane, Brisbane, QLD, Australia",
+          "date": "2026-08-01",
+          "url": "https://aihackday.com/brisbane/",
+          "status": "upcoming"
+        },
+        {
+          "eventName": "AI Hack Day Melbourne",
+          "location": "SSW Melbourne, Melbourne, VIC, Australia",
+          "url": "https://aihackday.com/melbourne/",
+          "status": "upcoming"
+        }
+      ],
+      "tags": [
+        "AI",
+        "Machine Learning",
+        "Azure"
+      ],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": "https://aihackday.com/",
+      "imageUrl": "/static/images/events/ai-hack-day.png"
     }
   ]
 }

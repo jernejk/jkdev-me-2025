@@ -1,6 +1,45 @@
 {
   "talks": [
     {
+      "id": "manual-ai-hack-days-2026",
+      "title": "AI Hack Days 2026",
+      "description": "A free community event for developers to learn AI hands-on with workshops and hack sessions.",
+      "type": "talk",
+      "groupName": "manual-ai-hack-days-2026-group",
+      "events": [
+        {
+          "eventName": "AI Hack Day Brisbane",
+          "location": "SSW Brisbane, Brisbane, QLD, Australia",
+          "date": "2026-08-01",
+          "url": "https://aihackday.com/brisbane/",
+          "status": "upcoming"
+        },
+        {
+          "eventName": "AI Hack Day Sydney",
+          "location": "SSW Sydney, Neutral Bay, NSW, Australia",
+          "date": "2026-07-11",
+          "url": "https://aihackday.com/sydney/",
+          "status": "upcoming"
+        },
+        {
+          "eventName": "AI Hack Day Melbourne",
+          "location": "SSW Melbourne, Melbourne, VIC, Australia",
+          "url": "https://aihackday.com/melbourne/",
+          "status": "past"
+        }
+      ],
+      "tags": [
+        "AI",
+        "Machine Learning",
+        "Azure"
+      ],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": "https://aihackday.com/",
+      "imageUrl": "/static/images/events/ai-hack-day.png"
+    },
+    {
       "id": "manual-ef-core-bench-lab-dotnet-brisbane-2026",
       "title": "EF Core Bench Lab – A Peek into the Black Box",
       "description": "A practical performance deep-dive into EF Core internals, query costs, and benchmarking patterns.",
@@ -11,7 +50,7 @@
           "eventName": ".NET Brisbane User Group",
           "location": "Brisbane, Australia",
           "date": "2026-06-04",
-          "url": "https://www.meetup.com/brisbane-dotnet-user-group/events/314050554/",
+          "url": "https://www.meetup.com/brisbane-net-user-group/",
           "status": "upcoming"
         }
       ],
@@ -23,7 +62,7 @@
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
-      "conferenceUrl": "https://www.meetup.com/brisbane-dotnet-user-group/events/314050554/"
+      "conferenceUrl": "https://www.meetup.com/brisbane-net-user-group/"
     },
     {
       "id": "manual-mvp-summit-2026",
