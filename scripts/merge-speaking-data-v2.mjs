@@ -161,10 +161,60 @@ function mergeTalks() {
     }
   }
 
+  // Build a set of Sessionize event IDs that are claimed by other talks
+  // via the sessionizeEventId field (e.g. a legacy talk can reference
+  // "sessionize-event-621" to indicate it covers that Sessionize entry)
+  const claimedSessionizeIds = new Set()
+  const allSources = [
+    ...(legacyData?.talks || []),
+    ...(manualData?.talks || []),
+    ...(mvpData?.contributions || mvpData?.activities || []),
+  ]
+  for (const talk of allSources) {
+    if (talk.sessionizeEventId) {
+      if (Array.isArray(talk.sessionizeEventId)) {
+        talk.sessionizeEventId.forEach((id) => claimedSessionizeIds.add(id))
+      } else {
+        claimedSessionizeIds.add(talk.sessionizeEventId)
+      }
+    }
+  }
+
   // Process Sessionize data
   if (sessionizeData?.talks) {
     console.log('\n📊 Processing Sessionize data...')
     for (const talk of sessionizeData.talks) {
+      // Skip if this Sessionize entry is claimed by a more specific talk
+      if (claimedSessionizeIds.has(talk.id)) {
+        console.log(`  ⏭️  Skipping "${talk.title}" (claimed by another talk via sessionizeEventId)`)
+        continue
+      }
+
+      // Skip generic "Speaking at [EVENT]" entries if we already have
+      // a talk with an event at the same conference (date-based match)
+      if (talk.title.match(/^(Speaking at|Presented at)/i) && talk.events?.length > 0) {
+        const sessionizeEvent = talk.events[0]
+        const eventName = sessionizeEvent.eventName?.toLowerCase() || ''
+        const eventDate = sessionizeEvent.date
+
+        const alreadyCovered = mergedTalks.some((existing) =>
+          existing.events.some((e) => {
+            const existingName = e.eventName?.toLowerCase() || ''
+            return (
+              (existingName.includes(eventName) || eventName.includes(existingName)) &&
+              e.date &&
+              eventDate &&
+              Math.abs(new Date(e.date) - new Date(eventDate)) < 7 * 24 * 60 * 60 * 1000
+            )
+          })
+        )
+
+        if (alreadyCovered) {
+          console.log(`  ⏭️  Skipping "${talk.title}" (already covered by specific talk)`)
+          continue
+        }
+      }
+
       addOrMergeTalk(talk, 'Sessionize')
     }
   }

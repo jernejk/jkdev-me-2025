@@ -4,6 +4,7 @@
       "id": "2020-getting-started-with-machine-learning-using-ml-net",
       "title": "Getting Started with Machine Learning using ML.NET (full day workshop)",
       "description": "",
+      "sessionizeEventId": "sessionize-event-3269",
       "events": [
         {
           "eventName": "NDC Sydney 2020",
@@ -688,6 +689,7 @@
       "id": "2018-making-unit-tests-simple-again-with-net-core-and-e",
       "title": "Making unit tests simple again with .Net Core and EF Core",
       "description": "Making unit tests simple again with .Net Core and EF Core.",
+      "sessionizeEventId": "sessionize-event-621",
       "events": [
         {
           "eventName": "DDD Sydney 2018",

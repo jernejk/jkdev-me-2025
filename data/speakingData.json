@@ -611,21 +611,13 @@
       "title": "Speaking at The Virtual ML.NET Community Conference 2021",
       "description": "Presented at The Virtual ML.NET Community Conference 2021",
       "type": "talk",
-      "groupName": "sessionize-event-5549-group",
+      "groupName": null,
       "events": [
         {
           "eventName": "The Virtual ML.NET Community Conference 2021",
           "location": "",
           "date": "2021-05-07",
           "dateEnd": "2021-05-08",
-          "url": "https://virtualml.net/",
-          "status": "past"
-        },
-        {
-          "eventName": "The Virtual ML.NET Community Conference",
-          "location": "",
-          "date": "2020-05-29",
-          "dateEnd": "2020-05-30",
           "url": "https://virtualml.net/",
           "status": "past"
         }
@@ -763,28 +755,6 @@
       "conferenceUrl": "https://sessionize.com/s/jernej-kavka/getting-started-with-machine-learning-using-ml.net/34372"
     },
     {
-      "id": "sessionize-event-3269",
-      "title": "Speaking at NDC Sydney 2020",
-      "description": "Presented at NDC Sydney 2020",
-      "type": "talk",
-      "groupName": null,
-      "events": [
-        {
-          "eventName": "NDC Sydney 2020",
-          "location": "Sydney, Australia",
-          "date": "2020-10-12",
-          "dateEnd": "2020-10-16",
-          "url": "https://ndcsydney.com",
-          "status": "past"
-        }
-      ],
-      "tags": [],
-      "videoUrl": null,
-      "slidesUrl": null,
-      "githubUrl": null,
-      "conferenceUrl": "https://ndcsydney.com"
-    },
-    {
       "id": "2020-ef-core-query-tags-and-logging",
       "title": "EF Core Query Tags and logging",
       "description": "",
@@ -837,28 +807,6 @@
       "slidesUrl": null,
       "githubUrl": null,
       "conferenceUrl": null
-    },
-    {
-      "id": "sessionize-event-3799",
-      "title": "Speaking at NDC Minnesota 2020 - Online Workshop Event",
-      "description": "Presented at NDC Minnesota 2020 - Online Workshop Event",
-      "type": "talk",
-      "groupName": null,
-      "events": [
-        {
-          "eventName": "NDC Minnesota 2020 - Online Workshop Event",
-          "location": "",
-          "date": "2020-09-08",
-          "dateEnd": "2020-09-11",
-          "url": "https://ndcMinnesota.com/",
-          "status": "past"
-        }
-      ],
-      "tags": [],
-      "videoUrl": null,
-      "slidesUrl": null,
-      "githubUrl": null,
-      "conferenceUrl": "https://ndcMinnesota.com/"
     },
     {
       "id": "2020-from-paper-to-power-using-azure-form-recognizer",
@@ -936,27 +884,6 @@
       "conferenceUrl": null
     },
     {
-      "id": "sessionize-event-3730",
-      "title": "Speaking at Virtual Global AI on Tour 2020 Melbourne Australia ",
-      "description": "Presented at Virtual Global AI on Tour 2020 Melbourne Australia ",
-      "type": "talk",
-      "groupName": null,
-      "events": [
-        {
-          "eventName": "Virtual Global AI on Tour 2020 Melbourne Australia ",
-          "location": "",
-          "date": "2020-06-20",
-          "url": "https://globalai.community/global-ai-on-tour/",
-          "status": "past"
-        }
-      ],
-      "tags": [],
-      "videoUrl": null,
-      "slidesUrl": null,
-      "githubUrl": null,
-      "conferenceUrl": "https://globalai.community/global-ai-on-tour/"
-    },
-    {
       "id": "2020-getting-started-with-azure-cognitive-services",
       "title": "Getting started with Azure Cognitive Services",
       "description": "",
@@ -1000,28 +927,6 @@
       "slidesUrl": null,
       "githubUrl": null,
       "conferenceUrl": "https://virtual.globalazure.net"
-    },
-    {
-      "id": "sessionize-event-2397",
-      "title": "Speaking at NDC Porto 2020",
-      "description": "Presented at NDC Porto 2020",
-      "type": "talk",
-      "groupName": null,
-      "events": [
-        {
-          "eventName": "NDC Porto 2020",
-          "location": "Porto, Portugal",
-          "date": "2020-04-21",
-          "dateEnd": "2020-04-24",
-          "url": "https://ndcporto.com/",
-          "status": "past"
-        }
-      ],
-      "tags": [],
-      "videoUrl": null,
-      "slidesUrl": null,
-      "githubUrl": null,
-      "conferenceUrl": "https://ndcporto.com/"
     },
     {
       "id": "2020-getting-started-with-cognitive-services",
@@ -1240,49 +1145,6 @@
       "conferenceUrl": null
     },
     {
-      "id": "sessionize-event-1401",
-      "title": "Speaking at NDC Sydney 2019",
-      "description": "Presented at NDC Sydney 2019",
-      "type": "talk",
-      "groupName": null,
-      "events": [
-        {
-          "eventName": "NDC Sydney 2019",
-          "location": "Sydney, Australia",
-          "date": "2019-10-14",
-          "dateEnd": "2019-10-18",
-          "url": "https://ndcsydney.com",
-          "status": "past"
-        }
-      ],
-      "tags": [],
-      "videoUrl": null,
-      "slidesUrl": null,
-      "githubUrl": null,
-      "conferenceUrl": "https://ndcsydney.com"
-    },
-    {
-      "id": "sessionize-event-1888",
-      "title": "Speaking at DDD Sydney 2019",
-      "description": "Presented at DDD Sydney 2019",
-      "type": "talk",
-      "groupName": null,
-      "events": [
-        {
-          "eventName": "DDD Sydney 2019",
-          "location": "Sydney, Australia",
-          "date": "2019-09-21",
-          "url": "http://next.dddsydney.com.au",
-          "status": "past"
-        }
-      ],
-      "tags": [],
-      "videoUrl": null,
-      "slidesUrl": null,
-      "githubUrl": null,
-      "conferenceUrl": "http://next.dddsydney.com.au"
-    },
-    {
       "id": "2019-cognitive-services-how-can-you-add-so-much-with-so",
       "title": "Cognitive Services – How can you add so much, with so little effort?",
       "description": "",
@@ -1304,27 +1166,6 @@
       "slidesUrl": null,
       "githubUrl": null,
       "conferenceUrl": null
-    },
-    {
-      "id": "sessionize-event-1637",
-      "title": "Speaking at DDD Melbourne 2019",
-      "description": "Presented at DDD Melbourne 2019",
-      "type": "talk",
-      "groupName": null,
-      "events": [
-        {
-          "eventName": "DDD Melbourne 2019",
-          "location": "Melbourne, Australia",
-          "date": "2019-08-10",
-          "url": "https://www.dddmelbourne.com/",
-          "status": "past"
-        }
-      ],
-      "tags": [],
-      "videoUrl": null,
-      "slidesUrl": null,
-      "githubUrl": null,
-      "conferenceUrl": "https://www.dddmelbourne.com/"
     },
     {
       "id": "2019-angular-introduction-routing",
@@ -1421,27 +1262,6 @@
       "slidesUrl": null,
       "githubUrl": null,
       "conferenceUrl": null
-    },
-    {
-      "id": "sessionize-event-621",
-      "title": "Speaking at DDD Sydney 2018",
-      "description": "Presented at DDD Sydney 2018",
-      "type": "talk",
-      "groupName": null,
-      "events": [
-        {
-          "eventName": "DDD Sydney 2018",
-          "location": "Sydney, Australia",
-          "date": "2018-08-18",
-          "url": "http://next.dddsydney.com.au",
-          "status": "past"
-        }
-      ],
-      "tags": [],
-      "videoUrl": null,
-      "slidesUrl": null,
-      "githubUrl": null,
-      "conferenceUrl": "http://next.dddsydney.com.au"
     },
     {
       "id": "2015-visual-studio-everywhere-linux-osx-in-windows-se-r",
