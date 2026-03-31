@@ -59,12 +59,13 @@ export default function SingleTalkCard({
     }
   }
 
-  // Determine best URL for favicon (prefer conferenceUrl, avoid Eventbrite if possible)
+  // Determine best URL for favicon (prefer conferenceUrl, skip generic platforms)
   const getBestUrlForIcon = () => {
-    const isEventbrite = (url: string) => url && url.includes('eventbrite')
+    const isGenericPlatform = (url: string) =>
+      url && (url.includes('eventbrite') || url.includes('sessionize.com'))
 
-    if (conferenceUrl && !isEventbrite(conferenceUrl)) return conferenceUrl
-    if (event.url && !isEventbrite(event.url)) return event.url
+    if (conferenceUrl && !isGenericPlatform(conferenceUrl)) return conferenceUrl
+    if (event.url && !isGenericPlatform(event.url)) return event.url
     return conferenceUrl || event.url
   }
 

@@ -690,7 +690,9 @@
       "description": "",
       "events": [
         {
-          "eventName": "DDD Sydney",
+          "eventName": "DDD Sydney 2018",
+          "date": "2018-08-18",
+          "location": "Sydney, Australia",
           "url": "https://next.dddsydney.com.au"
         }
       ],
