@@ -687,7 +687,7 @@
     {
       "id": "2018-making-unit-tests-simple-again-with-net-core-and-e",
       "title": "Making unit tests simple again with .Net Core and EF Core",
-      "description": "",
+      "description": "Making unit tests simple again with .Net Core and EF Core.",
       "events": [
         {
           "eventName": "DDD Sydney 2018",
@@ -699,7 +699,8 @@
       "tags": [
         "EF Core",
         ".NET"
-      ]
+      ],
+      "videoUrl": "https://www.youtube.com/watch?v=6nYefHkKby8"
     },
     {
       "id": "2018-brisbane-full-stack-user-group-angular-react-net-c",
