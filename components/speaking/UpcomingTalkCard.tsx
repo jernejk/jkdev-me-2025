@@ -75,7 +75,7 @@ export default function UpcomingTalkCard({ talk, compact = false }: UpcomingTalk
           >
             {imageUrl ? (
               <div
-                className={`relative overflow-hidden rounded-lg bg-white ring-1 shadow-sm ring-cyan-200/80 dark:bg-gray-800 dark:ring-cyan-500/20 ${compact ? 'h-12 w-12 p-1' : 'h-14 w-14 p-1'}`}
+                className={`relative overflow-hidden rounded-lg bg-white shadow-sm ring-1 ring-cyan-200/80 dark:bg-gray-800 dark:ring-cyan-500/20 ${compact ? 'h-12 w-12 p-1' : 'h-14 w-14 p-1'}`}
               >
                 <Image
                   src={imageUrl}
@@ -87,7 +87,7 @@ export default function UpcomingTalkCard({ talk, compact = false }: UpcomingTalk
               </div>
             ) : faviconUrl ? (
               <div
-                className={`relative overflow-hidden rounded-md bg-white p-1 ring-1 shadow-sm ring-cyan-200/80 dark:bg-gray-800 dark:ring-cyan-500/20 ${compact ? 'h-10 w-10' : 'h-12 w-12'}`}
+                className={`relative overflow-hidden rounded-md bg-white p-1 shadow-sm ring-1 ring-cyan-200/80 dark:bg-gray-800 dark:ring-cyan-500/20 ${compact ? 'h-10 w-10' : 'h-12 w-12'}`}
               >
                 <Image
                   src={faviconUrl}

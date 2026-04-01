@@ -18,9 +18,9 @@ export default function Comments({ slug }: { slug: string }) {
     !isGiscus ||
     Boolean(
       giscusConfig?.repo &&
-        giscusConfig?.repositoryId &&
-        giscusConfig?.category &&
-        giscusConfig?.categoryId
+      giscusConfig?.repositoryId &&
+      giscusConfig?.category &&
+      giscusConfig?.categoryId
     )
 
   useEffect(() => {
