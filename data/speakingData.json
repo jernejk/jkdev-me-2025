@@ -65,6 +65,62 @@
       "conferenceUrl": "https://www.meetup.com/brisbane-net-user-group/"
     },
     {
+      "id": "manual-agentcamp-brisbane-2026",
+      "title": "From Vibe-Coded to Prod-Ready: Testing Your .NET Agents with MAF + AgentEval",
+      "description": "Workshop at AgentCamp 2026 Brisbane Edition. Hands-on session showing how to take a vibe-coded .NET agent and make it production-ready using Microsoft Agent Framework (MAF) and AgentEval for systematic evaluation and testing.",
+      "type": "workshop",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "AgentCamp 2026 - Brisbane Edition",
+          "location": "QUT P Block, Gardens Point, Brisbane, QLD, Australia",
+          "date": "2026-05-09",
+          "url": "https://www.meetup.com/ai-builders-brisbane-ai-experts-engineers-ai-agents/events/314197231/",
+          "status": "upcoming"
+        }
+      ],
+      "tags": [
+        "AI",
+        ".NET",
+        "Agents",
+        "MAF",
+        "AgentEval",
+        "Testing"
+      ],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": "https://agentcamp.city/brisbane/",
+      "imageUrl": "/static/images/events/agentcamp.svg"
+    },
+    {
+      "id": "manual-vibe-coding-brisbane-2026",
+      "title": "Optimising Vibe Coding - Ship Full-Stack AI Apps",
+      "description": "Hosting a Brisbane Build Club meetup exploring modern development workflows for Vibe Coders. Talks and live walkthroughs on rapidly building frontends, reliable backends, production-ready databases and AI agent orchestration — all without losing engineering fundamentals.",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "Brisbane Build Club",
+          "location": "Launch Event Space, Fortitude Valley, QLD, Australia",
+          "date": "2026-04-20",
+          "url": "https://luma.com/yo5jatjk",
+          "status": "upcoming"
+        }
+      ],
+      "tags": [
+        "AI",
+        "Vibe Coding",
+        "Full-Stack",
+        "Build Club"
+      ],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": "https://buildclub.ai/",
+      "imageUrl": "/static/images/events/buildclub.png"
+    },
+    {
       "id": "manual-mvp-summit-2026",
       "title": "MVP Summit 2026",
       "description": "Exclusive annual multi-day Microsoft event for MVPs and Regional Directors, featuring hundreds of in-depth technical sessions, direct engagement with Microsoft product leadership and engineers, and networking with MVPs worldwide.",
