@@ -76,6 +76,12 @@ export default function Speaking() {
     }
   })
 
+  // Upcoming: soonest first (ascending). Past stays newest first (descending).
+  upcomingTalks.sort(
+    (a, b) =>
+      new Date(a.events[0]?.date || 0).getTime() - new Date(b.events[0]?.date || 0).getTime()
+  )
+
   // Group past talks by year for cleaner scanning and machine extraction.
   const groupedPastTalks = pastTalks.reduce((acc, talk) => {
     const date = new Date(talk.events[0].date)
