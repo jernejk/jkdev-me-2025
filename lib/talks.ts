@@ -8,7 +8,7 @@ type TalkEvent = {
   url?: string
   online?: boolean
   status?: string
-  role?: EventRole
+  role?: string
 }
 
 type Talk = {
