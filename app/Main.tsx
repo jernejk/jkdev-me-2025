@@ -19,8 +19,7 @@ const upcomingHeadingByRole: Record<string, string> = {
 
 export default function Home({ posts, upcomingTalk }) {
   const upcomingRole = upcomingTalk?.events?.[0]?.role as string | undefined
-  const upcomingHeading =
-    (upcomingRole && upcomingHeadingByRole[upcomingRole]) || 'Speaking Next'
+  const upcomingHeading = (upcomingRole && upcomingHeadingByRole[upcomingRole]) || 'Speaking Next'
   return (
     <div className="space-y-10 pt-6 pb-6">
       <section className="relative overflow-hidden rounded-3xl border border-cyan-500/25 bg-[radial-gradient(circle_at_20%_20%,rgba(6,182,212,0.14),transparent_45%),radial-gradient(circle_at_90%_90%,rgba(14,165,233,0.16),transparent_40%),linear-gradient(140deg,rgba(15,23,42,0.95),rgba(2,6,23,0.96))] p-6 sm:p-8">
