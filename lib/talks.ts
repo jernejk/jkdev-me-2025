@@ -1,3 +1,5 @@
+export type EventRole = 'speaker' | 'host' | 'organizer' | 'workshop' | 'mentor' | 'attendee'
+
 type TalkEvent = {
   eventName: string
   location?: string
@@ -6,6 +8,7 @@ type TalkEvent = {
   url?: string
   online?: boolean
   status?: string
+  role?: EventRole
 }
 
 type Talk = {

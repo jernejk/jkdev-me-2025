@@ -14,7 +14,8 @@
           "location": "Launch Event Space, Fortitude Valley, QLD, Australia",
           "date": "2026-04-20",
           "url": "https://luma.com/yo5jatjk",
-          "status": "upcoming"
+          "status": "upcoming",
+          "role": "host"
         }
       ],
       "tags": [
@@ -41,7 +42,8 @@
           "location": "QUT P Block, Gardens Point, Brisbane, QLD, Australia",
           "date": "2026-05-09",
           "url": "https://www.meetup.com/ai-builders-brisbane-ai-experts-engineers-ai-agents/events/314197231/",
-          "status": "upcoming"
+          "status": "upcoming",
+          "role": "workshop"
         }
       ],
       "tags": [
@@ -131,7 +133,8 @@
           "location": "SSW Brisbane, Brisbane, QLD, Australia",
           "date": "2026-08-01",
           "url": "https://aihackday.com/brisbane/",
-          "status": "upcoming"
+          "status": "upcoming",
+          "role": "organizer"
         },
         {
           "eventName": "AI Hack Day Melbourne",

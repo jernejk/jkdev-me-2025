@@ -8,7 +8,19 @@ import SocialIcon from '@/components/social-icons'
 
 const MAX_DISPLAY = 4
 
+const upcomingHeadingByRole: Record<string, string> = {
+  speaker: 'Speaking Next',
+  workshop: 'Workshop Next',
+  host: 'Hosting Next',
+  organizer: 'Organizing Next',
+  mentor: 'Mentoring Next',
+  attendee: 'Attending Next',
+}
+
 export default function Home({ posts, upcomingTalk }) {
+  const upcomingRole = upcomingTalk?.events?.[0]?.role as string | undefined
+  const upcomingHeading =
+    (upcomingRole && upcomingHeadingByRole[upcomingRole]) || 'Speaking Next'
   return (
     <div className="space-y-10 pt-6 pb-6">
       <section className="relative overflow-hidden rounded-3xl border border-cyan-500/25 bg-[radial-gradient(circle_at_20%_20%,rgba(6,182,212,0.14),transparent_45%),radial-gradient(circle_at_90%_90%,rgba(14,165,233,0.16),transparent_40%),linear-gradient(140deg,rgba(15,23,42,0.95),rgba(2,6,23,0.96))] p-6 sm:p-8">
@@ -107,7 +119,7 @@ export default function Home({ posts, upcomingTalk }) {
           <div className="rounded-xl border border-gray-200/90 bg-white/95 p-4 shadow-sm dark:border-cyan-500/35 dark:bg-gradient-to-b dark:from-slate-900 dark:to-slate-950 dark:shadow-[0_12px_30px_rgba(8,145,178,0.18)]">
             <div className="mb-3 flex items-center justify-between">
               <h2 className="text-xl font-bold tracking-tight text-gray-900 dark:text-cyan-100">
-                Upcoming Talk
+                {upcomingHeading}
               </h2>
               <Link
                 href="/speaking"
