@@ -19,14 +19,15 @@ export default function Now() {
 
       <div className="prose dark:prose-invert max-w-none">
         <p>
-          <em>Last updated: March 2026</em>
+          <em>Last updated: April 2026</em>
         </p>
 
         <h2>Current Focus</h2>
         <ul>
           <li>
-            Preparing and refining talks around EF Core performance and developer workflows for
-            local and conference events.
+            Preparing upcoming talks and workshops: vibe coding at Build Club Brisbane, testing
+            .NET agents with MAF + AgentEval at AgentCamp, and an EF Core performance deep-dive at
+            the Brisbane .NET User Group.
           </li>
           <li>
             Building practical .NET and AI experiments, with a focus on offline/local model usage.
@@ -36,17 +37,50 @@ export default function Now() {
             stronger technical depth.
           </li>
           <li>
-            Crazy agentic experiments that I might write about them if they work or do a talk on
-            them if successful.
+            Crazy agentic experiments that I might write about if they work, or do a talk on if
+            they're successful.
           </li>
         </ul>
 
-        <h2>Upcoming Event</h2>
-        <p>
-          Attending the <a href="https://summit.microsoft.com/">Microsoft MVP Summit 2026</a> (March
-          24-26) at the Microsoft Redmond Campus — multi-day event with in-depth technical sessions,
-          direct engagement with Microsoft product teams, and networking with MVPs worldwide.
-        </p>
+        <h2>Upcoming Events</h2>
+        <ul>
+          <li>
+            Hosting{' '}
+            <a href="https://luma.com/yo5jatjk">
+              Brisbane Build Club — Optimising Vibe Coding
+            </a>{' '}
+            (April 20, 2026) at Launch Event Space, Fortitude Valley.
+          </li>
+          <li>
+            Workshop at{' '}
+            <a href="https://agentcamp.city/brisbane/">AgentCamp 2026 Brisbane Edition</a> (May 9,
+            2026): <em>From Vibe-Coded to Prod-Ready — Testing Your .NET Agents with MAF + AgentEval</em>.
+          </li>
+          <li>
+            Speaking at the{' '}
+            <a href="https://www.meetup.com/brisbane-net-user-group/">
+              Brisbane .NET User Group
+            </a>{' '}
+            (June 4, 2026): <em>EF Core Bench Lab — A Peek into the Black Box</em>.
+          </li>
+        </ul>
+
+        <h2>Recent</h2>
+        <ul>
+          <li>
+            Attended the <a href="https://summit.microsoft.com/">Microsoft MVP Summit 2026</a>{' '}
+            (March 24-26) at the Microsoft Redmond Campus: deep technical sessions, direct time
+            with Microsoft product teams, and catching up with MVPs from around the world.
+          </li>
+          <li>
+            Was one of the industry judges at the{' '}
+            <a href="https://www.linkedin.com/feed/update/urn:li:activity:7449996174003970048/">
+              QUT AI &amp; ML Society 2026 Hackathon
+            </a>
+            , QUT's biggest standalone student club hackathon to date, with 115+ students across 20
+            teams from QUT and UQ.
+          </li>
+        </ul>
 
         <h2>Community</h2>
         <ul>
