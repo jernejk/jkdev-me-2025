@@ -1,7 +1,36 @@
 {
   "source": "Manual talk entries",
-  "updatedDate": "2026-04-16",
+  "updatedDate": "2026-04-20",
   "talks": [
+    {
+      "id": "manual-qut-aiml-hackathon-2026",
+      "title": "Judge — QUT AIML 2026 Hackathon",
+      "description": "Invited as one of 5 industry judges at QUT AI & ML Society's 2026 inaugural AIML Hackathon — QUT's biggest standalone student club hackathon to date. Reviewed 20 team pitches and live demos from 115+ participants across QUT and UQ, giving technical feedback on architecture, AI/ML choices, and product direction. Fellow judges: Gemma Lipovski and Lachlan Healey (NTI), Olaf Wrieden (Microsoft), Priyanka Shah (Avanade).",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "QUT AIML 2026 Hackathon",
+          "location": "QUT, Brisbane, QLD, Australia",
+          "date": "2026-04-11",
+          "dateEnd": "2026-04-12",
+          "url": "https://www.linkedin.com/feed/update/urn:li:activity:7449996174003970048/",
+          "status": "past",
+          "role": "judge"
+        }
+      ],
+      "tags": [
+        "AI",
+        "Machine Learning",
+        "Hackathon",
+        "Student Community"
+      ],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": "http://qut-aiml.org",
+      "imageUrl": "/static/images/events/qut-aiml.jpg"
+    },
     {
       "id": "manual-vibe-coding-brisbane-2026",
       "title": "Optimising Vibe Coding - Ship Full-Stack AI Apps",
