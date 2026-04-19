@@ -85,3 +85,5 @@ yarn-error.log*
 .mvp
 mvp-shared-docs
 .backup/
+.mvp-submissions/
+.playwright-mcp/
