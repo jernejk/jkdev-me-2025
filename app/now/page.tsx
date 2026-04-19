@@ -25,9 +25,9 @@ export default function Now() {
         <h2>Current Focus</h2>
         <ul>
           <li>
-            Preparing upcoming talks and workshops: vibe coding at Build Club Brisbane, testing
-            .NET agents with MAF + AgentEval at AgentCamp, and an EF Core performance deep-dive at
-            the Brisbane .NET User Group.
+            Preparing upcoming talks and workshops: vibe coding at Build Club Brisbane, testing .NET
+            agents with MAF + AgentEval at AgentCamp, and an EF Core performance deep-dive at the
+            Brisbane .NET User Group.
           </li>
           <li>
             Building practical .NET and AI experiments, with a focus on offline/local model usage.
@@ -46,21 +46,18 @@ export default function Now() {
         <ul>
           <li>
             Hosting{' '}
-            <a href="https://luma.com/yo5jatjk">
-              Brisbane Build Club — Optimising Vibe Coding
-            </a>{' '}
+            <a href="https://luma.com/yo5jatjk">Brisbane Build Club — Optimising Vibe Coding</a>{' '}
             (April 20, 2026) at Launch Event Space, Fortitude Valley.
           </li>
           <li>
             Workshop at{' '}
             <a href="https://agentcamp.city/brisbane/">AgentCamp 2026 Brisbane Edition</a> (May 9,
-            2026): <em>From Vibe-Coded to Prod-Ready — Testing Your .NET Agents with MAF + AgentEval</em>.
+            2026):{' '}
+            <em>From Vibe-Coded to Prod-Ready — Testing Your .NET Agents with MAF + AgentEval</em>.
           </li>
           <li>
             Speaking at the{' '}
-            <a href="https://www.meetup.com/brisbane-net-user-group/">
-              Brisbane .NET User Group
-            </a>{' '}
+            <a href="https://www.meetup.com/brisbane-net-user-group/">Brisbane .NET User Group</a>{' '}
             (June 4, 2026): <em>EF Core Bench Lab — A Peek into the Black Box</em>.
           </li>
         </ul>
@@ -69,8 +66,8 @@ export default function Now() {
         <ul>
           <li>
             Attended the <a href="https://summit.microsoft.com/">Microsoft MVP Summit 2026</a>{' '}
-            (March 24-26) at the Microsoft Redmond Campus: deep technical sessions, direct time
-            with Microsoft product teams, and catching up with MVPs from around the world.
+            (March 24-26) at the Microsoft Redmond Campus: deep technical sessions, direct time with
+            Microsoft product teams, and catching up with MVPs from around the world.
           </li>
           <li>
             Was one of the industry judges at the{' '}
