@@ -25,9 +25,9 @@ export default function Now() {
         <h2>Current Focus</h2>
         <ul>
           <li>
-            Preparing upcoming talks and workshops: vibe coding at Build Club Brisbane, testing .NET
-            agents with MAF + AgentEval at AgentCamp, and an EF Core performance deep-dive at the
-            Brisbane .NET User Group.
+            Preparing upcoming talks and workshops: AI agents in Notion at Build Club Brisbane,
+            testing .NET agents with MAF + AgentEval at AgentCamp, and an EF Core performance
+            deep-dive at the Brisbane .NET User Group.
           </li>
           <li>
             Building practical .NET and AI experiments, with a focus on offline/local model usage.
@@ -45,15 +45,17 @@ export default function Now() {
         <h2>Upcoming Events</h2>
         <ul>
           <li>
-            Hosting{' '}
-            <a href="https://luma.com/yo5jatjk">Brisbane Build Club — Optimising Vibe Coding</a>{' '}
-            (April 20, 2026) at Launch Event Space, Fortitude Valley.
-          </li>
-          <li>
             Workshop at{' '}
             <a href="https://agentcamp.city/brisbane/">AgentCamp 2026 Brisbane Edition</a> (May 9,
             2026):{' '}
             <em>From Vibe-Coded to Prod-Ready — Testing Your .NET Agents with MAF + AgentEval</em>.
+          </li>
+          <li>
+            Hosting{' '}
+            <a href="https://luma.com/0dd4m7we">
+              Brisbane Build Club — Building Real AI Agents in Notion
+            </a>{' '}
+            (May 18, 2026) at The Precinct, Fortitude Valley.
           </li>
           <li>
             Speaking at the{' '}
@@ -64,6 +66,12 @@ export default function Now() {
 
         <h2>Recent</h2>
         <ul>
+          <li>
+            Hosted{' '}
+            <a href="https://luma.com/yo5jatjk">Brisbane Build Club — Optimising Vibe Coding</a>{' '}
+            (April 20, 2026) at Launch Event Space, Fortitude Valley: a night of vibe-coding talks
+            and live walkthroughs for builders shipping full-stack AI apps.
+          </li>
           <li>
             Attended the <a href="https://summit.microsoft.com/">Microsoft MVP Summit 2026</a>{' '}
             (March 24-26) at the Microsoft Redmond Campus: deep technical sessions, direct time with

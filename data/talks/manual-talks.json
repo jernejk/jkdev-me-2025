@@ -1,7 +1,30 @@
 {
   "source": "Manual talk entries",
-  "updatedDate": "2026-04-20",
+  "updatedDate": "2026-04-21",
   "talks": [
+    {
+      "id": "manual-buildclub-notion-agents-brisbane-2026",
+      "title": "Building Real AI Agents in Notion @ Brisbane",
+      "description": "Hosting a Brisbane Build Club session on AI agents from two angles: how Notion AI Agents plug intelligence into everyday workspaces, and the harness engineering that powers autonomous agent systems underneath. Live demos plus hands-on time for attendees who bring a laptop.",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "Brisbane Build Club",
+          "location": "The Precinct, Level 2/315 Brunswick St, Fortitude Valley, QLD, Australia",
+          "date": "2026-05-18",
+          "url": "https://luma.com/0dd4m7we",
+          "status": "upcoming",
+          "role": "host"
+        }
+      ],
+      "tags": ["AI", "Agents", "Notion", "Build Club"],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": "https://buildclub.ai/",
+      "imageUrl": "/static/images/events/buildclub.png"
+    },
     {
       "id": "manual-qut-aiml-hackathon-2026",
       "title": "Judge — QUT AIML 2026 Hackathon",
@@ -19,12 +42,7 @@
           "role": "judge"
         }
       ],
-      "tags": [
-        "AI",
-        "Machine Learning",
-        "Hackathon",
-        "Student Community"
-      ],
+      "tags": ["AI", "Machine Learning", "Hackathon", "Student Community"],
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
@@ -43,16 +61,11 @@
           "location": "Launch Event Space, Fortitude Valley, QLD, Australia",
           "date": "2026-04-20",
           "url": "https://luma.com/yo5jatjk",
-          "status": "upcoming",
+          "status": "past",
           "role": "host"
         }
       ],
-      "tags": [
-        "AI",
-        "Vibe Coding",
-        "Full-Stack",
-        "Build Club"
-      ],
+      "tags": ["AI", "Vibe Coding", "Full-Stack", "Build Club"],
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
@@ -75,14 +88,7 @@
           "role": "workshop"
         }
       ],
-      "tags": [
-        "AI",
-        ".NET",
-        "Agents",
-        "MAF",
-        "AgentEval",
-        "Testing"
-      ],
+      "tags": ["AI", ".NET", "Agents", "MAF", "AgentEval", "Testing"],
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
@@ -104,13 +110,7 @@
           "status": "past"
         }
       ],
-      "tags": [
-        "Microsoft",
-        "MVP",
-        "AI",
-        ".NET",
-        "Azure"
-      ],
+      "tags": ["Microsoft", "MVP", "AI", ".NET", "Azure"],
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
@@ -132,11 +132,7 @@
           "status": "upcoming"
         }
       ],
-      "tags": [
-        ".NET",
-        "EF Core",
-        "Performance"
-      ],
+      "tags": [".NET", "EF Core", "Performance"],
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
@@ -171,11 +167,7 @@
           "status": "upcoming"
         }
       ],
-      "tags": [
-        "AI",
-        "Machine Learning",
-        "Azure"
-      ],
+      "tags": ["AI", "Machine Learning", "Azure"],
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
