@@ -3,8 +3,9 @@ import { defineConfig, devices } from 'playwright/test'
 const PORT = process.env.E2E_PORT ? Number(process.env.E2E_PORT) : 3100
 
 export default defineConfig({
-  testDir: './e2e',
-  testIgnore: ['**/pages.spec.ts'],
+  testDir: '.',
+  testMatch: ['e2e/**/*.spec.ts', 'tests/e2e/**/*.spec.ts'],
+  testIgnore: ['**/pages.spec.ts', '**/.claude/**', '**/node_modules/**'],
   timeout: 60_000,
   expect: {
     timeout: 10_000,

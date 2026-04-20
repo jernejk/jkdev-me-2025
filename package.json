@@ -20,6 +20,8 @@
     "ui:review": "node scripts/ui-review-loop.mjs",
     "e2e": "playwright test",
     "e2e:screenshots": "playwright test --update-snapshots",
+    "test:unit": "node --import tsx --test tests/unit/*.test.ts",
+    "test": "yarn test:unit && yarn e2e",
     "audit:ai": "node scripts/audit/ai-benchmark.mjs",
     "audit:links": "node scripts/audit/link-check.mjs",
     "audit:a11y": "yarn exec pa11y-ci -c .pa11yci.js -j",
@@ -88,6 +90,7 @@
     "playwright": "^1.59.0",
     "prettier": "^3.8.1",
     "prettier-plugin-tailwindcss": "^0.6.11",
+    "tsx": "^4.21.0",
     "typescript": "^5.9.3"
   },
   "lint-staged": {
