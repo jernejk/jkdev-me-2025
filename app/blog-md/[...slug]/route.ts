@@ -2,6 +2,13 @@ import { allBlogs } from 'contentlayer/generated'
 import siteMetadata from '@/data/siteMetadata'
 
 export const dynamic = 'force-static'
+export const dynamicParams = false
+
+export async function generateStaticParams() {
+  return allBlogs
+    .filter((post) => !post.draft)
+    .map((post) => ({ slug: post.slug.split('/').map(decodeURI) }))
+}
 
 function toAbsoluteUrl(path: string) {
   return `${siteMetadata.siteUrl}/${path.replace(/^\/+/, '')}`

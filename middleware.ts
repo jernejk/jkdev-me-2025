@@ -29,5 +29,10 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: '/:path*',
+  // Skip middleware for static assets and asset-like paths. Every excluded path
+  // is one fewer edge request billed. Content routes (and /about-me-test) still
+  // match, so the 410 and trailing-slash logic above keeps working.
+  matcher: [
+    '/((?!_next/static|_next/image|_next/data|favicon\\.ico|robots\\.txt|sitemap\\.xml|feed\\.xml|search\\.json|static/|content/|tags/.*\\.xml$).*)',
+  ],
 }
