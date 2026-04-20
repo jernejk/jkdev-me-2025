@@ -26,15 +26,15 @@ type Talk = {
   imageUrl?: string | null
 }
 
+const SITE_TIMEZONE = 'Australia/Brisbane'
+
 const isFutureOrUpcoming = (event: TalkEvent) => {
   if (!event.date) return false
-  const eventTime = new Date(event.date).getTime()
-  if (Number.isNaN(eventTime)) return false
+  if (event.status === 'past') return false
 
-  const now = new Date()
-  const todayStart = new Date(now.getFullYear(), now.getMonth(), now.getDate()).getTime()
-
-  return event.status === 'upcoming' || eventTime >= todayStart
+  const todayBrisbane = new Date().toLocaleDateString('en-CA', { timeZone: SITE_TIMEZONE })
+  const endDate = (event.dateEnd ?? event.date).slice(0, 10)
+  return endDate >= todayBrisbane
 }
 
 export function findNextUpcomingTalk(talks: Talk[]) {

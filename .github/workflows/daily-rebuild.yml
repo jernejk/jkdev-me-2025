@@ -1,0 +1,29 @@
+name: Daily Vercel Rebuild
+
+# Pings a Vercel Deploy Hook so the static site rebuilds daily. Keeps
+# time-sensitive pages (upcoming talks, /now) fresh on days where
+# speakingData.json didn't change. Same build pipeline Vercel runs on push.
+
+on:
+  # 16:00 UTC = 02:00 Brisbane (AEST, UTC+10, no DST).
+  schedule:
+    - cron: '0 16 * * *'
+  workflow_dispatch:
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Vercel Deploy Hook
+        env:
+          DEPLOY_HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK_URL }}
+        run: |
+          if [ -z "$DEPLOY_HOOK" ]; then
+            echo "VERCEL_DEPLOY_HOOK_URL secret is not set" >&2
+            exit 1
+          fi
+          http_code=$(curl -sS -o /tmp/resp.json -w "%{http_code}" -X POST "$DEPLOY_HOOK")
+          echo "HTTP $http_code"
+          cat /tmp/resp.json
+          echo
+          [ "$http_code" = "201" ] || [ "$http_code" = "200" ]
