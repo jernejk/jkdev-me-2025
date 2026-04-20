@@ -3,142 +3,6 @@
   "updatedDate": "2026-04-21",
   "talks": [
     {
-      "id": "manual-buildclub-notion-agents-brisbane-2026",
-      "title": "Building Real AI Agents in Notion @ Brisbane",
-      "description": "Hosting a Brisbane Build Club session on AI agents from two angles: how Notion AI Agents plug intelligence into everyday workspaces, and the harness engineering that powers autonomous agent systems underneath. Live demos plus hands-on time for attendees who bring a laptop.",
-      "type": "talk",
-      "groupName": null,
-      "events": [
-        {
-          "eventName": "Brisbane Build Club",
-          "location": "The Precinct, Level 2/315 Brunswick St, Fortitude Valley, QLD, Australia",
-          "date": "2026-05-18",
-          "url": "https://luma.com/0dd4m7we",
-          "status": "upcoming",
-          "role": "host"
-        }
-      ],
-      "tags": ["AI", "Agents", "Notion", "Build Club"],
-      "videoUrl": null,
-      "slidesUrl": null,
-      "githubUrl": null,
-      "conferenceUrl": "https://buildclub.ai/",
-      "imageUrl": "/static/images/events/buildclub.png"
-    },
-    {
-      "id": "manual-qut-aiml-hackathon-2026",
-      "title": "Judge — QUT AIML 2026 Hackathon",
-      "description": "Invited as one of 5 industry judges at QUT AI & ML Society's 2026 inaugural AIML Hackathon — QUT's biggest standalone student club hackathon to date. Reviewed 20 team pitches and live demos from 115+ participants across QUT and UQ, giving technical feedback on architecture, AI/ML choices, and product direction. Fellow judges: Gemma Lipovski and Lachlan Healey (NTI), Olaf Wrieden (Microsoft), Priyanka Shah (Avanade).",
-      "type": "talk",
-      "groupName": null,
-      "events": [
-        {
-          "eventName": "QUT AIML 2026 Hackathon",
-          "location": "QUT, Brisbane, QLD, Australia",
-          "date": "2026-04-11",
-          "dateEnd": "2026-04-12",
-          "url": "https://www.linkedin.com/feed/update/urn:li:activity:7449996174003970048/",
-          "status": "past",
-          "role": "judge"
-        }
-      ],
-      "tags": ["AI", "Machine Learning", "Hackathon", "Student Community"],
-      "videoUrl": null,
-      "slidesUrl": null,
-      "githubUrl": null,
-      "conferenceUrl": "http://qut-aiml.org",
-      "imageUrl": "/static/images/events/qut-aiml.jpg"
-    },
-    {
-      "id": "manual-vibe-coding-brisbane-2026",
-      "title": "Optimising Vibe Coding - Ship Full-Stack AI Apps",
-      "description": "Hosting a Brisbane Build Club meetup exploring modern development workflows for Vibe Coders. Talks and live walkthroughs on rapidly building frontends, reliable backends, production-ready databases and AI agent orchestration — all without losing engineering fundamentals.",
-      "type": "talk",
-      "groupName": null,
-      "events": [
-        {
-          "eventName": "Brisbane Build Club",
-          "location": "Launch Event Space, Fortitude Valley, QLD, Australia",
-          "date": "2026-04-20",
-          "url": "https://luma.com/yo5jatjk",
-          "status": "past",
-          "role": "host"
-        }
-      ],
-      "tags": ["AI", "Vibe Coding", "Full-Stack", "Build Club"],
-      "videoUrl": null,
-      "slidesUrl": null,
-      "githubUrl": null,
-      "conferenceUrl": "https://buildclub.ai/",
-      "imageUrl": "/static/images/events/buildclub.png"
-    },
-    {
-      "id": "manual-agentcamp-brisbane-2026",
-      "title": "From Vibe-Coded to Prod-Ready: Testing Your .NET Agents with MAF + AgentEval",
-      "description": "Workshop at AgentCamp 2026 Brisbane Edition. Hands-on session showing how to take a vibe-coded .NET agent and make it production-ready using Microsoft Agent Framework (MAF) and AgentEval for systematic evaluation and testing.",
-      "type": "workshop",
-      "groupName": null,
-      "events": [
-        {
-          "eventName": "AgentCamp 2026 - Brisbane Edition",
-          "location": "QUT P Block, Gardens Point, Brisbane, QLD, Australia",
-          "date": "2026-05-09",
-          "url": "https://www.meetup.com/ai-builders-brisbane-ai-experts-engineers-ai-agents/events/314197231/",
-          "status": "upcoming",
-          "role": "workshop"
-        }
-      ],
-      "tags": ["AI", ".NET", "Agents", "MAF", "AgentEval", "Testing"],
-      "videoUrl": null,
-      "slidesUrl": null,
-      "githubUrl": null,
-      "conferenceUrl": "https://agentcamp.city/brisbane/"
-    },
-    {
-      "id": "manual-mvp-summit-2026",
-      "title": "MVP Summit 2026",
-      "description": "Exclusive annual multi-day Microsoft event for MVPs and Regional Directors, featuring hundreds of in-depth technical sessions, direct engagement with Microsoft product leadership and engineers, and networking with MVPs worldwide.",
-      "type": "talk",
-      "groupName": null,
-      "events": [
-        {
-          "eventName": "MVP Summit 2026",
-          "location": "Microsoft Redmond Campus, WA, USA",
-          "date": "2026-03-24",
-          "dateEnd": "2026-03-26",
-          "url": "https://summit.microsoft.com/",
-          "status": "past"
-        }
-      ],
-      "tags": ["Microsoft", "MVP", "AI", ".NET", "Azure"],
-      "videoUrl": null,
-      "slidesUrl": null,
-      "githubUrl": null,
-      "conferenceUrl": "https://summit.microsoft.com/",
-      "imageUrl": "/static/images/events/mvp-summit.svg"
-    },
-    {
-      "id": "manual-ef-core-bench-lab-dotnet-brisbane-2026",
-      "title": "EF Core Bench Lab – A Peek into the Black Box",
-      "description": "A practical performance deep-dive into EF Core internals, query costs, and benchmarking patterns.",
-      "type": "talk",
-      "groupName": null,
-      "events": [
-        {
-          "eventName": ".NET Brisbane User Group",
-          "location": "Brisbane, Australia",
-          "date": "2026-06-04",
-          "url": "https://www.meetup.com/brisbane-net-user-group/",
-          "status": "upcoming"
-        }
-      ],
-      "tags": [".NET", "EF Core", "Performance"],
-      "videoUrl": null,
-      "slidesUrl": null,
-      "githubUrl": null,
-      "conferenceUrl": "https://www.meetup.com/brisbane-net-user-group/"
-    },
-    {
       "id": "manual-ai-hack-days-2026",
       "title": "AI Hack Days 2026",
       "description": "A free community event for developers to learn AI hands-on with workshops and hack sessions.",
@@ -173,6 +37,211 @@
       "githubUrl": null,
       "conferenceUrl": "https://aihackday.com/",
       "imageUrl": "/static/images/events/ai-hack-day.png"
+    },
+    {
+      "id": "manual-ef-core-bench-lab-dotnet-brisbane-2026",
+      "title": "EF Core Bench Lab – A Peek into the Black Box",
+      "description": "A practical performance deep-dive into EF Core internals, query costs, and benchmarking patterns.",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": ".NET Brisbane User Group",
+          "location": "Brisbane, Australia",
+          "date": "2026-06-04",
+          "url": "https://www.meetup.com/brisbane-net-user-group/",
+          "status": "upcoming"
+        }
+      ],
+      "tags": [".NET", "EF Core", "Performance"],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": "https://www.meetup.com/brisbane-net-user-group/"
+    },
+    {
+      "id": "manual-buildclub-notion-agents-brisbane-2026",
+      "title": "Building Real AI Agents in Notion @ Brisbane",
+      "description": "Hosting a Brisbane Build Club session on AI agents from two angles: how Notion AI Agents plug intelligence into everyday workspaces, and the harness engineering that powers autonomous agent systems underneath. Live demos plus hands-on time for attendees who bring a laptop.",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "Brisbane Build Club",
+          "location": "The Precinct, Level 2/315 Brunswick St, Fortitude Valley, QLD, Australia",
+          "date": "2026-05-18",
+          "url": "https://luma.com/0dd4m7we",
+          "status": "upcoming",
+          "role": "host"
+        }
+      ],
+      "tags": ["AI", "Agents", "Notion", "Build Club"],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": "https://buildclub.ai/",
+      "imageUrl": "/static/images/events/buildclub.png"
+    },
+    {
+      "id": "manual-agentcamp-brisbane-2026",
+      "title": "From Vibe-Coded to Prod-Ready: Testing Your .NET Agents with MAF + AgentEval",
+      "description": "Workshop at AgentCamp 2026 Brisbane Edition. Hands-on session showing how to take a vibe-coded .NET agent and make it production-ready using Microsoft Agent Framework (MAF) and AgentEval for systematic evaluation and testing.",
+      "type": "workshop",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "AgentCamp 2026 - Brisbane Edition",
+          "location": "QUT P Block, Gardens Point, Brisbane, QLD, Australia",
+          "date": "2026-05-09",
+          "url": "https://www.meetup.com/ai-builders-brisbane-ai-experts-engineers-ai-agents/events/314197231/",
+          "status": "upcoming",
+          "role": "workshop"
+        }
+      ],
+      "tags": ["AI", ".NET", "Agents", "MAF", "AgentEval", "Testing"],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": "https://agentcamp.city/brisbane/"
+    },
+    {
+      "id": "manual-vibe-coding-brisbane-2026",
+      "title": "Optimising Vibe Coding - Ship Full-Stack AI Apps",
+      "description": "Hosting a Brisbane Build Club meetup exploring modern development workflows for Vibe Coders. Talks and live walkthroughs on rapidly building frontends, reliable backends, production-ready databases and AI agent orchestration — all without losing engineering fundamentals.",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "Brisbane Build Club",
+          "location": "Launch Event Space, Fortitude Valley, QLD, Australia",
+          "date": "2026-04-20",
+          "url": "https://luma.com/yo5jatjk",
+          "status": "past",
+          "role": "host"
+        }
+      ],
+      "tags": ["AI", "Vibe Coding", "Full-Stack", "Build Club"],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": "https://buildclub.ai/",
+      "imageUrl": "/static/images/events/buildclub.png"
+    },
+    {
+      "id": "manual-qut-aiml-hackathon-2026",
+      "title": "Judge — QUT AIML 2026 Hackathon",
+      "description": "Invited as one of 5 industry judges at QUT AI & ML Society's 2026 inaugural AIML Hackathon — QUT's biggest standalone student club hackathon to date. Reviewed 20 team pitches and live demos from 115+ participants across QUT and UQ, giving technical feedback on architecture, AI/ML choices, and product direction. Fellow judges: Gemma Lipovski and Lachlan Healey (NTI), Olaf Wrieden (Microsoft), Priyanka Shah (Avanade).",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "QUT AIML 2026 Hackathon",
+          "location": "QUT, Brisbane, QLD, Australia",
+          "date": "2026-04-11",
+          "dateEnd": "2026-04-12",
+          "url": "https://www.linkedin.com/feed/update/urn:li:activity:7449996174003970048/",
+          "status": "past",
+          "role": "judge"
+        }
+      ],
+      "tags": ["AI", "Machine Learning", "Hackathon", "Student Community"],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": "http://qut-aiml.org",
+      "imageUrl": "/static/images/events/qut-aiml.jpg"
+    },
+    {
+      "id": "manual-mvp-summit-2026",
+      "title": "MVP Summit 2026",
+      "description": "Exclusive annual multi-day Microsoft event for MVPs and Regional Directors, featuring hundreds of in-depth technical sessions, direct engagement with Microsoft product leadership and engineers, and networking with MVPs worldwide.",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "MVP Summit 2026",
+          "location": "Microsoft Redmond Campus, WA, USA",
+          "date": "2026-03-24",
+          "dateEnd": "2026-03-26",
+          "url": "https://summit.microsoft.com/",
+          "status": "past"
+        }
+      ],
+      "tags": ["Microsoft", "MVP", "AI", ".NET", "Azure"],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": "https://summit.microsoft.com/",
+      "imageUrl": "/static/images/events/mvp-summit.svg"
+    },
+    {
+      "id": "manual-buildclub-q1-trends-brisbane-2026",
+      "title": "Catching Up 2026 Q1 AI Trends @ Brisbane",
+      "description": "Hosting a Brisbane Build Club session catching up on the first few months of 2026 in AI: new models, agent frameworks, and developer tools reshaping how we build and ship. Talks on setting up OpenClaw locally, orchestrating Mastra.ai agents beyond the hello-world demo, and moving from vibe coding to software observability and reliability.",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "Brisbane Build Club",
+          "location": "Launch Event Space, The Precinct, Fortitude Valley, QLD, Australia",
+          "date": "2026-03-23",
+          "url": "https://luma.com/oabuhpwg",
+          "status": "past",
+          "role": "host"
+        }
+      ],
+      "tags": ["AI", "Agents", "Mastra.ai", "OpenClaw", "Build Club"],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": "https://buildclub.ai/",
+      "imageUrl": "/static/images/events/buildclub.png"
+    },
+    {
+      "id": "manual-buildclub-safety-guardrails-brisbane-2026",
+      "title": "Safety and Guardrails in AI Coding @ Brisbane",
+      "description": "Hosting a Brisbane Build Club workshop on the risks hiding behind fast AI-generated code: hallucinations, security vulnerabilities, and logic flaws that traditional testing misses. Focused on practical patterns for validating LLM output before it ships.",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "Brisbane Build Club",
+          "location": "Launch Event Space, The Precinct, Fortitude Valley, QLD, Australia",
+          "date": "2026-02-25",
+          "url": "https://luma.com/hm8piz1n",
+          "status": "past",
+          "role": "host"
+        }
+      ],
+      "tags": ["AI", "Safety", "Security", "AI Coding", "Build Club"],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": "https://buildclub.ai/",
+      "imageUrl": "/static/images/events/buildclub.png"
+    },
+    {
+      "id": "manual-buildclub-ai-experimentation-brisbane-2026",
+      "title": "AI Tools Experimentation Playground Workshop @ Brisbane",
+      "description": "Hosting a Brisbane Build Club workshop for side-by-side experimentation with AI tools — testing whether the newest hyped tools really 10× productivity, or whether well-used familiars like ChatGPT still hold their own. Shared insights from Sandra Arato, Adam Beaupeurt, and Damian Karzon alongside builder demos.",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "Brisbane Build Club",
+          "location": "Launch Event Space, Level 3, The Precinct, Fortitude Valley, QLD, Australia",
+          "date": "2026-01-15",
+          "url": "https://luma.com/26qbe2pf",
+          "status": "past",
+          "role": "host"
+        }
+      ],
+      "tags": ["AI", "AI Tools", "Workshop", "Build Club"],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": "https://buildclub.ai/",
+      "imageUrl": "/static/images/events/buildclub.png"
     }
   ]
 }

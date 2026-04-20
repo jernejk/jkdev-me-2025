@@ -209,6 +209,75 @@
       "imageUrl": "/static/images/events/mvp-summit.svg"
     },
     {
+      "id": "manual-buildclub-q1-trends-brisbane-2026",
+      "title": "Catching Up 2026 Q1 AI Trends @ Brisbane",
+      "description": "Hosting a Brisbane Build Club session catching up on the first few months of 2026 in AI: new models, agent frameworks, and developer tools reshaping how we build and ship. Talks on setting up OpenClaw locally, orchestrating Mastra.ai agents beyond the hello-world demo, and moving from vibe coding to software observability and reliability.",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "Brisbane Build Club",
+          "location": "Launch Event Space, The Precinct, Fortitude Valley, QLD, Australia",
+          "date": "2026-03-23",
+          "url": "https://luma.com/oabuhpwg",
+          "status": "past",
+          "role": "host"
+        }
+      ],
+      "tags": ["AI", "Agents", "Mastra.ai", "OpenClaw", "Build Club"],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": "https://buildclub.ai/",
+      "imageUrl": "/static/images/events/buildclub.png"
+    },
+    {
+      "id": "manual-buildclub-safety-guardrails-brisbane-2026",
+      "title": "Safety and Guardrails in AI Coding @ Brisbane",
+      "description": "Hosting a Brisbane Build Club workshop on the risks hiding behind fast AI-generated code: hallucinations, security vulnerabilities, and logic flaws that traditional testing misses. Focused on practical patterns for validating LLM output before it ships.",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "Brisbane Build Club",
+          "location": "Launch Event Space, The Precinct, Fortitude Valley, QLD, Australia",
+          "date": "2026-02-25",
+          "url": "https://luma.com/hm8piz1n",
+          "status": "past",
+          "role": "host"
+        }
+      ],
+      "tags": ["AI", "Safety", "Security", "AI Coding", "Build Club"],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": "https://buildclub.ai/",
+      "imageUrl": "/static/images/events/buildclub.png"
+    },
+    {
+      "id": "manual-buildclub-ai-experimentation-brisbane-2026",
+      "title": "AI Tools Experimentation Playground Workshop @ Brisbane",
+      "description": "Hosting a Brisbane Build Club workshop for side-by-side experimentation with AI tools — testing whether the newest hyped tools really 10× productivity, or whether well-used familiars like ChatGPT still hold their own. Shared insights from Sandra Arato, Adam Beaupeurt, and Damian Karzon alongside builder demos.",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "Brisbane Build Club",
+          "location": "Launch Event Space, Level 3, The Precinct, Fortitude Valley, QLD, Australia",
+          "date": "2026-01-15",
+          "url": "https://luma.com/26qbe2pf",
+          "status": "past",
+          "role": "host"
+        }
+      ],
+      "tags": ["AI", "AI Tools", "Workshop", "Build Club"],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": "https://buildclub.ai/",
+      "imageUrl": "/static/images/events/buildclub.png"
+    },
+    {
       "id": "sessionize-event-20920",
       "title": "Speaking at DDD Brisbane 2025",
       "description": "Presented at DDD Brisbane 2025",
