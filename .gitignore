@@ -90,3 +90,6 @@ mvp-shared-docs
 
 # TypeScript incremental build cache
 *.tsbuildinfo
+
+# Private agents guide (lives in .claude/skills/agents-guide instead)
+/AGENTS.md

@@ -40,6 +40,7 @@ export default function Now() {
             Crazy agentic experiments that I might write about if they work, or do a talk on if
             they're successful.
           </li>
+          <li>Learning to build custom agent harnesses.</li>
         </ul>
 
         <h2>Upcoming Events</h2>
@@ -61,6 +62,10 @@ export default function Now() {
             Speaking at the{' '}
             <a href="https://www.meetup.com/brisbane-net-user-group/">Brisbane .NET User Group</a>{' '}
             (June 4, 2026): <em>EF Core Bench Lab — A Peek into the Black Box</em>.
+          </li>
+          <li>
+            Organiser for <a href="https://aihackday.com/sydney/">AI Hack Day Sydney</a> (July 11,
+            2026): a free community hack day for developers building with AI.
           </li>
           <li>
             Organiser for <a href="https://aihackday.com/brisbane/">AI Hack Day Brisbane</a> (August
