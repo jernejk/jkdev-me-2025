@@ -224,7 +224,13 @@
           "role": "host"
         }
       ],
-      "tags": ["AI", "Agents", "Mastra.ai", "OpenClaw", "Build Club"],
+      "tags": [
+        "AI",
+        "Agents",
+        "Mastra.ai",
+        "OpenClaw",
+        "Build Club"
+      ],
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
@@ -247,7 +253,13 @@
           "role": "host"
         }
       ],
-      "tags": ["AI", "Safety", "Security", "AI Coding", "Build Club"],
+      "tags": [
+        "AI",
+        "Safety",
+        "Security",
+        "AI Coding",
+        "Build Club"
+      ],
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
@@ -270,7 +282,12 @@
           "role": "host"
         }
       ],
-      "tags": ["AI", "AI Tools", "Workshop", "Build Club"],
+      "tags": [
+        "AI",
+        "AI Tools",
+        "Workshop",
+        "Build Club"
+      ],
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
