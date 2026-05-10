@@ -19,7 +19,7 @@ export default function Now() {
 
       <div className="prose dark:prose-invert max-w-none">
         <p>
-          <em>Last updated: April 2026</em>
+          <em>Last updated: May 2026</em>
         </p>
 
         <h2>Current Focus</h2>
@@ -41,16 +41,14 @@ export default function Now() {
             they're successful.
           </li>
           <li>Learning to build custom agent harnesses.</li>
+          <li>
+            Created a familiar Codex pet —{' '}
+            <a href="https://petdex.crafter.run/pets/jk">petdex.crafter.run/pets/jk</a>.
+          </li>
         </ul>
 
         <h2>Upcoming Events</h2>
         <ul>
-          <li>
-            Workshop at{' '}
-            <a href="https://agentcamp.city/brisbane/">AgentCamp 2026 Brisbane Edition</a> (May 9,
-            2026):{' '}
-            <em>From Vibe-Coded to Prod-Ready — Testing Your .NET Agents with MAF + AgentEval</em>.
-          </li>
           <li>
             Hosting{' '}
             <a href="https://luma.com/0dd4m7we">
@@ -75,6 +73,12 @@ export default function Now() {
 
         <h2>Recent</h2>
         <ul>
+          <li>
+            Ran a workshop at{' '}
+            <a href="https://agentcamp.city/brisbane/">AgentCamp 2026 Brisbane Edition</a> (May 9,
+            2026) at QUT Gardens Point:{' '}
+            <em>From Vibe-Coded to Prod-Ready — Testing Your .NET Agents with MAF + AgentEval</em>.
+          </li>
           <li>
             Hosted{' '}
             <a href="https://luma.com/yo5jatjk">Brisbane Build Club — Optimising Vibe Coding</a>{' '}
