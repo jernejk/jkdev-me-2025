@@ -1,4 +1,5 @@
 import { genPageMetadata } from 'app/seo'
+import Image from 'next/image'
 
 export const metadata = genPageMetadata({
   title: 'Now',
@@ -44,6 +45,14 @@ export default function Now() {
           <li>
             Created a familiar Codex pet —{' '}
             <a href="https://petdex.crafter.run/pets/jk">petdex.crafter.run/pets/jk</a>.
+            <Image
+              src="/static/images/codex-pet-wave.gif"
+              alt="Animated Codex pet waving"
+              width={144}
+              height={176}
+              unoptimized
+              className="not-prose mt-2 block h-[60px] w-[49px] [image-rendering:pixelated]"
+            />
           </li>
         </ul>
 
