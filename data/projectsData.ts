@@ -9,7 +9,7 @@ const projectsData: Project[] = [
   {
     title: 'efcore-bench-lab',
     description:
-      'EF Core benchmarking experiments focused on query behavior, performance bottlenecks, and practical optimization.',
+      'EF Core benchmarking experiments focused on query behavior, performance bottlenecks, practical optimization and repeatable coding-agent workflows.',
     href: 'https://github.com/jernejk/efcore-bench-lab',
   },
   {

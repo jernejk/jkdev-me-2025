@@ -44,8 +44,8 @@ export default function Home({ posts, upcomingTalk }) {
               Microsoft AI MVP · Solution Architect · Speaker
             </p>
             <p className="mt-4 max-w-3xl text-lg leading-8 text-slate-200">
-              I build with .NET and AI, speak at conferences, and organize developer communities in
-              Brisbane.
+              I build agentic AI workflows with Azure AI, coding agents, .NET and EF Core, speak at
+              conferences and organize developer communities in Brisbane.
             </p>
             <div className="mt-5 flex items-center gap-3">
               <SocialIcon kind="github" href={siteMetadata.github} size={6} />
