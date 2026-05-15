@@ -51,7 +51,7 @@ export default function Now() {
               width={144}
               height={176}
               unoptimized
-              className="not-prose mt-2 block h-[60px] w-[49px] [image-rendering:pixelated]"
+              className="not-prose mt-2 block"
             />
           </li>
         </ul>
