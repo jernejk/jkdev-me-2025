@@ -161,6 +161,11 @@ Custom MDX components available in posts (see `components/MDXComponents.tsx`):
 - Netlify: Uses Next.js runtime
 - Static hosting: Use export build commands above
 
+**AI helpers** (GitHub Models, no API keys required):
+- `.github/workflows/pr-summary.yml` — posts a sticky AI summary on every PR
+- `.github/workflows/blog-post-helper.yml` — on PRs touching `data/blog/**.mdx`, suggests missing `summary` / `tldr` / `tags` / image alt text
+- Add `[skip ai]` to a PR title to disable both
+
 ## Development Patterns
 
 ### Adding a Blog Post
