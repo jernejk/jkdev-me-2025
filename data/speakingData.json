@@ -29,11 +29,7 @@
           "status": "past"
         }
       ],
-      "tags": [
-        "AI",
-        "Machine Learning",
-        "Azure"
-      ],
+      "tags": ["AI", "Machine Learning", "Azure"],
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
@@ -55,11 +51,7 @@
           "status": "upcoming"
         }
       ],
-      "tags": [
-        ".NET",
-        "EF Core",
-        "Performance"
-      ],
+      "tags": [".NET", "EF Core", "Performance"],
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
@@ -77,16 +69,11 @@
           "location": "The Precinct, Level 2/315 Brunswick St, Fortitude Valley, QLD, Australia",
           "date": "2026-05-18",
           "url": "https://luma.com/0dd4m7we",
-          "status": "upcoming",
+          "status": "past",
           "role": "host"
         }
       ],
-      "tags": [
-        "AI",
-        "Agents",
-        "Notion",
-        "Build Club"
-      ],
+      "tags": ["AI", "Agents", "Notion", "Build Club"],
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
@@ -109,14 +96,7 @@
           "role": "workshop"
         }
       ],
-      "tags": [
-        "AI",
-        ".NET",
-        "Agents",
-        "MAF",
-        "AgentEval",
-        "Testing"
-      ],
+      "tags": ["AI", ".NET", "Agents", "MAF", "AgentEval", "Testing"],
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
@@ -138,12 +118,7 @@
           "role": "host"
         }
       ],
-      "tags": [
-        "AI",
-        "Vibe Coding",
-        "Full-Stack",
-        "Build Club"
-      ],
+      "tags": ["AI", "Vibe Coding", "Full-Stack", "Build Club"],
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
@@ -167,12 +142,7 @@
           "role": "judge"
         }
       ],
-      "tags": [
-        "AI",
-        "Machine Learning",
-        "Hackathon",
-        "Student Community"
-      ],
+      "tags": ["AI", "Machine Learning", "Hackathon", "Student Community"],
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
@@ -195,13 +165,7 @@
           "status": "past"
         }
       ],
-      "tags": [
-        "Microsoft",
-        "MVP",
-        "AI",
-        ".NET",
-        "Azure"
-      ],
+      "tags": ["Microsoft", "MVP", "AI", ".NET", "Azure"],
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
@@ -224,13 +188,7 @@
           "role": "host"
         }
       ],
-      "tags": [
-        "AI",
-        "Agents",
-        "Mastra.ai",
-        "OpenClaw",
-        "Build Club"
-      ],
+      "tags": ["AI", "Agents", "Mastra.ai", "OpenClaw", "Build Club"],
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
@@ -253,13 +211,7 @@
           "role": "host"
         }
       ],
-      "tags": [
-        "AI",
-        "Safety",
-        "Security",
-        "AI Coding",
-        "Build Club"
-      ],
+      "tags": ["AI", "Safety", "Security", "AI Coding", "Build Club"],
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
@@ -282,12 +234,7 @@
           "role": "host"
         }
       ],
-      "tags": [
-        "AI",
-        "AI Tools",
-        "Workshop",
-        "Build Club"
-      ],
+      "tags": ["AI", "AI Tools", "Workshop", "Build Club"],
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
@@ -353,11 +300,7 @@
           "status": "past"
         }
       ],
-      "tags": [
-        "AI",
-        "Machine Learning",
-        "Azure"
-      ],
+      "tags": ["AI", "Machine Learning", "Azure"],
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
@@ -410,11 +353,7 @@
           "status": "past"
         }
       ],
-      "tags": [
-        "AI",
-        "Machine Learning",
-        "Azure"
-      ],
+      "tags": ["AI", "Machine Learning", "Azure"],
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
@@ -437,11 +376,7 @@
           "status": "past"
         }
       ],
-      "tags": [
-        "AI",
-        "Machine Learning",
-        "Azure"
-      ],
+      "tags": ["AI", "Machine Learning", "Azure"],
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
@@ -576,11 +511,7 @@
           "status": "past"
         }
       ],
-      "tags": [
-        "AI",
-        "Machine Learning",
-        "Azure"
-      ],
+      "tags": ["AI", "Machine Learning", "Azure"],
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
@@ -603,11 +534,7 @@
           "status": "past"
         }
       ],
-      "tags": [
-        "AI",
-        "Machine Learning",
-        "Azure"
-      ],
+      "tags": ["AI", "Machine Learning", "Azure"],
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
@@ -630,11 +557,7 @@
           "status": "past"
         }
       ],
-      "tags": [
-        "AI",
-        "Machine Learning",
-        "Azure"
-      ],
+      "tags": ["AI", "Machine Learning", "Azure"],
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
@@ -701,11 +624,7 @@
           "status": "past"
         }
       ],
-      "tags": [
-        "AI",
-        "Machine Learning",
-        "Azure"
-      ],
+      "tags": ["AI", "Machine Learning", "Azure"],
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
@@ -935,11 +854,7 @@
           "status": "past"
         }
       ],
-      "tags": [
-        "ML.NET",
-        "AI",
-        "Machine Learning"
-      ],
+      "tags": ["ML.NET", "AI", "Machine Learning"],
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
@@ -960,11 +875,7 @@
           "status": "past"
         }
       ],
-      "tags": [
-        "ML.NET",
-        "AI",
-        "Machine Learning"
-      ],
+      "tags": ["ML.NET", "AI", "Machine Learning"],
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
@@ -991,10 +902,7 @@
           "status": "past"
         }
       ],
-      "tags": [
-        "EF Core",
-        ".NET"
-      ],
+      "tags": ["EF Core", ".NET"],
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
@@ -1016,11 +924,7 @@
           "status": "past"
         }
       ],
-      "tags": [
-        "ML.NET",
-        "AI",
-        "Machine Learning"
-      ],
+      "tags": ["ML.NET", "AI", "Machine Learning"],
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
@@ -1071,10 +975,7 @@
           "status": "past"
         }
       ],
-      "tags": [
-        "Azure",
-        "AI"
-      ],
+      "tags": ["Azure", "AI"],
       "videoUrl": "https://www.youtube.com/watch?v=OpSXbHUYTAQ",
       "slidesUrl": null,
       "githubUrl": null,
@@ -1094,9 +995,7 @@
           "status": "past"
         }
       ],
-      "tags": [
-        "Azure"
-      ],
+      "tags": ["Azure"],
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
@@ -1116,10 +1015,7 @@
           "status": "past"
         }
       ],
-      "tags": [
-        "Azure",
-        "AI"
-      ],
+      "tags": ["Azure", "AI"],
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
@@ -1162,10 +1058,7 @@
           "status": "past"
         }
       ],
-      "tags": [
-        "Azure",
-        "AI"
-      ],
+      "tags": ["Azure", "AI"],
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
@@ -1186,10 +1079,7 @@
           "status": "past"
         }
       ],
-      "tags": [
-        "Azure",
-        "AI"
-      ],
+      "tags": ["Azure", "AI"],
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
@@ -1244,9 +1134,7 @@
           "status": "past"
         }
       ],
-      "tags": [
-        "Testing"
-      ],
+      "tags": ["Testing"],
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
@@ -1267,9 +1155,7 @@
           "status": "past"
         }
       ],
-      "tags": [
-        "Testing"
-      ],
+      "tags": ["Testing"],
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
@@ -1313,10 +1199,7 @@
           "status": "past"
         }
       ],
-      "tags": [
-        "Azure",
-        "AI"
-      ],
+      "tags": ["Azure", "AI"],
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
@@ -1336,11 +1219,7 @@
           "status": "past"
         }
       ],
-      "tags": [
-        "ML.NET",
-        "AI",
-        "Machine Learning"
-      ],
+      "tags": ["ML.NET", "AI", "Machine Learning"],
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
@@ -1360,10 +1239,7 @@
           "status": "past"
         }
       ],
-      "tags": [
-        "AI",
-        "Machine Learning"
-      ],
+      "tags": ["AI", "Machine Learning"],
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
@@ -1384,10 +1260,7 @@
           "status": "past"
         }
       ],
-      "tags": [
-        "Azure",
-        "AI"
-      ],
+      "tags": ["Azure", "AI"],
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
@@ -1412,9 +1285,7 @@
           "status": "past"
         }
       ],
-      "tags": [
-        "Angular"
-      ],
+      "tags": ["Angular"],
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
@@ -1455,11 +1326,7 @@
           "status": "past"
         }
       ],
-      "tags": [
-        "ML.NET",
-        "AI",
-        "Machine Learning"
-      ],
+      "tags": ["ML.NET", "AI", "Machine Learning"],
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
@@ -1480,10 +1347,7 @@
           "status": "past"
         }
       ],
-      "tags": [
-        "EF Core",
-        ".NET"
-      ],
+      "tags": ["EF Core", ".NET"],
       "videoUrl": "https://www.youtube.com/watch?v=6nYefHkKby8",
       "slidesUrl": null,
       "githubUrl": null,
@@ -1504,9 +1368,7 @@
           "status": "past"
         }
       ],
-      "tags": [
-        ".NET"
-      ],
+      "tags": [".NET"],
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
@@ -1526,10 +1388,7 @@
           "status": "past"
         }
       ],
-      "tags": [
-        "Mobile",
-        "Windows"
-      ],
+      "tags": ["Mobile", "Windows"],
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
@@ -1549,10 +1408,7 @@
           "status": "past"
         }
       ],
-      "tags": [
-        "Mobile",
-        "Windows"
-      ],
+      "tags": ["Mobile", "Windows"],
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
@@ -1572,9 +1428,7 @@
           "status": "past"
         }
       ],
-      "tags": [
-        ".NET"
-      ],
+      "tags": [".NET"],
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
@@ -1594,10 +1448,7 @@
           "status": "past"
         }
       ],
-      "tags": [
-        "Mobile",
-        "Windows"
-      ],
+      "tags": ["Mobile", "Windows"],
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
@@ -1617,10 +1468,7 @@
           "status": "past"
         }
       ],
-      "tags": [
-        "Mobile",
-        "Windows"
-      ],
+      "tags": ["Mobile", "Windows"],
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
@@ -1640,10 +1488,7 @@
           "status": "past"
         }
       ],
-      "tags": [
-        "Mobile",
-        "Windows"
-      ],
+      "tags": ["Mobile", "Windows"],
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
@@ -1663,10 +1508,7 @@
           "status": "past"
         }
       ],
-      "tags": [
-        "Mobile",
-        "Windows"
-      ],
+      "tags": ["Mobile", "Windows"],
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
@@ -1703,10 +1545,7 @@
           "status": "past"
         }
       ],
-      "tags": [
-        "Angular",
-        ".NET"
-      ],
+      "tags": ["Angular", ".NET"],
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
@@ -1725,9 +1564,7 @@
           "status": "past"
         }
       ],
-      "tags": [
-        "Azure"
-      ],
+      "tags": ["Azure"],
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
@@ -1746,9 +1583,7 @@
           "status": "past"
         }
       ],
-      "tags": [
-        "Azure"
-      ],
+      "tags": ["Azure"],
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
@@ -1767,9 +1602,7 @@
           "status": "past"
         }
       ],
-      "tags": [
-        "Angular"
-      ],
+      "tags": ["Angular"],
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
@@ -1787,9 +1620,7 @@
           "status": "past"
         }
       ],
-      "tags": [
-        "IoT"
-      ],
+      "tags": ["IoT"],
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
@@ -1807,9 +1638,7 @@
           "status": "past"
         }
       ],
-      "tags": [
-        "Game Development"
-      ],
+      "tags": ["Game Development"],
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
@@ -1841,12 +1670,7 @@
           "status": "past"
         }
       ],
-      "tags": [
-        "AI",
-        "Machine Learning",
-        "Azure",
-        "OpenAI"
-      ],
+      "tags": ["AI", "Machine Learning", "Azure", "OpenAI"],
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
@@ -1879,12 +1703,7 @@
           "status": "past"
         }
       ],
-      "tags": [
-        "AI",
-        "Machine Learning",
-        "Azure",
-        "OpenAI"
-      ],
+      "tags": ["AI", "Machine Learning", "Azure", "OpenAI"],
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
@@ -1904,10 +1723,7 @@
           "status": "past"
         }
       ],
-      "tags": [
-        ".NET",
-        "EF Core"
-      ],
+      "tags": [".NET", "EF Core"],
       "videoUrl": "https://www.youtube.com/watch?v=yyJuol7oxtA",
       "slidesUrl": null,
       "githubUrl": null,
@@ -1927,12 +1743,7 @@
           "status": "past"
         }
       ],
-      "tags": [
-        "AI",
-        "Machine Learning",
-        "Azure",
-        "OpenAI"
-      ],
+      "tags": ["AI", "Machine Learning", "Azure", "OpenAI"],
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
@@ -1952,11 +1763,7 @@
           "status": "past"
         }
       ],
-      "tags": [
-        "AI",
-        "Machine Learning",
-        "Azure"
-      ],
+      "tags": ["AI", "Machine Learning", "Azure"],
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
@@ -1975,10 +1782,7 @@
           "status": "past"
         }
       ],
-      "tags": [
-        ".NET",
-        "EF Core"
-      ],
+      "tags": [".NET", "EF Core"],
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
@@ -2000,10 +1804,7 @@
           "status": "past"
         }
       ],
-      "tags": [
-        ".NET",
-        "EF Core"
-      ],
+      "tags": [".NET", "EF Core"],
       "videoUrl": "https://www.youtube.com/watch?v=tfMPfDyzHxc",
       "slidesUrl": null,
       "githubUrl": null,
@@ -2022,11 +1823,7 @@
           "status": "past"
         }
       ],
-      "tags": [
-        "AI",
-        "Machine Learning",
-        "Azure"
-      ],
+      "tags": ["AI", "Machine Learning", "Azure"],
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
@@ -2048,11 +1845,7 @@
           "status": "past"
         }
       ],
-      "tags": [
-        "AI",
-        "Machine Learning",
-        "Azure"
-      ],
+      "tags": ["AI", "Machine Learning", "Azure"],
       "videoUrl": "https://www.youtube.com/watch?v=OW5wBERdhQU",
       "slidesUrl": null,
       "githubUrl": null,
@@ -2072,11 +1865,7 @@
           "status": "past"
         }
       ],
-      "tags": [
-        "AI",
-        "Machine Learning",
-        "Azure"
-      ],
+      "tags": ["AI", "Machine Learning", "Azure"],
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
@@ -2098,9 +1887,7 @@
           "status": "past"
         }
       ],
-      "tags": [
-        ".NET"
-      ],
+      "tags": [".NET"],
       "videoUrl": "https://www.youtube.com/watch?v=abMAW1pjreg",
       "slidesUrl": null,
       "githubUrl": null,
@@ -2122,9 +1909,7 @@
           "status": "past"
         }
       ],
-      "tags": [
-        ".NET"
-      ],
+      "tags": [".NET"],
       "videoUrl": "https://www.youtube.com/watch?v=3ObZSNeBVac",
       "slidesUrl": null,
       "githubUrl": null,
@@ -2145,11 +1930,7 @@
           "status": "past"
         }
       ],
-      "tags": [
-        "AI",
-        "Machine Learning",
-        "Azure"
-      ],
+      "tags": ["AI", "Machine Learning", "Azure"],
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
@@ -2170,11 +1951,7 @@
           "status": "past"
         }
       ],
-      "tags": [
-        "AI",
-        "Machine Learning",
-        "Azure"
-      ],
+      "tags": ["AI", "Machine Learning", "Azure"],
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
@@ -2195,11 +1972,7 @@
           "status": "past"
         }
       ],
-      "tags": [
-        "AI",
-        "Machine Learning",
-        "Azure"
-      ],
+      "tags": ["AI", "Machine Learning", "Azure"],
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
@@ -2221,11 +1994,7 @@
           "status": "past"
         }
       ],
-      "tags": [
-        "AI",
-        "Machine Learning",
-        "Azure"
-      ],
+      "tags": ["AI", "Machine Learning", "Azure"],
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
@@ -2245,12 +2014,7 @@
           "status": "past"
         }
       ],
-      "tags": [
-        "AI",
-        "Machine Learning",
-        "Azure",
-        "OpenAI"
-      ],
+      "tags": ["AI", "Machine Learning", "Azure", "OpenAI"],
       "videoUrl": "https://www.youtube.com/watch?v=2N4Pw1FpC5I",
       "slidesUrl": null,
       "githubUrl": null,
@@ -2269,11 +2033,7 @@
           "status": "past"
         }
       ],
-      "tags": [
-        "AI",
-        "Machine Learning",
-        "Azure"
-      ],
+      "tags": ["AI", "Machine Learning", "Azure"],
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
@@ -2293,11 +2053,7 @@
           "status": "past"
         }
       ],
-      "tags": [
-        "AI",
-        "Machine Learning",
-        "Azure"
-      ],
+      "tags": ["AI", "Machine Learning", "Azure"],
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
@@ -2318,10 +2074,7 @@
           "status": "past"
         }
       ],
-      "tags": [
-        ".NET",
-        "EF Core"
-      ],
+      "tags": [".NET", "EF Core"],
       "videoUrl": "https://www.youtube.com/watch?v=gZDw0IeS6f8",
       "slidesUrl": null,
       "githubUrl": null,
@@ -2340,11 +2093,7 @@
           "status": "past"
         }
       ],
-      "tags": [
-        "AI",
-        "Machine Learning",
-        "Azure"
-      ],
+      "tags": ["AI", "Machine Learning", "Azure"],
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
@@ -2365,9 +2114,7 @@
           "status": "past"
         }
       ],
-      "tags": [
-        ".NET"
-      ],
+      "tags": [".NET"],
       "videoUrl": "https://www.youtube.com/watch?v=1d6V0lAs_so&t=539s",
       "slidesUrl": null,
       "githubUrl": null,

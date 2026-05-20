@@ -26,9 +26,8 @@ export default function Now() {
         <h2>Current Focus</h2>
         <ul>
           <li>
-            Preparing upcoming talks and workshops: AI agents in Notion at Build Club Brisbane,
-            testing .NET agents with MAF + AgentEval at AgentCamp, and an EF Core performance
-            deep-dive at the Brisbane .NET User Group.
+            Preparing an EF Core performance deep-dive at the Brisbane .NET User Group, and
+            organising AI Hack Days in Sydney and Brisbane.
           </li>
           <li>
             Building practical .NET and AI experiments, with a focus on offline/local model usage.
@@ -59,13 +58,6 @@ export default function Now() {
         <h2>Upcoming Events</h2>
         <ul>
           <li>
-            Hosting{' '}
-            <a href="https://luma.com/0dd4m7we">
-              Brisbane Build Club — Building Real AI Agents in Notion
-            </a>{' '}
-            (May 18, 2026) at The Precinct, Fortitude Valley.
-          </li>
-          <li>
             Speaking at the{' '}
             <a href="https://www.meetup.com/brisbane-net-user-group/">Brisbane .NET User Group</a>{' '}
             (June 4, 2026): <em>EF Core Bench Lab — A Peek into the Black Box</em>.
@@ -82,6 +74,13 @@ export default function Now() {
 
         <h2>Recent</h2>
         <ul>
+          <li>
+            Hosted{' '}
+            <a href="https://luma.com/0dd4m7we">
+              Brisbane Build Club — Building Real AI Agents in Notion
+            </a>{' '}
+            (May 18, 2026) at The Precinct, Fortitude Valley.
+          </li>
           <li>
             Ran a workshop at{' '}
             <a href="https://agentcamp.city/brisbane/">AgentCamp 2026 Brisbane Edition</a> (May 9,
