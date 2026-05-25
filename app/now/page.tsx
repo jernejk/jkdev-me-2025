@@ -26,6 +26,11 @@ export default function Now() {
         <h2>Current Focus</h2>
         <ul>
           <li>
+            Building <a href="https://github.com/jernejk/efcore-bench-lab">EF Core Bench Lab</a>: an
+            open-source .NET/Aspire diagnostics lab for capturing EF Core query behavior, SQL Server
+            execution plans, and repeatable performance investigations.
+          </li>
+          <li>
             Preparing an EF Core performance deep-dive at the Brisbane .NET User Group, and
             organising AI Hack Days in Sydney and Brisbane.
           </li>
