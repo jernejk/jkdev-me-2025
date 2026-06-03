@@ -33,6 +33,13 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const REPO_ROOT = path.resolve(__dirname, '..')
 
 const KG_PER_REP = 8.5 // 8kg plates + 0.5kg handle
+// Actual mechanical work per rep ≈ mass × g × lift-height. A curl raises the
+// weight through roughly a forearm's range of motion (~0.4 m). It's a humbling
+// counterpoint to the big "kg lifted" number — and lets us pun on kJ ≈ JK.
+const GRAVITY = 9.81 // m/s²
+const LIFT_HEIGHT_M = 0.4 // rough curl range of motion
+const J_PER_REP = KG_PER_REP * GRAVITY * LIFT_HEIGHT_M // ≈ 33.4 J
+const KJ_PER_CUPPA = 84 // boil a 250 ml cup of tea from room temp (~84 kJ)
 const CHALLENGE_END = '2026-06-26'
 const FUNDRAISER_URL =
   'https://www.thepushupchallenge.com.au/fundraisers/jernejkavka/the-push-up-challenge'
@@ -190,6 +197,17 @@ function main() {
   const dollarProgress = goal > 0 ? Math.min(100, Math.round((raised / goal) * 100)) : null
 
   const tonnes = totalKg / 1000
+
+  // Actual mechanical work (the "you didn't really do a tonne of *work*" angle).
+  const totalJ = Math.round(repsForKg * J_PER_REP)
+  const totalKj = totalJ / 1000
+  const kjDisplay = totalKj >= 10 ? `${Math.round(totalKj)} kJ` : `${totalKj.toFixed(1)} kJ`
+  const cuppaPct = Math.round((totalKj / KJ_PER_CUPPA) * 100)
+  const teaLine =
+    totalKj >= KJ_PER_CUPPA
+      ? `enough real work to boil ${(totalKj / KJ_PER_CUPPA).toFixed(1)} cups of tea ☕`
+      : `that wouldn't even boil a cuppa yet (${cuppaPct}% of one mug of tea ☕)`
+
   const data = {
     updated: today,
     challenge: {
@@ -239,6 +257,19 @@ function main() {
         tonnes >= 1
           ? `That's ${tonnes.toFixed(tonnes >= 10 ? 0 : 2)} tonnes — officially a tonne of fun. 🎉`
           : `${fmtKg(1000 - totalKg)} to go before it's literally a tonne of fun.`,
+      workLine:
+        totalJ > 0
+          ? `${kjDisplay} of honest muscle work — that's a lot of kJ. A lot of JK, even. 😎`
+          : null,
+      teaLine: totalJ > 0 ? teaLine : null,
+    },
+    work: {
+      joulesPerRep: Math.round(J_PER_REP * 10) / 10,
+      totalJ,
+      kj: Math.round(totalKj * 100) / 100,
+      kjDisplay,
+      cuppaPct,
+      note: 'mass × gravity × ~0.4 m lift; a tonne of *work* would be a much longer day',
     },
     links: {
       fundraiser: FUNDRAISER_URL,
@@ -251,6 +282,7 @@ function main() {
   console.log(`Wrote ${path.relative(REPO_ROOT, OUT)}`)
   console.log(`  reps: ${totalReps} (official banked ${officialReps}/${target || '?'})`)
   console.log(`  lifted: ${fmtKg(totalKg)} — ${compare(totalKg)}`)
+  console.log(`  work:   ${kjDisplay} (${cuppaPct}% of a cuppa)`)
   console.log(`  heaviest set: ${maxSet} reps = ${fmtKg(maxSetKg)}`)
   if (mostActive) console.log(`  most active day: ${mostActive.date} (${mostActive.reps} reps)`)
   console.log(`  raised: $${raised}/$${goal}  •  ${daysLeft} days left`)

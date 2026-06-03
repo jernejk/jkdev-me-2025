@@ -37,7 +37,17 @@
     "totalLine": "680 kg hoisted so far — about a racehorse 🐎",
     "heaviestLine": "30 reps in one go = 255 kg (about a grand piano 🎹)",
     "tonneOfFun": false,
-    "tonneLine": "320 kg to go before it's literally a tonne of fun."
+    "tonneLine": "320 kg to go before it's literally a tonne of fun.",
+    "workLine": "2.7 kJ of honest muscle work — that's a lot of kJ. A lot of JK, even. 😎",
+    "teaLine": "that wouldn't even boil a cuppa yet (3% of one mug of tea ☕)"
+  },
+  "work": {
+    "joulesPerRep": 33.4,
+    "totalJ": 2668,
+    "kj": 2.67,
+    "kjDisplay": "2.7 kJ",
+    "cuppaPct": 3,
+    "note": "mass × gravity × ~0.4 m lift; a tonne of *work* would be a much longer day"
   },
   "links": {
     "fundraiser": "https://www.thepushupchallenge.com.au/fundraisers/jernejkavka/the-push-up-challenge",
