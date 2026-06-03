@@ -1,5 +1,6 @@
 import { genPageMetadata } from 'app/seo'
 import Image from 'next/image'
+import PushupChallengeCard from './PushupChallengeCard'
 
 export const metadata = genPageMetadata({
   title: 'Now',
@@ -20,7 +21,7 @@ export default function Now() {
 
       <div className="prose dark:prose-invert max-w-none">
         <p>
-          <em>Last updated: May 2026</em>
+          <em>Last updated: June 2026</em>
         </p>
 
         <h2>Current Focus</h2>
@@ -59,6 +60,8 @@ export default function Now() {
             />
           </li>
         </ul>
+
+        <PushupChallengeCard />
 
         <h2>Upcoming Events</h2>
         <ul>

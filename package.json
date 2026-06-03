@@ -17,6 +17,7 @@
     "speaking:merge": "node scripts/merge-speaking-data-v2.mjs",
     "speaking:youtube-sync": "node scripts/sync-youtube-talks.mjs",
     "speaking:build": "npm run speaking:extract-mvp && npm run speaking:fetch && npm run speaking:merge",
+    "pushup:update": "node scripts/update-pushup-challenge.mjs",
     "ui:review": "node scripts/ui-review-loop.mjs",
     "e2e": "playwright test",
     "e2e:screenshots": "playwright test --update-snapshots",

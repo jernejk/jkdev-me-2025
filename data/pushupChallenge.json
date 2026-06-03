@@ -1,0 +1,47 @@
+{
+  "updated": "2026-06-03",
+  "challenge": {
+    "name": "The Push-Up Challenge",
+    "cause": "The Push for Better Foundation (mental health)",
+    "endDate": "2026-06-26",
+    "daysLeft": 23,
+    "substitution": "8kg dumbbell curls (8.5kg/rep) instead of push-ups"
+  },
+  "reps": {
+    "total": 80,
+    "heaviestSet": 30,
+    "officialBanked": 50,
+    "target": 1654,
+    "progressPct": 3
+  },
+  "kg": {
+    "perRep": 8.5,
+    "total": 680,
+    "display": "680 kg",
+    "heaviestSet": 255,
+    "heaviestSetDisplay": "255 kg"
+  },
+  "mostActiveDay": {
+    "date": "2026-06-03",
+    "reps": 80,
+    "kg": 680,
+    "kgDisplay": "680 kg"
+  },
+  "fundraising": {
+    "raised": 35,
+    "goal": 500,
+    "currency": "AUD",
+    "progressPct": 7
+  },
+  "fun": {
+    "totalLine": "680 kg hoisted so far — about a racehorse 🐎",
+    "heaviestLine": "30 reps in one go = 255 kg (about a grand piano 🎹)",
+    "tonneOfFun": false,
+    "tonneLine": "320 kg to go before it's literally a tonne of fun."
+  },
+  "links": {
+    "fundraiser": "https://www.thepushupchallenge.com.au/fundraisers/jernejkavka/the-push-up-challenge",
+    "team": "https://www.thepushupchallenge.com.au/fundraisers/ssw",
+    "challenge": "https://www.thepushupchallenge.com.au"
+  }
+}
