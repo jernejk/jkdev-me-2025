@@ -8,24 +8,24 @@
     "substitution": "8kg dumbbell curls (8.5kg/rep) instead of push-ups"
   },
   "reps": {
-    "total": 80,
+    "total": 130,
+    "done": 130,
     "heaviestSet": 30,
-    "officialBanked": 50,
     "target": 1654,
-    "progressPct": 3
+    "progressPct": 8
   },
   "kg": {
     "perRep": 8.5,
-    "total": 680,
-    "display": "680 kg",
+    "total": 1105,
+    "display": "1.10 t",
     "heaviestSet": 255,
     "heaviestSetDisplay": "255 kg"
   },
   "mostActiveDay": {
     "date": "2026-06-03",
-    "reps": 80,
-    "kg": 680,
-    "kgDisplay": "680 kg"
+    "reps": 130,
+    "kg": 1105,
+    "kgDisplay": "1.10 t"
   },
   "fundraising": {
     "raised": 35,
@@ -34,19 +34,19 @@
     "progressPct": 7
   },
   "fun": {
-    "totalLine": "680 kg hoisted so far — about a racehorse 🐎",
+    "totalLine": "1.10 t hoisted so far — about a small car 🚗",
     "heaviestLine": "30 reps in one go = 255 kg (about a grand piano 🎹)",
-    "tonneOfFun": false,
-    "tonneLine": "320 kg to go before it's literally a tonne of fun.",
-    "workLine": "2.7 kJ of honest muscle work — that's a lot of kJ. A lot of JK, even. 😎",
-    "teaLine": "that wouldn't even boil a cuppa yet (3% of one mug of tea ☕)"
+    "tonneOfFun": true,
+    "tonneLine": "That's 1.10 tonnes — officially a tonne of fun. 🎉",
+    "workLine": "4.3 kJ of honest muscle work — that's a lot of kJ. A lot of JK, even. 😎",
+    "teaLine": "that wouldn't even boil a cuppa yet (5% of one mug of tea ☕)"
   },
   "work": {
     "joulesPerRep": 33.4,
-    "totalJ": 2668,
-    "kj": 2.67,
-    "kjDisplay": "2.7 kJ",
-    "cuppaPct": 3,
+    "totalJ": 4336,
+    "kj": 4.34,
+    "kjDisplay": "4.3 kJ",
+    "cuppaPct": 5,
     "note": "mass × gravity × ~0.4 m lift; a tonne of *work* would be a much longer day"
   },
   "links": {

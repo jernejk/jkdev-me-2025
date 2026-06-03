@@ -94,10 +94,10 @@ export default function PushupChallengeCard() {
         {reps.progressPct !== null ? (
           <div>
             <div className="mb-1 flex justify-between text-sm">
-              <span className="font-medium text-gray-700 dark:text-gray-300">Reps banked</span>
+              <span className="font-medium text-gray-700 dark:text-gray-300">Reps done</span>
               <span className="text-gray-500 dark:text-gray-400">
-                {reps.officialBanked.toLocaleString('en-AU')} /{' '}
-                {reps.target.toLocaleString('en-AU')} ({reps.progressPct}%)
+                {reps.done.toLocaleString('en-AU')} / {reps.target.toLocaleString('en-AU')} (
+                {reps.progressPct}%)
               </span>
             </div>
             <Bar pct={reps.progressPct} color="bg-rose-500" />

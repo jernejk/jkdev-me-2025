@@ -183,23 +183,25 @@ function main() {
   // Public-page numbers: use flags, else keep previous run's values.
   const raised = num(args.raised) ?? prev.fundraising?.raised ?? 0
   const goal = num(args.goal) ?? prev.fundraising?.goal ?? 500
-  const officialReps = num(args['official-reps']) ?? prev.reps?.officialBanked ?? 0
   const target = num(args.target) ?? prev.reps?.target ?? 0
 
-  // Lifting stats are driven by the local log (what JK actually did); fall back to
-  // the official banked count if the log isn't reachable (e.g. fresh checkout).
-  const repsForKg = totalReps > 0 ? totalReps : officialReps
-  const totalKg = Math.round(repsForKg * KG_PER_REP)
+  // The curl log is the source of truth for reps actually done — JK might forget to
+  // bank them on the challenge website, so we don't trust the site's count. The
+  // --official-reps flag (and last run's value) is only a fallback for when the log
+  // can't be reached (e.g. Drive read failed on a remote run).
+  const fallbackReps = num(args['official-reps']) ?? prev.reps?.officialBanked ?? 0
+  const repsDone = totalReps > 0 ? totalReps : fallbackReps
+  const totalKg = Math.round(repsDone * KG_PER_REP)
   const maxSetKg = Math.round(maxSet * KG_PER_REP)
 
   const daysLeft = Math.max(0, daysBetween(today, CHALLENGE_END))
-  const repProgress = target > 0 ? Math.min(100, Math.round((officialReps / target) * 100)) : null
+  const repProgress = target > 0 ? Math.min(100, Math.round((repsDone / target) * 100)) : null
   const dollarProgress = goal > 0 ? Math.min(100, Math.round((raised / goal) * 100)) : null
 
   const tonnes = totalKg / 1000
 
   // Actual mechanical work (the "you didn't really do a tonne of *work*" angle).
-  const totalJ = Math.round(repsForKg * J_PER_REP)
+  const totalJ = Math.round(repsDone * J_PER_REP)
   const totalKj = totalJ / 1000
   const kjDisplay = totalKj >= 10 ? `${Math.round(totalKj)} kJ` : `${totalKj.toFixed(1)} kJ`
   const cuppaPct = Math.round((totalKj / KJ_PER_CUPPA) * 100)
@@ -218,9 +220,9 @@ function main() {
       substitution: '8kg dumbbell curls (8.5kg/rep) instead of push-ups',
     },
     reps: {
-      total: totalReps,
+      total: repsDone,
+      done: repsDone,
       heaviestSet: maxSet,
-      officialBanked: officialReps,
       target,
       progressPct: repProgress,
     },
@@ -280,7 +282,7 @@ function main() {
 
   fs.writeFileSync(OUT, JSON.stringify(data, null, 2) + '\n')
   console.log(`Wrote ${path.relative(REPO_ROOT, OUT)}`)
-  console.log(`  reps: ${totalReps} (official banked ${officialReps}/${target || '?'})`)
+  console.log(`  reps: ${repsDone} done / ${target || '?'} target (log is source of truth)`)
   console.log(`  lifted: ${fmtKg(totalKg)} — ${compare(totalKg)}`)
   console.log(`  work:   ${kjDisplay} (${cuppaPct}% of a cuppa)`)
   console.log(`  heaviest set: ${maxSet} reps = ${fmtKg(maxSetKg)}`)
