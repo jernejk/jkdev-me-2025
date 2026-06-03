@@ -138,6 +138,11 @@ export default function PushupChallengeCard() {
           month: 'long',
         })}
       </p>
+      <p className="mt-1 text-[10px] leading-snug text-gray-400 dark:text-gray-600">
+        Numbers are real; jokes are AI-generated. No liability accepted for cringe, sudden bursts of
+        laughter, involuntary eye-rolls, groans, or any inexplicable urge to go do a set of curls.
+        Lift responsibly.
+      </p>
     </div>
   )
 }
