@@ -1,23 +1,23 @@
 {
-  "updated": "2026-06-03",
+  "updated": "2026-06-04",
   "challenge": {
     "name": "The Push-Up Challenge",
     "cause": "The Push for Better Foundation (mental health)",
     "endDate": "2026-06-26",
-    "daysLeft": 23,
+    "daysLeft": 22,
     "substitution": "8kg dumbbell curls (8.5kg/rep) instead of push-ups"
   },
   "reps": {
-    "total": 130,
-    "done": 130,
+    "total": 180,
+    "done": 180,
     "heaviestSet": 30,
     "target": 1654,
-    "progressPct": 8
+    "progressPct": 11
   },
   "kg": {
     "perRep": 8.5,
-    "total": 1105,
-    "display": "1.10 t",
+    "total": 1530,
+    "display": "1.53 t",
     "heaviestSet": 255,
     "heaviestSetDisplay": "255 kg"
   },
@@ -34,19 +34,19 @@
     "progressPct": 7
   },
   "fun": {
-    "totalLine": "1.10 t hoisted so far — about a small car 🚗",
+    "totalLine": "1.53 t hoisted so far — about a Toyota Corolla 🚗",
     "heaviestLine": "30 reps in one go = 255 kg (about a grand piano 🎹)",
     "tonneOfFun": true,
-    "tonneLine": "That's 1.10 tonnes — officially a tonne of fun. 🎉",
-    "workLine": "4.3 kJ of honest muscle work — that's a lot of kJ. A lot of JK, even. 😎",
-    "teaLine": "that wouldn't even boil a cuppa yet (5% of one mug of tea ☕)"
+    "tonneLine": "That's 1.53 tonnes — officially a tonne of fun. 🎉",
+    "workLine": "6.0 kJ of honest muscle work — that's a lot of kJ. A lot of JK, even. 😎",
+    "teaLine": "that wouldn't even boil a cuppa yet (7% of one mug of tea ☕)"
   },
   "work": {
     "joulesPerRep": 33.4,
-    "totalJ": 4336,
-    "kj": 4.34,
-    "kjDisplay": "4.3 kJ",
-    "cuppaPct": 5,
+    "totalJ": 6004,
+    "kj": 6,
+    "kjDisplay": "6.0 kJ",
+    "cuppaPct": 7,
     "note": "mass × gravity × ~0.4 m lift; a tonne of *work* would be a much longer day"
   },
   "links": {
