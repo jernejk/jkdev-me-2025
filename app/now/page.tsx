@@ -1,5 +1,4 @@
 import { genPageMetadata } from 'app/seo'
-import Image from 'next/image'
 import PushupChallengeCard from './PushupChallengeCard'
 
 export const metadata = genPageMetadata({
@@ -21,44 +20,23 @@ export default function Now() {
 
       <div className="prose dark:prose-invert max-w-none">
         <p>
-          <em>Last updated: June 2026</em>
+          <em>Last updated: June 8, 2026</em>
         </p>
 
         <h2>Current Focus</h2>
         <ul>
           <li>
-            Building <a href="https://github.com/jernejk/efcore-bench-lab">EF Core Bench Lab</a>: an
-            open-source .NET/Aspire diagnostics lab for capturing EF Core query behavior, SQL Server
-            execution plans, and repeatable performance investigations.
+            Shipping <a href="https://github.com/jernejk/efcore-bench-lab">EF Core Bench Lab</a>:
+            practical EF Core query traces, execution plans, and performance investigations.
           </li>
           <li>
-            Preparing an EF Core performance deep-dive at the Brisbane .NET User Group, and
-            organising AI Hack Days in Sydney and Brisbane.
+            Organising AI Hack Days in Sydney and Brisbane for developers who want practical,
+            hands-on AI learning.
           </li>
           <li>
-            Building practical .NET and AI experiments, with a focus on offline/local model usage.
+            Building useful .NET + AI experiments, especially local models and agent harnesses.
           </li>
-          <li>
-            Improving content workflows for tutorials: faster drafting from notes, cleaner editing,
-            stronger technical depth.
-          </li>
-          <li>
-            Crazy agentic experiments that I might write about if they work, or do a talk on if
-            they're successful.
-          </li>
-          <li>Learning to build custom agent harnesses.</li>
-          <li>
-            Created a familiar Codex pet —{' '}
-            <a href="https://petdex.crafter.run/pets/jk">petdex.crafter.run/pets/jk</a>.
-            <Image
-              src="/static/images/codex-pet-wave.gif"
-              alt="Animated Codex pet waving"
-              width={144}
-              height={176}
-              unoptimized
-              className="not-prose mt-2 block"
-            />
-          </li>
+          <li>Turning notes into sharper tutorials, talks, and demos.</li>
         </ul>
 
         <PushupChallengeCard />
@@ -66,53 +44,33 @@ export default function Now() {
         <h2>Upcoming Events</h2>
         <ul>
           <li>
-            Speaking at the{' '}
-            <a href="https://www.meetup.com/brisbane-net-user-group/">Brisbane .NET User Group</a>{' '}
-            (June 4, 2026): <em>EF Core Bench Lab — A Peek into the Black Box</em>.
+            <a href="https://aihackday.com/sydney/">AI Hack Day Sydney</a> — July 11, 2026 at SSW
+            Sydney (co-organiser).
           </li>
           <li>
-            Organiser for <a href="https://aihackday.com/sydney/">AI Hack Day Sydney</a> (July 11,
-            2026): a free community hack day for developers building with AI.
-          </li>
-          <li>
-            Organiser for <a href="https://aihackday.com/brisbane/">AI Hack Day Brisbane</a> (August
-            1, 2026) at SSW Brisbane: a free community hack day for developers building with AI.
+            <a href="https://aihackday.com/brisbane/">AI Hack Day Brisbane</a> — August 1, 2026 at
+            SSW Brisbane (co-organiser).
           </li>
         </ul>
 
         <h2>Recent</h2>
         <ul>
           <li>
-            Hosted{' '}
+            <a href="https://www.meetup.com/en-AU/brisbane-dotnet-user-group/events/314050554/">
+              Brisbane .NET User Group
+            </a>{' '}
+            — <em>EF Core Bench Lab — A Peek into the Black Box</em> (June 4, 2026).
+          </li>
+          <li>
             <a href="https://luma.com/0dd4m7we">
               Brisbane Build Club — Building Real AI Agents in Notion
             </a>{' '}
-            (May 18, 2026) at The Precinct, Fortitude Valley.
+            (May 18, 2026).
           </li>
           <li>
-            Ran a workshop at{' '}
-            <a href="https://agentcamp.city/brisbane/">AgentCamp 2026 Brisbane Edition</a> (May 9,
-            2026) at QUT Gardens Point:{' '}
-            <em>From Vibe-Coded to Prod-Ready — Testing Your .NET Agents with MAF + AgentEval</em>.
-          </li>
-          <li>
-            Hosted{' '}
-            <a href="https://luma.com/yo5jatjk">Brisbane Build Club — Optimising Vibe Coding</a>{' '}
-            (April 20, 2026) at Launch Event Space, Fortitude Valley: a night of vibe-coding talks
-            and live walkthroughs for builders shipping full-stack AI apps.
-          </li>
-          <li>
-            Attended the <a href="https://summit.microsoft.com/">Microsoft MVP Summit 2026</a>{' '}
-            (March 24-26) at the Microsoft Redmond Campus: deep technical sessions, direct time with
-            Microsoft product teams, and catching up with MVPs from around the world.
-          </li>
-          <li>
-            Was one of the industry judges at the{' '}
-            <a href="https://www.linkedin.com/feed/update/urn:li:activity:7449996174003970048/">
-              QUT AI &amp; ML Society 2026 Hackathon
-            </a>
-            , QUT's biggest standalone student club hackathon to date, with 115+ students across 20
-            teams from QUT and UQ.
+            <a href="https://agentcamp.city/brisbane/">AgentCamp 2026 Brisbane Edition</a> —{' '}
+            <em>From Vibe-Coded to Prod-Ready — Testing Your .NET Agents with MAF + AgentEval</em>{' '}
+            (May 9, 2026).
           </li>
         </ul>
 

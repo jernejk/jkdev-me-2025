@@ -1,6 +1,6 @@
 {
   "source": "Manual talk entries",
-  "updatedDate": "2026-04-21",
+  "updatedDate": "2026-06-08",
   "talks": [
     {
       "id": "manual-ai-hack-days-2026",
@@ -14,7 +14,8 @@
           "location": "SSW Sydney, Neutral Bay, NSW, Australia",
           "date": "2026-07-11",
           "url": "https://aihackday.com/sydney/",
-          "status": "upcoming"
+          "status": "upcoming",
+          "role": "organizer"
         },
         {
           "eventName": "AI Hack Day Brisbane",
@@ -27,8 +28,10 @@
         {
           "eventName": "AI Hack Day Melbourne",
           "location": "SSW Melbourne, Melbourne, VIC, Australia",
+          "date": "2026-02-07",
           "url": "https://aihackday.com/melbourne/",
-          "status": "upcoming"
+          "status": "past",
+          "role": "organizer"
         }
       ],
       "tags": ["AI", "Machine Learning", "Azure"],
@@ -46,11 +49,12 @@
       "groupName": null,
       "events": [
         {
-          "eventName": ".NET Brisbane User Group",
-          "location": "Brisbane, Australia",
+          "eventName": "Brisbane .NET User Group",
+          "location": "Microsoft HQ - Brisbane, Level 28, 400 George Street, Brisbane, QLD, Australia",
           "date": "2026-06-04",
-          "url": "https://www.meetup.com/brisbane-net-user-group/",
-          "status": "upcoming"
+          "url": "https://www.meetup.com/en-AU/brisbane-dotnet-user-group/events/314050554/",
+          "status": "past",
+          "role": "speaker"
         }
       ],
       "tags": [".NET", "EF Core", "Performance"],
@@ -94,7 +98,7 @@
           "location": "QUT P Block, Gardens Point, Brisbane, QLD, Australia",
           "date": "2026-05-09",
           "url": "https://www.meetup.com/ai-builders-brisbane-ai-experts-engineers-ai-agents/events/314197231/",
-          "status": "upcoming",
+          "status": "past",
           "role": "workshop"
         }
       ],
