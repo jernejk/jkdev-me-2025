@@ -1,31 +1,31 @@
 {
-  "updated": "2026-06-11",
+  "updated": "2026-06-12",
   "challenge": {
     "name": "The Push-Up Challenge",
     "cause": "The Push for Better Foundation (mental health)",
     "endDate": "2026-06-26",
-    "daysLeft": 15,
+    "daysLeft": 14,
     "substitution": "8kg dumbbell curls (8.5kg/rep) instead of push-ups"
   },
   "reps": {
-    "total": 520,
-    "done": 520,
+    "total": 660,
+    "done": 660,
     "heaviestSet": 40,
     "target": 1654,
-    "progressPct": 31
+    "progressPct": 40
   },
   "kg": {
     "perRep": 8.5,
-    "total": 4420,
-    "display": "4.42 t",
+    "total": 5610,
+    "display": "5.61 t",
     "heaviestSet": 340,
     "heaviestSetDisplay": "340 kg"
   },
   "mostActiveDay": {
-    "date": "2026-06-03",
-    "reps": 130,
-    "kg": 1105,
-    "kgDisplay": "1.10 t"
+    "date": "2026-06-12",
+    "reps": 140,
+    "kg": 1190,
+    "kgDisplay": "1.19 t"
   },
   "fundraising": {
     "raised": 35,
@@ -34,19 +34,19 @@
     "progressPct": 7
   },
   "fun": {
-    "totalLine": "4.42 t hoisted so far — about an African elephant 🐘",
+    "totalLine": "5.61 t hoisted so far — about an African elephant 🐘",
     "heaviestLine": "40 reps in one go = 340 kg (about a grand piano 🎹)",
     "tonneOfFun": true,
-    "tonneLine": "That's 4.42 tonnes — officially a tonne of fun. 🎉",
-    "workLine": "17 kJ of honest muscle work — that's a lot of kJ. A lot of JK, even. 😎",
-    "teaLine": "that wouldn't even boil a cuppa yet (21% of one mug of tea ☕)"
+    "tonneLine": "That's 5.61 tonnes — officially a tonne of fun. 🎉",
+    "workLine": "22 kJ of honest muscle work — that's a lot of kJ. A lot of JK, even. 😎",
+    "teaLine": "that wouldn't even boil a cuppa yet (26% of one mug of tea ☕)"
   },
   "work": {
     "joulesPerRep": 33.4,
-    "totalJ": 17344,
-    "kj": 17.34,
-    "kjDisplay": "17 kJ",
-    "cuppaPct": 21,
+    "totalJ": 22014,
+    "kj": 22.01,
+    "kjDisplay": "22 kJ",
+    "cuppaPct": 26,
     "note": "mass × gravity × ~0.4 m lift; a tonne of *work* would be a much longer day"
   },
   "links": {
