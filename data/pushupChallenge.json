@@ -1,31 +1,31 @@
 {
-  "updated": "2026-06-16",
+  "updated": "2026-06-17",
   "challenge": {
     "name": "The Push-Up Challenge",
     "cause": "The Push for Better Foundation (mental health)",
     "endDate": "2026-06-26",
-    "daysLeft": 10,
+    "daysLeft": 9,
     "substitution": "8kg dumbbell curls (8.5kg/rep) instead of push-ups"
   },
   "reps": {
-    "total": 700,
-    "done": 700,
+    "total": 960,
+    "done": 960,
     "heaviestSet": 40,
     "target": 1654,
-    "progressPct": 42
+    "progressPct": 58
   },
   "kg": {
     "perRep": 8.5,
-    "total": 5950,
-    "display": "5.95 t",
+    "total": 8160,
+    "display": "8.16 t",
     "heaviestSet": 340,
     "heaviestSetDisplay": "340 kg"
   },
   "mostActiveDay": {
-    "date": "2026-06-12",
-    "reps": 140,
-    "kg": 1190,
-    "kgDisplay": "1.19 t"
+    "date": "2026-06-17",
+    "reps": 260,
+    "kg": 2210,
+    "kgDisplay": "2.21 t"
   },
   "fundraising": {
     "raised": 35,
@@ -34,19 +34,19 @@
     "progressPct": 7
   },
   "fun": {
-    "totalLine": "5.95 t hoisted so far — about an African elephant 🐘",
+    "totalLine": "8.16 t hoisted so far — about a T. rex 🦖",
     "heaviestLine": "40 reps in one go = 340 kg (about a grand piano 🎹)",
     "tonneOfFun": true,
-    "tonneLine": "That's 5.95 tonnes — officially a tonne of fun. 🎉",
-    "workLine": "23 kJ of honest muscle work — that's a lot of kJ. A lot of JK, even. 😎",
-    "teaLine": "that wouldn't even boil a cuppa yet (28% of one mug of tea ☕)"
+    "tonneLine": "That's 8.16 tonnes — officially a tonne of fun. 🎉",
+    "workLine": "32 kJ of honest muscle work — that's a lot of kJ. A lot of JK, even. 😎",
+    "teaLine": "that wouldn't even boil a cuppa yet (38% of one mug of tea ☕)"
   },
   "work": {
     "joulesPerRep": 33.4,
-    "totalJ": 23348,
-    "kj": 23.35,
-    "kjDisplay": "23 kJ",
-    "cuppaPct": 28,
+    "totalJ": 32020,
+    "kj": 32.02,
+    "kjDisplay": "32 kJ",
+    "cuppaPct": 38,
     "note": "mass × gravity × ~0.4 m lift; a tonne of *work* would be a much longer day"
   },
   "links": {
