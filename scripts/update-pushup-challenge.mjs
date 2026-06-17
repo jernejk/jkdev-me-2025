@@ -41,6 +41,49 @@ const LIFT_HEIGHT_M = 0.4 // rough curl range of motion
 const J_PER_REP = KG_PER_REP * GRAVITY * LIFT_HEIGHT_M // ≈ 33.4 J
 const KJ_PER_CUPPA = 84 // boil a 250 ml cup of tea from room temp (~84 kJ)
 const CHALLENGE_END = '2026-06-26'
+const CHALLENGE_START = '2026-06-03'
+
+// Each entry is a fn(kjDisplay, kj) → string. Cycled daily by day-of-challenge index.
+const WORK_LINE_POOL = [
+  (kjDisplay) =>
+    `${kjDisplay} of honest muscle work — that's a lot of kJ. A lot of JK, even. 😎`,
+  (kjDisplay) =>
+    `${kjDisplay} of pure effort — the dumbbell is quietly reconsidering its career choices. 💪`,
+  (kjDisplay) =>
+    `${kjDisplay} generated — JK's biceps are now officially classified as a power station. ⚡`,
+  (kjDisplay) =>
+    `${kjDisplay} of work done — science hasn't renamed the joule yet, but JK is lobbying. 🔬`,
+  (kjDisplay) =>
+    `${kjDisplay} of mechanical energy — the dumbbell's therapist says it's a healthy relationship. 🏋️`,
+  (kjDisplay, kj) =>
+    `${kjDisplay} of effort. In more relatable units: ${Math.round(kj)} JK. (The SI committee hasn't replied.) 🤓`,
+  (kjDisplay) =>
+    `${kjDisplay} of honest toil — the laws of thermodynamics did not see this coming. 🌡️`,
+  (kjDisplay) =>
+    `${kjDisplay} expended — enough to power a genuinely impressive sense of accomplishment. 🏆`,
+  (kjDisplay) =>
+    `${kjDisplay} logged — JK is basically a bicep-powered, very dedicated generator. 🔋`,
+  (kjDisplay) =>
+    `${kjDisplay} of real work. Contrast with the non-mechanical kind stacking up in the inbox. 📧`,
+  (kjDisplay) =>
+    `${kjDisplay} produced — the dumbbell has seen things. The dumbbell has feelings now. 😤`,
+  (kjDisplay) =>
+    `${kjDisplay} of effort, arm by arm, rep by rep, kJ by JK. 💪`,
+]
+
+// Each entry is a fn(tonneDisplay) → string. Only shown when total >= 1 tonne.
+const TONNE_LINE_POOL = [
+  (t) => `That's ${t} tonnes — officially a tonne of fun. 🎉`,
+  (t) => `${t} tonnes lifted — the challenge didn't say they had to be push-ups. 😏`,
+  (t) => `${t} tonnes! At this point the dumbbell knows JK by name. 🤝`,
+  (t) => `${t} tonnes of iron, one rep at a time. Not bad for a push-up challenge. 💪`,
+  (t) => `${t} tonnes — JK's arms now qualify as heavy infrastructure. 🏗️`,
+  (t) => `${t} tonnes. That's not fitness anymore, that's geology. 🪨`,
+  (t) => `${t} tonnes hoisted — and somehow JK's shirt still fits. 👕`,
+  (t) => `${t} tonnes of curl action. The push-up challenge never stood a chance. 🎯`,
+  (t) => `${t} tonnes. The gym floor has concerns; the biceps do not. 🏋️`,
+  (t) => `${t} tonnes. JK came here to do push-ups and accidentally became a powerlifter. 🦾`,
+]
 const FUNDRAISER_URL =
   'https://www.thepushupchallenge.com.au/fundraisers/jernejkavka/the-push-up-challenge'
 const TEAM_URL = 'https://www.thepushupchallenge.com.au/fundraisers/ssw'
@@ -195,6 +238,7 @@ function main() {
   const maxSetKg = Math.round(maxSet * KG_PER_REP)
 
   const daysLeft = Math.max(0, daysBetween(today, CHALLENGE_END))
+  const daysSince = Math.max(0, daysBetween(CHALLENGE_START, today))
   const repProgress = target > 0 ? Math.min(100, Math.round((repsDone / target) * 100)) : null
   const dollarProgress = goal > 0 ? Math.min(100, Math.round((raised / goal) * 100)) : null
 
@@ -255,14 +299,12 @@ function main() {
       heaviestLine:
         maxSet > 0 ? `${maxSet} reps in one go = ${fmtKg(maxSetKg)} (${compare(maxSetKg)})` : null,
       tonneOfFun: tonnes >= 1,
-      tonneLine:
-        tonnes >= 1
-          ? `That's ${tonnes.toFixed(tonnes >= 10 ? 0 : 2)} tonnes — officially a tonne of fun. 🎉`
-          : `${fmtKg(1000 - totalKg)} to go before it's literally a tonne of fun.`,
-      workLine:
-        totalJ > 0
-          ? `${kjDisplay} of honest muscle work — that's a lot of kJ. A lot of JK, even. 😎`
-          : null,
+      tonneLine: tonnes >= 1
+        ? TONNE_LINE_POOL[daysSince % TONNE_LINE_POOL.length](tonnes.toFixed(tonnes >= 10 ? 0 : 2))
+        : `${fmtKg(1000 - totalKg)} to go before it's literally a tonne of fun.`,
+      workLine: totalJ > 0
+        ? WORK_LINE_POOL[daysSince % WORK_LINE_POOL.length](kjDisplay, totalKj)
+        : null,
       teaLine: totalJ > 0 ? teaLine : null,
     },
     work: {
