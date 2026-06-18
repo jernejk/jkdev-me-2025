@@ -1,0 +1,17 @@
+# osv-scanner ignore list for the pre-push dependency gate
+# (scripts/security/pre-push-dependency-scan.sh).
+#
+# Only Medium-severity advisories in build/observability tooling that cannot be
+# fixed without a disproportionate major upgrade are listed here. Trivy still
+# enforces zero fixable HIGH/CRITICAL with no ignores. Each entry has a review
+# date so these don't silently rot — revisit when the upstream majors land.
+
+[[IgnoredVulns]]
+id = "GHSA-8988-4f7v-96qf"
+ignoreUntil = 2026-09-18
+reason = "@opentelemetry/core 1.30.1 (Medium 5.3). Fix is otel 2.8.0, but the whole @opentelemetry/* stack is pulled (pinned exact 1.x) by @sentry/node 9.47.1. Clean fix needs a major @sentry/node upgrade — tracked separately. Build-time/observability only; no untrusted input path on a static site."
+
+[[IgnoredVulns]]
+id = "GHSA-h67p-54hq-rp68"
+ignoreUntil = 2026-09-18
+reason = "js-yaml 3.14.2 (Medium 5.3). Fix is 4.x, but js-yaml 4 removed safeLoad and is pulled transitively by gray-matter 4.0.3 and @lhci/utils — forcing 4.x breaks them. The 4.1.1 line is already bumped to 4.2.0; only the 3.x transitive remains. Build-time only; we parse our own trusted frontmatter."

@@ -45,8 +45,7 @@ const CHALLENGE_START = '2026-06-03'
 
 // Each entry is a fn(kjDisplay, kj) → string. Cycled daily by day-of-challenge index.
 const WORK_LINE_POOL = [
-  (kjDisplay) =>
-    `${kjDisplay} of honest muscle work — that's a lot of kJ. A lot of JK, even. 😎`,
+  (kjDisplay) => `${kjDisplay} of honest muscle work — that's a lot of kJ. A lot of JK, even. 😎`,
   (kjDisplay) =>
     `${kjDisplay} of pure effort — the dumbbell is quietly reconsidering its career choices. 💪`,
   (kjDisplay) =>
@@ -67,8 +66,7 @@ const WORK_LINE_POOL = [
     `${kjDisplay} of real work. Contrast with the non-mechanical kind stacking up in the inbox. 📧`,
   (kjDisplay) =>
     `${kjDisplay} produced — the dumbbell has seen things. The dumbbell has feelings now. 😤`,
-  (kjDisplay) =>
-    `${kjDisplay} of effort, arm by arm, rep by rep, kJ by JK. 💪`,
+  (kjDisplay) => `${kjDisplay} of effort, arm by arm, rep by rep, kJ by JK. 💪`,
 ]
 
 // Each entry is a fn(tonneDisplay) → string. Only shown when total >= 1 tonne.
@@ -299,12 +297,14 @@ function main() {
       heaviestLine:
         maxSet > 0 ? `${maxSet} reps in one go = ${fmtKg(maxSetKg)} (${compare(maxSetKg)})` : null,
       tonneOfFun: tonnes >= 1,
-      tonneLine: tonnes >= 1
-        ? TONNE_LINE_POOL[daysSince % TONNE_LINE_POOL.length](tonnes.toFixed(tonnes >= 10 ? 0 : 2))
-        : `${fmtKg(1000 - totalKg)} to go before it's literally a tonne of fun.`,
-      workLine: totalJ > 0
-        ? WORK_LINE_POOL[daysSince % WORK_LINE_POOL.length](kjDisplay, totalKj)
-        : null,
+      tonneLine:
+        tonnes >= 1
+          ? TONNE_LINE_POOL[daysSince % TONNE_LINE_POOL.length](
+              tonnes.toFixed(tonnes >= 10 ? 0 : 2)
+            )
+          : `${fmtKg(1000 - totalKg)} to go before it's literally a tonne of fun.`,
+      workLine:
+        totalJ > 0 ? WORK_LINE_POOL[daysSince % WORK_LINE_POOL.length](kjDisplay, totalKj) : null,
       teaLine: totalJ > 0 ? teaLine : null,
     },
     work: {
