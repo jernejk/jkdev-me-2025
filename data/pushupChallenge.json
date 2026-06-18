@@ -1,25 +1,25 @@
 {
-  "updated": "2026-06-17",
+  "updated": "2026-06-18",
   "challenge": {
     "name": "The Push-Up Challenge",
     "cause": "The Push for Better Foundation (mental health)",
     "endDate": "2026-06-26",
-    "daysLeft": 9,
+    "daysLeft": 8,
     "substitution": "8kg dumbbell curls (8.5kg/rep) instead of push-ups"
   },
   "reps": {
-    "total": 960,
-    "done": 960,
-    "heaviestSet": 40,
+    "total": 1100,
+    "done": 1100,
+    "heaviestSet": 50,
     "target": 1654,
-    "progressPct": 58
+    "progressPct": 67
   },
   "kg": {
     "perRep": 8.5,
-    "total": 8160,
-    "display": "8.16 t",
-    "heaviestSet": 340,
-    "heaviestSetDisplay": "340 kg"
+    "total": 9350,
+    "display": "9.35 t",
+    "heaviestSet": 425,
+    "heaviestSetDisplay": "425 kg"
   },
   "mostActiveDay": {
     "date": "2026-06-17",
@@ -34,19 +34,19 @@
     "progressPct": 7
   },
   "fun": {
-    "totalLine": "8.16 t hoisted so far — about a T. rex 🦖",
-    "heaviestLine": "40 reps in one go = 340 kg (about a grand piano 🎹)",
+    "totalLine": "9.35 t hoisted so far — about a T. rex 🦖",
+    "heaviestLine": "50 reps in one go = 425 kg (2× a grand piano 🎹)",
     "tonneOfFun": true,
-    "tonneLine": "8.16 tonnes — JK's arms now qualify as heavy infrastructure. 🏗️",
-    "workLine": "32 kJ generated — JK's biceps are now officially classified as a power station. ⚡",
-    "teaLine": "that wouldn't even boil a cuppa yet (38% of one mug of tea ☕)"
+    "tonneLine": "9.35 tonnes. That's not fitness anymore, that's geology. 🪨",
+    "workLine": "37 kJ of work done — science hasn't renamed the joule yet, but JK is lobbying. 🔬",
+    "teaLine": "that wouldn't even boil a cuppa yet (44% of one mug of tea ☕)"
   },
   "work": {
     "joulesPerRep": 33.4,
-    "totalJ": 32020,
-    "kj": 32.02,
-    "kjDisplay": "32 kJ",
-    "cuppaPct": 38,
+    "totalJ": 36689,
+    "kj": 36.69,
+    "kjDisplay": "37 kJ",
+    "cuppaPct": 44,
     "note": "mass × gravity × ~0.4 m lift; a tonne of *work* would be a much longer day"
   },
   "links": {
