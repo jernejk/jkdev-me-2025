@@ -8,16 +8,16 @@
     "substitution": "8kg dumbbell curls (8.5kg/rep) instead of push-ups"
   },
   "reps": {
-    "total": 1100,
-    "done": 1100,
+    "total": 1190,
+    "done": 1190,
     "heaviestSet": 50,
     "target": 1654,
-    "progressPct": 67
+    "progressPct": 72
   },
   "kg": {
     "perRep": 8.5,
-    "total": 9350,
-    "display": "9.35 t",
+    "total": 10115,
+    "display": "10 t",
     "heaviestSet": 425,
     "heaviestSetDisplay": "425 kg"
   },
@@ -34,19 +34,19 @@
     "progressPct": 7
   },
   "fun": {
-    "totalLine": "9.35 t hoisted so far — about a T. rex 🦖",
+    "totalLine": "10 t hoisted so far — about a T. rex 🦖",
     "heaviestLine": "50 reps in one go = 425 kg (2× a grand piano 🎹)",
     "tonneOfFun": true,
-    "tonneLine": "9.35 tonnes. That's not fitness anymore, that's geology. 🪨",
-    "workLine": "37 kJ of work done — science hasn't renamed the joule yet, but JK is lobbying. 🔬",
-    "teaLine": "that wouldn't even boil a cuppa yet (44% of one mug of tea ☕)"
+    "tonneLine": "10 tonnes. That's not fitness anymore, that's geology. 🪨",
+    "workLine": "40 kJ of work done — science hasn't renamed the joule yet, but JK is lobbying. 🔬",
+    "teaLine": "that wouldn't even boil a cuppa yet (47% of one mug of tea ☕)"
   },
   "work": {
     "joulesPerRep": 33.4,
-    "totalJ": 36689,
-    "kj": 36.69,
-    "kjDisplay": "37 kJ",
-    "cuppaPct": 44,
+    "totalJ": 39691,
+    "kj": 39.69,
+    "kjDisplay": "40 kJ",
+    "cuppaPct": 47,
     "note": "mass × gravity × ~0.4 m lift; a tonne of *work* would be a much longer day"
   },
   "links": {
