@@ -8,15 +8,15 @@
     "substitution": "8kg dumbbell curls (8.5kg/rep) instead of push-ups"
   },
   "reps": {
-    "total": 1320,
-    "done": 1320,
+    "total": 1340,
+    "done": 1340,
     "heaviestSet": 50,
     "target": 1654,
-    "progressPct": 80
+    "progressPct": 81
   },
   "kg": {
     "perRep": 8.5,
-    "total": 11220,
+    "total": 11390,
     "display": "11 t",
     "heaviestSet": 425,
     "heaviestSetDisplay": "425 kg"
@@ -38,15 +38,15 @@
     "heaviestLine": "50 reps in one go = 425 kg (2× a grand piano 🎹)",
     "tonneOfFun": true,
     "tonneLine": "11 tonnes of curl action. The push-up challenge never stood a chance. 🎯",
-    "workLine": "44 kJ of effort. In more relatable units: 44 JK. (The SI committee hasn't replied.) 🤓",
-    "teaLine": "that wouldn't even boil a cuppa yet (52% of one mug of tea ☕)"
+    "workLine": "45 kJ of effort. In more relatable units: 45 JK. (The SI committee hasn't replied.) 🤓",
+    "teaLine": "that wouldn't even boil a cuppa yet (53% of one mug of tea ☕)"
   },
   "work": {
     "joulesPerRep": 33.4,
-    "totalJ": 44027,
-    "kj": 44.03,
-    "kjDisplay": "44 kJ",
-    "cuppaPct": 52,
+    "totalJ": 44694,
+    "kj": 44.69,
+    "kjDisplay": "45 kJ",
+    "cuppaPct": 53,
     "note": "mass × gravity × ~0.4 m lift; a tonne of *work* would be a much longer day"
   },
   "links": {
