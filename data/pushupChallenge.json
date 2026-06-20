@@ -1,23 +1,23 @@
 {
-  "updated": "2026-06-18",
+  "updated": "2026-06-20",
   "challenge": {
     "name": "The Push-Up Challenge",
     "cause": "The Push for Better Foundation (mental health)",
     "endDate": "2026-06-26",
-    "daysLeft": 8,
+    "daysLeft": 6,
     "substitution": "8kg dumbbell curls (8.5kg/rep) instead of push-ups"
   },
   "reps": {
-    "total": 1190,
-    "done": 1190,
+    "total": 1320,
+    "done": 1320,
     "heaviestSet": 50,
     "target": 1654,
-    "progressPct": 72
+    "progressPct": 80
   },
   "kg": {
     "perRep": 8.5,
-    "total": 10115,
-    "display": "10 t",
+    "total": 11220,
+    "display": "11 t",
     "heaviestSet": 425,
     "heaviestSetDisplay": "425 kg"
   },
@@ -34,19 +34,19 @@
     "progressPct": 7
   },
   "fun": {
-    "totalLine": "10 t hoisted so far — about a T. rex 🦖",
+    "totalLine": "11 t hoisted so far — 2× a T. rex 🦖",
     "heaviestLine": "50 reps in one go = 425 kg (2× a grand piano 🎹)",
     "tonneOfFun": true,
-    "tonneLine": "10 tonnes. That's not fitness anymore, that's geology. 🪨",
-    "workLine": "40 kJ of work done — science hasn't renamed the joule yet, but JK is lobbying. 🔬",
-    "teaLine": "that wouldn't even boil a cuppa yet (47% of one mug of tea ☕)"
+    "tonneLine": "11 tonnes of curl action. The push-up challenge never stood a chance. 🎯",
+    "workLine": "44 kJ of effort. In more relatable units: 44 JK. (The SI committee hasn't replied.) 🤓",
+    "teaLine": "that wouldn't even boil a cuppa yet (52% of one mug of tea ☕)"
   },
   "work": {
     "joulesPerRep": 33.4,
-    "totalJ": 39691,
-    "kj": 39.69,
-    "kjDisplay": "40 kJ",
-    "cuppaPct": 47,
+    "totalJ": 44027,
+    "kj": 44.03,
+    "kjDisplay": "44 kJ",
+    "cuppaPct": 52,
     "note": "mass × gravity × ~0.4 m lift; a tonne of *work* would be a much longer day"
   },
   "links": {
