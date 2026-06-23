@@ -106,7 +106,7 @@
   "packageManager": "yarn@3.6.1",
   "resolutions": {
     "h3": "^1.15.10",
-    "undici": "^6.24.1",
+    "undici": "^6.27.0",
     "flatted": "^3.4.2",
     "fast-xml-parser": "^5.3.5",
     "sitemapper": "^4.1.5",
