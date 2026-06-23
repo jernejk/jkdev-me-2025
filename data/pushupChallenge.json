@@ -1,23 +1,23 @@
 {
-  "updated": "2026-06-22",
+  "updated": "2026-06-23",
   "challenge": {
     "name": "The Push-Up Challenge",
     "cause": "The Push for Better Foundation (mental health)",
     "endDate": "2026-06-26",
-    "daysLeft": 4,
+    "daysLeft": 3,
     "substitution": "8kg dumbbell curls (8.5kg/rep) instead of push-ups"
   },
   "reps": {
-    "total": 1560,
-    "done": 1560,
+    "total": 1610,
+    "done": 1610,
     "heaviestSet": 50,
     "target": 1654,
-    "progressPct": 94
+    "progressPct": 97
   },
   "kg": {
     "perRep": 8.5,
-    "total": 13260,
-    "display": "13 t",
+    "total": 13685,
+    "display": "14 t",
     "heaviestSet": 425,
     "heaviestSetDisplay": "425 kg"
   },
@@ -34,19 +34,19 @@
     "progressPct": 7
   },
   "fun": {
-    "totalLine": "13 t hoisted so far — about a double-decker bus 🚌",
+    "totalLine": "14 t hoisted so far — about a double-decker bus 🚌",
     "heaviestLine": "50 reps in one go = 425 kg (2× a grand piano 🎹)",
     "tonneOfFun": true,
-    "tonneLine": "13 tonnes. JK came here to do push-ups and accidentally became a powerlifter. 🦾",
-    "workLine": "52 kJ expended — enough to power a genuinely impressive sense of accomplishment. 🏆",
-    "teaLine": "that wouldn't even boil a cuppa yet (62% of one mug of tea ☕)"
+    "tonneLine": "That's 14 tonnes — officially a tonne of fun. 🎉",
+    "workLine": "54 kJ logged — JK is basically a bicep-powered, very dedicated generator. 🔋",
+    "teaLine": "that wouldn't even boil a cuppa yet (64% of one mug of tea ☕)"
   },
   "work": {
     "joulesPerRep": 33.4,
-    "totalJ": 52032,
-    "kj": 52.03,
-    "kjDisplay": "52 kJ",
-    "cuppaPct": 62,
+    "totalJ": 53700,
+    "kj": 53.7,
+    "kjDisplay": "54 kJ",
+    "cuppaPct": 64,
     "note": "mass × gravity × ~0.4 m lift; a tonne of *work* would be a much longer day"
   },
   "links": {
