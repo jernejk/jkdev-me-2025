@@ -8,24 +8,24 @@
     "substitution": "standing 8kg dumbbell curls (8.5kg/rep) instead of push-ups"
   },
   "reps": {
-    "total": 1670,
-    "done": 1670,
+    "total": 1740,
+    "done": 1740,
     "heaviestSet": 50,
     "target": 1654,
     "progressPct": 100
   },
   "kg": {
     "perRep": 8.5,
-    "total": 14195,
-    "display": "14 t",
+    "total": 14790,
+    "display": "15 t",
     "heaviestSet": 425,
     "heaviestSetDisplay": "425 kg"
   },
   "mostActiveDay": {
     "date": "2026-06-17",
-    "reps": 260,
-    "kg": 2210,
-    "kgDisplay": "2.21 t"
+    "reps": 240,
+    "kg": 2040,
+    "kgDisplay": "2.04 t"
   },
   "fundraising": {
     "raised": 35,
@@ -34,29 +34,29 @@
     "progressPct": 7
   },
   "fun": {
-    "totalLine": "14 t hoisted so far — about a double-decker bus 🚌",
+    "totalLine": "15 t hoisted so far — about a double-decker bus 🚌",
     "heaviestLine": "50 reps in one go = 425 kg (2× a grand piano 🎹)",
     "tonneOfFun": true,
-    "tonneLine": "14 tonnes lifted — the challenge didn't say they had to be push-ups. 😏",
-    "workLine": "Mechanical lift work: 111 kJ. The inbox remains non-mechanical and unhelpful. 📧",
-    "burnLine": "Estimated workout burn: 850 kJ (~203 kcal): 550 kJ lifting + 300 kJ controlled lowering.",
-    "teaLine": "lift work could boil 1.3 mugs of tea; with controlled lowering, body burn is more like 10.1 mugs ☕"
+    "tonneLine": "15 tonnes lifted — the challenge didn't say they had to be push-ups. 😏",
+    "workLine": "Mechanical lift work: 116 kJ. The inbox remains non-mechanical and unhelpful. 📧",
+    "burnLine": "Estimated workout burn: 900 kJ (~215 kcal): 600 kJ lifting + 300 kJ controlled lowering.",
+    "teaLine": "lift work could boil 1.4 mugs of tea; with controlled lowering, body burn is more like 10.7 mugs ☕"
   },
   "work": {
     "joulesPerRep": 66.7,
-    "totalJ": 111402,
-    "kj": 111.4,
-    "kjDisplay": "111 kJ",
+    "totalJ": 116072,
+    "kj": 116.07,
+    "kjDisplay": "116 kJ",
     "liftHeightM": 0.8,
-    "cuppaPct": 133,
-    "cuppaCount": 1.3,
+    "cuppaPct": 138,
+    "cuppaCount": 1.4,
     "note": "mass × gravity × ~0.8 m upward lift only; controlled descent is counted in workout burn"
   },
   "workoutBurn": {
-    "kj": 850,
-    "kjDisplay": "850 kJ",
-    "kcal": 203,
-    "liftingKj": 550,
+    "kj": 900,
+    "kjDisplay": "900 kJ",
+    "kcal": 215,
+    "liftingKj": 600,
     "loweringKj": 300,
     "concentricEfficiency": 0.2,
     "loweringCostRatio": 0.5,
