@@ -33,40 +33,41 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const REPO_ROOT = path.resolve(__dirname, '..')
 
 const KG_PER_REP = 8.5 // 8kg plates + 0.5kg handle
-// Actual mechanical work per rep ≈ mass × g × lift-height. A curl raises the
-// weight through roughly a forearm's range of motion (~0.4 m). It's a humbling
-// counterpoint to the big "kg lifted" number — and lets us pun on kJ ≈ JK.
+// Positive mechanical work per rep ≈ mass × g × lift-height. JK is doing these
+// standing from low hang to face height, so use double the earlier sitting range.
 const GRAVITY = 9.81 // m/s²
-const LIFT_HEIGHT_M = 0.4 // rough curl range of motion
-const J_PER_REP = KG_PER_REP * GRAVITY * LIFT_HEIGHT_M // ≈ 33.4 J
+const LIFT_HEIGHT_M = 0.8 // rough standing curl range of motion
+const HUMAN_CONCENTRIC_EFFICIENCY = 0.2 // middle estimate for human muscle efficiency while lifting
+const CONTROLLED_LOWERING_COST_RATIO = 0.5 // slow eccentric lowering, high end of the 0.3-0.5 range
+const WORKOUT_BURN_ROUNDING_KJ = 50
+const KJ_PER_FOOD_CALORIE = 4.184
+const J_PER_REP = KG_PER_REP * GRAVITY * LIFT_HEIGHT_M // ≈ 66.7 J
 const KJ_PER_CUPPA = 84 // boil a 250 ml cup of tea from room temp (~84 kJ)
 const CHALLENGE_END = '2026-06-26'
 const CHALLENGE_START = '2026-06-03'
 
 // Each entry is a fn(kjDisplay, kj) → string. Cycled daily by day-of-challenge index.
 const WORK_LINE_POOL = [
-  (kjDisplay) => `${kjDisplay} of honest muscle work — that's a lot of kJ. A lot of JK, even. 😎`,
+  (kjDisplay) => `Mechanical lift work: ${kjDisplay} added to the dumbbell on the way up. 📈`,
   (kjDisplay) =>
-    `${kjDisplay} of pure effort — the dumbbell is quietly reconsidering its career choices. 💪`,
+    `Mechanical lift work: ${kjDisplay}. The downward half gets counted in the human burn. 🧾`,
   (kjDisplay) =>
-    `${kjDisplay} generated — JK's biceps are now officially classified as a power station. ⚡`,
+    `Mechanical lift work: ${kjDisplay}; gravity was consulted and remains unimpressed. ⚖️`,
   (kjDisplay) =>
-    `${kjDisplay} of work done — science hasn't renamed the joule yet, but JK is lobbying. 🔬`,
+    `Mechanical lift work: ${kjDisplay}. Science still refuses to rename joules to JKs. 🔬`,
   (kjDisplay) =>
-    `${kjDisplay} of mechanical energy — the dumbbell's therapist says it's a healthy relationship. 🏋️`,
+    `Mechanical lift work: ${kjDisplay}; the dumbbell got the clean physics version. 🏋️`,
   (kjDisplay, kj) =>
-    `${kjDisplay} of effort. In more relatable units: ${Math.round(kj)} JK. (The SI committee hasn't replied.) 🤓`,
+    `Mechanical lift work: ${kjDisplay}. In more relatable units: ${Math.round(kj)} JK. 🤓`,
+  (kjDisplay) => `Mechanical lift work: ${kjDisplay}; thermodynamics filed the paperwork. 🌡️`,
   (kjDisplay) =>
-    `${kjDisplay} of honest toil — the laws of thermodynamics did not see this coming. 🌡️`,
+    `Mechanical lift work: ${kjDisplay}, before biology adds lifting and lowering overhead. 🏆`,
+  (kjDisplay) => `Mechanical lift work: ${kjDisplay} logged for the upward part of the curl. 🔋`,
   (kjDisplay) =>
-    `${kjDisplay} expended — enough to power a genuinely impressive sense of accomplishment. 🏆`,
+    `Mechanical lift work: ${kjDisplay}. The inbox remains non-mechanical and unhelpful. 📧`,
   (kjDisplay) =>
-    `${kjDisplay} logged — JK is basically a bicep-powered, very dedicated generator. 🔋`,
-  (kjDisplay) =>
-    `${kjDisplay} of real work. Contrast with the non-mechanical kind stacking up in the inbox. 📧`,
-  (kjDisplay) =>
-    `${kjDisplay} produced — the dumbbell has seen things. The dumbbell has feelings now. 😤`,
-  (kjDisplay) => `${kjDisplay} of effort, arm by arm, rep by rep, kJ by JK. 💪`,
+    `Mechanical lift work: ${kjDisplay}; the rest is heat, control, and stubbornness. 😤`,
+  (kjDisplay) => `Mechanical lift work: ${kjDisplay}, arm by arm, rep by rep, kJ by JK. 💪`,
 ]
 
 // Each entry is a fn(tonneDisplay) → string. Only shown when total >= 1 tonne.
@@ -168,6 +169,15 @@ function fmtKg(kg) {
   return `${Math.round(kg)} kg`
 }
 
+function roundTo(n, step) {
+  return Math.round(n / step) * step
+}
+
+function fmtKj(kj) {
+  if (kj >= 1000) return `${(kj / 1000).toFixed(kj >= 10000 ? 0 : 1)} MJ`
+  return `${Math.round(kj).toLocaleString('en-AU')} kJ`
+}
+
 /** Pick the best ladder comparison for a weight in kg. */
 function compare(kg) {
   if (kg <= 0) return null
@@ -242,15 +252,27 @@ function main() {
 
   const tonnes = totalKg / 1000
 
-  // Actual mechanical work (the "you didn't really do a tonne of *work*" angle).
+  // Positive mechanical work on the dumbbell during the upward half of each curl.
   const totalJ = Math.round(repsDone * J_PER_REP)
   const totalKj = totalJ / 1000
-  const kjDisplay = totalKj >= 10 ? `${Math.round(totalKj)} kJ` : `${totalKj.toFixed(1)} kJ`
-  const cuppaPct = Math.round((totalKj / KJ_PER_CUPPA) * 100)
+  const kjDisplay = totalKj >= 10 ? fmtKj(totalKj) : `${totalKj.toFixed(1)} kJ`
+  const cuppaCount = totalKj / KJ_PER_CUPPA
+  const cuppaPct = Math.round(cuppaCount * 100)
+  const liftingBurnKjRaw = totalKj / HUMAN_CONCENTRIC_EFFICIENCY
+  const loweringBurnKjRaw = liftingBurnKjRaw * CONTROLLED_LOWERING_COST_RATIO
+  const liftingBurnKj = roundTo(liftingBurnKjRaw, WORKOUT_BURN_ROUNDING_KJ)
+  const loweringBurnKj = roundTo(loweringBurnKjRaw, WORKOUT_BURN_ROUNDING_KJ)
+  const workoutBurnKj = liftingBurnKj + loweringBurnKj
+  const workoutBurnCalories = Math.round(workoutBurnKj / KJ_PER_FOOD_CALORIE)
+  const workoutBurnDisplay = fmtKj(workoutBurnKj)
   const teaLine =
     totalKj >= KJ_PER_CUPPA
-      ? `enough real work to boil ${(totalKj / KJ_PER_CUPPA).toFixed(1)} cups of tea ☕`
-      : `that wouldn't even boil a cuppa yet (${cuppaPct}% of one mug of tea ☕)`
+      ? `lift work could boil ${cuppaCount.toFixed(1)} mugs of tea; with controlled lowering, body burn is more like ${(
+          workoutBurnKj / KJ_PER_CUPPA
+        ).toFixed(1)} mugs ☕`
+      : `lift work would be ${cuppaPct}% of one mug of tea; with controlled lowering, body burn is more like ${(
+          workoutBurnKj / KJ_PER_CUPPA
+        ).toFixed(1)} mugs ☕`
 
   const data = {
     updated: today,
@@ -259,7 +281,7 @@ function main() {
       cause: 'The Push for Better Foundation (mental health)',
       endDate: CHALLENGE_END,
       daysLeft,
-      substitution: '8kg dumbbell curls (8.5kg/rep) instead of push-ups',
+      substitution: 'standing 8kg dumbbell curls (8.5kg/rep) instead of push-ups',
     },
     reps: {
       total: repsDone,
@@ -305,6 +327,10 @@ function main() {
           : `${fmtKg(1000 - totalKg)} to go before it's literally a tonne of fun.`,
       workLine:
         totalJ > 0 ? WORK_LINE_POOL[daysSince % WORK_LINE_POOL.length](kjDisplay, totalKj) : null,
+      burnLine:
+        totalJ > 0
+          ? `Estimated workout burn: ${workoutBurnDisplay} (~${workoutBurnCalories} kcal): ${fmtKj(liftingBurnKj)} lifting + ${fmtKj(loweringBurnKj)} controlled lowering.`
+          : null,
       teaLine: totalJ > 0 ? teaLine : null,
     },
     work: {
@@ -312,8 +338,21 @@ function main() {
       totalJ,
       kj: Math.round(totalKj * 100) / 100,
       kjDisplay,
+      liftHeightM: LIFT_HEIGHT_M,
       cuppaPct,
-      note: 'mass × gravity × ~0.4 m lift; a tonne of *work* would be a much longer day',
+      cuppaCount: Math.round(cuppaCount * 10) / 10,
+      note: 'mass × gravity × ~0.8 m upward lift only; controlled descent is counted in workout burn',
+    },
+    workoutBurn: {
+      kj: workoutBurnKj,
+      kjDisplay: workoutBurnDisplay,
+      kcal: workoutBurnCalories,
+      liftingKj: liftingBurnKj,
+      loweringKj: loweringBurnKj,
+      concentricEfficiency: HUMAN_CONCENTRIC_EFFICIENCY,
+      loweringCostRatio: CONTROLLED_LOWERING_COST_RATIO,
+      roundingKj: WORKOUT_BURN_ROUNDING_KJ,
+      note: 'lifting burn uses ~20% concentric efficiency; controlled lowering adds 50% of lifting burn, rounded to the nearest 50 kJ',
     },
     links: {
       fundraiser: FUNDRAISER_URL,
@@ -326,7 +365,8 @@ function main() {
   console.log(`Wrote ${path.relative(REPO_ROOT, OUT)}`)
   console.log(`  reps: ${repsDone} done / ${target || '?'} target (log is source of truth)`)
   console.log(`  lifted: ${fmtKg(totalKg)} — ${compare(totalKg)}`)
-  console.log(`  work:   ${kjDisplay} (${cuppaPct}% of a cuppa)`)
+  console.log(`  lift:   ${kjDisplay} (${cuppaCount.toFixed(1)} cuppas)`)
+  console.log(`  burn:   ${workoutBurnDisplay} (~${workoutBurnCalories} kcal estimate)`)
   console.log(`  heaviest set: ${maxSet} reps = ${fmtKg(maxSetKg)}`)
   if (mostActive) console.log(`  most active day: ${mostActive.date} (${mostActive.reps} reps)`)
   console.log(`  raised: $${raised}/$${goal}  •  ${daysLeft} days left`)

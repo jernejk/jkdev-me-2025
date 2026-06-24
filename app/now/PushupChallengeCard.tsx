@@ -63,6 +63,9 @@ export default function PushupChallengeCard() {
         {fun.workLine ? (
           <div className="mt-3 border-t border-gray-200 pt-2 text-sm text-gray-600 dark:border-gray-700 dark:text-gray-400">
             <span className="font-medium text-gray-800 dark:text-gray-200">{fun.workLine}</span>
+            {fun.burnLine ? (
+              <span className="block text-xs text-gray-600 dark:text-gray-400">{fun.burnLine}</span>
+            ) : null}
             {fun.teaLine ? (
               <span className="block text-xs text-gray-500 dark:text-gray-500">{fun.teaLine}</span>
             ) : null}
