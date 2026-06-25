@@ -1,31 +1,31 @@
 {
-  "updated": "2026-06-24",
+  "updated": "2026-06-25",
   "challenge": {
     "name": "The Push-Up Challenge",
     "cause": "The Push for Better Foundation (mental health)",
     "endDate": "2026-06-26",
-    "daysLeft": 2,
+    "daysLeft": 1,
     "substitution": "standing 8kg dumbbell curls (8.5kg/rep) instead of push-ups"
   },
   "reps": {
-    "total": 1740,
-    "done": 1740,
+    "total": 1770,
+    "done": 1770,
     "heaviestSet": 50,
     "target": 1654,
     "progressPct": 100
   },
   "kg": {
     "perRep": 8.5,
-    "total": 14790,
+    "total": 15045,
     "display": "15 t",
     "heaviestSet": 425,
     "heaviestSetDisplay": "425 kg"
   },
   "mostActiveDay": {
     "date": "2026-06-17",
-    "reps": 240,
-    "kg": 2040,
-    "kgDisplay": "2.04 t"
+    "reps": 260,
+    "kg": 2210,
+    "kgDisplay": "2.21 t"
   },
   "fundraising": {
     "raised": 35,
@@ -37,18 +37,18 @@
     "totalLine": "15 t hoisted so far — about a double-decker bus 🚌",
     "heaviestLine": "50 reps in one go = 425 kg (2× a grand piano 🎹)",
     "tonneOfFun": true,
-    "tonneLine": "15 tonnes lifted — the challenge didn't say they had to be push-ups. 😏",
-    "workLine": "Mechanical lift work: 116 kJ. The inbox remains non-mechanical and unhelpful. 📧",
+    "tonneLine": "15 tonnes! At this point the dumbbell knows JK by name. 🤝",
+    "workLine": "Mechanical lift work: 118 kJ; the rest is heat, control, and stubbornness. 😤",
     "burnLine": "Estimated workout burn: 900 kJ (~215 kcal): 600 kJ lifting + 300 kJ controlled lowering.",
     "teaLine": "lift work could boil 1.4 mugs of tea; with controlled lowering, body burn is more like 10.7 mugs ☕"
   },
   "work": {
     "joulesPerRep": 66.7,
-    "totalJ": 116072,
-    "kj": 116.07,
-    "kjDisplay": "116 kJ",
+    "totalJ": 118073,
+    "kj": 118.07,
+    "kjDisplay": "118 kJ",
     "liftHeightM": 0.8,
-    "cuppaPct": 138,
+    "cuppaPct": 141,
     "cuppaCount": 1.4,
     "note": "mass × gravity × ~0.8 m upward lift only; controlled descent is counted in workout burn"
   },
