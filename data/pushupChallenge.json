@@ -1,23 +1,23 @@
 {
-  "updated": "2026-06-25",
+  "updated": "2026-06-26",
   "challenge": {
     "name": "The Push-Up Challenge",
     "cause": "The Push for Better Foundation (mental health)",
     "endDate": "2026-06-26",
-    "daysLeft": 1,
+    "daysLeft": 0,
     "substitution": "standing 8kg dumbbell curls (8.5kg/rep) instead of push-ups"
   },
   "reps": {
-    "total": 1770,
-    "done": 1770,
+    "total": 1860,
+    "done": 1860,
     "heaviestSet": 50,
     "target": 1654,
     "progressPct": 100
   },
   "kg": {
     "perRep": 8.5,
-    "total": 15045,
-    "display": "15 t",
+    "total": 15810,
+    "display": "16 t",
     "heaviestSet": 425,
     "heaviestSetDisplay": "425 kg"
   },
@@ -34,22 +34,22 @@
     "progressPct": 7
   },
   "fun": {
-    "totalLine": "15 t hoisted so far — about a double-decker bus 🚌",
+    "totalLine": "16 t hoisted so far — about a double-decker bus 🚌",
     "heaviestLine": "50 reps in one go = 425 kg (2× a grand piano 🎹)",
     "tonneOfFun": true,
-    "tonneLine": "15 tonnes! At this point the dumbbell knows JK by name. 🤝",
-    "workLine": "Mechanical lift work: 118 kJ; the rest is heat, control, and stubbornness. 😤",
+    "tonneLine": "16 tonnes of iron, one rep at a time. Not bad for a push-up challenge. 💪",
+    "workLine": "Mechanical lift work: 124 kJ, arm by arm, rep by rep, kJ by JK. 💪",
     "burnLine": "Estimated workout burn: 900 kJ (~215 kcal): 600 kJ lifting + 300 kJ controlled lowering.",
-    "teaLine": "lift work could boil 1.4 mugs of tea; with controlled lowering, body burn is more like 10.7 mugs ☕"
+    "teaLine": "lift work could boil 1.5 mugs of tea; with controlled lowering, body burn is more like 10.7 mugs ☕"
   },
   "work": {
     "joulesPerRep": 66.7,
-    "totalJ": 118073,
-    "kj": 118.07,
-    "kjDisplay": "118 kJ",
+    "totalJ": 124077,
+    "kj": 124.08,
+    "kjDisplay": "124 kJ",
     "liftHeightM": 0.8,
-    "cuppaPct": 141,
-    "cuppaCount": 1.4,
+    "cuppaPct": 148,
+    "cuppaCount": 1.5,
     "note": "mass × gravity × ~0.8 m upward lift only; controlled descent is counted in workout burn"
   },
   "workoutBurn": {
