@@ -1,7 +1,37 @@
 {
   "source": "Manual talk entries",
-  "updatedDate": "2026-06-08",
+  "updatedDate": "2026-08-25",
   "talks": [
+    {
+      "id": "manual-global-ai-construct-brisbane-2026",
+      "title": "Small Models, Sharp Jobs: Build a Local Agent That Proves Its Work",
+      "description": "A 90-minute hands-on workshop building a .NET agent that runs entirely offline on small open-weight models. The agent reads a service-incident evidence pack, proposes typed claims with citations, and verifies each one through deterministic C# rules before anything reaches the final brief — Microsoft Agent Framework agents and tools inside a plain, debuggable C# pipeline.",
+      "type": "workshop",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "Global AI Construct - Brisbane",
+          "location": "Microsoft Brisbane, Level 28, 400 George Street, Brisbane, QLD, Australia",
+          "date": "2026-08-31",
+          "url": "https://www.meetup.com/ai-builders-brisbane-ai-experts-engineers-ai-agents/events/316112128",
+          "status": "upcoming",
+          "role": "speaker"
+        }
+      ],
+      "tags": [
+        "AI",
+        ".NET",
+        "Microsoft Agent Framework",
+        "Local LLM",
+        "SLM",
+        "LM Studio",
+        "Offline AI"
+      ],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": "https://www.meetup.com/ai-builders-brisbane-ai-experts-engineers-ai-agents/"
+    },
     {
       "id": "manual-ai-hack-days-2026",
       "title": "AI Hack Days 2026",

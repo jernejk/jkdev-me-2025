@@ -93,3 +93,5 @@ mvp-shared-docs
 
 # Private agents guide (lives in .claude/skills/agents-guide instead)
 /AGENTS.md
+# local env overrides
+.envrc.local

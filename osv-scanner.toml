@@ -9,9 +9,23 @@
 [[IgnoredVulns]]
 id = "GHSA-8988-4f7v-96qf"
 ignoreUntil = 2026-09-18
-reason = "@opentelemetry/core 1.30.1 (Medium 5.3). Fix is otel 2.8.0, but the whole @opentelemetry/* stack is pulled (pinned exact 1.x) by @sentry/node 9.47.1. Clean fix needs a major @sentry/node upgrade — tracked separately. Build-time/observability only; no untrusted input path on a static site."
+reason = "@opentelemetry/core 1.30.1 (Medium 5.3). Fix is otel 2.x. The stack is pulled by @contentlayer2/utils 0.5.8 via @opentelemetry/sdk-trace-node ^1.30.1 — not @sentry/node, which is no longer a dependency. propagator-jaeger is already forced to 2.x via resolutions and the production build passes; core has not been moved yet. Build-time/observability only; no untrusted input path on a static site."
+
+# --- No released fix upstream. Trivy runs with --ignore-unfixed so it does not
+# flag these; osv-scanner has no equivalent flag, so they are listed here to
+# keep the pre-push gate meaningful rather than permanently red.
 
 [[IgnoredVulns]]
-id = "GHSA-h67p-54hq-rp68"
-ignoreUntil = 2026-09-18
-reason = "js-yaml 3.14.2 (Medium 5.3). Fix is 4.x, but js-yaml 4 removed safeLoad and is pulled transitively by gray-matter 4.0.3 and @lhci/utils — forcing 4.x breaks them. The 4.1.1 line is already bumped to 4.2.0; only the 3.x transitive remains. Build-time only; we parse our own trusted frontmatter."
+id = "GHSA-jmr9-qjv8-65gv"
+ignoreUntil = 2026-11-25
+reason = "extract-zip 2.0.1 (High 8.6). 2.0.1 is the latest published release; there is no fixed version. Transitive under puppeteer, dev/build only — it unpacks the Chromium download, not user input."
+
+[[IgnoredVulns]]
+id = "GHSA-5p2g-fcmc-qvqq"
+ignoreUntil = 2026-11-25
+reason = "image-size 2.0.2 (High 8.7), JXL/HEIF parser DoS. 2.0.2 is the latest published release; there is no fixed version. Build-time only, and it reads our own images from the repo."
+
+[[IgnoredVulns]]
+id = "GHSA-w3rx-r6r6-pgpr"
+ignoreUntil = 2026-11-25
+reason = "image-size 2.0.2 (High 8.7). Same package and reasoning as GHSA-5p2g-fcmc-qvqq: no released fix, build-time only, parses our own images."

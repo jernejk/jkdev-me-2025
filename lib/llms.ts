@@ -142,7 +142,7 @@ export function buildLlmsTxt(): string {
   const lines = [
     `# ${siteMetadata.title}`,
     '',
-    '> Technical blog by Jernej Kavka (Microsoft AI MVP). Focus: agentic AI, Azure AI, coding-agent workflows, .NET, EF Core, performance, conference talks and practical experiments using tools such as OpenAI Codex. Prefer canonical URLs and markdown mirrors for retrieval.',
+    '> Technical blog by Jernej Kavka (Microsoft Foundry MVP). Focus: agentic AI, Azure AI, coding-agent workflows, .NET, EF Core, performance, conference talks and practical experiments using tools such as OpenAI Codex. Prefer canonical URLs and markdown mirrors for retrieval.',
     '',
     '## Information',
     `- [Homepage](${siteMetadata.siteUrl}/): Primary site entry.`,
@@ -190,7 +190,7 @@ export function buildLlmsFullTxt(): string {
   const header = [
     `# ${siteMetadata.title}`,
     '',
-    '> Technical blog by Jernej Kavka (Microsoft AI MVP). Focus: agentic AI, Azure AI, coding-agent workflows, .NET, EF Core, performance, conference talks and practical experiments using tools such as OpenAI Codex. Prefer canonical URLs and markdown mirrors for retrieval.',
+    '> Technical blog by Jernej Kavka (Microsoft Foundry MVP). Focus: agentic AI, Azure AI, coding-agent workflows, .NET, EF Core, performance, conference talks and practical experiments using tools such as OpenAI Codex. Prefer canonical URLs and markdown mirrors for retrieval.',
     '',
     '## Information',
     `- Author: ${siteMetadata.author}`,

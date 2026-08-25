@@ -41,7 +41,7 @@ export default function Home({ posts, upcomingTalk }) {
               Jernej Kavka (JK)
             </h1>
             <p className="mt-2 text-xl text-cyan-100/85">
-              Microsoft AI MVP · Solution Architect · Speaker
+              Microsoft Foundry MVP · Solution Architect · Speaker
             </p>
             <p className="mt-4 max-w-3xl text-lg leading-8 text-slate-200">
               I build agentic AI workflows with Azure AI, coding agents, .NET and EF Core, speak at

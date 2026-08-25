@@ -3,7 +3,7 @@ const siteMetadata = {
   title: 'Jernej Kavka (JK)',
   author: 'Jernej Kavka',
   headerTitle: 'JK',
-  description: 'Microsoft AI MVP - .NET, AI, and speaking',
+  description: 'Microsoft Foundry MVP - .NET, AI, and speaking',
   language: 'en-US',
   theme: 'system', // system, dark or light
   siteUrl: 'https://jkdev.me',
