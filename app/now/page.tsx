@@ -1,5 +1,4 @@
 import { genPageMetadata } from 'app/seo'
-import PushupChallengeCard from './PushupChallengeCard'
 
 export const metadata = genPageMetadata({
   title: 'Now',
@@ -38,8 +37,6 @@ export default function Now() {
           </li>
           <li>Turning notes into sharper tutorials, talks, and demos.</li>
         </ul>
-
-        <PushupChallengeCard />
 
         <h2>Upcoming Events</h2>
         <ul>
