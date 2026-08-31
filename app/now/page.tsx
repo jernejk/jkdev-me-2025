@@ -52,7 +52,7 @@ export default function Now() {
               Global AI Construct Brisbane
             </a>{' '}
             — <em>Small Models, Sharp Jobs — Build a Local Agent That Proves Its Work</em>, a
-            90-minute hands-on workshop (August 31, 2026) at the Microsoft Brisbane office. We built
+            90-minute hands-on workshop (August 31, 2026) at the Microsoft Brisbane office. Building
             a .NET agent that runs entirely offline on small open-weight models: the model fills a
             typed filter, C# validates and clamps it before it touches the data, and deterministic
             gates reject invented record IDs, malformed JSON and low confidence before anything
