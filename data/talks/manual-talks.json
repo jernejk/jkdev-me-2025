@@ -1,12 +1,12 @@
 {
   "source": "Manual talk entries",
-  "updatedDate": "2026-08-25",
+  "updatedDate": "2026-09-01",
   "talks": [
     {
       "id": "manual-global-ai-construct-brisbane-2026",
       "title": "Small Models, Sharp Jobs: Build a Local Agent That Proves Its Work",
-      "description": "A 90-minute hands-on workshop building a .NET agent that runs entirely offline on small open-weight models. The agent reads a service-incident evidence pack, proposes typed claims with citations, and verifies each one through deterministic C# rules before anything reaches the final brief — Microsoft Agent Framework agents and tools inside a plain, debuggable C# pipeline.",
-      "type": "workshop",
+      "description": "A 90-minute session building a .NET agent that runs entirely offline on small open-weight models in LM Studio or Ollama. A plain-English prompt becomes a typed filter that C# validates and clamps before it touches an approved dataset; a second agent selects records by ID; and deterministic code gates reject invented IDs, malformed JSON and low confidence before anything reaches the final analysis. Built on Microsoft Agent Framework and .NET 10, then shown again as a MAF Workflows graph. Planned as a hands-on workshop, delivered as a talk after attendee setup problems.",
+      "type": "talk",
       "groupName": null,
       "events": [
         {
@@ -14,7 +14,7 @@
           "location": "Microsoft Brisbane, Level 28, 400 George Street, Brisbane, QLD, Australia",
           "date": "2026-08-31",
           "url": "https://www.meetup.com/ai-builders-brisbane-ai-experts-engineers-ai-agents/events/316112128",
-          "status": "upcoming",
+          "status": "past",
           "role": "speaker"
         }
       ],
@@ -28,8 +28,8 @@
         "Offline AI"
       ],
       "videoUrl": null,
-      "slidesUrl": null,
-      "githubUrl": null,
+      "slidesUrl": "https://small-models-sharp-jobs-workshop-20260829.surge.sh/slides/",
+      "githubUrl": "https://github.com/jernejk/small-models-sharp-jobs",
       "conferenceUrl": "https://www.meetup.com/ai-builders-brisbane-ai-experts-engineers-ai-agents/"
     },
     {
@@ -44,7 +44,7 @@
           "location": "SSW Sydney, Neutral Bay, NSW, Australia",
           "date": "2026-07-11",
           "url": "https://aihackday.com/sydney/",
-          "status": "upcoming",
+          "status": "past",
           "role": "organizer"
         },
         {
@@ -52,7 +52,7 @@
           "location": "SSW Brisbane, Brisbane, QLD, Australia",
           "date": "2026-08-01",
           "url": "https://aihackday.com/brisbane/",
-          "status": "upcoming",
+          "status": "past",
           "role": "organizer"
         },
         {

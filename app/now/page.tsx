@@ -19,7 +19,7 @@ export default function Now() {
 
       <div className="prose dark:prose-invert max-w-none">
         <p>
-          <em>Last updated: August 25, 2026</em>
+          <em>Last updated: September 1, 2026</em>
         </p>
 
         <h2>Current Focus</h2>
@@ -33,28 +33,33 @@ export default function Now() {
             hands-on AI learning.
           </li>
           <li>
-            Building useful .NET + AI experiments, especially local models and agent harnesses.
+            Building useful .NET + AI experiments, especially local models and agent harnesses —
+            most recently a six-lab course on making small local models reliable enough to trust.
           </li>
           <li>Turning notes into sharper tutorials, talks, and demos.</li>
         </ul>
 
         <h2>Upcoming Events</h2>
+        <p>
+          Nothing locked in right now. If you would like me to speak at your event or user group,{' '}
+          <a href="https://www.linkedin.com/in/jernejkavka/">get in touch</a>.
+        </p>
+
+        <h2>Recent</h2>
         <ul>
           <li>
             <a href="https://www.meetup.com/ai-builders-brisbane-ai-experts-engineers-ai-agents/events/316112128">
               Global AI Construct Brisbane
             </a>{' '}
-            — <em>Small Models, Sharp Jobs — Build a Local Agent That Proves Its Work</em>, a
-            90-minute hands-on workshop (August 31, 2026) at the Microsoft Brisbane office. We build
-            a .NET agent that runs entirely offline on small open-weight models, proposes typed
-            claims with citations from a service-incident evidence pack, and verifies every one of
-            them in deterministic C# before anything reaches the final brief. Bring a laptop with LM
-            Studio and VS Code.
+            — <em>Small Models, Sharp Jobs — Build a Local Agent That Proves Its Work</em> (August
+            31, 2026) at the Microsoft Brisbane office. A .NET agent that runs entirely offline on
+            small open-weight models: the model fills a typed filter, C# validates and clamps it
+            before it touches the data, and deterministic gates reject invented record IDs,
+            malformed JSON and low confidence before anything reaches the final answer. Built on
+            Microsoft Agent Framework and .NET 10.{' '}
+            <a href="https://small-models-sharp-jobs-workshop-20260829.surge.sh/slides/">Slides</a>{' '}
+            and <a href="https://github.com/jernejk/small-models-sharp-jobs">code</a> are public.
           </li>
-        </ul>
-
-        <h2>Recent</h2>
-        <ul>
           <li>
             <a href="https://aihackday.com/brisbane/">AI Hack Day Brisbane</a> — August 1, 2026 at
             SSW Brisbane (co-organiser).
