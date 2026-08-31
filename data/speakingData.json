@@ -3,8 +3,8 @@
     {
       "id": "manual-global-ai-construct-brisbane-2026",
       "title": "Small Models, Sharp Jobs: Build a Local Agent That Proves Its Work",
-      "description": "A 90-minute session building a .NET agent that runs entirely offline on small open-weight models in LM Studio or Ollama. A plain-English prompt becomes a typed filter that C# validates and clamps before it touches an approved dataset; a second agent selects records by ID; and deterministic code gates reject invented IDs, malformed JSON and low confidence before anything reaches the final analysis. Built on Microsoft Agent Framework and .NET 10, then shown again as a MAF Workflows graph. Planned as a hands-on workshop, delivered as a talk after attendee setup problems.",
-      "type": "talk",
+      "description": "A 90-minute hands-on workshop building a .NET agent that runs entirely offline on small open-weight models in LM Studio or Ollama. A plain-English prompt becomes a typed filter that C# validates and clamps before it touches an approved dataset; a second agent selects records by ID; and deterministic code gates reject invented IDs, malformed JSON and low confidence before anything reaches the final analysis. Built on Microsoft Agent Framework and .NET 10, then shown again as a MAF Workflows graph. Six progressive labs you can work through at your own pace.",
+      "type": "workshop",
       "groupName": null,
       "events": [
         {

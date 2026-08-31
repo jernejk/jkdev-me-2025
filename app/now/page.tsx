@@ -51,12 +51,13 @@ export default function Now() {
             <a href="https://www.meetup.com/ai-builders-brisbane-ai-experts-engineers-ai-agents/events/316112128">
               Global AI Construct Brisbane
             </a>{' '}
-            — <em>Small Models, Sharp Jobs — Build a Local Agent That Proves Its Work</em> (August
-            31, 2026) at the Microsoft Brisbane office. A .NET agent that runs entirely offline on
-            small open-weight models: the model fills a typed filter, C# validates and clamps it
-            before it touches the data, and deterministic gates reject invented record IDs,
-            malformed JSON and low confidence before anything reaches the final answer. Built on
-            Microsoft Agent Framework and .NET 10.{' '}
+            — <em>Small Models, Sharp Jobs — Build a Local Agent That Proves Its Work</em>, a
+            90-minute hands-on workshop (August 31, 2026) at the Microsoft Brisbane office. We built
+            a .NET agent that runs entirely offline on small open-weight models: the model fills a
+            typed filter, C# validates and clamps it before it touches the data, and deterministic
+            gates reject invented record IDs, malformed JSON and low confidence before anything
+            reaches the final answer. Built on Microsoft Agent Framework and .NET 10. Six
+            progressive labs, so you can keep going at home.{' '}
             <a href="https://small-models-sharp-jobs-workshop-20260829.surge.sh/slides/">Slides</a>{' '}
             and <a href="https://github.com/jernejk/small-models-sharp-jobs">code</a> are public.
           </li>
