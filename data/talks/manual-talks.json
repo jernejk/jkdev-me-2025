@@ -1,7 +1,29 @@
 {
   "source": "Manual talk entries",
-  "updatedDate": "2026-09-01",
+  "updatedDate": "2026-09-14",
   "talks": [
+    {
+      "id": "manual-codex-custom-birthday-gift-brisbane-2026",
+      "title": "How to make a custom b-day gift with Codex?",
+      "description": "From an idea to a handmade birthday gift over two weekends. ChatGPT image generation helped explore concepts; Codex helped inspect SVG files, operate Cricut Design Space and correct setup mistakes. Interactive HTML layers and PDF previews made the design easier to judge before cutting. A practical story about computer use, creative judgement and making something personal with the materials on hand.",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "Codex Community Meetup – Brisbane",
+          "location": "Launch Event Space, Level 3, The Precinct, Fortitude Valley, QLD, Australia",
+          "date": "2026-09-14",
+          "url": "https://luma.com/waqcl0zy",
+          "status": "upcoming",
+          "role": "speaker"
+        }
+      ],
+      "tags": ["Codex", "Computer Use", "AI", "Image Generation", "Cricut"],
+      "videoUrl": null,
+      "slidesUrl": "https://penny-gift-story-20260914.surge.sh",
+      "githubUrl": null,
+      "conferenceUrl": "https://luma.com/waqcl0zy"
+    },
     {
       "id": "manual-global-ai-construct-brisbane-2026",
       "title": "Small Models, Sharp Jobs: Build a Local Agent That Proves Its Work",

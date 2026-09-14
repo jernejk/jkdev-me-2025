@@ -19,7 +19,7 @@ export default function Now() {
 
       <div className="prose dark:prose-invert max-w-none">
         <p>
-          <em>Last updated: September 1, 2026</em>
+          <em>Last updated: September 14, 2026</em>
         </p>
 
         <h2>Current Focus</h2>
@@ -39,9 +39,19 @@ export default function Now() {
           <li>Turning notes into sharper tutorials, talks, and demos.</li>
         </ul>
 
+        <h2>This week</h2>
+        <p>
+          <a href="https://luma.com/waqcl0zy">Codex Community Meetup – Brisbane</a>, September 14,
+          2026 at The Precinct: <em>How to make a custom b-day gift with Codex?</em> A story about
+          turning an idea into a real gift over two weekends, using image generation, Codex computer
+          use and the cardstock and pens I had. Creativity, testing and hands-on work still
+          mattered.{' '}
+          <a href="https://penny-gift-story-20260914.surge.sh">See the interactive slides</a>.
+        </p>
+
         <h2>Upcoming Events</h2>
         <p>
-          Nothing locked in right now. If you would like me to speak at your event or user group,{' '}
+          For future speaking invitations and user-group sessions,{' '}
           <a href="https://www.linkedin.com/in/jernejkavka/">get in touch</a>.
         </p>
 
