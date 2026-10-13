@@ -46,6 +46,28 @@
       "conferenceUrl": "https://luma.com/mojp4yl6"
     },
     {
+      "id": "manual-github-copilot-dev-days-brisbane-2026",
+      "title": "GitHub Copilot Dev Days Brisbane",
+      "description": "Mentoring at a community-led, hands-on workshop on agent-driven development with the GitHub Copilot app: working through a project backlog from picking up issues and running agents to reviewing changes and merging pull requests.",
+      "type": "workshop",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "GitHub Copilot Dev Days – Coding Night ANZ",
+          "location": "Level 28, 215 Adelaide St, Brisbane, QLD, Australia",
+          "date": "2026-09-24",
+          "url": "https://www.meetup.com/coding-night-anz-local/events/315972680/",
+          "status": "past",
+          "role": "mentor"
+        }
+      ],
+      "tags": ["GitHub Copilot", "Agents", "AI"],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": "https://www.meetup.com/coding-night-anz-local/events/315972680/"
+    },
+    {
       "id": "manual-codex-custom-birthday-gift-brisbane-2026",
       "title": "How to make a custom b-day gift with Codex?",
       "description": "From an idea to a handmade birthday gift over two weekends. ChatGPT image generation helped explore concepts; Codex helped inspect SVG files, operate Cricut Design Space and correct setup mistakes. Interactive HTML layers and PDF previews made the design easier to judge before cutting. A practical story about computer use, creative judgement and making something personal with the materials on hand.",

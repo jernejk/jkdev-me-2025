@@ -60,6 +60,13 @@ export default function Now() {
         <h2>Recent</h2>
         <ul>
           <li>
+            <a href="https://www.meetup.com/coding-night-anz-local/events/315972680/">
+              GitHub Copilot Dev Days Brisbane
+            </a>{' '}
+            — September 24, 2026 (mentor). A hands-on workshop on agent-driven development with the
+            GitHub Copilot app, from picking up issues to merging pull requests.
+          </li>
+          <li>
             <a href="https://luma.com/waqcl0zy">Codex Community Meetup – Brisbane</a> —{' '}
             <em>How to make a custom b-day gift with Codex?</em> (September 14, 2026) at The
             Precinct. Turning an idea into a real gift over two weekends with image generation,
