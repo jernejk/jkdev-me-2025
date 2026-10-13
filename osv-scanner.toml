@@ -8,8 +8,23 @@
 
 [[IgnoredVulns]]
 id = "GHSA-8988-4f7v-96qf"
-ignoreUntil = 2026-09-18
+ignoreUntil = 2026-11-25
 reason = "@opentelemetry/core 1.30.1 (Medium 5.3). Fix is otel 2.x. The stack is pulled by @contentlayer2/utils 0.5.8 via @opentelemetry/sdk-trace-node ^1.30.1 — not @sentry/node, which is no longer a dependency. propagator-jaeger is already forced to 2.x via resolutions and the production build passes; core has not been moved yet. Build-time/observability only; no untrusted input path on a static site."
+
+[[IgnoredVulns]]
+id = "GHSA-qqmp-wf37-98f9"
+ignoreUntil = 2026-11-25
+reason = "@opentelemetry/instrumentation-{knex,mongoose,mysql,mysql2,pg,tedious} (Medium 5.8), database user exposure in spans. Fixes are much newer 0.x lines, pulled by the same contentlayer2 0.5.8 otel stack (latest contentlayer2 is still 0.5.8). The site has no database; build-time only."
+
+[[IgnoredVulns]]
+id = "GHSA-rj75-hqrm-r3gf"
+ignoreUntil = 2026-11-25
+reason = "postcss-selector-parser 6.0.10 (Medium 5.9), quadratic selector parsing. Fix is 7.x; @tailwindcss/typography (latest 0.5.20 included) pins 6.0.10 exactly. Build-time only, parses our own CSS."
+
+[[IgnoredVulns]]
+id = "GHSA-238p-pmpm-9mq7"
+ignoreUntil = 2026-11-25
+reason = "katex 0.16.x (Low 2.1), trust-restriction bypass that needs pre-existing prototype pollution. Fix is 0.18.2; rehype-katex (latest 7.0.1) requires ^0.16.0. Renders our own posts at build time."
 
 # --- No released fix upstream. Trivy runs with --ignore-unfixed so it does not
 # flag these; osv-scanner has no equivalent flag, so they are listed here to
@@ -21,11 +36,26 @@ ignoreUntil = 2026-11-25
 reason = "extract-zip 2.0.1 (High 8.6). 2.0.1 is the latest published release; there is no fixed version. Transitive under puppeteer, dev/build only — it unpacks the Chromium download, not user input."
 
 [[IgnoredVulns]]
-id = "GHSA-5p2g-fcmc-qvqq"
+id = "GHSA-7pqw-9j4j-h8q3"
 ignoreUntil = 2026-11-25
-reason = "image-size 2.0.2 (High 8.7), JXL/HEIF parser DoS. 2.0.2 is the latest published release; there is no fixed version. Build-time only, and it reads our own images from the repo."
+reason = "extract-zip 2.0.1 (High 8.1), symlink arbitrary file write. Same package and reasoning as GHSA-jmr9-qjv8-65gv: no released fix, only unpacks the Chromium download."
 
 [[IgnoredVulns]]
-id = "GHSA-w3rx-r6r6-pgpr"
+id = "GHSA-vfj7-8cjw-p6xm"
 ignoreUntil = 2026-11-25
-reason = "image-size 2.0.2 (High 8.7). Same package and reasoning as GHSA-5p2g-fcmc-qvqq: no released fix, build-time only, parses our own images."
+reason = "braces 3.0.3 (High 8.7), stack-exhaustion DoS. 3.0.3 is the latest published release; there is no fixed version. Pulled by chokidar/micromatch for build-time globbing of our own paths."
+
+[[IgnoredVulns]]
+id = "GHSA-ch52-4w7c-c8xp"
+ignoreUntil = 2026-11-25
+reason = "http-cache-semantics (High 8.7), max-stale cross-user cache disclosure. No released fix. Used by HTTP clients in dev tooling (linkinator, unlighthouse); no shared cache serves users."
+
+[[IgnoredVulns]]
+id = "GHSA-86w9-cpqp-85rv"
+ignoreUntil = 2026-11-25
+reason = "node-forge 1.4.0 (High 8.7), lenient RSA PKCS#1 v1.5 signature verification. No released fix. Pulled by listhen under @unlighthouse/cli for a local dev cert; never verifies third-party signatures."
+
+[[IgnoredVulns]]
+id = "GHSA-hp3w-g68c-fv3c"
+ignoreUntil = 2026-11-25
+reason = "sprintf-js 1.0.3 (Medium 6.9), DoS via unbounded precision. No released fix. Pulled by argparse 1.x under js-yaml 3 for build-time frontmatter parsing of our own content."
