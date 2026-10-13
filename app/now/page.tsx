@@ -19,7 +19,7 @@ export default function Now() {
 
       <div className="prose dark:prose-invert max-w-none">
         <p>
-          <em>Last updated: September 14, 2026</em>
+          <em>Last updated: October 14, 2026</em>
         </p>
 
         <h2>Current Focus</h2>
@@ -39,17 +39,19 @@ export default function Now() {
           <li>Turning notes into sharper tutorials, talks, and demos.</li>
         </ul>
 
-        <h2>This week</h2>
-        <p>
-          <a href="https://luma.com/waqcl0zy">Codex Community Meetup – Brisbane</a>, September 14,
-          2026 at The Precinct: <em>How to make a custom b-day gift with Codex?</em> A story about
-          turning an idea into a real gift over two weekends, using image generation, Codex computer
-          use and the cardstock and pens I had. Creativity, testing and hands-on work still
-          mattered.{' '}
-          <a href="https://penny-gift-story-20260914.surge.sh">See the interactive slides</a>.
-        </p>
-
         <h2>Upcoming Events</h2>
+        <ul>
+          <li>
+            <a href="https://luma.com/mojp4yl6">DevDay Exchange Community: Brisbane</a> — October
+            20, 2026 at The Precinct. A project showcase at the Codex Community Brisbane evening
+            unpacking OpenAI DevDay 2026.
+          </li>
+          <li>
+            <a href="https://luma.com/qveldpfr">Ship, Then Sell It: Build Club Brisbane x AdaL</a> —
+            October 22, 2026 at The Precinct (co-organiser). Bring a project and leave with a demo
+            video and a launch post.
+          </li>
+        </ul>
         <p>
           For future speaking invitations and user-group sessions,{' '}
           <a href="https://www.linkedin.com/in/jernejkavka/">get in touch</a>.
@@ -57,6 +59,13 @@ export default function Now() {
 
         <h2>Recent</h2>
         <ul>
+          <li>
+            <a href="https://luma.com/waqcl0zy">Codex Community Meetup – Brisbane</a> —{' '}
+            <em>How to make a custom b-day gift with Codex?</em> (September 14, 2026) at The
+            Precinct. Turning an idea into a real gift over two weekends with image generation,
+            Codex computer use and the cardstock and pens I had.{' '}
+            <a href="https://penny-gift-story-20260914.surge.sh">Interactive slides</a>.
+          </li>
           <li>
             <a href="https://www.meetup.com/ai-builders-brisbane-ai-experts-engineers-ai-agents/events/316112128">
               Global AI Construct Brisbane

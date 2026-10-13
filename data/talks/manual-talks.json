@@ -1,7 +1,52 @@
 {
   "source": "Manual talk entries",
-  "updatedDate": "2026-09-14",
+  "updatedDate": "2026-10-14",
   "talks": [
+    {
+      "id": "manual-buildclub-adal-ship-then-sell-brisbane-2026",
+      "title": "Ship, Then Sell It: Build Club Brisbane x AdaL",
+      "description": "Co-hosting a Build Club Brisbane evening with AdaL for builders whose side projects go unseen. Jax Koh (DevRel at AdaL) on why getting users is the hard part now, a live codebase-to-launch demo, then hands-on time to build a product demo and launch post, followed by show and tell.",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "Build Club Brisbane x AdaL",
+          "location": "The Precinct, Level 2/315 Brunswick St, Fortitude Valley, QLD, Australia",
+          "date": "2026-10-22",
+          "url": "https://luma.com/qveldpfr",
+          "status": "upcoming",
+          "role": "host"
+        }
+      ],
+      "tags": ["AI", "Agents", "Build Club", "Launch"],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": "https://luma.com/qveldpfr",
+      "imageUrl": "/static/images/events/buildclub.png"
+    },
+    {
+      "id": "manual-devday-exchange-brisbane-2026",
+      "title": "Project Showcase: DevDay Exchange Brisbane",
+      "description": "A short project showcase at the Codex Community Brisbane DevDay Exchange, a community evening unpacking OpenAI DevDay 2026 announcements with practical talks and hands-on builds.",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "DevDay Exchange Community: Brisbane",
+          "location": "Dimbin-Mil Event Space, The Precinct, Fortitude Valley, QLD, Australia",
+          "date": "2026-10-20",
+          "url": "https://luma.com/mojp4yl6",
+          "status": "upcoming",
+          "role": "speaker"
+        }
+      ],
+      "tags": ["Codex", "OpenAI", "AI"],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": "https://luma.com/mojp4yl6"
+    },
     {
       "id": "manual-codex-custom-birthday-gift-brisbane-2026",
       "title": "How to make a custom b-day gift with Codex?",
