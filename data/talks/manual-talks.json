@@ -5,7 +5,7 @@
     {
       "id": "manual-buildclub-adal-ship-then-sell-brisbane-2026",
       "title": "Ship, Then Sell It: Build Club Brisbane x AdaL",
-      "description": "Co-hosting a Build Club Brisbane evening with AdaL for builders whose side projects go unseen. Jax Koh (DevRel at AdaL) on why getting users is the hard part now, a live codebase-to-launch demo, then hands-on time to build a product demo and launch post, followed by show and tell.",
+      "description": "Co-organising a Build Club Brisbane evening with AdaL for builders whose side projects go unseen. Jax Koh (DevRel at AdaL) on why getting users is the hard part now, a live codebase-to-launch demo, then hands-on time to build a product demo and launch post, followed by show and tell.",
       "type": "talk",
       "groupName": null,
       "events": [
@@ -15,7 +15,7 @@
           "date": "2026-10-22",
           "url": "https://luma.com/qveldpfr",
           "status": "upcoming",
-          "role": "host"
+          "role": "organizer"
         }
       ],
       "tags": ["AI", "Agents", "Build Club", "Launch"],
