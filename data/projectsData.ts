@@ -7,6 +7,12 @@ interface Project {
 
 const projectsData: Project[] = [
   {
+    title: 'talk-deck-template',
+    description:
+      'AI-first talk decks in plain HTML and CSS: a coding agent builds the slides, QA renders and checks every one, and decks run offline. Seven templates, 63 slide patterns and a live gallery.',
+    href: 'https://github.com/jernejk/talk-deck-template',
+  },
+  {
     title: 'efcore-bench-lab',
     description:
       'EF Core benchmarking experiments focused on query behavior, performance bottlenecks, practical optimization and repeatable coding-agent workflows.',
