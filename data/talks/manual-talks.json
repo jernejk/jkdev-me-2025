@@ -1,7 +1,30 @@
 {
   "source": "Manual talk entries",
-  "updatedDate": "2026-10-14",
+  "updatedDate": "2026-11-02",
   "talks": [
+    {
+      "id": "manual-ddd-brisbane-2026-innocent-linq-query",
+      "title": "The Case of the Innocent LINQ Query: An EF Core Performance Investigation",
+      "description": "The LINQ query is readable, the SQL finishes quickly, and the page is still slow. Following one request from the HTTP endpoint to the database and back, traces, query logs and generated SQL expose the suspects: an N+1 query hiding behind a loop, an innocent-looking Include that multiplies rows, unnecessary data loading and a query that needs a better index. Each gets evidence, a targeted fix and a measured effect on the whole request, and you leave with a repeatable investigation checklist.",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "DDD Brisbane 2026",
+          "location": "QUT Gardens Point, Brisbane, QLD, Australia",
+          "date": "2026-12-05",
+          "url": "https://www.dddbrisbane.com",
+          "status": "upcoming",
+          "role": "speaker"
+        }
+      ],
+      "tags": ["EF Core", ".NET", "Performance"],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": "https://www.dddbrisbane.com",
+      "imageUrl": "/static/images/events/ddd.png"
+    },
     {
       "id": "manual-buildclub-adal-ship-then-sell-brisbane-2026",
       "title": "Ship, Then Sell It: Build Club Brisbane x AdaL",
@@ -14,7 +37,7 @@
           "location": "The Precinct, Level 2/315 Brunswick St, Fortitude Valley, QLD, Australia",
           "date": "2026-10-22",
           "url": "https://luma.com/qveldpfr",
-          "status": "upcoming",
+          "status": "past",
           "role": "organizer"
         }
       ],
@@ -37,7 +60,7 @@
           "location": "Dimbin-Mil Event Space, The Precinct, Fortitude Valley, QLD, Australia",
           "date": "2026-10-20",
           "url": "https://luma.com/mojp4yl6",
-          "status": "upcoming",
+          "status": "past",
           "role": "speaker"
         }
       ],
@@ -81,7 +104,7 @@
           "location": "Launch Event Space, Level 3, The Precinct, Fortitude Valley, QLD, Australia",
           "date": "2026-09-14",
           "url": "https://luma.com/waqcl0zy",
-          "status": "upcoming",
+          "status": "past",
           "role": "speaker"
         }
       ],

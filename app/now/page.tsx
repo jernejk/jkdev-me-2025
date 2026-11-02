@@ -19,37 +19,28 @@ export default function Now() {
 
       <div className="prose dark:prose-invert max-w-none">
         <p>
-          <em>Last updated: October 14, 2026</em>
+          <em>Last updated: November 2, 2026</em>
         </p>
 
         <h2>Current Focus</h2>
         <ul>
+          <li>Big news coming after November 16. Stay tuned!</li>
+          <li>Working on ADE (Agentic Developer Environment).</li>
           <li>
-            Shipping <a href="https://github.com/jernejk/efcore-bench-lab">EF Core Bench Lab</a>:
-            practical EF Core query traces, execution plans, and performance investigations.
+            Improving <a href="https://github.com/jernejk/efcore-bench-lab">EF Core Bench Lab</a>{' '}
+            for my DDD Brisbane talk.
           </li>
-          <li>
-            Organising AI Hack Days in Sydney and Brisbane for developers who want practical,
-            hands-on AI learning.
-          </li>
-          <li>
-            Building useful .NET + AI experiments, especially local models and agent harnesses —
-            most recently a six-lab course on making small local models reliable enough to trust.
-          </li>
-          <li>Turning notes into sharper tutorials, talks, and demos.</li>
+          <li>Helping out with Codex Community Brisbane, the local Codex user group.</li>
         </ul>
 
         <h2>Upcoming Events</h2>
         <ul>
           <li>
-            <a href="https://luma.com/mojp4yl6">DevDay Exchange Community: Brisbane</a> — October
-            20, 2026 at The Precinct. A project showcase at the Codex Community Brisbane evening
-            unpacking OpenAI DevDay 2026.
-          </li>
-          <li>
-            <a href="https://luma.com/qveldpfr">Ship, Then Sell It: Build Club Brisbane x AdaL</a> —
-            October 22, 2026 at The Precinct (co-organiser). Bring a project and leave with a demo
-            video and a launch post.
+            <a href="https://www.dddbrisbane.com">DDD Brisbane 2026</a> —{' '}
+            <em>The Case of the Innocent LINQ Query: An EF Core Performance Investigation</em>{' '}
+            (December 5, 2026) at QUT Gardens Point. The LINQ query looks fine and the SQL is fast,
+            yet the page is still slow: following one request end to end to catch N+1 queries,
+            row-multiplying Includes, over-fetching and missing indexes.
           </li>
         </ul>
         <p>
@@ -59,6 +50,16 @@ export default function Now() {
 
         <h2>Recent</h2>
         <ul>
+          <li>
+            <a href="https://luma.com/qveldpfr">Ship, Then Sell It: Build Club Brisbane x AdaL</a> —
+            October 22, 2026 at The Precinct (co-organiser). A hands-on evening on turning side
+            projects into a product demo and a launch post.
+          </li>
+          <li>
+            <a href="https://luma.com/mojp4yl6">DevDay Exchange Community: Brisbane</a> — October
+            20, 2026 at The Precinct. A project showcase at the Codex Community Brisbane evening
+            unpacking OpenAI DevDay 2026.
+          </li>
           <li>
             <a href="https://www.meetup.com/coding-night-anz-local/events/315972680/">
               GitHub Copilot Dev Days Brisbane
