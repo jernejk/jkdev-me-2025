@@ -2,10 +2,19 @@ interface Project {
   title: string
   description: string
   href?: string
+  liveHref?: string
   imgSrc?: string
 }
 
 const projectsData: Project[] = [
+  {
+    title: "JK's Arcade",
+    description:
+      'Small browser games I built with AI coding tools, in one installable app: Piece by Pixel, Tumbleverse, Loose Ends, Prism Pop Painter and Block Loop Shooter. Free, no accounts, and most of them play fine on a phone.',
+    imgSrc: '/static/images/projects/jk-arcade.jpg',
+    href: 'https://github.com/jernejk/jk-arcade',
+    liveHref: 'https://jernejk.github.io/jk-arcade/',
+  },
   {
     title: 'talk-deck-template',
     description:

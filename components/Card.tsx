@@ -1,7 +1,7 @@
 import Image from './Image'
 import Link from './Link'
 
-const Card = ({ title, description, imgSrc, href }) => (
+const Card = ({ title, description, imgSrc, href, liveHref = '' }) => (
   <div className="md max-w-[544px] p-4 md:w-1/2">
     <div
       className={`${imgSrc ? 'h-full' : ''} overflow-hidden rounded-md border-2 border-gray-200/60 dark:border-gray-700/60`}
@@ -37,15 +37,26 @@ const Card = ({ title, description, imgSrc, href }) => (
           )}
         </h2>
         <p className="prose mb-3 max-w-none text-gray-500 dark:text-gray-400">{description}</p>
-        {href && (
-          <Link
-            href={href}
-            className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400 text-base leading-6 font-medium"
-            aria-label={`Link to ${title}`}
-          >
-            Learn more &rarr;
-          </Link>
-        )}
+        <div className="flex flex-wrap gap-x-6 gap-y-2">
+          {href && (
+            <Link
+              href={href}
+              className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400 text-base leading-6 font-medium"
+              aria-label={`Link to ${title}`}
+            >
+              Learn more &rarr;
+            </Link>
+          )}
+          {liveHref && (
+            <Link
+              href={liveHref}
+              className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400 text-base leading-6 font-medium"
+              aria-label={`Open the live version of ${title}`}
+            >
+              Live version &rarr;
+            </Link>
+          )}
+        </div>
       </div>
     </div>
   </div>
