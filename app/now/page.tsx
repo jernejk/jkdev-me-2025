@@ -52,13 +52,14 @@ export default function Now() {
         <ul>
           <li>
             <a href="https://luma.com/qveldpfr">Ship, Then Sell It: Build Club Brisbane x AdaL</a> —
-            October 22, 2026 at The Precinct (co-organiser). A hands-on evening on turning side
-            projects into a product demo and a launch post.
+            October 22, 2026 at The Precinct (assisted organisation). A hands-on evening on turning
+            side projects into a product demo and a launch post.
           </li>
           <li>
             <a href="https://luma.com/mojp4yl6">DevDay Exchange Community: Brisbane</a> — October
             20, 2026 at The Precinct. A project showcase at the Codex Community Brisbane evening
-            unpacking OpenAI DevDay 2026.
+            unpacking OpenAI DevDay 2026.{' '}
+            <a href="https://devday-pantry-20261020.surge.sh">Slides</a>.
           </li>
           <li>
             <a href="https://www.meetup.com/coding-night-anz-local/events/315972680/">

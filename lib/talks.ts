@@ -1,4 +1,11 @@
-export type EventRole = 'speaker' | 'host' | 'organizer' | 'workshop' | 'mentor' | 'attendee'
+export type EventRole =
+  | 'speaker'
+  | 'host'
+  | 'organizer'
+  | 'assisted-organizer'
+  | 'workshop'
+  | 'mentor'
+  | 'attendee'
 
 type TalkEvent = {
   eventName: string

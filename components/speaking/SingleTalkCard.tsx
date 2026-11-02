@@ -10,6 +10,16 @@ interface Event {
   date: string
   url: string
   status: 'upcoming' | 'past'
+  role?: string
+}
+
+const ROLE_LABELS: Record<string, string> = {
+  host: 'Host',
+  judge: 'Judge',
+  mentor: 'Mentor',
+  organizer: 'Organiser',
+  'assisted-organizer': 'Assisted organisation',
+  workshop: 'Workshop',
 }
 
 interface SingleTalkCardProps {
@@ -48,6 +58,8 @@ export default function SingleTalkCard({
   }
 
   const firstSentence = getFirstSentence(description)
+  const roleLabel =
+    event.role && event.role !== 'speaker' ? (ROLE_LABELS[event.role] ?? event.role) : null
 
   // Get domain for favicon
   const getDomain = (url: string) => {
@@ -128,6 +140,11 @@ export default function SingleTalkCard({
 
           <div className="mb-2 flex flex-wrap items-center gap-x-2 text-sm text-gray-500 dark:text-gray-400">
             <span className="font-medium text-gray-700 dark:text-gray-300">{event.eventName}</span>
+            {roleLabel && (
+              <span className="bg-primary-50 text-primary-700 dark:bg-primary-900/30 dark:text-primary-300 rounded-full px-2 py-0.5 text-xs font-medium">
+                {roleLabel}
+              </span>
+            )}
             <span>•</span>
             <span>{formatDate(event.date)}</span>
             <span>•</span>

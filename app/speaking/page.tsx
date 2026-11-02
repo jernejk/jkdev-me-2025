@@ -12,6 +12,7 @@ interface Event {
   url?: string
   online?: boolean
   status: 'upcoming' | 'past'
+  role?: string
 }
 
 interface Talk {
