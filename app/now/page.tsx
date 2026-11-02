@@ -28,6 +28,12 @@ export default function Now() {
           <li>Big news coming after November 16. Stay tuned!</li>
           <li>Working on ADE (Agentic Developer Environment).</li>
           <li>
+            Opened <a href="https://jernejk.github.io/jk-arcade/">JK&apos;s Arcade</a>: the small
+            browser games I build with AI coding tools, in one app you can install on your phone.
+            Newest are Piece by Pixel and Tumbleverse. Builds are on{' '}
+            <a href="https://github.com/jernejk/jk-arcade">GitHub</a>.
+          </li>
+          <li>
             Released <a href="https://github.com/jernejk/talk-deck-template">talk-deck-template</a>:
             AI-first talk decks in plain HTML. A coding agent builds the slides, QA checks every
             one, and it all runs offline.
@@ -50,6 +56,34 @@ export default function Now() {
             Still tweaking on the way to the venue: a slide made with the template. Rider and city
             generated with gpt-image-2. Browse every pattern in the{' '}
             <a href="https://talk-deck-template.surge.sh">live gallery</a>.
+          </figcaption>
+        </figure>
+
+        <figure>
+          <div className="grid gap-4 sm:grid-cols-2">
+            <a href="https://jernejk.github.io/jk-arcade/piece-by-pixel/#gull-harbor@master">
+              <Image
+                src="/static/images/now/arcade-piece-by-pixel.jpg"
+                alt="Piece by Pixel on the Master tier: a pixel-art harbour with dark silhouettes where the lighthouse and cliffs are missing, and a tray of turned pieces"
+                width={1280}
+                height={800}
+                sizes="(max-width: 640px) 100vw, 550px"
+              />
+            </a>
+            <a href="https://jernejk.github.io/jk-arcade/tumbleverse/">
+              <Image
+                src="/static/images/now/arcade-tumbleverse.jpg"
+                alt="Tumbleverse's menu: five game-mode cards, Knockdown, Sandbox, Zen, Bridge Breaker and Cosmos, in front of a castle and planets"
+                width={1280}
+                height={800}
+                sizes="(max-width: 640px) 100vw, 550px"
+              />
+            </a>
+          </div>
+          <figcaption>
+            The two newest games: Piece by Pixel, rebuilding a pixel-art harbour on the Master tier,
+            and Tumbleverse, a physics toy with five modes. Both play in the{' '}
+            <a href="https://jernejk.github.io/jk-arcade/">live arcade</a>.
           </figcaption>
         </figure>
 
