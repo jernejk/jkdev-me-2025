@@ -1,3 +1,4 @@
+import Image from '@/components/Image'
 import { genPageMetadata } from 'app/seo'
 
 export const metadata = genPageMetadata({
@@ -27,11 +28,30 @@ export default function Now() {
           <li>Big news coming after November 16. Stay tuned!</li>
           <li>Working on ADE (Agentic Developer Environment).</li>
           <li>
+            Released <a href="https://github.com/jernejk/talk-deck-template">talk-deck-template</a>:
+            AI-first talk decks in plain HTML. A coding agent builds the slides, QA checks every
+            one, and it all runs offline.
+          </li>
+          <li>
             Improving <a href="https://github.com/jernejk/efcore-bench-lab">EF Core Bench Lab</a>{' '}
             for my DDD Brisbane talk.
           </li>
           <li>Helping out with Codex Community Brisbane, the local Codex user group.</li>
         </ul>
+        <figure>
+          <Image
+            src="/static/images/now/talk-deck-scooter.jpg"
+            alt="A pixel-art rider on an e-scooter crossing Brisbane at dusk while a checklist ticks off a tighter slide title, a refreshed demo fallback, QA and a deploy"
+            width={1920}
+            height={1080}
+            sizes="(max-width: 1100px) 100vw, 1100px"
+          />
+          <figcaption>
+            Still tweaking on the way to the venue: a slide made with the template. Rider and city
+            generated with gpt-image-2. Browse every pattern in the{' '}
+            <a href="https://talk-deck-template.surge.sh">live gallery</a>.
+          </figcaption>
+        </figure>
 
         <h2>Upcoming Events</h2>
         <ul>
