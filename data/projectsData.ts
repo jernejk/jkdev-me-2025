@@ -19,31 +19,23 @@ const projectsData: Project[] = [
     title: 'talk-deck-template',
     description:
       'AI-first talk decks in plain HTML and CSS: a coding agent builds the slides, QA renders and checks every one, and decks run offline. Seven templates, 63 slide patterns and a live gallery.',
+    imgSrc: '/static/images/projects/talk-deck-template.jpg',
     href: 'https://github.com/jernejk/talk-deck-template',
+    liveHref: 'https://talk-deck-template.surge.sh',
   },
   {
     title: 'efcore-bench-lab',
     description:
       'EF Core benchmarking experiments focused on query behavior, performance bottlenecks, practical optimization and repeatable coding-agent workflows.',
+    imgSrc: '/static/images/projects/efcore-bench-lab.jpg',
     href: 'https://github.com/jernejk/efcore-bench-lab',
   },
   {
     title: 'home-automation-offline-gpt',
     description:
       'Offline GPT prototype for home automation, using local models for privacy-first voice and workflow automation.',
+    imgSrc: '/static/images/projects/home-automation-offline-gpt.jpg',
     href: 'https://github.com/jernejk/home-automation-offline-gpt',
-  },
-  {
-    title: 'CognitiveServices.Explorer',
-    description:
-      'Tooling and demos for exploring Microsoft Cognitive Services APIs in practical developer scenarios.',
-    href: 'https://github.com/jernejk/CognitiveServices.Explorer',
-  },
-  {
-    title: 'RealTimeFaceApi',
-    description:
-      'Real-time Face API experimentation with OpenCV and Azure Cognitive Services integrations.',
-    href: 'https://github.com/jernejk/RealTimeFaceApi',
   },
 ]
 
