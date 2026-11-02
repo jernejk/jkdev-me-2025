@@ -41,21 +41,21 @@ ignoreUntil = 2026-11-25
 reason = "extract-zip 2.0.1 (High 8.1), symlink arbitrary file write. Same package and reasoning as GHSA-jmr9-qjv8-65gv: no released fix, only unpacks the Chromium download."
 
 [[IgnoredVulns]]
-id = "GHSA-vfj7-8cjw-p6xm"
-ignoreUntil = 2026-11-25
-reason = "braces 3.0.3 (High 8.7), stack-exhaustion DoS. 3.0.3 is the latest published release; there is no fixed version. Pulled by chokidar/micromatch for build-time globbing of our own paths."
+id = "GHSA-mrhx-c7xc-m3w5"
+ignoreUntil = 2026-12-02
+reason = "zod 3.25.76 (High 8.2), memory exhaustion validating oversized constrained collections. Fix is 4.6.6; @contentlayer2/source-files 0.5.8 and chromium-bidi need zod 3. Validates our own frontmatter and local browser protocol messages at build/test time."
 
 [[IgnoredVulns]]
-id = "GHSA-ch52-4w7c-c8xp"
-ignoreUntil = 2026-11-25
-reason = "http-cache-semantics (High 8.7), max-stale cross-user cache disclosure. No released fix. Used by HTTP clients in dev tooling (linkinator, unlighthouse); no shared cache serves users."
+id = "GHSA-g3hv-75wg-m249"
+ignoreUntil = 2026-12-02
+reason = "minimatch 3.x/9.x/10.x (Medium 6.9), globparts amplification DoS. Fix is 11.0.1; eslint, typescript-eslint and copyfiles require older majors. Matches our own patterns at lint/build time."
 
 [[IgnoredVulns]]
-id = "GHSA-86w9-cpqp-85rv"
-ignoreUntil = 2026-11-25
-reason = "node-forge 1.4.0 (High 8.7), lenient RSA PKCS#1 v1.5 signature verification. No released fix. Pulled by listhen under @unlighthouse/cli for a local dev cert; never verifies third-party signatures."
+id = "GHSA-3g3m-2fjr-6pw4"
+ignoreUntil = 2026-12-02
+reason = "glob 10.x/13.x (Medium 6.3), AbortSignal cancellation bypass. Fix is 14.0.2; cacache, copyfiles, linkinator and node-gyp require older majors. Build/dev tooling over our own paths; nothing passes an AbortSignal."
 
 [[IgnoredVulns]]
-id = "GHSA-hp3w-g68c-fv3c"
-ignoreUntil = 2026-11-25
-reason = "sprintf-js 1.0.3 (Medium 6.9), DoS via unbounded precision. No released fix. Pulled by argparse 1.x under js-yaml 3 for build-time frontmatter parsing of our own content."
+id = "GHSA-gcqx-w48m-w2h4"
+ignoreUntil = 2026-12-02
+reason = "deepmerge 4.3.1 (Medium 5.3), prototype poisoning of merged objects. No released fix. Pulled by @svgr/plugin-svgo to merge our own SVGO config at build time."
