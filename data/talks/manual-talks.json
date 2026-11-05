@@ -1,7 +1,29 @@
 {
   "source": "Manual talk entries",
-  "updatedDate": "2026-11-02",
+  "updatedDate": "2026-11-05",
   "talks": [
+    {
+      "id": "manual-brisbane-dotnet-conf-2026",
+      "title": "Brisbane .NET Conf 2026 — Topic TBA",
+      "description": "I'll be speaking at Brisbane .NET Conf 2026. Topic TBA. The event listing is currently a placeholder; the advertised date and venue are provisional. Check the Meetup page for confirmed details.",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "Brisbane .NET Conf 2026",
+          "location": "Microsoft HQ, Brisbane (provisional)",
+          "date": "2026-11-12",
+          "url": "https://www.meetup.com/en-au/brisbane-dotnet-user-group/events/316892076/",
+          "status": "upcoming",
+          "role": "speaker"
+        }
+      ],
+      "tags": [".NET"],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": "https://www.meetup.com/en-au/brisbane-dotnet-user-group/events/316892076/"
+    },
     {
       "id": "manual-ddd-brisbane-2026-innocent-linq-query",
       "title": "The Case of the Innocent LINQ Query: An EF Core Performance Investigation",

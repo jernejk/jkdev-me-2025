@@ -28,6 +28,30 @@
       "imageUrl": "/static/images/events/ddd.png"
     },
     {
+      "id": "manual-brisbane-dotnet-conf-2026",
+      "title": "Brisbane .NET Conf 2026 — Topic TBA",
+      "description": "I'll be speaking at Brisbane .NET Conf 2026. Topic TBA. The event listing is currently a placeholder; the advertised date and venue are provisional. Check the Meetup page for confirmed details.",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "Brisbane .NET Conf 2026",
+          "location": "Microsoft HQ, Brisbane (provisional)",
+          "date": "2026-11-12",
+          "url": "https://www.meetup.com/en-au/brisbane-dotnet-user-group/events/316892076/",
+          "status": "upcoming",
+          "role": "speaker"
+        }
+      ],
+      "tags": [
+        ".NET"
+      ],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": "https://www.meetup.com/en-au/brisbane-dotnet-user-group/events/316892076/"
+    },
+    {
       "id": "manual-buildclub-adal-ship-then-sell-brisbane-2026",
       "title": "Ship, Then Sell It: Build Club Brisbane x AdaL",
       "description": "Helped organise a Build Club Brisbane evening with AdaL for builders whose side projects go unseen. Jax Koh (DevRel at AdaL) on why getting users is the hard part now, a live codebase-to-launch demo, then hands-on time to build a product demo and launch post, followed by show and tell.",
