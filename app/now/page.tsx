@@ -20,7 +20,7 @@ export default function Now() {
 
       <div className="prose dark:prose-invert max-w-none">
         <p>
-          <em>Last updated: November 2, 2026</em>
+          <em>Last updated: November 8, 2026</em>
         </p>
 
         <h2>Current Focus</h2>
@@ -30,7 +30,9 @@ export default function Now() {
           <li>
             Opened <a href="https://jernejk.github.io/jk-arcade/">JK&apos;s Arcade</a>: the small
             browser games I build with AI coding tools, in one app you can install on your phone.
-            Newest are Piece by Pixel and Tumbleverse. Builds are on{' '}
+            Newest is <a href="https://jernejk.github.io/jk-arcade/nap-patch/">Nap Patch</a>, a cosy
+            logic puzzle: tuck sleepy bush critters into a patchwork quilt, one per patch, row and
+            column, and no bumping. Piece by Pixel and Tumbleverse are in there too. Builds are on{' '}
             <a href="https://github.com/jernejk/jk-arcade">GitHub</a>.
           </li>
           <li>
@@ -81,9 +83,10 @@ export default function Now() {
             </a>
           </div>
           <figcaption>
-            The two newest games: Piece by Pixel, rebuilding a pixel-art harbour on the Master tier,
-            and Tumbleverse, a physics toy with five modes. Both play in the{' '}
-            <a href="https://jernejk.github.io/jk-arcade/">live arcade</a>.
+            Piece by Pixel, rebuilding a pixel-art harbour on the Master tier, and Tumbleverse, a
+            physics toy with five modes. Both play in the{' '}
+            <a href="https://jernejk.github.io/jk-arcade/">live arcade</a>, where{' '}
+            <a href="https://jernejk.github.io/jk-arcade/nap-patch/">Nap Patch</a> is the newest.
           </figcaption>
         </figure>
 
