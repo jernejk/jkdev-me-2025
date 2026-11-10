@@ -34,8 +34,6 @@ export default function Footer() {
         <div className="pb-2 text-center text-xs text-gray-500 dark:text-gray-500">
           <Link href="https://sessionize.com/jernej-kavka/">Sessionize</Link>
           {' • '}
-          <Link href="https://www.ssw.com.au/people/jernej-kavka/">SSW</Link>
-          {' • '}
           <Link href="https://mvp.microsoft.com/en-US/MVP/profile/a20a7792-5c01-eb11-a815-000d3a8ccaf5">
             MVP
           </Link>

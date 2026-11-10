@@ -20,7 +20,7 @@ export default function Now() {
 
       <div className="prose dark:prose-invert max-w-none">
         <p>
-          <em>Last updated: November 8, 2026</em>
+          <em>Last updated: November 10, 2026</em>
         </p>
 
         <h2>Current Focus</h2>
@@ -44,7 +44,11 @@ export default function Now() {
             Improving <a href="https://github.com/jernejk/efcore-bench-lab">EF Core Bench Lab</a>{' '}
             for my DDD Brisbane talk.
           </li>
-          <li>Helping out with Codex Community Brisbane, the local Codex user group.</li>
+          <li>
+            One of the organisers of{' '}
+            <a href="https://luma.com/mojp4yl6">DevDay Exchange Community: Brisbane</a>. No new
+            events announced yet.
+          </li>
         </ul>
         <figure>
           <Image
@@ -188,8 +192,8 @@ export default function Now() {
 
         <h2>Work</h2>
         <p>
-          Solution Architect at SSW Consulting in Brisbane, focused on .NET, EF Core, Azure, and
-          AI-enabled developer tooling.
+          AI Architect in Brisbane, focused on .NET, EF Core, Azure, and AI-enabled developer
+          tooling.
         </p>
       </div>
     </div>

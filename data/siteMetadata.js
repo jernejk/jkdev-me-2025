@@ -15,7 +15,6 @@ const siteMetadata = {
   youtube: 'https://www.youtube.com/channel/UCige1JIdeIc3sYU2HSaismg',
   linkedin: 'https://www.linkedin.com/in/jernejkavka/',
   sessionize: 'https://sessionize.com/jernej-kavka/',
-  ssw: 'https://www.ssw.com.au/people/jernej-kavka/',
   mvp: 'https://mvp.microsoft.com/en-US/MVP/profile/a20a7792-5c01-eb11-a815-000d3a8ccaf5',
   locale: 'en-US',
   // set to true if you want a navbar fixed to the top
