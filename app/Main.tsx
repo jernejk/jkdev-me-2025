@@ -45,7 +45,12 @@ export default function Home({ posts, upcomingTalk }) {
             </p>
             <p className="mt-4 max-w-3xl text-lg leading-8 text-slate-200">
               I build agentic AI workflows with Azure AI, coding agents, .NET and EF Core, speak at
-              conferences and organize developer communities in Brisbane.
+              conferences and organize developer communities in Brisbane. I am one of the organisers
+              of{' '}
+              <Link href="https://luma.com/mojp4yl6" className="underline underline-offset-4">
+                DevDay Exchange Community: Brisbane
+              </Link>
+              .
             </p>
             <div className="mt-5 flex items-center gap-3">
               <SocialIcon kind="github" href={siteMetadata.github} size={6} />
