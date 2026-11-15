@@ -3,25 +3,26 @@
   "updatedDate": "2026-11-16",
   "talks": [
     {
-      "id": "manual-brisbane-dotnet-conf-2026",
-      "title": "Brisbane .NET Conf 2026 — Topic TBA",
-      "description": "I'll be speaking at Brisbane .NET Conf 2026 on 25 November. Topic and venue to be announced.",
+      "id": "manual-global-ai-nights-dotnet-bootcamp-brisbane-2026",
+      "title": "Beyond Chatbots: Building Agent Harnesses with .NET",
+      "description": "A demo-led session on building an agent harness with Microsoft Agent Framework and C#. The harness gives an agent a plan, working memory, tools and clear boundaries. It turns a research request into a traceable report, then uses the same approach to diagnose a failing service and propose a repair without handing the model unrestricted control. Along the way: sessions, context management, human approval, telemetry, and when a simple CLI command is the better choice.",
       "type": "talk",
       "groupName": null,
       "events": [
         {
-          "eventName": "Brisbane .NET Conf 2026",
-          "location": "Brisbane",
+          "eventName": "Global AI Nights with .NET Bootcamp",
+          "location": "400 George Street, Brisbane, QLD, Australia",
           "date": "2026-11-25",
+          "url": "https://www.meetup.com/ai-builders-brisbane-ai-experts-engineers-ai-agents/events/317445928/",
           "status": "upcoming",
           "role": "speaker"
         }
       ],
-      "tags": [".NET"],
+      "tags": ["AI", ".NET", "Microsoft Agent Framework", "AI Agents"],
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
-      "conferenceUrl": null
+      "conferenceUrl": "https://www.meetup.com/ai-builders-brisbane-ai-experts-engineers-ai-agents/"
     },
     {
       "id": "manual-ddd-brisbane-2026-innocent-linq-query",

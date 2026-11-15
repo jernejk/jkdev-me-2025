@@ -103,6 +103,15 @@ export default function Now() {
             <a href="https://live-timelines-20261116.surge.sh">Slides</a>.
           </li>
           <li>
+            <a href="https://www.meetup.com/ai-builders-brisbane-ai-experts-engineers-ai-agents/events/317445928/">
+              Global AI Nights with .NET Bootcamp
+            </a>{' '}
+            — <em>Beyond Chatbots: Building Agent Harnesses with .NET</em> (November 25, 2026) at
+            400 George Street. A demo-led look at giving an agent a plan, working memory, tools and
+            clear boundaries with Microsoft Agent Framework and C#, without handing the model
+            unrestricted control.
+          </li>
+          <li>
             <a href="https://www.dddbrisbane.com">DDD Brisbane 2026</a> —{' '}
             <em>The Case of the Innocent LINQ Query: An EF Core Performance Investigation</em>{' '}
             (December 5, 2026) at QUT Gardens Point. The LINQ query looks fine and the SQL is fast,
