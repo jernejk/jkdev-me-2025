@@ -30,16 +30,15 @@
     {
       "id": "manual-brisbane-dotnet-conf-2026",
       "title": "Brisbane .NET Conf 2026 — Topic TBA",
-      "description": "I'll be speaking at Brisbane .NET Conf 2026. Topic TBA. The event listing is currently a placeholder; the advertised date and venue are provisional. Check the Meetup page for confirmed details.",
+      "description": "I'll be speaking at Brisbane .NET Conf 2026 on 25 November. Topic and venue to be announced.",
       "type": "talk",
       "groupName": null,
       "events": [
         {
           "eventName": "Brisbane .NET Conf 2026",
-          "location": "Microsoft HQ, Brisbane (provisional)",
-          "date": "2026-11-12",
-          "url": "https://www.meetup.com/en-au/brisbane-dotnet-user-group/events/316892076/",
-          "status": "past",
+          "location": "Brisbane",
+          "date": "2026-11-25",
+          "status": "upcoming",
           "role": "speaker"
         }
       ],
@@ -49,7 +48,59 @@
       "videoUrl": null,
       "slidesUrl": null,
       "githubUrl": null,
-      "conferenceUrl": "https://www.meetup.com/en-au/brisbane-dotnet-user-group/events/316892076/"
+      "conferenceUrl": null
+    },
+    {
+      "id": "manual-codex-community-meetup-brisbane-2026-11",
+      "title": "Many agents. Many hours. One page.",
+      "description": "A project showcase at the Codex Community Meetup in Brisbane. My SSW farewell film was made overnight by a lead agent and 38 subagents across both labs, over 22 hours. This talk shows how I kept track of it all: one live timeline page that a keeper agent writes as the work happens, with milestones, dead ends, pictures and the decisions waiting on me.",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "Codex Community Meetup: Brisbane, Australia",
+          "location": "Launch Event Space, Level 3, The Precinct, 315 Brunswick St Mall, Fortitude Valley, QLD, Australia",
+          "date": "2026-11-16",
+          "url": "https://luma.com/0uyxiwqo",
+          "status": "upcoming",
+          "role": "speaker"
+        }
+      ],
+      "tags": [
+        "Codex",
+        "OpenAI",
+        "AI Agents"
+      ],
+      "videoUrl": null,
+      "slidesUrl": "https://live-timelines-20261116.surge.sh",
+      "githubUrl": null,
+      "conferenceUrl": "https://luma.com/0uyxiwqo"
+    },
+    {
+      "id": "manual-ai-mega-meetup-brisbane-2026",
+      "title": "2026 AI Mega Meetup",
+      "description": "Brisbane and Gold Coast AI meetups and user groups came together for one evening at The Precinct, hosted by the AI Paper Reading Club. I presented two of the communities I help run: Build Club Brisbane and Codex Community Brisbane.",
+      "type": "talk",
+      "groupName": null,
+      "events": [
+        {
+          "eventName": "2026 AI Mega Meetup",
+          "location": "The Precinct – Stair Stadium, Level 2, 315 Brunswick St, Fortitude Valley, QLD, Australia",
+          "date": "2026-11-12",
+          "url": "https://events.humanitix.com/2026-ai-mega-meetup",
+          "status": "past",
+          "role": "presenter"
+        }
+      ],
+      "tags": [
+        "AI",
+        "Build Club",
+        "Codex"
+      ],
+      "videoUrl": null,
+      "slidesUrl": null,
+      "githubUrl": null,
+      "conferenceUrl": "https://events.humanitix.com/2026-ai-mega-meetup"
     },
     {
       "id": "manual-buildclub-adal-ship-then-sell-brisbane-2026",

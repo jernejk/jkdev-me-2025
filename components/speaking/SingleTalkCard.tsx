@@ -18,6 +18,7 @@ const ROLE_LABELS: Record<string, string> = {
   judge: 'Judge',
   mentor: 'Mentor',
   organizer: 'Organiser',
+  presenter: 'Presenter',
   'assisted-organizer': 'Assisted organisation',
   workshop: 'Workshop',
 }

@@ -20,19 +20,20 @@ export default function Now() {
 
       <div className="prose dark:prose-invert max-w-none">
         <p>
-          <em>Last updated: November 10, 2026</em>
+          <em>Last updated: November 16, 2026</em>
         </p>
 
         <h2>Current Focus</h2>
         <ul>
-          <li>Big news coming after November 16. Stay tuned!</li>
+          <li>
+            Started as AI Architect at <a href="https://www.avanade.com/">Avanade</a> today, after
+            almost 11 years at SSW.
+          </li>
           <li>Working on ADE (Agentic Developer Environment).</li>
           <li>
             Opened <a href="https://jernejk.github.io/jk-arcade/">JK&apos;s Arcade</a>: the small
             browser games I build with AI coding tools, in one app you can install on your phone.
-            Newest is <a href="https://jernejk.github.io/jk-arcade/nap-patch/">Nap Patch</a>, a cosy
-            logic puzzle: tuck sleepy bush critters into a patchwork quilt, one per patch, row and
-            column, and no bumping. Piece by Pixel and Tumbleverse are in there too. Builds are on{' '}
+            Newest are Piece by Pixel and Tumbleverse. Builds are on{' '}
             <a href="https://github.com/jernejk/jk-arcade">GitHub</a>.
           </li>
           <li>
@@ -45,9 +46,8 @@ export default function Now() {
             for my DDD Brisbane talk.
           </li>
           <li>
-            One of the organisers of{' '}
-            <a href="https://luma.com/mojp4yl6">DevDay Exchange Community: Brisbane</a>. No new
-            events announced yet.
+            Co-organising <a href="https://luma.com/codex-community">Codex Community Brisbane</a>,
+            the local Codex user group.
           </li>
         </ul>
         <figure>
@@ -87,15 +87,21 @@ export default function Now() {
             </a>
           </div>
           <figcaption>
-            Piece by Pixel, rebuilding a pixel-art harbour on the Master tier, and Tumbleverse, a
-            physics toy with five modes. Both play in the{' '}
-            <a href="https://jernejk.github.io/jk-arcade/">live arcade</a>, where{' '}
-            <a href="https://jernejk.github.io/jk-arcade/nap-patch/">Nap Patch</a> is the newest.
+            The two newest games: Piece by Pixel, rebuilding a pixel-art harbour on the Master tier,
+            and Tumbleverse, a physics toy with five modes. Both play in the{' '}
+            <a href="https://jernejk.github.io/jk-arcade/">live arcade</a>.
           </figcaption>
         </figure>
 
         <h2>Upcoming Events</h2>
         <ul>
+          <li>
+            <a href="https://luma.com/0uyxiwqo">Codex Community Meetup: Brisbane</a> —{' '}
+            <em>Many agents. Many hours. One page.</em> (November 16, 2026) at The Precinct. How I
+            kept track of a lead agent and 38 subagents making my farewell film overnight, with one
+            live timeline page that a keeper agent writes as the work happens.{' '}
+            <a href="https://live-timelines-20261116.surge.sh">Slides</a>.
+          </li>
           <li>
             <a href="https://www.dddbrisbane.com">DDD Brisbane 2026</a> —{' '}
             <em>The Case of the Innocent LINQ Query: An EF Core Performance Investigation</em>{' '}
@@ -111,6 +117,11 @@ export default function Now() {
 
         <h2>Recent</h2>
         <ul>
+          <li>
+            <a href="https://events.humanitix.com/2026-ai-mega-meetup">2026 AI Mega Meetup</a> —
+            November 12, 2026 at The Precinct. Brisbane and Gold Coast AI communities in one room; I
+            presented Build Club Brisbane and Codex Community Brisbane.
+          </li>
           <li>
             <a href="https://luma.com/qveldpfr">Ship, Then Sell It: Build Club Brisbane x AdaL</a> —
             October 22, 2026 at The Precinct (assisted organisation). A hands-on evening on turning
@@ -192,8 +203,9 @@ export default function Now() {
 
         <h2>Work</h2>
         <p>
-          AI Architect in Brisbane, focused on .NET, EF Core, Azure, and AI-enabled developer
-          tooling.
+          AI Architect at <a href="https://www.avanade.com/">Avanade</a> in Brisbane. Before that,
+          almost 11 years at SSW (2016–2026), most recently as a Solution Architect focused on .NET,
+          EF Core, Azure and AI-enabled developer tooling.
         </p>
       </div>
     </div>

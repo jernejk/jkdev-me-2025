@@ -9,7 +9,19 @@ interface Props {
 }
 
 export default function AuthorLayout({ children, content }: Props) {
-  const { name, avatar, occupation, company, email, twitter, bluesky, linkedin, github } = content
+  const {
+    name,
+    avatar,
+    occupation,
+    company,
+    employerLogo,
+    employerUrl,
+    email,
+    twitter,
+    bluesky,
+    linkedin,
+    github,
+  } = content
 
   return (
     <>
@@ -33,6 +45,11 @@ export default function AuthorLayout({ children, content }: Props) {
             <h3 className="pt-4 pb-2 text-2xl leading-8 font-bold tracking-tight">{name}</h3>
             <div className="text-gray-500 dark:text-gray-400">{occupation}</div>
             <div className="text-gray-500 dark:text-gray-400">{company}</div>
+            {employerLogo && employerUrl && (
+              <a href={employerUrl} className="pt-4" aria-label="Avanade">
+                <Image src={employerLogo} alt="Avanade logo" width={117} height={44} unoptimized />
+              </a>
+            )}
             <div className="flex space-x-3 pt-6">
               <SocialIcon kind="mail" href={`mailto:${email}`} />
               <SocialIcon kind="github" href={github} />

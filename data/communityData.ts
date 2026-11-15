@@ -8,11 +8,11 @@ interface Community {
 
 const communityData: Community[] = [
   {
-    name: 'DevDay Exchange Community: Brisbane',
+    name: 'Codex Community Brisbane',
     description:
-      'A Brisbane developer community sharing practical experiences with AI and developer tools. No new events announced yet.',
+      'The Brisbane Codex user group: community-led meetups sharing practical experiences with Codex, AI and developer tools.',
     role: 'One of the organisers',
-    href: 'https://luma.com/mojp4yl6',
+    href: 'https://luma.com/codex-community',
   },
   {
     name: 'Build Club Brisbane',

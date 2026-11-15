@@ -40,15 +40,34 @@ export default function Home({ posts, upcomingTalk }) {
             <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl">
               Jernej Kavka (JK)
             </h1>
-            <p className="mt-2 text-xl text-cyan-100/85">
-              Microsoft Foundry MVP · AI Architect · Speaker
+            <p className="mt-2 flex flex-wrap items-center gap-x-2 text-xl text-cyan-100/85">
+              <span>Microsoft Foundry MVP</span>
+              <span aria-hidden="true">·</span>
+              <span className="inline-flex items-center gap-2">
+                AI Architect at
+                <a href="https://www.avanade.com/" aria-label="Avanade">
+                  <Image
+                    src="/static/images/logos/avanade.svg"
+                    alt="Avanade"
+                    width={117}
+                    height={44}
+                    unoptimized
+                    className="-my-2 h-[44px] w-auto"
+                  />
+                </a>
+              </span>
+              <span aria-hidden="true">·</span>
+              <span>Speaker</span>
             </p>
             <p className="mt-4 max-w-3xl text-lg leading-8 text-slate-200">
               I build agentic AI workflows with Azure AI, coding agents, .NET and EF Core, speak at
               conferences and organize developer communities in Brisbane. I am one of the organisers
               of{' '}
-              <Link href="https://luma.com/mojp4yl6" className="underline underline-offset-4">
-                DevDay Exchange Community: Brisbane
+              <Link
+                href="https://luma.com/codex-community"
+                className="underline underline-offset-4"
+              >
+                Codex Community Brisbane
               </Link>
               .
             </p>

@@ -80,7 +80,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     alternateName: ['Jernej Kavka (JK)', 'JK'],
     url: siteMetadata.siteUrl,
     image: `${siteMetadata.siteUrl}/static/images/jk-headshot.jpg`,
-    jobTitle: 'Solution Architect',
+    jobTitle: 'AI Architect',
+    worksFor: {
+      '@type': 'Organization',
+      name: 'Avanade',
+      url: 'https://www.avanade.com/',
+    },
     sameAs: [
       siteMetadata.github,
       siteMetadata.linkedin,
