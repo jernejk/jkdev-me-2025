@@ -96,13 +96,6 @@ export default function Now() {
         <h2>Upcoming Events</h2>
         <ul>
           <li>
-            <a href="https://luma.com/0uyxiwqo">Codex Community Meetup: Brisbane</a> —{' '}
-            <em>Many agents. Many hours. One page.</em> (November 16, 2026) at The Precinct. How I
-            kept track of a lead agent and 38 subagents making my farewell film overnight, with one
-            live timeline page that a keeper agent writes as the work happens.{' '}
-            <a href="https://live-timelines-20261116.surge.sh">Slides</a>.
-          </li>
-          <li>
             <a href="https://www.meetup.com/ai-builders-brisbane-ai-experts-engineers-ai-agents/events/317445928/">
               Global AI Nights with .NET Bootcamp
             </a>{' '}
@@ -126,6 +119,16 @@ export default function Now() {
 
         <h2>Recent</h2>
         <ul>
+          <li>
+            <a href="https://luma.com/0uyxiwqo">Codex Community Meetup: Brisbane</a> —{' '}
+            <em>Many agents. Many hours. One page.</em> (November 16, 2026) at The Precinct, the
+            last Codex Community Brisbane night of 2026, which I co-hosted; all 80 places were
+            taken. How I kept track of a lead agent and 38 subagents making my farewell film
+            overnight, with one live timeline page that a keeper agent writes as the work happens.{' '}
+            <a href="https://live-timelines-20261116.surge.sh">Slides</a> ·{' '}
+            <a href="https://live-timelines-20261116.surge.sh/timeline/">the real run's timeline</a>
+            .
+          </li>
           <li>
             <a href="https://events.humanitix.com/2026-ai-mega-meetup">2026 AI Mega Meetup</a> —
             November 12, 2026 at The Precinct. Brisbane and Gold Coast AI communities in one room; I
