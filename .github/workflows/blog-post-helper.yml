@@ -1,0 +1,239 @@
+name: AI Blog Post Helper
+
+# When a PR touches data/blog/**.mdx, posts a sticky comment suggesting
+# missing frontmatter fields (summary, tldr, tags, image alt text).
+# Suggestions only — never auto-commits.
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    paths:
+      - 'data/blog/**.mdx'
+
+permissions:
+  contents: read
+  pull-requests: write
+  models: read
+
+concurrency:
+  group: ai-blog-helper-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  suggest:
+    if: >-
+      github.event.pull_request.user.login != 'github-actions[bot]' &&
+      github.event.pull_request.user.login != 'dependabot[bot]' &&
+      !contains(github.event.pull_request.title, '[skip ai]')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout PR head
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          fetch-depth: 0
+
+      - name: Find changed blog posts
+        id: changed
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/ai
+          gh pr diff "$PR_NUMBER" --name-only \
+            | grep -E '^data/blog/.*\.mdx$' \
+            | sort -u > /tmp/ai/files.txt || true
+          : > /tmp/ai/files-existing.txt
+          while IFS= read -r f; do
+            [ -n "$f" ] && [ -f "$f" ] && printf '%s\n' "$f" >> /tmp/ai/files-existing.txt
+          done < /tmp/ai/files.txt
+          COUNT=$(wc -l < /tmp/ai/files-existing.txt | tr -d ' ')
+          echo "count=$COUNT" >> "$GITHUB_OUTPUT"
+          echo "Changed blog files: $COUNT"
+          cat /tmp/ai/files-existing.txt || true
+
+      - name: Setup Node
+        if: steps.changed.outputs.count != '0'
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Generate suggestions and write comment body
+        if: steps.changed.outputs.count != '0'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          node <<'EOF'
+          const fs = require('fs');
+          const path = require('path');
+
+          const files = fs.readFileSync('/tmp/ai/files-existing.txt', 'utf8')
+            .split('\n').map(s => s.trim()).filter(Boolean);
+
+          function parseFrontmatter(src) {
+            if (!src.startsWith('---')) return { fm: {}, body: src };
+            const end = src.indexOf('\n---', 3);
+            if (end === -1) return { fm: {}, body: src };
+            const block = src.slice(3, end).trim();
+            const body = src.slice(end + 4).replace(/^\n/, '');
+            const fm = {};
+            let currentKey = null;
+            let currentList = null;
+            for (const line of block.split('\n')) {
+              const listMatch = line.match(/^\s+-\s+(.*)$/);
+              if (listMatch && currentList) {
+                currentList.push(listMatch[1].replace(/^['"]|['"]$/g, ''));
+                continue;
+              }
+              const kv = line.match(/^([A-Za-z0-9_]+):\s*(.*)$/);
+              if (kv) {
+                currentKey = kv[1];
+                const val = kv[2].trim();
+                if (val === '') {
+                  fm[currentKey] = [];
+                  currentList = fm[currentKey];
+                } else {
+                  fm[currentKey] = val.replace(/^['"]|['"]$/g, '');
+                  currentList = null;
+                }
+              }
+            }
+            return { fm, body };
+          }
+
+          const SYSTEM_PROMPT = `You suggest missing MDX frontmatter for a personal developer blog (jkdev.me).
+          Voice: direct, practical, first-person, no hype, no emoji, no exclamation marks.
+          Output ONLY GitHub-flavoured Markdown with these sections, in this order, omitting any whose field is not in "Missing fields":
+
+          **summary** (1 sentence, <= 200 chars, plain text, no quotes)
+          \`\`\`
+          <one sentence>
+          \`\`\`
+
+          **tldr** (one short sentence, plain text)
+          \`\`\`
+          <one short sentence>
+          \`\`\`
+
+          **tags** (3 to 6 lowercase, hyphenated, comma-separated; reuse existing tags when sensible)
+          \`\`\`
+          tag-one, tag-two, tag-three
+          \`\`\`
+
+          **image alt text** (only if "image-alt" is in Missing fields; one bullet per listed image URL)
+          - <url>: <concise alt text>
+
+          Do not add preamble, explanation, or extra sections.`;
+
+          async function callModel(userPrompt) {
+            const res = await fetch('https://models.github.ai/inference/chat/completions', {
+              method: 'POST',
+              headers: {
+                'Authorization': `Bearer ${process.env.GITHUB_TOKEN}`,
+                'Accept': 'application/vnd.github+json',
+                'Content-Type': 'application/json',
+                'X-GitHub-Api-Version': '2022-11-28',
+              },
+              body: JSON.stringify({
+                model: 'openai/gpt-4o-mini',
+                max_tokens: 500,
+                temperature: 0.3,
+                messages: [
+                  { role: 'system', content: SYSTEM_PROMPT },
+                  { role: 'user', content: userPrompt },
+                ],
+              }),
+            });
+            if (!res.ok) {
+              const text = await res.text();
+              throw new Error(`Models API ${res.status}: ${text}`);
+            }
+            const json = await res.json();
+            return json.choices?.[0]?.message?.content?.trim() || '(no content)';
+          }
+
+          (async () => {
+            const sections = [];
+            let suggestedCount = 0;
+            for (const file of files) {
+              const src = fs.readFileSync(file, 'utf8');
+              const { fm, body } = parseFrontmatter(src);
+              const missing = [];
+              if (!fm.summary || String(fm.summary).length < 20) missing.push('summary');
+              if (!fm.tldr || String(fm.tldr).length < 10) missing.push('tldr');
+              if (!Array.isArray(fm.tags) || fm.tags.length === 0) missing.push('tags');
+              const imgRe = /!\[(\s*)\]\(([^)]+)\)/g;
+              const altMissing = [];
+              let m;
+              while ((m = imgRe.exec(body)) !== null) altMissing.push(m[2]);
+              if (altMissing.length) missing.push('image-alt');
+
+              if (missing.length === 0) continue;
+              suggestedCount++;
+
+              const userPrompt = [
+                `Blog post file: ${file}`,
+                `Title: ${fm.title || path.basename(file, '.mdx')}`,
+                `Existing tags: ${(Array.isArray(fm.tags) ? fm.tags : []).join(', ') || '(none)'}`,
+                `Missing fields: ${missing.join(', ')}`,
+                altMissing.length ? `Images missing alt text: ${altMissing.join(', ')}` : '',
+                '',
+                'Post excerpt (first 4000 chars of body):',
+                '---',
+                body.slice(0, 4000),
+              ].filter(Boolean).join('\n');
+
+              try {
+                const response = await callModel(userPrompt);
+                sections.push(
+                  `<details><summary><code>${file}</code> — missing: ${missing.join(', ')}</summary>\n\n${response}\n\n</details>\n`
+                );
+              } catch (err) {
+                sections.push(
+                  `<details><summary><code>${file}</code> — error</summary>\n\n\`\`\`\n${err.message}\n\`\`\`\n\n</details>\n`
+                );
+              }
+            }
+
+            fs.writeFileSync('/tmp/ai/suggested-count.txt', String(suggestedCount));
+            fs.writeFileSync('/tmp/ai/suggestions.md', sections.join('\n') || '_All changed blog posts already have summary, tldr, tags, and image alt text._');
+          })().catch(err => {
+            console.error(err);
+            process.exit(1);
+          });
+          EOF
+          echo "suggested=$(cat /tmp/ai/suggested-count.txt)"
+
+      - name: Post or update sticky comment
+        if: steps.changed.outputs.count != '0'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          MARKER='<!-- ai-blog-helper -->'
+          {
+            echo "$MARKER"
+            echo "## 📝 Blog post helper"
+            echo
+            echo "Suggested values for missing frontmatter on blog posts in this PR. Copy whatever's useful — nothing is committed automatically."
+            echo
+            cat /tmp/ai/suggestions.md
+            echo
+            echo "<sub>Generated by \`openai/gpt-4o-mini\` via GitHub Models. Add \`[skip ai]\` to the PR title to disable.</sub>"
+          } > /tmp/ai/comment.md
+
+          EXISTING=$(gh api "repos/$REPO/issues/$PR_NUMBER/comments" --paginate \
+            --jq "map(select(.body | startswith(\"$MARKER\"))) | .[0].id // empty")
+
+          if [ -n "$EXISTING" ]; then
+            gh api -X PATCH "repos/$REPO/issues/comments/$EXISTING" \
+              -F body=@/tmp/ai/comment.md > /dev/null
+            echo "Updated comment $EXISTING"
+          else
+            gh pr comment "$PR_NUMBER" --body-file /tmp/ai/comment.md
+            echo "Posted new comment"
+          fi
