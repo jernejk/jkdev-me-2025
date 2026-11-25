@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 544 306" width="544" height="306">
+  <defs>
+    <radialGradient id="glow" cx="56%" cy="48%" r="54%">
+      <stop stop-color="#697449"/>
+      <stop offset="1" stop-color="#1b2420"/>
+    </radialGradient>
+    <pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="5" r="1" fill="#e5dfc7" opacity=".17"/>
+    </pattern>
+  </defs>
+  <path fill="url(#glow)" d="M0 0h544v306H0z"/>
+  <path fill="url(#dots)" d="M0 0h544v306H0z"/>
+  <ellipse cx="282" cy="259" rx="130" ry="14" fill="#111913"/>
+  <path d="M68 69q215 65 419-16" fill="none" stroke="#101712" stroke-width="4"/>
+  <g stroke="#1b2420" stroke-width="2">
+    <circle cx="100" cy="78" r="7" fill="#dd6b56"/>
+    <circle cx="158" cy="92" r="6" fill="#c8d88c"/>
+    <circle cx="220" cy="100" r="7" fill="#f3bf62"/>
+    <circle cx="400" cy="82" r="7" fill="#dd6b56"/>
+    <circle cx="460" cy="63" r="6" fill="#f3bf62"/>
+  </g>
+  <g transform="translate(235 115) rotate(12)" stroke="#131c16" stroke-width="4" stroke-linejoin="round">
+    <path d="M-36 103l4-35 21-8h104l20 8 4 35z" fill="#9d4035"/>
+    <path d="M-16 38l-20-11 5 28 15 12m108-29 20-11-5 28-15 12" fill="#759742"/>
+    <path d="M-17 16 4 0h66l24 16-2 59-22 20H6l-22-20z" fill="#91ad4c"/>
+    <path d="M-18 22 8-35l50-15 33 53-16 21z" fill="#b94c3a"/>
+    <circle cx="9" cy="-36" r="11" fill="#f1dfbd"/>
+    <path d="M-21 17q52-10 117 1l-3 17q-59-12-113 0z" fill="#f1dfbd"/>
+    <path d="M7 51l18 3m30 0 18-3" stroke-linecap="round"/>
+    <path d="M12 72q26 15 54 0" fill="none" stroke-linecap="round"/>
+    <path d="M9 77l-2-18 13 14m50 4 2-18-13 14" fill="#f4e0b8" stroke-width="2"/>
+  </g>
+  <path d="M174 250h211l13 11H161z" fill="#bfbb9e"/>
+  <path d="M174 250h211l-11-7h-39l-18 4-25-4h-68l-15 4-20-1z" fill="#f1dfbd"/>
+  <g stroke="#e6debd" stroke-width="2" stroke-linecap="round" opacity=".8">
+    <path d="M111 151v18m-9-9h18M404 134v16m-8-8h16M436 210v16m-8-8h16M164 195v12m-6-6h12"/>
+  </g>
+</svg>
