@@ -8,6 +8,13 @@ interface Project {
 
 const projectsData: Project[] = [
   {
+    title: 'A Very Merry Waaagh!',
+    description:
+      'My Christmas Ork miniature painting project. In the grimdark future, there is only WAAAGH!',
+    imgSrc: '/static/images/projects/christmas-waaagh.svg',
+    href: '/projects/christmas-waaagh',
+  },
+  {
     title: "JK's Arcade",
     description:
       'Small browser games I built with AI coding tools, in one installable app: Piece by Pixel, Tumbleverse, Loose Ends, Prism Pop Painter and Block Loop Shooter. Free, no accounts, and most of them play fine on a phone.',
