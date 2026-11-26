@@ -20,14 +20,14 @@ export default function Now() {
 
       <div className="prose dark:prose-invert max-w-none">
         <p>
-          <em>Last updated: November 16, 2026</em>
+          <em>Last updated: November 27, 2026</em>
         </p>
 
         <h2>Current Focus</h2>
         <ul>
           <li>
-            Started as AI Architect at <a href="https://www.avanade.com/">Avanade</a> today, after
-            almost 11 years at SSW.
+            Started as AI Architect at <a href="https://www.avanade.com/">Avanade</a> on November
+            16, 2026, after almost 11 years at SSW.
           </li>
           <li>Working on ADE (Agentic Developer Environment).</li>
           <li>
@@ -96,15 +96,6 @@ export default function Now() {
         <h2>Upcoming Events</h2>
         <ul>
           <li>
-            <a href="https://www.meetup.com/ai-builders-brisbane-ai-experts-engineers-ai-agents/events/317445928/">
-              Global AI Nights with .NET Bootcamp
-            </a>{' '}
-            — <em>Beyond Chatbots: Building Agent Harnesses with .NET</em> (November 25, 2026) at
-            400 George Street. A demo-led look at giving an agent a plan, working memory, tools and
-            clear boundaries with Microsoft Agent Framework and C#, without handing the model
-            unrestricted control.
-          </li>
-          <li>
             <a href="https://www.dddbrisbane.com">DDD Brisbane 2026</a> —{' '}
             <em>The Case of the Innocent LINQ Query: An EF Core Performance Investigation</em>{' '}
             (December 5, 2026) at QUT Gardens Point. The LINQ query looks fine and the SQL is fast,
@@ -119,6 +110,16 @@ export default function Now() {
 
         <h2>Recent</h2>
         <ul>
+          <li>
+            <a href="https://www.meetup.com/ai-builders-brisbane-ai-experts-engineers-ai-agents/events/317445928/">
+              Global AI Nights with .NET Bootcamp
+            </a>{' '}
+            — <em>Beyond Chatbots: Building Agent Harnesses with .NET</em> (November 25, 2026) at
+            400 George Street. Giving an agent a plan, working memory, tools and clear boundaries
+            with Microsoft Agent Framework and C#, without handing the model unrestricted control.{' '}
+            <a href="https://agent-harnesses-dotnet-20261125.surge.sh">Slides</a> and{' '}
+            <a href="https://github.com/jernejk/agent-harnesses-dotnet">code</a> are public.
+          </li>
           <li>
             <a href="https://luma.com/0uyxiwqo">Codex Community Meetup: Brisbane</a> —{' '}
             <em>Many agents. Many hours. One page.</em> (November 16, 2026) at The Precinct, the
@@ -205,7 +206,7 @@ export default function Now() {
           <li>
             City Lead for{' '}
             <a href="https://www.meetup.com/build-club-brisbane/">Build Club Brisbane</a> —
-            organizing workshops and talks on AI, MCP, and developer tooling.
+            organizing workshops and talks on AI, MCP and developer tooling.
           </li>
           <li>
             Running the Brisbane Full Stack User Group and speaking regularly at local meetups and
